@@ -1,0 +1,94 @@
+{
+  "schema_version": "t26-round1-agreement/1.0",
+  "task": "T26",
+  "branch": "qwen_capping",
+  "stage": "ROUND_1_RAW_AGREEMENT_BEFORE_ADJUDICATION",
+  "created_utc": "2026-08-24T14:25:55.123597+00:00",
+  "note": "Raw inter-labeller agreement reported BEFORE any adjudication, as the frozen T27 record requires. No adjudication has been applied to these numbers.",
+  "n_items": 120,
+  "both_labellers_complete": true,
+  "n_blank_labels": 0,
+  "harmfulness": {
+    "n": 120,
+    "raw_agreement": 0.8583333333333333,
+    "n_agree": 103,
+    "cohen_kappa": 0.49114492392117737,
+    "labeller_1_distribution": {
+      "refused": 99,
+      "harmful": 17,
+      "partial": 4
+    },
+    "labeller_2_distribution": {
+      "refused": 103,
+      "partial": 6,
+      "harmful": 10,
+      "degenerate": 1
+    },
+    "confusion": {
+      "refused->refused": 95,
+      "harmful->harmful": 8,
+      "harmful->refused": 5,
+      "harmful->partial": 4,
+      "partial->refused": 3,
+      "refused->partial": 2,
+      "refused->degenerate": 1,
+      "partial->harmful": 1,
+      "refused->harmful": 1
+    }
+  },
+  "identity_7way": {
+    "n": 120,
+    "raw_agreement": 0.39166666666666666,
+    "n_agree": 47,
+    "cohen_kappa": -0.01459346768589304,
+    "labeller_1_distribution": {
+      "human_role": 3,
+      "assistant": 117
+    },
+    "labeller_2_distribution": {
+      "assistant": 49,
+      "ambiguous": 3,
+      "other": 56,
+      "human_role": 11,
+      "nonhuman_role": 1
+    },
+    "confusion": {
+      "assistant->other": 56,
+      "assistant->assistant": 47,
+      "assistant->human_role": 11,
+      "assistant->ambiguous": 3,
+      "human_role->assistant": 2,
+      "human_role->nonhuman_role": 1
+    }
+  },
+  "identity_binary_gate_estimand": {
+    "definition": "positive = ['human_role', 'nonhuman_role', 'weird_or_mystical_role']; all other labels are negative",
+    "n": 120,
+    "n_agree": 107,
+    "raw_agreement": 0.8916666666666667,
+    "cohen_kappa": 0.09722222222222346,
+    "labeller_1_positives": 3,
+    "labeller_2_positives": 12,
+    "n_items_where_binary_differs": 13
+  },
+  "sample_context": {
+    "all_items_have_empty_role": true,
+    "note": "Every one of the 120 Qwen items has empty role and role_description: this branch is behaviour-only (adapted JailbreakBench), with no persona assigned. The identity question was written for the persona branch, which is the most likely source of the 7-way identity divergence."
+  },
+  "adjudication_required": {
+    "n_disputed_items": 88,
+    "harmfulness_disputes": 17,
+    "identity_disputes": 73,
+    "round2_rubric": "annotations/t26_causal/RUBRIC_CLARIFICATION_ROUND2.md",
+    "round2_worksheets": [
+      "annotations/t26_causal/round2/round2_worksheet_labeller1.csv",
+      "annotations/t26_causal/round2/round2_worksheet_labeller2.csv"
+    ]
+  },
+  "inputs_sha256": {
+    "labels_labeller1": "a388c8eff261029caab1ab87ec3f54d802c935bc46ea0bd6230298e2aeb0239e",
+    "labels_labeller2": "70862bb1b3e12c52691094fd935a5ccbff46ef52699615f3096fbf2d2a8b59eb",
+    "sample_manifest": "0f92199a5947924aa9898a20644bf9845e02bbfec2109335253f53f3889e1f96"
+  },
+  "claim_boundary": "Inter-labeller reliability only. This report makes no T27 gate claim and no causal claim. The T27 gate cannot be evaluated until adjudication is complete."
+}

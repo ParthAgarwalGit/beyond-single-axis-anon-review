@@ -1,0 +1,233 @@
+{
+  "format_version": "t17-c160-role-space-v2",
+  "task": "T17_C160_role_space_PCA_and_region_geometry",
+  "status": "MIXED_PRIMARY_AND_SENSITIVITY",
+  "membership": "label_independent_technical_validity",
+  "claim_scope": "role-space variance structure; not intrinsic dimensionality of a single persona",
+  "middle_block_index": 16,
+  "retained_roles": 275,
+  "software": {
+    "numpy": "2.1.3"
+  },
+  "c160_construction": "C80-A and C80-B per-role means merged by exact contributing-output counts; equivalent to concatenating the contributing C160 rows before taking role means",
+  "c160_default_construction": "T17-specific pooled default: each response-region default first clears the >=95% floor independently in C80-A and C80-B; only then are per-condition means count-weighted across blocks and equally averaged over five conditions. This pooled vector does not replace the independent defaults used for T15/T16 confirmatory axes.",
+  "analysis_registry": {
+    "all_response_primary_all_eligible": {
+      "analysis_status": "PRIMARY",
+      "lu_comparable": true,
+      "scope_note": "Primary T17 all-response role-space PCA under label-independent membership."
+    },
+    "matched_all_response": {
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": true,
+      "scope_note": "Matched-cohort all-response companion to regional sensitivities."
+    },
+    "matched_answer": {
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Answer-only geometry is a response-region sensitivity and is not Lu-comparable."
+    },
+    "matched_reasoning": {
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Reasoning-only geometry is a response-region sensitivity and is not Lu-comparable."
+    },
+    "region_comparisons": {
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Cross-region Axis/projection comparisons are sensitivity analyses, not the primary Lu-comparable estimand."
+    }
+  },
+  "pca_preprocessing": {
+    "centering": "across role means",
+    "standardization": "none"
+  },
+  "pca": {
+    "all_response_primary_all_eligible": {
+      "n_roles": 275,
+      "hidden_dim": 4096,
+      "centering": "center role means across roles",
+      "standardization": "none",
+      "pc1_variance_explained": 0.19315125407801578,
+      "components_to_70pct": 18,
+      "variance_target": 0.7,
+      "axis_pc1_alignment_abs": 0.6952240033244182,
+      "pc1_sign_policy": "sign aligned to Assistant Axis for display only",
+      "analysis_status": "PRIMARY",
+      "lu_comparable": true,
+      "scope_note": "Primary T17 all-response role-space PCA under label-independent membership."
+    },
+    "matched_all_response": {
+      "n_roles": 275,
+      "hidden_dim": 4096,
+      "centering": "center role means across roles",
+      "standardization": "none",
+      "pc1_variance_explained": 0.19315125407801578,
+      "components_to_70pct": 18,
+      "variance_target": 0.7,
+      "axis_pc1_alignment_abs": 0.6952240033244182,
+      "pc1_sign_policy": "sign aligned to Assistant Axis for display only",
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": true,
+      "scope_note": "Matched-cohort all-response companion to regional sensitivities."
+    },
+    "matched_answer": {
+      "n_roles": 275,
+      "hidden_dim": 4096,
+      "centering": "center role means across roles",
+      "standardization": "none",
+      "pc1_variance_explained": 0.240477895825504,
+      "components_to_70pct": 14,
+      "variance_target": 0.7,
+      "axis_pc1_alignment_abs": 0.6006881581117189,
+      "pc1_sign_policy": "sign aligned to Assistant Axis for display only",
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Answer-only geometry is a response-region sensitivity and is not Lu-comparable."
+    },
+    "matched_reasoning": {
+      "n_roles": 275,
+      "hidden_dim": 4096,
+      "centering": "center role means across roles",
+      "standardization": "none",
+      "pc1_variance_explained": 0.2001356457700045,
+      "components_to_70pct": 19,
+      "variance_target": 0.7,
+      "axis_pc1_alignment_abs": 0.7636829250609898,
+      "pc1_sign_policy": "sign aligned to Assistant Axis for display only",
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Reasoning-only geometry is a response-region sensitivity and is not Lu-comparable."
+    }
+  },
+  "region_comparisons": [
+    {
+      "region_a": "all_response",
+      "region_b": "answer",
+      "axis_cosine": 0.7654617701067957,
+      "same_role_own_axis_projection_pearson": 0.9575101346394658,
+      "same_role_all_response_reference_projection_pearson": 0.9767732016469393,
+      "n_roles": 275,
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Cross-region Axis/projection comparisons are sensitivity analyses, not the primary Lu-comparable estimand."
+    },
+    {
+      "region_a": "all_response",
+      "region_b": "reasoning",
+      "axis_cosine": 0.9624242897332549,
+      "same_role_own_axis_projection_pearson": 0.9956949269978252,
+      "same_role_all_response_reference_projection_pearson": 0.9975034414951516,
+      "n_roles": 275,
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Cross-region Axis/projection comparisons are sensitivity analyses, not the primary Lu-comparable estimand."
+    },
+    {
+      "region_a": "answer",
+      "region_b": "reasoning",
+      "axis_cosine": 0.5877841077999876,
+      "same_role_own_axis_projection_pearson": 0.9546374089228963,
+      "same_role_all_response_reference_projection_pearson": 0.9634341548695383,
+      "n_roles": 275,
+      "analysis_status": "SENSITIVITY",
+      "lu_comparable": false,
+      "scope_note": "Cross-region Axis/projection comparisons are sensitivity analyses, not the primary Lu-comparable estimand."
+    }
+  ],
+  "matched_triple_count_summary": {
+    "min_per_role": 159,
+    "max_per_role": 160
+  },
+  "all_response_count_summary": {
+    "min_per_role": 159,
+    "max_per_role": 160
+  },
+  "default_counts_by_region": {
+    "all_response": {
+      "0": {
+        "total": 160,
+        "eligible": 159
+      },
+      "1": {
+        "total": 160,
+        "eligible": 159
+      },
+      "2": {
+        "total": 160,
+        "eligible": 159
+      },
+      "3": {
+        "total": 160,
+        "eligible": 160
+      },
+      "4": {
+        "total": 160,
+        "eligible": 160
+      }
+    },
+    "answer": {
+      "0": {
+        "total": 160,
+        "eligible": 159
+      },
+      "1": {
+        "total": 160,
+        "eligible": 159
+      },
+      "2": {
+        "total": 160,
+        "eligible": 159
+      },
+      "3": {
+        "total": 160,
+        "eligible": 160
+      },
+      "4": {
+        "total": 160,
+        "eligible": 160
+      }
+    },
+    "reasoning": {
+      "0": {
+        "total": 160,
+        "eligible": 159
+      },
+      "1": {
+        "total": 160,
+        "eligible": 159
+      },
+      "2": {
+        "total": 160,
+        "eligible": 159
+      },
+      "3": {
+        "total": 160,
+        "eligible": 160
+      },
+      "4": {
+        "total": 160,
+        "eligible": 160
+      }
+    }
+  },
+  "input_provenance": {
+    "c80_a_manifest_sha256": "74ba728d52e50311675b7e8b2eacc1f09d17a937e22d045b846ca7961ee45d1b",
+    "c80_b_manifest_sha256": "06a30075b0559363d5724c6cf00b945cf4d44fcfe167110f5873daa62169b47c",
+    "retained_role_manifest_sha256": "3c7d373cb67f96ac21d9b6cbd9097ce184d145b9d381af1ad12b3e0675524315",
+    "membership_authority_sha256": "21afdeb5aa4f45eae6d8600a60a311af2b4ce7689013e48e7b385847ea6aee1a",
+    "hf_dataset_repo": "[Author-A-HF]/persona-artifacts",
+    "hf_dataset_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1"
+  },
+  "interpretation_guardrails": [
+    "Only all_response_primary_all_eligible is the PRIMARY T17 PCA analysis.",
+    "Answer-only, reasoning-only, matched regional PCA, and cross-region comparisons are SENSITIVITY analyses.",
+    "Answer-only and reasoning-only geometry are not Lu-comparable.",
+    "PCA is descriptive and does not define or reorient the Assistant Axis.",
+    "PC1 sign is aligned to the Axis for display only; report absolute Axis-PC1 alignment.",
+    "Differences across reasoning/answer/all-response are role-space differences and do not establish that reasoning training caused them."
+  ],
+  "source_git_sha": "dd0b1b561e8b908e5321d3cdb40e508ba535845e",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

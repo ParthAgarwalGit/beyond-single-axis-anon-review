@@ -1,0 +1,58 @@
+{
+  "task": "DEEPSEEK_CONFOUND_AUDIT",
+  "fidelity_gate": {
+    "reconstructed_r": 0.9765281450918534,
+    "frozen_headline_r": 0.976528,
+    "tolerance": 1e-06,
+    "status": "PASS"
+  },
+  "frozen_inputs_sha256": {
+    "results/t17/C80-A/C80-A/available_all_response.npz": "5c3ccb2c7130353eec211ed34661ff468e223014a39a276ad61462a21baaf7a8",
+    "results/t17/C80-A/DEFAULT-C80-A/all_response.npz": "9585af09ca5d0211423eca49803c5be6051021437e64337255032a5ababd9a0f",
+    "results/t17/C80-A/DEFAULT-C80-A/condition_counts.json": "47a0d6958036f73fec9fc7165b41a1fef1731c4195b9ca8565bc46deab4e525f",
+    "results/t17/C80-A/reduced_manifest.json": "74ba728d52e50311675b7e8b2eacc1f09d17a937e22d045b846ca7961ee45d1b",
+    "results/t17/C80-B/C80-B/available_all_response.npz": "1202e233c5b3b20ee8fd1ff28199ec873316ab3fbfd389f99fd092e2eaa3b058",
+    "results/t17/C80-B/DEFAULT-C80-B/all_response.npz": "e2c018aeeeb2fa9ed7630a87e4f3e0431cd5dbbb59b48d2ef4eb95e6b24f436e",
+    "results/t17/C80-B/DEFAULT-C80-B/condition_counts.json": "468f22fe129a6ec3c2976739848efe4d00490d2154d4da5186083c7b4833c254",
+    "results/t17/C80-B/reduced_manifest.json": "06a30075b0559363d5724c6cf00b945cf4d44fcfe167110f5873daa62169b47c",
+    "results/t15/confirmatory_reliability.json": "c95383683b09f0490c6f76c485a1756c7458bb427d5eb5c39adabd138edcdaed",
+    "results/t14/retained_roles.json": "3c7d373cb67f96ac21d9b6cbd9097ce184d145b9d381af1ad12b3e0675524315"
+  },
+  "t12_c80_meta_hf_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1",
+  "t12_c80_meta_binding": {
+    "method": "per-file size + git blob sha1 verified against the pinned revision tree via HF API; fail-closed on any missing/extra/modified file",
+    "n_files_verified": 176,
+    "aggregate_sha256": "86735468eb47f4826e95d75788fe44ca618b71c474097865ffd938040bef2299",
+    "per_file_sha256": "metadata_file_hashes.json"
+  },
+  "meta_rows_used": {
+    "C80-A": {
+      "n_files": 86,
+      "n_valid_rows": 21998
+    },
+    "C80-B": {
+      "n_files": 86,
+      "n_valid_rows": 22000
+    }
+  },
+  "python": "3.13.1",
+  "numpy": "2.5.1",
+  "command": "python tools/run_deepseek_confound_audit.py --meta-root <pinned>",
+  "output_sha256": {
+    "response_length_sensitivity.json": "d904f6dac608367a3b375b0c393e1645ce7f8388edf0d7c530e5923a28adae4b",
+    "response_length_sensitivity.csv": "b902e3778cc1d1e749cf158607586419ac67f14352f249a7535856486ea6f545",
+    "default_condition_sensitivity.json": "d9cdab58b9a1ce57bc0ef590daf635d2547a77f430234af58b7264b3649c0751",
+    "default_condition_sensitivity.csv": "d9c2f990c07c079e47ce143c9011414dad443103ce5e40d51529a3067d4354fe",
+    "heldout_role_recovery.json": "837d3e3b3b944056d81e2222a2724d9d1ab1723c97adbf42468264162bf4bcdd",
+    "heldout_role_recovery.csv": "a5bb555df16d648f49920d6d85429f072665cf87f7ef5a71ae37ec279e0b9174",
+    "metadata_file_hashes.json": "b6f93732f96b6812f70775ff01b621cbc34dc5a2d0cf2bf775aa9cc99e3fee27"
+  },
+  "status_per_analysis": {
+    "response_length": "PASS",
+    "default_stability": "PASS",
+    "heldout_roles": "PASS"
+  },
+  "source_git_sha": "bade0f1aee43dd10ec1d5a1fd3cff9fb6ed4f2c9",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

@@ -1,0 +1,9 @@
+outcome,condition,population_n,human_sample_n,human_sample_positive_n,weighted_positive_estimate,rate
+strict,unsteered_baseline,100,30,3,3.0,0.03
+strict,assistant_cap,100,30,4,4.0,0.04
+strict,random_direction_cap,100,30,5,7.6923076923076925,0.07692307692307693
+strict,sphere_proximity_cap,100,30,3,3.0,0.03
+inclusive,unsteered_baseline,100,30,5,7.6923076923076925,0.07692307692307693
+inclusive,assistant_cap,100,30,5,5.0,0.05
+inclusive,random_direction_cap,100,30,5,7.6923076923076925,0.07692307692307693
+inclusive,sphere_proximity_cap,100,30,4,4.0,0.04

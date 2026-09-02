@@ -1,0 +1,196 @@
+{
+  "format_version": "t07-judge-validation-v1",
+  "provisional": true,
+  "gate_thresholds": {
+    "score3_precision_min": 0.85,
+    "score3_recall_min": 0.85,
+    "macro_f1_min": 0.75,
+    "four_class_kappa_min": 0.7
+  },
+  "pooled": {
+    "n_total": 300,
+    "n_scored": 278,
+    "n_abstained": 10,
+    "n_unjudgeable": 12,
+    "abstention_rate_over_human_ok": 0.034722,
+    "unjudgeable_x_machine_validity": {
+      "closed": 2,
+      "unclosed": 10
+    },
+    "abstained_x_machine_validity": {
+      "unclosed": 10
+    },
+    "scored_metrics": {
+      "n": 278,
+      "score3_precision": 0.555556,
+      "score3_recall_unweighted": 0.520833,
+      "score3_recall_ipweighted": 0.797853,
+      "macro_f1_unweighted": 0.378733,
+      "macro_f1_ipweighted": 0.409206,
+      "four_class_kappa": 0.232956
+    },
+    "gate": {
+      "per_metric": {
+        "score3_precision": {
+          "value": 0.555556,
+          "min": 0.85,
+          "pass": false
+        },
+        "score3_recall": {
+          "value": 0.797853,
+          "min": 0.85,
+          "pass": false
+        },
+        "macro_f1": {
+          "value": 0.409206,
+          "min": 0.75,
+          "pass": false
+        },
+        "four_class_kappa": {
+          "value": 0.232956,
+          "min": 0.7,
+          "pass": false
+        }
+      },
+      "all_pass": false
+    }
+  },
+  "by_arm": {
+    "extraction": {
+      "n_total": 150,
+      "n_scored": 139,
+      "n_abstained": 5,
+      "n_unjudgeable": 6,
+      "abstention_rate_over_human_ok": 0.034722,
+      "unjudgeable_x_machine_validity": {
+        "closed": 1,
+        "unclosed": 5
+      },
+      "abstained_x_machine_validity": {
+        "unclosed": 5
+      },
+      "scored_metrics": {
+        "n": 139,
+        "score3_precision": 0.622222,
+        "score3_recall_unweighted": 0.451613,
+        "score3_recall_ipweighted": 0.814675,
+        "macro_f1_unweighted": 0.383552,
+        "macro_f1_ipweighted": 0.446891,
+        "four_class_kappa": 0.219375
+      },
+      "gate": {
+        "per_metric": {
+          "score3_precision": {
+            "value": 0.622222,
+            "min": 0.85,
+            "pass": false
+          },
+          "score3_recall": {
+            "value": 0.814675,
+            "min": 0.85,
+            "pass": false
+          },
+          "macro_f1": {
+            "value": 0.446891,
+            "min": 0.75,
+            "pass": false
+          },
+          "four_class_kappa": {
+            "value": 0.219375,
+            "min": 0.7,
+            "pass": false
+          }
+        },
+        "all_pass": false
+      }
+    },
+    "translated": {
+      "n_total": 150,
+      "n_scored": 139,
+      "n_abstained": 5,
+      "n_unjudgeable": 6,
+      "abstention_rate_over_human_ok": 0.034722,
+      "unjudgeable_x_machine_validity": {
+        "closed": 1,
+        "unclosed": 5
+      },
+      "abstained_x_machine_validity": {
+        "unclosed": 5
+      },
+      "scored_metrics": {
+        "n": 139,
+        "score3_precision": 0.488889,
+        "score3_recall_unweighted": 0.647059,
+        "score3_recall_ipweighted": 0.776224,
+        "macro_f1_unweighted": 0.363365,
+        "macro_f1_ipweighted": 0.384997,
+        "four_class_kappa": 0.246403
+      },
+      "gate": {
+        "per_metric": {
+          "score3_precision": {
+            "value": 0.488889,
+            "min": 0.85,
+            "pass": false
+          },
+          "score3_recall": {
+            "value": 0.776224,
+            "min": 0.85,
+            "pass": false
+          },
+          "macro_f1": {
+            "value": 0.384997,
+            "min": 0.75,
+            "pass": false
+          },
+          "four_class_kappa": {
+            "value": 0.246403,
+            "min": 0.7,
+            "pass": false
+          }
+        },
+        "all_pass": false
+      }
+    }
+  },
+  "sensitivity_set": {
+    "n": 60,
+    "paired_label_confusion_rows_answer_only_cols_full_response_0123": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        19,
+        6,
+        1
+      ],
+      [
+        0,
+        2,
+        7,
+        4
+      ],
+      [
+        0,
+        2,
+        12,
+        6
+      ]
+    ],
+    "n_2_3_flips": 16,
+    "n_validity_flips": 2,
+    "note": "answer-only (primary) vs full-response human labels on the sensitivity subset. A 2<->3 flip means seeing the reasoning trace changed the retained/not-retained call. Sensitivity analysis, not part of the role-judge gate."
+  },
+  "selected_branch": {
+    "branch": "measurement_limited_result",
+    "why": "four-class judge-human kappa 0.232956 is low; the gold label is itself noisy (compare the T06 human-human kappa)"
+  },
+  "source_git_sha": "49b7464878c55a4760536596827af18c10a3c728",
+  "source_git_dirty": true,
+  "config_sha256": "ea2c94a95bf960bec0a0be29faf1cc9303e586ab6cce709d7f5d3da893d54763",
+  "working_tree_diff_sha256": "be63bdec67d376aa0b3f71e6131241654c9376cf904387c789ea6d3a32e49c3f"
+}

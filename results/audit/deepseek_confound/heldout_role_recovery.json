@@ -1,0 +1,43 @@
+{
+  "question": "does the recovered ordering hold when each role is excluded from BOTH axes used to score it?",
+  "heldout_recovery": {
+    "pearson_r": 0.9757709867072291,
+    "spearman_r": 0.9752828827789158,
+    "n_roles": 275,
+    "frozen_headline_r": 0.976528,
+    "n_sign_check_failures": 0
+  },
+  "loro_axis_cosines": {
+    "min_A": 0.9998555888424184,
+    "median_A": 0.9999867337771009,
+    "min_B": 0.9998087573666883,
+    "median_B": 0.9999871186742402,
+    "most_influential_roles": [
+      {
+        "role": "infant",
+        "cos_A": 0.9998555888424184,
+        "cos_B": 0.9998087573666883
+      },
+      {
+        "role": "caveman",
+        "cos_A": 0.999880880236312,
+        "cos_B": 0.9998767864537993
+      },
+      {
+        "role": "coral_reef",
+        "cos_A": 0.9998898711048403,
+        "cos_B": 0.9999013430444845
+      },
+      {
+        "role": "narcissist",
+        "cos_A": 0.9999193822038411,
+        "cos_B": 0.999902547270447
+      },
+      {
+        "role": "poet",
+        "cos_A": 0.9999208651446726,
+        "cos_B": 0.9999050010834261
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "task": "E80_membership_bridge",
+  "status": "SENSITIVITY_ONLY - not a confirmatory statistic",
+  "cos_v_score3_v_all_valid": 0.785438,
+  "role_projection_pearson_r": 0.69894,
+  "n_roles_common": 253,
+  "provenance_status": "HISTORICAL_UNSTAMPED_RESULT",
+  "provenance_note": "This committed bridge result predates immutable-HF-revision pinning and final provenance stamping. The numerical sensitivity result is retained, but no exact source_hf_revision is backfilled. tools/gpu_cells/e80_membership_bridge.py now fails closed unless rerun at an immutable 40-hex HF revision and emits per-input SHA-256 provenance.",
+  "caveat": "The archived E80 default arm is USER_EXPLICIT while roles are USER_TRANSLATED_LU; both axes share the same default mean, so this comparison is intended to isolate membership rather than estimate a prompt-arm effect.",
+  "interpretation": "Membership choice materially changes the estimated E80 Axis; the score-3 and all-technically-valid constructions are not interchangeable."
+}

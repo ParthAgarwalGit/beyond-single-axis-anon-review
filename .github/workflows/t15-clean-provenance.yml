@@ -1,0 +1,73 @@
+name: T15 clean provenance rerun
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/t15-clean-provenance.yml
+      - .gitattributes
+      - tools/run_t15_confirmatory.py
+      - src/confirmatory_geometry.py
+      - src/geometry.py
+      - src/provenance.py
+      - configs/method_frozen.yaml
+      - results/t15/t15_confirmatory_bundle.counts.json
+  workflow_dispatch:
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install analysis dependencies
+        run: python -m pip install --quiet numpy pyyaml huggingface_hub
+      - name: Download pinned T15 bundle
+        run: |
+          python - <<'PY'
+          from huggingface_hub import hf_hub_download
+          repo = '[Author-A-HF]/persona-artifacts'
+          rev = 'e1885e0865d1e6d7a39a9c2585b224b30e28b3f1'
+          for name in (
+              't15-confirmatory/t15_confirmatory_bundle.npz',
+              't15-confirmatory/t15_confirmatory_bundle.counts.json',
+          ):
+              hf_hub_download(
+                  repo_id=repo,
+                  repo_type='dataset',
+                  revision=rev,
+                  filename=name,
+                  local_dir='/tmp/t15',
+              )
+          PY
+      - name: Confirm clean source tree and rerun T15
+        run: |
+          git status --porcelain
+          test -z "$(git status --porcelain)"
+          python tools/run_t15_confirmatory.py analyze \
+            --bundle /tmp/t15/t15-confirmatory/t15_confirmatory_bundle.npz \
+            --counts /tmp/t15/t15-confirmatory/t15_confirmatory_bundle.counts.json \
+            --bundle-revision e1885e0865d1e6d7a39a9c2585b224b30e28b3f1 \
+            --out /tmp/confirmatory_reliability.clean.json
+          python - <<'PY'
+          import json
+          p = '/tmp/confirmatory_reliability.clean.json'
+          d = json.load(open(p))
+          assert d['source_git_dirty'] is False
+          assert 'working_tree_diff_sha256' not in d
+          assert d['cross_axis_pearson_r'] == 0.976528
+          assert d['n_retained_roles'] == 275
+          assert d['nulls']['role_correspondence_permutation']['p_ge_observed'] == 0.0
+          assert d['nulls']['common_orientation_sign_flip']['p_ge_observed'] == 0.3784
+          assert d['nulls']['isotropic_random_direction']['p_ge_observed'] == 0.0
+          print(json.dumps(d, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: t15-clean-report
+          path: /tmp/confirmatory_reliability.clean.json
+          if-no-files-found: error

@@ -1,0 +1,63 @@
+{
+  "schema_version": "t07-judge-uncertainty-v1",
+  "status": "FROZEN_BEFORE_INTERVAL_INSPECTION",
+  "purpose": "Uncertainty estimation only for the already-frozen T07 role-judge validation result.",
+  "frozen_estimand": {
+    "population": "same final adjudicated 300-item T06 human consensus and archived T07 automatic judge scores",
+    "scored_population": "human_validity == 'ok' and lu_score is not None",
+    "abstained_population": "human_validity == 'ok' and lu_score is None",
+    "human_unjudgeable_population": "human_validity == 'unjudgeable'",
+    "metrics": {
+      "score3_precision": "unweighted, canonical T07 convention",
+      "score3_recall_ipweighted": "inverse-probability weighted, canonical T07 convention",
+      "macro_f1_ipweighted": "four-class inverse-probability weighted macro-F1, canonical T07 convention",
+      "four_class_kappa": "unweighted Cohen's kappa, canonical T07 convention"
+    },
+    "thresholds": {
+      "score3_precision": 0.85,
+      "score3_recall_ipweighted": 0.85,
+      "macro_f1_ipweighted": 0.75,
+      "four_class_kappa": 0.7
+    },
+    "decision_rule": "unchanged; PASS/FAIL remains based on frozen point estimates, not CI overlap"
+  },
+  "sampling": {
+    "authority": [
+      "annotations/t14_gold_v3/sampling_coverage.json",
+      "ORIGINAL private sampling_key_PRIVATE.json"
+    ],
+    "design": "stratified simple random sampling",
+    "stratum_fields": [
+      "arm",
+      "archived_automatic_lu_score"
+    ],
+    "resampling": "within each original stratum, with replacement",
+    "preserve_original_labelled_n_per_stratum": true,
+    "retain_each_sampled_item_frozen_ip_weight": true,
+    "historical_ip_weight_serialization": "round(source_population_n / labelled_sample_n, 6)",
+    "do_not_derive_strata_from_human_outcomes": true,
+    "private_key_sha256": "5eab10c2e9bb6ce07eee2853c692c3291ce95e162e1b4de35a3fa44964f15999"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260830,
+    "level": 0.95,
+    "ci_method": "percentile",
+    "percentile_method": "linear",
+    "undefined_metric_handling": "record per-metric invalid count; exclude only undefined/non-finite replicates from that metric's percentile calculation; never replace NaN with zero",
+    "canonical_metric_implementation": "tools/run_t07_judge_validation.py::_metrics"
+  },
+  "output": {
+    "pooled_primary": true,
+    "by_arm_secondary": [
+      "extraction",
+      "translated"
+    ],
+    "human_human_secondary_ci": "NOT_RUN_IN_PRIMARY_T07_UNCERTAINTY_TASK"
+  },
+  "privacy": {
+    "private_key_must_not_be_committed": true,
+    "commit_only_aggregate_stratum_definition_and_hashes": true,
+    "do_not_commit_item_level_join_or_stratum_assignments": true
+  }
+}

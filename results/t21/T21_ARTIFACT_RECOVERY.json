@@ -1,0 +1,80 @@
+{
+  "schema_version": "t21-artifact-recovery/1.3",
+  "task": "T21",
+  "status": "RECOVERED_PINNED_AND_INDEPENDENTLY_VERIFIED",
+  "recovered_utc": "2026-08-22T05:16:41.915812+00:00",
+  "recovered_by": "[Author B]",
+  "verification_completed_by": [
+    "[Reviewer]",
+    "[Author-A-GitHub]"
+  ],
+  "verification_completed_utc": "2026-08-22T14:50:50Z",
+  "source_root": "/content/drive/MyDrive/[anonymized-repository-name]-t21",
+  "recovery_method": "EXACT_PATHS_FROM_ORIGINAL_T21_NOTEBOOKS_NO_DRIVE_WIDE_SEARCH",
+  "judge_checkpoint_semantics": "APPEND_ONLY_RETRY_LOG; production expectation is 200 unique successful item-condition judgments, not 200 physical JSONL rows. Extra raw rows are permitted only when they are technical-error retry records for expected keys.",
+  "hf_repo_id": "[Author-B-HF]/[anonymized-repository-name]-artifacts",
+  "hf_prefix": "t21-recovered/",
+  "hf_revision": "050445e47a0d29d0e9de1c21c81a5da8dccf6fc4",
+  "files": {
+    "t21_eval_manifest_frozen.jsonl": {
+      "recovered_from_local_path": "/content/drive/MyDrive/[anonymized-repository-name]-t21/input/t21_eval_manifest_frozen.jsonl",
+      "raw_rows": 100,
+      "sha256_now": "d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793",
+      "prior_recorded_sha256": "d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793",
+      "hash_originally_verified": true,
+      "provenance_status": "HASH_VERIFIED_AGAINST_PRIOR_RECORD",
+      "hf_roundtrip_sha256": "d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793",
+      "hf_roundtrip_verified": true
+    },
+    "t21_source_baseline_generations.jsonl": {
+      "recovered_from_local_path": "/content/drive/MyDrive/[anonymized-repository-name]-t21/checkpoints/t21_source_baseline_generations.jsonl",
+      "raw_rows": 200,
+      "successful_unique_expected_keys": 200,
+      "sha256_now": "6e3158622e8467199c8845b7bacd8cc70f99173587e51b5a7fc63bfb989634a4",
+      "prior_recorded_sha256": null,
+      "hash_originally_verified": false,
+      "provenance_status": "RECOVERED_AND_ATTESTED_NOT_ORIGINALLY_HASH_VERIFIED",
+      "hf_roundtrip_sha256": "6e3158622e8467199c8845b7bacd8cc70f99173587e51b5a7fc63bfb989634a4",
+      "hf_roundtrip_verified": true
+    },
+    "t21_full_capability_generations.jsonl": {
+      "recovered_from_local_path": "/content/drive/MyDrive/[anonymized-repository-name]-t21/checkpoints/t21_full_capability_generations.jsonl",
+      "raw_rows": 6224,
+      "sha256_now": "8aa5ffc35c2bcc63174014752b2d4f15946d4180800a5d4b3266eaf44b16a68d",
+      "prior_recorded_sha256": null,
+      "hash_originally_verified": false,
+      "provenance_status": "RECOVERED_AND_ATTESTED_NOT_ORIGINALLY_HASH_VERIFIED",
+      "hf_roundtrip_sha256": "8aa5ffc35c2bcc63174014752b2d4f15946d4180800a5d4b3266eaf44b16a68d",
+      "hf_roundtrip_verified": true
+    },
+    "t21_source_harm_judgments_deepseek_v3_appendix_d2_2_source_max_v5_novita.jsonl": {
+      "recovered_from_local_path": "/content/drive/MyDrive/[anonymized-repository-name]-t21/checkpoints/t21_source_harm_judgments_deepseek_v3_appendix_d2_2_source_max_v5_novita.jsonl",
+      "raw_rows": 317,
+      "successful_rows": 200,
+      "successful_unique_expected_keys": 200,
+      "technical_error_retry_rows": 117,
+      "invalid_rows": 0,
+      "judge_model": "deepseek-ai/DeepSeek-V3",
+      "judge_provider": "novita",
+      "system_prompt_sha256": "7ee9c5564556a13b434dfcadd8427ce06288bed8d4d57fafaddaaecca39dc633",
+      "user_template_sha256": "b445c9f5212519999b48ce4e17295186db81cb0adeaac148acb7f14b776c1dbf",
+      "sha256_now": "b9f3d6552a2732bd0920ab48707e46585cff6e375fff8892801d594b8f340b08",
+      "prior_recorded_sha256": null,
+      "hash_originally_verified": false,
+      "provenance_status": "RECOVERED_AND_ATTESTED_NOT_ORIGINALLY_HASH_VERIFIED",
+      "hf_roundtrip_sha256": "b9f3d6552a2732bd0920ab48707e46585cff6e375fff8892801d594b8f340b08",
+      "hf_roundtrip_verified": true
+    }
+  },
+  "provenance_boundary": {
+    "historically_hash_verified_files": [
+      "t21_eval_manifest_frozen.jsonl"
+    ],
+    "recovery_time_attestation_only_files": [
+      "t21_source_baseline_generations.jsonl",
+      "t21_full_capability_generations.jsonl",
+      "t21_source_harm_judgments_deepseek_v3_appendix_d2_2_source_max_v5_novita.jsonl"
+    ]
+  },
+  "note": "The frozen evaluation manifest is byte-verified against its prior committed SHA-256. The three raw generation/judgment artifacts had no historical SHA-256 recorded, so their hashes are recovery-time attestations of the exact original Drive bytes pinned at hf_revision. The source-max judge file is preserved byte-for-byte, including technical-error retry rows."
+}

@@ -1,0 +1,68 @@
+{
+  "all_response": {
+    "0": {
+      "total": 80,
+      "eligible": 79
+    },
+    "1": {
+      "total": 80,
+      "eligible": 79
+    },
+    "2": {
+      "total": 80,
+      "eligible": 79
+    },
+    "3": {
+      "total": 80,
+      "eligible": 80
+    },
+    "4": {
+      "total": 80,
+      "eligible": 80
+    }
+  },
+  "answer": {
+    "0": {
+      "total": 80,
+      "eligible": 79
+    },
+    "1": {
+      "total": 80,
+      "eligible": 79
+    },
+    "2": {
+      "total": 80,
+      "eligible": 79
+    },
+    "3": {
+      "total": 80,
+      "eligible": 80
+    },
+    "4": {
+      "total": 80,
+      "eligible": 80
+    }
+  },
+  "reasoning": {
+    "0": {
+      "total": 80,
+      "eligible": 79
+    },
+    "1": {
+      "total": 80,
+      "eligible": 79
+    },
+    "2": {
+      "total": 80,
+      "eligible": 79
+    },
+    "3": {
+      "total": 80,
+      "eligible": 80
+    },
+    "4": {
+      "total": 80,
+      "eligible": 80
+    }
+  }
+}

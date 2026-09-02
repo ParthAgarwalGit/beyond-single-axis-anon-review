@@ -1,0 +1,33 @@
+{
+  "schema_version": "t29-qwen-matched-control-hf-archive/1.0",
+  "task": "T29",
+  "created_utc": "2026-08-23T04:57:30.030849+00:00",
+  "status": "IMMUTABLY_ARCHIVED_AND_ROUNDTRIP_VERIFIED",
+  "repo_id": "[Author-B-HF]/[anonymized-repository-name]-artifacts",
+  "repo_type": "dataset",
+  "path_prefix": "t29-qwen-matched-controls/",
+  "revision": "e29553fe75a7d89757258e7c6c38723de1960ca9",
+  "files": {
+    "qwen_capping_400_generation_population.jsonl": {
+      "path_in_repo": "t29-qwen-matched-controls/qwen_capping_400_generation_population.jsonl",
+      "expected_sha256": "24a0c5a3699fd6b51a66d4be92bc054d14cb800db894c0162b65774c5667f06b",
+      "local_sha256": "24a0c5a3699fd6b51a66d4be92bc054d14cb800db894c0162b65774c5667f06b",
+      "hf_roundtrip_sha256": "24a0c5a3699fd6b51a66d4be92bc054d14cb800db894c0162b65774c5667f06b",
+      "hf_roundtrip_verified": true
+    },
+    "t29_qwen_new_matched_controls_200.jsonl": {
+      "path_in_repo": "t29-qwen-matched-controls/t29_qwen_new_matched_controls_200.jsonl",
+      "expected_sha256": "66ef447ef035a35eb0fb9502949dc3412fe2e540de0e20abba246cd71283f582",
+      "local_sha256": "66ef447ef035a35eb0fb9502949dc3412fe2e540de0e20abba246cd71283f582",
+      "hf_roundtrip_sha256": "66ef447ef035a35eb0fb9502949dc3412fe2e540de0e20abba246cd71283f582",
+      "hf_roundtrip_verified": true
+    },
+    "T29_QWEN_MATCHED_CONTROL_EXECUTION_RECEIPT.json": {
+      "path_in_repo": "t29-qwen-matched-controls/T29_QWEN_MATCHED_CONTROL_EXECUTION_RECEIPT.json",
+      "expected_sha256": "8539aa603e35f1ffb373ceff0e6f5435a9c36187e0757385b0aa8ad79ee2ecac",
+      "local_sha256": "8539aa603e35f1ffb373ceff0e6f5435a9c36187e0757385b0aa8ad79ee2ecac",
+      "hf_roundtrip_sha256": "8539aa603e35f1ffb373ceff0e6f5435a9c36187e0757385b0aa8ad79ee2ecac",
+      "hf_roundtrip_verified": true
+    }
+  }
+}

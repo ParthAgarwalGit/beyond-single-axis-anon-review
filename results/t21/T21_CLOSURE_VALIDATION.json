@@ -1,0 +1,49 @@
+{
+  "schema_version": "t21-closure-static-attestation-v1",
+  "artifact_type": "STATIC_ATTESTATION_NOT_RECOMPUTATION",
+  "status": "ATTESTED",
+  "scope": "This file records checks performed during static/manual closure review against committed notebook bytes and committed summary artifacts. It does not recompute raw generation or judgment metrics because the raw JSONL checkpoints remain outside Git on persistent storage.",
+  "reviewed_notebooks": {
+    "capability": {
+      "sha256": "d63ccba3ac56c9471628bbb4997a7d04f60e5d9e6d095df0bb82ee3b49c1fbb7",
+      "code_compile_errors": [],
+      "completed_generations_attested": 6224,
+      "expected_generations": 6224
+    },
+    "safety_judge": {
+      "sha256": "a22849740aed0559a2e373ecd0351d752c97cb9de9c480e13fefaebb21c5f7c6",
+      "code_compile_errors": [],
+      "judge_model_exact_original_deepseek_v3": true,
+      "provider_pinned_novita": true,
+      "faithful_appendix_d2_2_prompt": true,
+      "stale_paraphrased_prompt_label_absent": true,
+      "completed_judgments_attested": 200,
+      "expected_judgments": 200
+    }
+  },
+  "frozen_inputs": {
+    "capability_manifest_sha256": "7217d6021d77d9dc2091601dbe85a2974ccaa610b97fc77e90007732f9931f55",
+    "safety_manifest_sha256": "d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793"
+  },
+  "attested_summary_values": {
+    "safety_strict_harmful_rate_unsteered": 0.04,
+    "safety_strict_harmful_rate_capped": 0.04,
+    "paired_strict_harm_difference": 0.0,
+    "capability_successful_generations": 6224,
+    "capability_sum_relative_reductions_pct": 2.261882357200842
+  },
+  "capability_uncertainty": {
+    "artifact": "results/t21/t21_capability_uncertainty.json",
+    "binary_intervals_are_aggregate_only": true,
+    "eq_bench_binomial_interval_applicable": false,
+    "aggregate_relative_reduction_has_combined_ci": false,
+    "aggregate_relative_reduction_status": "DESCRIPTIVE_ONLY"
+  },
+  "claim_boundary_checks": {
+    "exact_lu_replication_claim_forbidden": true,
+    "adapted_safety_evaluation_explicit": true,
+    "source_provider_undisclosed_explicit": true,
+    "full_capability_battery_complete_attested": true,
+    "t21_alone_not_claimed_as_causal_specificity": true
+  }
+}

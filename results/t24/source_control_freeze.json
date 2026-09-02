@@ -1,0 +1,451 @@
+{
+  "schema_version": "t24-source-control-freeze/1.3",
+  "task": "T24",
+  "status": "FROZEN_NUMERICAL_CONTROLS",
+  "source_git_sha": "a880b4102de910ef08b57bd43fd00ca87b3de48e",
+  "source_git_dirty": false,
+  "calibration_archive": {
+    "repo_id": "[Author-B-HF]/[anonymized-repository-name]-artifacts",
+    "repo_type": "dataset",
+    "path": "t24-calibration/t24_qwen_calibration.npz",
+    "revision": "1bdf7ce4f5e71e487c8e13735f85490afc1cee28"
+  },
+  "interpretation_notes": {
+    "engagement_gate_role": "self_consistency_regression_guard_not_independent_evidence",
+    "engagement_gate_explanation": "Primary control quantiles are derived from measured source engagement. The 0.03 gate therefore checks implementation consistency, tie handling, and inequality semantics; it is not independent evidence of nontrivial control comparability.",
+    "majority_engagement_layers": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "sphere_control_asymmetry": "At layers 46-49 the matched spherical control radially projects a majority of natural rows toward the default-Assistant centroid. A null T29 sphere result is correspondingly strong, whereas a positive result is more ambiguous between intervention strength and geometry."
+  },
+  "deviation": {
+    "id": "T24_ENGAGEMENT_MATCHING_2026-08-21",
+    "path": "docs/DEVIATION_2026-08-21_T24_ENGAGEMENT_MATCHING.md",
+    "trigger": "original q25/q75 controls failed the predeclared engagement-match gate on genuine Qwen calibration",
+    "approved_before_t29_matched_control_outcomes": true,
+    "source_treatment_changed": false,
+    "primary_rule": "match each project control's engagement to measured source-cap engagement per layer",
+    "original_q25_q75_retained_as_sensitivity": true
+  },
+  "model": {
+    "id": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "dtype": "bfloat16",
+    "thinking": false
+  },
+  "source_axis_condition": {
+    "authority": "T21 source-capping reproduction",
+    "assistant_axis_sha256": "a207fe7a36563280b7b29010880aa0082bd8e3113c141cb4a2eed6b46c140211",
+    "capping_config_sha256": "6aec1220487473aaeab80b05d5d960ac54b5dd9080b51ac4bb0bbd1f4330db24",
+    "setting": "layers_46:54-p0.25",
+    "layers": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "retuned_in_t24": false,
+    "engagement_measurement": "released per-layer capping vectors/thresholds applied as measurement only to the same frozen natural calibration rows"
+  },
+  "natural_calibration_corpus": {
+    "source_id": "T21_JBB_BEHAVIOR_ONLY_ADAPTED_NOT_LU_PERSONA_JAILBREAK",
+    "manifest_sha256": "d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793",
+    "condition": "UNSTEERED",
+    "outcome_labels_used": false,
+    "capture_schema": "t24-qwen-calibration/1.0",
+    "capture_source_git_sha": "736b94c8b1929a1b2e54cf1c1ae535c1d022bbec"
+  },
+  "control_freeze": {
+    "random_base_seed": 20260818,
+    "random_rule": "per-layer Gaussian draw; remove source-Axis component; unit normalize",
+    "random_threshold_rule": "own natural projection quantile equal to measured source engagement rate",
+    "sphere_center_rule": "frozen default-Assistant centroid per layer",
+    "sphere_radius_rule": "natural distance-to-default-centroid quantile equal to 1 - measured source engagement rate",
+    "source_treatment_engagement_measured_not_assumed": true,
+    "outcome_data_used_for_calibration": false,
+    "post_outcome_retuning_forbidden": true,
+    "original_predeclared_sensitivity": {
+      "random_lower_tail_quantile": 0.25,
+      "sphere_radius_quantile": 0.75,
+      "role": "unmatched-engagement sensitivity/reference only"
+    }
+  },
+  "matching_constraints": [
+    "same model/revision",
+    "same evaluation rows",
+    "same layers 46-53",
+    "same token positions",
+    "same dtype",
+    "same decoding",
+    "same scoring",
+    "same natural calibration corpus/serialization"
+  ],
+  "calibration_input_sha256": "bb0670832e065f52a7c46dc99acf467960523f4cca888cca996347e3290d19c1",
+  "numerical_controls_npz": "/content/[anonymized-repository-name]/results/t24/source_control_parameters.npz",
+  "layers": {
+    "46": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 0.9999999999999999,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -0.9999999999999999,
+      "source_axis_threshold": -32.5,
+      "source_axis_engagement_rate": 0.5959463547443783,
+      "abs_cos_axis_random": 2.6020852139652106e-17,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.5959463547443783,
+      "random_threshold": 4.057421741802221,
+      "random_engagement_rate": 0.5959463547443783,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.4040536452556217,
+      "sphere_radius": 510.5118245094057,
+      "sphere_engagement_rate": 0.5959463547443783,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": 1.1072378283361033,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 546.3280045371093,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    },
+    "47": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 0.9999999999999998,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -0.9999999999999998,
+      "source_axis_threshold": -64.5,
+      "source_axis_engagement_rate": 0.5841484319854795,
+      "abs_cos_axis_random": 1.1275702593849246e-17,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.5841484319854795,
+      "random_threshold": 3.957489253106384,
+      "random_engagement_rate": 0.5841484319854795,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.4158515680145205,
+      "sphere_radius": 525.217186875283,
+      "sphere_engagement_rate": 0.5841484319854795,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": 0.4453930329115201,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 561.7155568374986,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    },
+    "48": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 0.9999999999999999,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -0.9999999999999999,
+      "source_axis_threshold": -35.75,
+      "source_axis_engagement_rate": 0.5803166280125038,
+      "abs_cos_axis_random": 7.15573433840433e-18,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.5803166280125038,
+      "random_threshold": 1.6496637961272878,
+      "random_engagement_rate": 0.5803166280125038,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.41968337198749617,
+      "sphere_radius": 528.0754893012023,
+      "sphere_engagement_rate": 0.5803166280125038,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": -2.6982132101970002,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 566.8569641567227,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    },
+    "49": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 1.0000000000000002,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -1.0000000000000002,
+      "source_axis_threshold": -37.25,
+      "source_axis_engagement_rate": 0.534940002016739,
+      "abs_cos_axis_random": 1.5287250632045613e-17,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.534940002016739,
+      "random_threshold": 3.5712377720369397,
+      "random_engagement_rate": 0.534940002016739,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.46505999798326103,
+      "sphere_radius": 541.5046943809796,
+      "sphere_engagement_rate": 0.534940002016739,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": 0.2778204539071836,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 585.3628170876115,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    },
+    "50": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 0.9999999999999996,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -0.9999999999999996,
+      "source_axis_threshold": -33.0,
+      "source_axis_engagement_rate": 0.49208429968740547,
+      "abs_cos_axis_random": 2.8189256484623115e-18,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.49208429968740547,
+      "random_threshold": 1.3496469844333456,
+      "random_engagement_rate": 0.49208429968740547,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.5079157003125945,
+      "sphere_radius": 576.6015328070638,
+      "sphere_engagement_rate": 0.49208429968740547,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": -1.7993022723422019,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 619.7705245880231,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    },
+    "51": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 1.0000000000000002,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -1.0000000000000002,
+      "source_axis_threshold": -28.5,
+      "source_axis_engagement_rate": 0.4669758999697489,
+      "abs_cos_axis_random": 1.214306433183765e-17,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.4669758999697489,
+      "random_threshold": -7.391855273342812,
+      "random_engagement_rate": 0.4669758999697489,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.5330241000302511,
+      "sphere_radius": 612.0873492313672,
+      "sphere_engagement_rate": 0.4669758999697489,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": -11.488558486311538,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 663.0034808782156,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    },
+    "52": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 1.0000000000000004,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -1.0000000000000004,
+      "source_axis_threshold": -21.0,
+      "source_axis_engagement_rate": 0.43198547947968136,
+      "abs_cos_axis_random": 1.1275702593849246e-17,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.43198547947968136,
+      "random_threshold": 6.8144314846891225,
+      "random_engagement_rate": 0.43198547947968136,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.5680145205203186,
+      "sphere_radius": 661.5547041628427,
+      "sphere_engagement_rate": 0.43198547947968136,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": 3.6552043848389166,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 714.0522334324014,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    },
+    "53": {
+      "n_natural_calibration": 9917,
+      "n_default_reference": 100,
+      "hidden_size": 5120,
+      "axis_released_cosine": 1.0,
+      "axis_raw_allclose": true,
+      "source_capping_vector_axis_cosine": -1.0,
+      "source_axis_threshold": -44.5,
+      "source_axis_engagement_rate": 0.48290813754159523,
+      "abs_cos_axis_random": 1.0408340855860843e-17,
+      "primary_matching_rule": "engagement_matched_to_measured_source_rate",
+      "random_lower_tail_quantile": 0.48290813754159523,
+      "random_threshold": 5.6032407963533615,
+      "random_engagement_rate": 0.48290813754159523,
+      "random_minus_source_engagement": 0.0,
+      "sphere_center": "default-Assistant centroid from default_L",
+      "sphere_radius_quantile": 0.5170918624584048,
+      "sphere_radius": 709.4715986279018,
+      "sphere_engagement_rate": 0.48290813754159523,
+      "sphere_minus_source_engagement": 0.0,
+      "original_predeclared_sensitivity": {
+        "random_lower_tail_quantile": 0.25,
+        "random_threshold": 0.14401982500159338,
+        "random_engagement_rate": 0.24997479076333567,
+        "sphere_radius_quantile": 0.75,
+        "sphere_radius": 785.6534179166632,
+        "sphere_engagement_rate": 0.24997479076333567,
+        "engagement_matched_to_source": false
+      }
+    }
+  },
+  "validation": {
+    "released_axis_sha256_check": "PASS",
+    "released_capping_config_sha256_check": "PASS",
+    "calibration_axis_vs_released_axis_check": "PASS",
+    "source_capping_vector_orientation_check": "PASS",
+    "source_axis_engagement_measured": "PASS",
+    "orthogonality_tolerance_absolute_cosine": 1e-06,
+    "engagement_reference": "measured source Axis-cap rate on same natural rows",
+    "engagement_absolute_tolerance": 0.03,
+    "random_directional_no_op_check": "PASS",
+    "sphere_no_op_check": "PASS",
+    "sphere_radial_boundary_check": "PASS",
+    "primary_controls_engagement_matched": "PASS"
+  },
+  "claim_boundary": "Random-direction and spherical-distance caps are project controls, not Lu source methods. Primary controls are matched to source engagement incidence, not intervention magnitude or geometry. This artifact freezes operators/calibration only and contains no T29 evaluation outcomes.",
+  "numerical_controls_npz_sha256": "adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291",
+  "canonical_controls_reproduction": {
+    "status": "PASS_OPERATIONAL_EQUIVALENCE",
+    "canonical_reviewed_sha256": "adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291",
+    "fresh_recompute_sha256": "bfa90a1a7377cd32e48f55d4ade4b0c168af2396b0bb878d4fb492d422b6ef41",
+    "byte_identical_reproduction": false,
+    "array_count": 56,
+    "exact_array_count": 44,
+    "nonexact_array_count": 12,
+    "nonexact_arrays": [
+      {
+        "key": "random_threshold_46",
+        "fresh": 4.057421741802223,
+        "canonical": 4.057421741802221,
+        "absolute_difference": 1.7763568394002505e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_46",
+        "fresh": 1.107237828336101,
+        "canonical": 1.1072378283361033,
+        "absolute_difference": 2.220446049250313e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_47",
+        "fresh": 3.957489253106382,
+        "canonical": 3.957489253106384,
+        "absolute_difference": 2.220446049250313e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_47",
+        "fresh": 0.44539303291152255,
+        "canonical": 0.4453930329115201,
+        "absolute_difference": 2.4424906541753444e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_48",
+        "fresh": -2.6982132101969984,
+        "canonical": -2.6982132101970002,
+        "absolute_difference": 1.7763568394002505e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_49",
+        "fresh": 3.5712377720369406,
+        "canonical": 3.5712377720369397,
+        "absolute_difference": 8.881784197001252e-16,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_49",
+        "fresh": 0.2778204539071851,
+        "canonical": 0.2778204539071836,
+        "absolute_difference": 1.5543122344752192e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_50",
+        "fresh": 1.349646984433345,
+        "canonical": 1.3496469844333456,
+        "absolute_difference": 6.661338147750939e-16,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_50",
+        "fresh": -1.7993022723422043,
+        "canonical": -1.7993022723422019,
+        "absolute_difference": 2.4424906541753444e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_51",
+        "fresh": -11.488558486311533,
+        "canonical": -11.488558486311538,
+        "absolute_difference": 5.329070518200751e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_53",
+        "fresh": 5.603240796353361,
+        "canonical": 5.6032407963533615,
+        "absolute_difference": 8.881784197001252e-16,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_53",
+        "fresh": 0.14401982500159383,
+        "canonical": 0.14401982500159338,
+        "absolute_difference": 4.440892098500626e-16,
+        "float32_equal": true
+      }
+    ],
+    "allowed_absolute_tolerance": 1e-12,
+    "maximum_absolute_difference": 5.329070518200751e-15,
+    "all_nonthreshold_arrays_exact": true,
+    "all_differing_thresholds_float32_equal": true,
+    "all_calibration_engagement_masks_equal": true,
+    "canonicalization_rule": "Preserve the exact independently reviewed artifact when a fresh clean-tree recomputation differs only by <=1e-12 in float64 random-projection threshold scalars, with identical float32 values and identical frozen-calibration engagement."
+  }
+}

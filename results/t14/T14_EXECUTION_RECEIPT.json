@@ -1,0 +1,26 @@
+{
+  "schema_version": "t14-execution-receipt/1.0",
+  "task": "T14",
+  "status": "FROZEN",
+  "created_utc": "2026-08-21T03:26:44.458171+00:00",
+  "source_git_sha": "fb01dfbd8247448e494136edc3b50a8e3e7d8a14",
+  "membership_authority": "docs/DEVIATION_2026-08-17_CONFIRMATORY_MEMBERSHIP.md",
+  "membership_authority_sha256": "21afdeb5aa4f45eae6d8600a60a311af2b4ce7689013e48e7b385847ea6aee1a",
+  "t15_t16_counts": "results/t15/t15_confirmatory_bundle.counts.json",
+  "t15_t16_counts_sha256": "6fc68c91539c5f3c2625d089f2301fd1ada43847c5253de629e479f4158dd694",
+  "t15_t16_report": "results/t15/confirmatory_reliability.json",
+  "t15_t16_report_sha256": "c95383683b09f0490c6f76c485a1756c7458bb427d5eb5c39adabd138edcdaed",
+  "bundle_fetched_at_hf_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1",
+  "t12_manifest_sha256": {
+    "C80-A": "021524bf56416d7217baaae07b024d398e3fc5b869561015dff24b44abacb7e8",
+    "C80-B": "987571b3518b014296326fef853709df991a4e68c7ede3ac45a9832a9e09b58e"
+  },
+  "retained_role_manifest": "results/t14/retained_roles.json",
+  "retained_role_manifest_sha256": "3c7d373cb67f96ac21d9b6cbd9097ce184d145b9d381af1ad12b3e0675524315",
+  "retained_role_count": 275,
+  "eligible_outputs": {
+    "C80-A": 21998,
+    "C80-B": 22000
+  },
+  "claim_scope": "technical-validity retained-role set; does not assert successful behavioural role enactment"
+}

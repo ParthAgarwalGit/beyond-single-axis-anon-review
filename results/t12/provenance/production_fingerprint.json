@@ -1,0 +1,23 @@
+{
+  "base_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+  "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+  "format": "t12-production-relaunch-v2-runtime-resolved",
+  "hf_dataset_repo": "[Author-A-HF]/persona-artifacts",
+  "hf_dataset_revision": "b0c9852cb42a17d222965ed2d27403ea4f86b2a1",
+  "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+  "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+  "production_signature": "5055bf516ad9a24fcc97d348f13d1e671a8032e7edf454498e7ad002536741c3",
+  "runner_sha256": "02c9a3d6a5d3484933f35f134caa5d2fe8bed256334b0f021395fb53091132c0",
+  "runtime_config_sha256": "7b8bd2918a61cf53cf97fcc8bc45d43e5f96a3987170467a2aff5ba8631c3a3e",
+  "tests_sha256": "f955dc55fce1d223094f2adde92877212ce42a27c62ac923f7584e99595271f8",
+  "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+  "translated_source_file": "lu-replication/run-003/translated/rollouts_shard0.jsonl",
+  "translated_source_sha256": "6b8c3ef5f2f1e69f6ba7241b3b3c7c98c1dad27178d6640a1c68b4313da5675f",
+  "validated_prior_gates": {
+    "historical_reconstruction": "PASS",
+    "smoke_default": "6 all / 6 answer / 6 reasoning",
+    "smoke_translated": "6 all / 6 answer / 6 reasoning",
+    "smoke_wrapper": "6 all / 6 answer / 6 reasoning",
+    "tests": "25/25 PASS"
+  }
+}

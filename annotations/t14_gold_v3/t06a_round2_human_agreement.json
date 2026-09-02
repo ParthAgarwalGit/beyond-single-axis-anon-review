@@ -1,0 +1,166 @@
+{
+  "task": "T06A_ROUND2_HUMAN_AGREEMENT",
+  "status": "PRE_ADJUDICATION",
+  "inputs": {
+    "labeller_1_round2": "t06a_round2_labeller_1(2).csv",
+    "labeller_1_sha256": "1c0a98604cec51ad97b1bf0dfedf2c3fcd8a189f44a653b514f279c8a406a4bc",
+    "labeller_2_round2": "t06a_round2_labeller_2(1).csv",
+    "labeller_2_sha256": "657de4661262fe621fd2bf82de1bf1aec46eb61361a71f3ef6a0a4ffac788761",
+    "original_round1_agreement": "human_agreement.json",
+    "original_round1_agreement_sha256": "51f3bcc1791ef8afabbf9411092345ab47681c43fa61e49a30bc99cf84a22dfe",
+    "original_adjudication_worksheet": "adjudication_worksheet.csv",
+    "original_adjudication_worksheet_sha256": "51eaed56a4adeb5a72fa66d09889d01c7aa52251b24429a1358f8a0fd728dc5b"
+  },
+  "round1_original_300": {
+    "n_items": 300,
+    "raw_agreement": 0.5167,
+    "cohen_kappa_4class": 0.2933,
+    "cohen_kappa_score3_vs_rest": 0.3648,
+    "n_disagreements": 145,
+    "n_disagreements_on_2_vs_3": 45,
+    "n_disagreements_touching_2_or_3": 129,
+    "labeller_1_dist": {
+      "0": 2,
+      "1": 111,
+      "2": 90,
+      "3": 97
+    },
+    "labeller_2_dist": {
+      "0": 24,
+      "1": 145,
+      "2": 58,
+      "3": 73
+    },
+    "confusion_rows_labeller1_cols_labeller2": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        16,
+        81,
+        9,
+        5
+      ],
+      [
+        3,
+        39,
+        26,
+        22
+      ],
+      [
+        3,
+        25,
+        23,
+        46
+      ]
+    ],
+    "note": "Inter-labeller agreement on the raw labels, PRE-adjudication. This is NOT the auto-judge-vs-gold gate (that is T07). No automatic judge score is used anywhere in T06 adjudication."
+  },
+  "round2_re_review_subset_149": {
+    "note": "Agreement on the deliberately hard 149-item re-review subset only. This subset is enriched for prior disagreements, so it should not be compared naively with the original 300-item agreement.",
+    "n_items": 149,
+    "raw_agreement": 0.389262,
+    "cohen_kappa_4class": 0.148304,
+    "cohen_kappa_score3_vs_rest": 0.176593,
+    "n_role_label_disagreements": 91,
+    "n_validity_disagreements": 21,
+    "n_union_disagreements_requiring_adjudication": 95,
+    "labeller_1_dist": {
+      "0": 2,
+      "1": 32,
+      "2": 73,
+      "3": 42
+    },
+    "labeller_2_dist": {
+      "0": 18,
+      "1": 59,
+      "2": 43,
+      "3": 29
+    },
+    "confusion_rows_labeller1_cols_labeller2": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        18,
+        5,
+        2
+      ],
+      [
+        6,
+        28,
+        25,
+        14
+      ],
+      [
+        3,
+        13,
+        13,
+        13
+      ]
+    ]
+  },
+  "post_round2_reconstructed_300": {
+    "note": "For the 149 re-reviewed items, uses the Round-2 labels. For the other 151 items, preserves the original independent Round-1 labels unchanged.",
+    "n_items": 300,
+    "raw_agreement": 0.696667,
+    "cohen_kappa_4class": 0.556119,
+    "cohen_kappa_score3_vs_rest": 0.621849,
+    "n_role_label_disagreements": 91,
+    "n_direct_2_vs_3_disagreements": 27,
+    "n_disagreements_touching_2_or_3": 84,
+    "n_validity_disagreements": 21,
+    "labeller_1_dist": {
+      "0": 4,
+      "1": 111,
+      "2": 97,
+      "3": 88
+    },
+    "labeller_2_dist": {
+      "0": 20,
+      "1": 138,
+      "2": 67,
+      "3": 75
+    },
+    "confusion_rows_labeller1_cols_labeller2": [
+      [
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        97,
+        5,
+        2
+      ],
+      [
+        6,
+        28,
+        49,
+        14
+      ],
+      [
+        3,
+        13,
+        13,
+        59
+      ]
+    ],
+    "change_from_round1": {
+      "raw_agreement_delta": 0.179967,
+      "cohen_kappa_4class_delta": 0.262819,
+      "cohen_kappa_score3_vs_rest_delta": 0.257049,
+      "role_label_disagreements_delta": -54
+    }
+  },
+  "next_step": "Adjudicate only the 95 Round-2 items with a remaining role-label and/or human-validity disagreement, without viewing automatic-judge predictions. Then construct the final 300-item gold_consensus.csv."
+}

@@ -1,0 +1,416 @@
+{
+  "schema_version": "t31-figures-manifest/2.0",
+  "task": "T31",
+  "status": "TEMPLATES_AWAITING_RESULTS",
+  "note": "Contracts only. No figure carries fabricated data. Each panel renders only once its own source CSV has rows. Every panel and table declares its saved source data, how those columns map onto the chart, its producing task, and the T32 claim branch(es) it supports.",
+  "supported_chart_types": [
+    "dag",
+    "scatter",
+    "bar",
+    "grouped_bar",
+    "dose_response",
+    "heatmap"
+  ],
+  "n_figures": 9,
+  "n_panels": 10,
+  "figures": [
+    {
+      "figure_id": "F1_evidence_chain",
+      "title": "Evidence chain",
+      "supports_claims": [
+        "validated_transfer",
+        "negative_result"
+      ],
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "dag",
+          "required_columns": [
+            "node_id",
+            "label",
+            "status",
+            "depends_on"
+          ],
+          "render_spec": {
+            "node": "node_id",
+            "label": "label",
+            "status": "status",
+            "depends_on": "depends_on"
+          },
+          "producing_task": "T00/T30 (task DAG)",
+          "source_csv": "design/figures/sources/F1_evidence_chain.csv",
+          "columns_sha256": "246badf86e1b52fbd877b7a55f18b5b9ef76c2251489f49788369d0f9ee6f921"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F2_channel_2x2",
+      "title": "Two-model x two-channel comparison",
+      "supports_claims": [
+        "prompt_conditioned_geometry",
+        "security_effect_without_identity_specificity",
+        "one_model_pilot"
+      ],
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "grouped_bar",
+          "required_columns": [
+            "model",
+            "channel",
+            "full_role_rate",
+            "ci_low",
+            "ci_high",
+            "n"
+          ],
+          "render_spec": {
+            "group": "model",
+            "category": "channel",
+            "value": "full_role_rate",
+            "err_low": "ci_low",
+            "err_high": "ci_high",
+            "n": "n"
+          },
+          "producing_task": "T19 (analysis_registry P2_CHANNEL_INTERACTION)",
+          "producing_artifact": "NOT_YET_DEFINED",
+          "source_csv": "design/figures/sources/F2_channel_2x2.csv",
+          "columns_sha256": "5c16269ed55affa2fd43c9ba9402b07b66376c187a065b304909b7f5a9280544"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F3_role_retention_judge_confusion",
+      "title": "Role retention and judge confusion",
+      "supports_claims": [
+        "validated_transfer"
+      ],
+      "notes": "Two panels with two separate saved sources. The confusion panel alone cannot reproduce the retention panel, so retention has its own contract rather than being implied.",
+      "n_panels": 2,
+      "panels": [
+        {
+          "panel_id": "confusion",
+          "chart_type": "heatmap",
+          "required_columns": [
+            "human_label",
+            "judge_label",
+            "count"
+          ],
+          "render_spec": {
+            "row": "human_label",
+            "col": "judge_label",
+            "value": "count"
+          },
+          "producing_task": "T06/T07 (human vs judge labels)",
+          "source_csv": "design/figures/sources/F3_role_retention_judge_confusion__confusion.csv",
+          "columns_sha256": "7dea1777d018137d37262aff4290a1d9fbdd30d7f210bf4b1e8138075f307322"
+        },
+        {
+          "panel_id": "retention",
+          "chart_type": "bar",
+          "required_columns": [
+            "role_id",
+            "n_eligible",
+            "n_score3",
+            "retention_rate",
+            "ci_low",
+            "ci_high"
+          ],
+          "render_spec": {
+            "category": "role_id",
+            "value": "retention_rate",
+            "err_low": "ci_low",
+            "err_high": "ci_high"
+          },
+          "producing_task": "T14 (role retention / eligibility)",
+          "source_csv": "design/figures/sources/F3_role_retention_judge_confusion__retention.csv",
+          "columns_sha256": "903b1461a23fec65666d56e2f6b8e184721e56a822c8d452a889508db2244216"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F4_c80_reliability",
+      "title": "C80-A / C80-B cross-axis role-projection reliability",
+      "supports_claims": [
+        "validated_transfer",
+        "reliable_but_not_causally_specific"
+      ],
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "scatter",
+          "required_columns": [
+            "role_id",
+            "proj_on_axis_B",
+            "proj_on_axis_A"
+          ],
+          "render_spec": {
+            "x": "proj_on_axis_B",
+            "y": "proj_on_axis_A",
+            "label": "role_id"
+          },
+          "producing_task": "T16 (geometry_confirmatory_v3.json)",
+          "source_csv": "design/figures/sources/F4_c80_reliability.csv",
+          "columns_sha256": "de154e5c3c8c597ae41506290d76ecc81049d508c19babe02eceb0c20c9faccf"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F5_all_response_vs_answer_only",
+      "title": "All-response versus answer-only geometry",
+      "supports_claims": [
+        "measurement_limited_result"
+      ],
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "scatter",
+          "required_columns": [
+            "role_id",
+            "proj_all_response",
+            "proj_answer_only"
+          ],
+          "render_spec": {
+            "x": "proj_all_response",
+            "y": "proj_answer_only",
+            "label": "role_id"
+          },
+          "producing_task": "T15/T17 (pool sensitivities)",
+          "source_csv": "design/figures/sources/F5_all_response_vs_answer_only.csv",
+          "columns_sha256": "b199b65db392ab741e0f1bb80deef937077445dcc1c1bb48fb031ed796927e6f"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F6_wrapper_vs_translated",
+      "title": "Wrapper versus translated geometry",
+      "supports_claims": [
+        "prompt_conditioned_geometry"
+      ],
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "scatter",
+          "required_columns": [
+            "role_id",
+            "proj_translated",
+            "proj_wrapper"
+          ],
+          "render_spec": {
+            "x": "proj_translated",
+            "y": "proj_wrapper",
+            "label": "role_id"
+          },
+          "producing_task": "T15 (wrapper E80 sensitivity)",
+          "source_csv": "design/figures/sources/F6_wrapper_vs_translated.csv",
+          "columns_sha256": "e3188338eb05a46a7e98817c85b3980e4190e2e149cc338a0a2f512252bfaef2"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F7_axis_vs_random_causal",
+      "title": "Axis versus random causal effects",
+      "supports_claims": [
+        "security_effect_without_identity_specificity",
+        "reliable_but_not_causally_specific"
+      ],
+      "notes": "shared_zero is ONE condition, stored ONCE, with direction='shared_zero'. Do not duplicate it per direction merely to draw two curves: the frozen two-slope encoding (analysis_registry P4/P5) sets axis_dose = random_dose = 0 on that single row, and both curves are drawn through it at render time. Duplicating the row would double-count the shared zero in any count taken from this source.",
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "dose_response",
+          "required_columns": [
+            "condition",
+            "direction",
+            "signed_coefficient",
+            "strict_harmful_rate",
+            "ci_low",
+            "ci_high",
+            "n"
+          ],
+          "render_spec": {
+            "series": "direction",
+            "x": "signed_coefficient",
+            "y": "strict_harmful_rate",
+            "err_low": "ci_low",
+            "err_high": "ci_high",
+            "n": "n"
+          },
+          "producing_task": "T28 (primary causal statistics)",
+          "source_csv": "design/figures/sources/F7_axis_vs_random_causal.csv",
+          "columns_sha256": "313ea34a3fb987d90d52a4e3d142a963d5ed8b4d98ec3e55c5eb84d34aa0bc7b"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F8_harm_identity_by_steering",
+      "title": "Harm and identity by steering condition",
+      "supports_claims": [
+        "security_effect_without_identity_specificity"
+      ],
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "grouped_bar",
+          "required_columns": [
+            "condition",
+            "outcome",
+            "rate",
+            "ci_low",
+            "ci_high",
+            "n"
+          ],
+          "render_spec": {
+            "group": "outcome",
+            "category": "condition",
+            "value": "rate",
+            "err_low": "ci_low",
+            "err_high": "ci_high",
+            "n": "n"
+          },
+          "producing_task": "T28 (harm + identity models)",
+          "source_csv": "design/figures/sources/F8_harm_identity_by_steering.csv",
+          "columns_sha256": "aac31316965d5ac29151bffdd3fc4ce224c4af50bd78ae488ccbbe1cab8192a7"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    },
+    {
+      "figure_id": "F9_degeneration_by_condition",
+      "title": "Degeneration by condition",
+      "supports_claims": [
+        "measurement_limited_result",
+        "negative_result"
+      ],
+      "n_panels": 1,
+      "panels": [
+        {
+          "panel_id": null,
+          "chart_type": "bar",
+          "required_columns": [
+            "condition",
+            "degenerate_rate",
+            "empty_rate",
+            "n"
+          ],
+          "render_spec": {
+            "category": "condition",
+            "value": "degenerate_rate",
+            "n": "n"
+          },
+          "producing_task": "T25/T28 (degeneration outcome)",
+          "source_csv": "design/figures/sources/F9_degeneration_by_condition.csv",
+          "columns_sha256": "39e32b49e77b4a35a06570523f8187c5556cad312b7f9c9a08e3443d216f0683"
+        }
+      ],
+      "status": "AWAITING_RESULTS",
+      "saved_source_data_required": true
+    }
+  ],
+  "n_tables": 4,
+  "tables": [
+    {
+      "table_id": "T_role_judge_validation",
+      "title": "Role-judge validation metrics",
+      "required_columns": [
+        "metric",
+        "value",
+        "gate_threshold",
+        "passes"
+      ],
+      "producing_task": "T07 (P1_ROLE_JUDGE_GATE)",
+      "supports_claims": [
+        "validated_transfer"
+      ],
+      "source_csv": "design/tables/sources/T_role_judge_validation.csv",
+      "columns_sha256": "7396a93819b1860a171724a90b66a541db4ee4bf99ce7708e7000b7ee02af05d",
+      "status": "AWAITING_RESULTS"
+    },
+    {
+      "table_id": "T_channel_calibration",
+      "title": "Channel calibration full-role rates",
+      "required_columns": [
+        "model",
+        "channel",
+        "full_role_rate",
+        "ci_low",
+        "ci_high",
+        "n"
+      ],
+      "producing_task": "T19 (analysis_registry P2_CHANNEL_INTERACTION)",
+      "producing_artifact": "NOT_YET_DEFINED",
+      "supports_claims": [
+        "prompt_conditioned_geometry",
+        "one_model_pilot"
+      ],
+      "source_csv": "design/tables/sources/T_channel_calibration.csv",
+      "columns_sha256": "5c16269ed55affa2fd43c9ba9402b07b66376c187a065b304909b7f5a9280544",
+      "status": "AWAITING_RESULTS"
+    },
+    {
+      "table_id": "T_confirmatory_reliability",
+      "title": "Confirmatory reliability and nulls",
+      "required_columns": [
+        "statistic",
+        "estimate",
+        "ci_low",
+        "ci_high",
+        "null_mean",
+        "null_p",
+        "n_roles"
+      ],
+      "producing_task": "T16 (P3_CONFIRMATORY_GEOMETRY)",
+      "supports_claims": [
+        "validated_transfer",
+        "reliable_but_not_causally_specific"
+      ],
+      "source_csv": "design/tables/sources/T_confirmatory_reliability.csv",
+      "columns_sha256": "cf190599161a41a1bb7a7bbbf446fdd983c3b24753941f5cebd3e4dd4728a5d9",
+      "status": "AWAITING_RESULTS"
+    },
+    {
+      "table_id": "T_causal_specificity",
+      "title": "Causal specificity (Axis vs random)",
+      "required_columns": [
+        "outcome",
+        "beta_axis",
+        "beta_random",
+        "beta_difference",
+        "ci_low",
+        "ci_high",
+        "holm_p"
+      ],
+      "producing_task": "T28 (P4/P5)",
+      "supports_claims": [
+        "security_effect_without_identity_specificity",
+        "reliable_but_not_causally_specific"
+      ],
+      "source_csv": "design/tables/sources/T_causal_specificity.csv",
+      "columns_sha256": "a99ab637031519ad0f012149765b3da012694d23979e2eb04686f9a0a6b66163",
+      "status": "AWAITING_RESULTS"
+    }
+  ],
+  "contracts_sha256": "3bed5808a03ad883432aefe6d4e289f797c6dac2e521a9fc5560a472233f2940",
+  "contracts_sha256_covers": "Complete figure and table contracts - columns, chart types, render specs, producing tasks, claim mappings, source paths - excluding only the volatile `status` field."
+}

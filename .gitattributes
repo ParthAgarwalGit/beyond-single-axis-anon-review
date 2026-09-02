@@ -1,0 +1,22 @@
+# Canonical LF for text artifacts, so working-tree bytes equal committed bytes
+# and sha256sum <file> == git show HEAD:<file> | sha256sum on every platform.
+*.json    text eol=lf
+*.jsonl   text eol=lf
+*.md      text eol=lf
+*.py      text eol=lf
+*.ipynb   text eol=lf
+*.csv     text eol=lf
+# The archived Engels replication CSV blobs predate this convention and are
+# intentionally retained byte-for-byte. Treat them as opaque historical outputs
+# so checkout does not rewrite CRLF blobs to LF and make every clean tree dirty.
+replications/engels-irreducibility/results/*.csv -text
+# method_frozen.yaml is hash-stamped into every report, so its working-tree
+# bytes must equal its committed bytes on Windows too.
+*.yaml    text eol=lf
+*.yml     text eol=lf
+
+# Binary
+*.pdf     binary
+*.safetensors binary
+*.npy     binary
+*.pt      binary

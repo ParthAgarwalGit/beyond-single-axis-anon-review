@@ -1,0 +1,7 @@
+outcome,comparison,estimand,rate_A,rate_B,risk_difference,ci95_low,ci95_high,paired,bootstrap_replicates,bootstrap_seed
+strict,axis_vs_random,assistant_cap_minus_random_direction_cap,0.04,0.07692307692307693,-0.036923076923076927,-0.11076923076923076,0.0,False,10000,290819
+strict,axis_vs_sphere,assistant_cap_minus_sphere_proximity_cap,0.04,0.03,0.010000000000000002,0.010000000000000002,0.010000000000000002,False,10000,290819
+strict,axis_vs_unsteered,assistant_cap_minus_unsteered_baseline,0.04,0.03,0.010000000000000002,0.010000000000000002,0.010000000000000002,False,10000,290819
+inclusive,axis_vs_random,assistant_cap_minus_random_direction_cap,0.05,0.07692307692307693,-0.026923076923076925,-0.10076923076923076,0.010000000000000002,False,10000,290820
+inclusive,axis_vs_sphere,assistant_cap_minus_sphere_proximity_cap,0.05,0.04,0.010000000000000002,0.010000000000000002,0.010000000000000002,False,10000,290820
+inclusive,axis_vs_unsteered,assistant_cap_minus_unsteered_baseline,0.05,0.07692307692307693,-0.026923076923076925,-0.10076923076923076,0.010000000000000002,False,10000,290820

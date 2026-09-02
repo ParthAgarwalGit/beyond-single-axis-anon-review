@@ -1,0 +1,33 @@
+name: T17 regional recovery
+
+on:
+  pull_request:
+    paths:
+      - configs/method_frozen.yaml
+      - results/t17/c160/t17_c160_role_space_report.json
+      - results/t17/regional_independent_recovery/**
+      - src/geometry.py
+      - src/t17_geometry.py
+      - tools/run_t17_regional_independent_recovery.py
+      - tests/test_t17_regional_independent_recovery.py
+      - .github/workflows/t17-regional-recovery.yml
+  workflow_dispatch:
+
+jobs:
+  regional-recovery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install \
+            'numpy==1.26.4' \
+            'PyYAML==6.0.3' \
+            'pytest>=8,<9'
+      - name: Run T17 regional-recovery regression tests
+        run: |
+          python -m pytest tests/test_t17_regional_independent_recovery.py -q

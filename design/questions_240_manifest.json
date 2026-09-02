@@ -1,0 +1,116 @@
+{
+  "schema_version": "t08-question-manifest/1.0",
+  "task": "T08",
+  "title": "Frozen 240-ID, three-block extraction manifest",
+  "status": "DRAFT_PRE_RENDER",
+  "method_config": {
+    "path": "configs/method_frozen.yaml",
+    "sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+    "freeze_status": "FROZEN",
+    "schema_version": "method-freeze-v3.0"
+  },
+  "source_questions": {
+    "path": "data/lu_et_al/questions.json",
+    "sha256": "142d1b08843a4193c87c1cb0cad482c3b9272562274af76414deea65d1f48d9a",
+    "n_question_ids": 240,
+    "n_unique_question_texts": 239,
+    "lu_repository": "https://github.com/safety-research/assistant-axis",
+    "lu_pinned_commit": "a98961956072224eaf244eb289d6c01700b63795"
+  },
+  "partition": {
+    "blocks": [
+      "E80",
+      "C80-A",
+      "C80-B"
+    ],
+    "n_ids_per_block": 80,
+    "n_ids_total": 240,
+    "union_is_0_to_239": true,
+    "blocks_are_disjoint": true,
+    "duplicate_text_groups": [
+      {
+        "question_ids": [
+          7,
+          227
+        ],
+        "required_common_block": "C80-A",
+        "duplicate_removed_sensitivity_drops": 227
+      }
+    ],
+    "duplicate_removed_sensitivity": {
+      "drop_question_id": 227,
+      "keep_question_id": 7
+    }
+  },
+  "prompt_assignment": {
+    "rule": "prompt_index = zero_based_position_within_frozen_block mod 5",
+    "same_mapping_for_every_role_model_and_arm": true,
+    "prompt_count": 5,
+    "counts_per_block": {
+      "E80": {
+        "0": 16,
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "C80-A": {
+        "0": 16,
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "C80-B": {
+        "0": 16,
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      }
+    },
+    "counts_across_240": {
+      "0": 48,
+      "1": 48,
+      "2": 48,
+      "3": 48,
+      "4": 48
+    },
+    "assignment_sha256": "6f0213dd56073d3ce87b835e8c7b8a7759ab9b53e78486bced689e3f0c1e6172"
+  },
+  "block_files": {
+    "E80": {
+      "path": "design/questions_E80.json",
+      "sha256": "e44eef92cf34beb4bfecffb30e61b4dd432bc3b04455ba6ba26d70b5a94366df",
+      "bytes": 31597
+    },
+    "C80-A": {
+      "path": "design/questions_C80_A.json",
+      "sha256": "0cde379ba0d551442e5739a806f22b70e21c7ef43580ab1ca6e461a373ddf19a",
+      "bytes": 31582
+    },
+    "C80-B": {
+      "path": "design/questions_C80_B.json",
+      "sha256": "f764a771e9cc0ec4ac9a6f5a2101c179b2f39395ce1fa901d75283a42c0c5df8",
+      "bytes": 31630
+    }
+  },
+  "rendered_prompt_hash_freeze": {
+    "status": "PENDING",
+    "required_before_generation": true,
+    "reason": "Exact rendered-prompt hashes require a pinned model revision, tokenizer revision, chat-template hash, and the canonical prompt renderer."
+  },
+  "analysis_blinding": {
+    "C80_geometry_must_not_be_inspected_before_both_blocks_complete": true,
+    "confirmatory_blocks": [
+      "C80-A",
+      "C80-B"
+    ]
+  },
+  "completion_gate": {
+    "question_manifest_validated": true,
+    "method_freeze_is_frozen": true,
+    "rendered_prompt_hashes_frozen": false,
+    "ready_for_generation": false
+  }
+}

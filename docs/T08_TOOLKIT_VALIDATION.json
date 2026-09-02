@@ -1,0 +1,37 @@
+{
+  "task": "T08",
+  "stage": "question_manifest_preview",
+  "builder_report": {
+    "status": "DRAFT_PRE_RENDER",
+    "manifest": "design/questions_240_manifest.json",
+    "manifest_sha256": "cef86198cf7ad76a1054d26de507271843b9efb75ef7bb3c4eaba85967af9631",
+    "method_config_sha256": "febbcbfc10ec40e98373c88a43fc31ba1c6ef2486eedeacca38d81301937e77b",
+    "source_questions_sha256": "0b348fa9646c730f08fb6264030e373bf716f4215983f8a193ae8a9884bd6897",
+    "assignment_sha256": "6f0213dd56073d3ce87b835e8c7b8a7759ab9b53e78486bced689e3f0c1e6172",
+    "block_files": {
+      "E80": {
+        "path": "design/questions_E80.json",
+        "sha256": "d2b91be92d9a981ee43f63a956f3c036c57c2f58a67dba369d0539923480d13f",
+        "bytes": 31617
+      },
+      "C80-A": {
+        "path": "design/questions_C80_A.json",
+        "sha256": "fdd442e492cada64b79b9bb63eef4de55808a8459dc7f5bad4a5c2a376d2176d",
+        "bytes": 31602
+      },
+      "C80-B": {
+        "path": "design/questions_C80_B.json",
+        "sha256": "9b7a3e47affa22bdf652af25b15da459a90a48c171a69962dd6143f070824e7b",
+        "bytes": 31650
+      }
+    },
+    "rendered_prompt_hash_freeze": {
+      "status": "PENDING",
+      "required_before_generation": true,
+      "reason": "Exact rendered-prompt hashes require a pinned model revision, tokenizer revision, chat-template hash, and the canonical prompt renderer."
+    },
+    "ready_for_generation": false
+  },
+  "tests": "8 passed in 4.40s",
+  "note": "The four question files were validated against the corrected T02 configuration and pinned T01 questions artifact. The method configuration still says REVIEW_CANDIDATE and its runtime model/tokenizer/chat-template fields are null, so the combined manifest intentionally remains DRAFT_PRE_RENDER and not ready for generation."
+}

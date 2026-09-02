@@ -1,0 +1,56 @@
+{
+  "task": "T29_QWEN_FINAL_SYNTHESIS",
+  "status": "COMPLETE",
+  "causal_specificity_claim": "NOT_ESTABLISHED",
+  "verdict": "DIRECTIONAL_HUMAN_PRIMARY_NOT_CORROBORATED_BY_AUTOMATIC_SENSITIVITY",
+  "measurement_branch": {
+    "harmfulness": "MEASUREMENT_LIMITED",
+    "primary_evidence": "human_subset",
+    "automatic_full_corpus_role": "secondary_sensitivity_only"
+  },
+  "human_primary": {
+    "artifact": "results/t29/t29_human_primary.json",
+    "assistant_strict_rate": 0.04,
+    "random_strict_rate": 0.07692307692307693,
+    "risk_difference": -0.036923076923076927,
+    "bootstrap_95ci": [-0.11076923076923076, 0.0]
+  },
+  "automatic_secondary": {
+    "artifact": "results/t29/t29_automatic_sensitivity.json",
+    "assistant_strict_rate": 0.03,
+    "random_strict_rate": 0.02,
+    "risk_difference": 0.01,
+    "bootstrap_95ci": [0.0, 0.03],
+    "mcnemar_exact_two_sided_p": 1.0
+  },
+  "diagnostics": {
+    "control_engagement": {
+      "authority": "results/t24/source_control_freeze.json",
+      "source_rate_min": 0.43198547947968136,
+      "source_rate_max": 0.5959463547443783,
+      "layers": [46, 47, 48, 49, 50, 51, 52, 53],
+      "random_minus_source_each_layer": 0.0,
+      "sphere_minus_source_each_layer": 0.0,
+      "interpretation": "primary controls match source intervention incidence per layer; this does not match intervention magnitude or geometry"
+    },
+    "automatic_degeneration": {
+      "unsteered_baseline": 0.0,
+      "assistant_cap": 0.0,
+      "random_direction_cap": 0.0,
+      "sphere_proximity_cap": 0.02
+    },
+    "automatic_coverage_failures_total": 0
+  },
+  "secondary_context": {
+    "human_axis_vs_sphere_strict_rd": 0.010000000000000002,
+    "human_axis_vs_unsteered_strict_rd": 0.010000000000000002,
+    "automatic_axis_vs_sphere_strict_rd": 0.02,
+    "automatic_axis_vs_unsteered_strict_rd": 0.01
+  },
+  "permitted_wording": "On the design-weighted human subset, the Assistant cap had 3.7 percentage points lower estimated strict harmful compliance than the matched random-direction cap, but the bootstrap interval reached zero. The paired 400-row automatic-label sensitivity did not corroborate this pattern, and the human-primary estimate did not show lower strict harm than sphere or unsteered. T29 therefore does not establish robust direction-specific harmfulness reduction.",
+  "claim_guard": "Do not state that the Assistant Axis causally reduces harmfulness or outperforms matched controls as a general result. Do not infer that identity mediates harmfulness.",
+  "private_input_binding": {
+    "scored_artifact_sha256": "d7f8feb34f8c2e8e8fff57764c95ff81b8128fbfa35d87c380322dce07565bd3",
+    "private_input_committed": false
+  }
+}

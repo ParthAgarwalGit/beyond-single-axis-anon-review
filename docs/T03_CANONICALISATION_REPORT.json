@@ -1,0 +1,29 @@
+{
+  "task": "T03",
+  "title": "Canonicalise code and archive duplicates",
+  "scope": "Canonical core library only. Executable production adapters (generation runner, activation hook runner, judge runner, mixed-effects analysis) are deferred; T03 remains open until each active artifact type has one production command path.",
+  "canonical_modules": [
+    "activation_extraction.py",
+    "config.py",
+    "generation.py",
+    "geometry.py",
+    "ids.py",
+    "judging.py",
+    "prompt_rendering.py",
+    "provenance.py",
+    "schemas.py",
+    "statistics.py",
+    "steering.py"
+  ],
+  "archived_files": [
+    "gemma_2_27b_replication.ipynb",
+    "persona_vectors_stage1_faithful_v2.ipynb",
+    "recover_axis.ipynb",
+    "tier2_8b_extraction.ipynb"
+  ],
+  "tests_exit_code": 0,
+  "tests_summary": "91 passed in 0.23s",
+  "source_git_sha": "0f11bd067fc094171af1b44e4639ff84e6094da7",
+  "source_git_dirty": false,
+  "config_sha256": "febbcbfc10ec40e98373c88a43fc31ba1c6ef2486eedeacca38d81301937e77b"
+}

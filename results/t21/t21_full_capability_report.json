@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETE_LU_SIZED_PUBLIC_CAPABILITY_BATTERY",
+  "fidelity_label": "LU_SIZED_PUBLIC_CAPABILITY_BATTERY_NOT_EXACT_MEMBERSHIP",
+  "exact_lu_membership_claim_allowed": false,
+  "model_id": "Qwen/Qwen3-32B",
+  "model_revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "precision": "bfloat16",
+  "quantized": false,
+  "thinking_enabled": false,
+  "source_repo_commit": "a98961956072224eaf244eb289d6c01700b63795",
+  "capping_dataset_revision": "3b3b788432ad33e3a28d9ff08e88a530c0740814",
+  "capping_config_sha256": "6aec1220487473aaeab80b05d5d960ac54b5dd9080b51ac4bb0bbd1f4330db24",
+  "capping_experiment": "layers_46:54-p0.25",
+  "manifest_sha256": "7217d6021d77d9dc2091601dbe85a2974ccaa610b97fc77e90007732f9931f55",
+  "successful_generations": 6224,
+  "IFEval": {
+    "UNSTEERED": {
+      "strict": {"prompt_accuracy": 0.8373382624768947, "instruction_accuracy": 0.8860911270983214, "prompt_n": 541, "instruction_n": 834},
+      "loose": {"prompt_accuracy": 0.8706099815157117, "instruction_accuracy": 0.9100719424460432, "prompt_n": 541, "instruction_n": 834}
+    },
+    "ASSISTANT_AXIS_CAP_SOURCE_SETTING": {
+      "strict": {"prompt_accuracy": 0.8354898336414048, "instruction_accuracy": 0.8812949640287769, "prompt_n": 541, "instruction_n": 834},
+      "loose": {"prompt_accuracy": 0.8761552680221811, "instruction_accuracy": 0.9112709832134293, "prompt_n": 541, "instruction_n": 834}
+    }
+  },
+  "MMLU-Pro": {
+    "UNSTEERED": {"accuracy": 0.7078571428571429, "n": 1400, "parseable_n": 1396, "parseable_fraction": 0.9971428571428571},
+    "ASSISTANT_AXIS_CAP_SOURCE_SETTING": {"accuracy": 0.6978571428571428, "n": 1400, "parseable_n": 1395, "parseable_fraction": 0.9964285714285714}
+  },
+  "GSM8K": {
+    "UNSTEERED": {"accuracy": 0.96, "n": 1000, "parseable_n": 1000, "parseable_fraction": 1.0},
+    "ASSISTANT_AXIS_CAP_SOURCE_SETTING": {"accuracy": 0.957, "n": 1000, "parseable_n": 1000, "parseable_fraction": 1.0}
+  },
+  "EQ-Bench": {
+    "UNSTEERED": {"score": 82.3, "n": 171, "parseable_n": 171, "parseable_fraction": 1.0},
+    "ASSISTANT_AXIS_CAP_SOURCE_SETTING": {"score": 82.04, "n": 171, "parseable_n": 171, "parseable_fraction": 1.0}
+  },
+  "sum_of_relative_performance_reductions_pct": 2.261882357200842,
+  "claim_boundary": "Matches Lu-reported capability benchmark families and sample sizes. MMLU-Pro/GSM8K exact Lu row membership and exact Assistant Axis capability prompt/decoding are not established; do not call this an exact Lu replication."
+}

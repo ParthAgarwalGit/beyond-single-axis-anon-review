@@ -1,0 +1,168 @@
+schema_version: t24-source-capping-controls/1.3
+task: T24
+status: FROZEN_NUMERICAL_CONTROLS_REVIEW_PENDING
+freeze_date: '2026-08-18'
+deviation_date: '2026-08-21'
+deviation_authority: "Owner/Executor pre-outcome approval; reviewer [Reviewer] ratification in PR #53 review 4990812696 on 2026-08-21; record: docs/DEVIATION_2026-08-21_T24_ENGAGEMENT_MATCHING.md"
+owner_executor: [Author B]
+reviewer: [Reviewer]
+
+scope:
+  family: source_model_activation_capping_specificity
+  purpose: Freeze matched random-direction and spherical-distance controls without changing the T21 source Axis condition.
+  outcome_data_allowed_for_calibration: false
+  post_outcome_retuning_forbidden: true
+
+model:
+  id: Qwen/Qwen3-32B
+  revision: 9216db5781bf21249d130ec9da846c4624c16137
+  dtype: bfloat16
+  quantized: false
+  thinking_enabled: false
+
+source_axis_cap:
+  authority: T21 source-capping reproduction
+  source_repository_commit: a98961956072224eaf244eb289d6c01700b63795
+  artifact_repo: lu-christina/assistant-axis-vectors
+  artifact_revision: 3b3b788432ad33e3a28d9ff08e88a530c0740814
+  artifact_file: qwen-3-32b/capping_config.pt
+  artifact_sha256: 6aec1220487473aaeab80b05d5d960ac54b5dd9080b51ac4bb0bbd1f4330db24
+  assistant_axis_file: qwen-3-32b/assistant_axis.pt
+  assistant_axis_sha256: a207fe7a36563280b7b29010880aa0082bd8e3113c141cb4a2eed6b46c140211
+  setting: layers_46:54-p0.25
+  layers: [46, 47, 48, 49, 50, 51, 52, 53]
+  source_percentile_label: 0.25
+  source_operator: upper-tail capping on the released capping-config vector; the config vector is expected to be the negated released Assistant Axis at each capped layer
+  retune_in_t24: false
+
+conditions:
+  - UNSTEERED
+  - ASSISTANT_AXIS_CAP_SOURCE_SETTING
+  - ORTHOGONAL_RANDOM_CAP
+  - SPHERICAL_DISTANCE_CAP
+
+natural_calibration_corpus:
+  source_id: T21_JBB_BEHAVIOR_ONLY_ADAPTED_NOT_LU_PERSONA_JAILBREAK
+  source_description: The same 100-item public behavior-only safety manifest frozen for T21 before outcome scoring; calibration uses only unsteered activations and never harmfulness/refusal labels.
+  manifest_sha256: d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793
+  n_frozen_items: 100
+  condition: UNSTEERED
+  selection_frozen_before_t21_outcomes: true
+  post_outcome_row_selection_forbidden: true
+  activation_row_unit: Flattened activation positions seen by the frozen source capping hook under the exact T21 prompt serialization/forward path; the same row construction is used for Axis-engagement measurement and both project controls.
+  default_reference: default_L is the frozen default-Assistant reference activation set from the same manifest/protocol and model revision.
+
+engagement_matching_deviation:
+  id: T24_ENGAGEMENT_MATCHING_2026-08-21
+  trigger: The genuine calibration showed the fixed source cap engaged 0.5959 of layer-46 natural rows while the originally frozen q25 random control engaged 0.2500, failing the predeclared 0.03 match gate before T29 matched-control outcomes.
+  approved_before_t29_matched_control_outcomes: true
+  source_treatment_changed: false
+  primary_matching_target: measured per-layer source Axis-cap engagement on the same natural_L rows
+  original_q25_q75_role: unmatched-engagement sensitivity/reference only
+
+orthogonal_random_cap:
+  base_seed: 20260818
+  per_layer_seed: sha256('t24|<base_seed>|layer=<L>') first 8 bytes little-endian
+  construction: sample g~N(0,I); remove projection onto unit released Assistant Axis; unit-normalize
+  orthogonality_tolerance_absolute_cosine: 1.0e-6
+  threshold_rule_primary: quantile equal to measured source Axis-cap engagement on that layer's common frozen natural calibration rows
+  intervention_rule: clamp projections below the frozen threshold up to the threshold
+  engagement_match_reference: measured source Axis-cap engagement on the same natural_L rows
+  engagement_match_absolute_tolerance: 0.03
+  raw_axis_threshold_reuse_forbidden: true
+  original_predeclared_sensitivity_quantile: 0.25
+
+spherical_distance_cap:
+  classification: PROJECT_DEFINED_CONTROL_NOT_LU_METHOD
+  center_rule: frozen default-Assistant centroid at each capped layer
+  radius_rule_primary: distance quantile equal to one minus the measured source Axis-cap engagement on that layer, so the outer-tail engagement matches the source rate
+  intervention_rule: if distance <= radius, no-op; otherwise radial projection to sphere boundary
+  engagement_match_reference: measured source Axis-cap engagement on the same natural_L rows
+  engagement_match_absolute_tolerance: 0.03
+  radius_outcome_tuning_forbidden: true
+  original_predeclared_sensitivity_radius_quantile: 0.75
+
+common_calibration_contract:
+  same_corpus_and_serialization_across_controls: true
+  required_scalar_metadata_in_npz:
+    calibration_source_id: T21_JBB_BEHAVIOR_ONLY_ADAPTED_NOT_LU_PERSONA_JAILBREAK
+    calibration_manifest_sha256: d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793
+  required_per_layer_arrays:
+    - axis_L
+    - natural_L
+    - default_L
+  axis_L_contract: Must numerically match the same-orientation released Assistant Axis layer; the runner also verifies the released Assistant-Axis file SHA-256.
+  minimum_natural_rows_per_layer: 100
+  minimum_default_rows_per_layer: 20
+  numerical_freeze_command: tools/run_t24_source_control_freeze.py
+  recovery_command: tools/recover_t24_numerical_freeze.py
+  required_source_artifacts_at_freeze:
+    - qwen-3-32b/assistant_axis.pt at the pinned artifact revision/hash
+    - qwen-3-32b/capping_config.pt at the pinned artifact revision/hash
+  final_numerical_artifacts:
+    - results/t24/source_control_parameters.npz
+    - results/t24/source_control_freeze.json
+    - results/t24/t24_calibration_capture_receipt.json
+  current_numerical_status: FROZEN_NUMERICAL_CONTROLS
+  production_freeze_source_git_sha: a880b4102de910ef08b57bd43fd00ca87b3de48e
+  production_calibration_npz_sha256: bb0670832e065f52a7c46dc99acf467960523f4cca888cca996347e3290d19c1
+  production_numerical_controls_npz_sha256: adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291
+  independent_review_required_before_t29: true
+
+matching_constraints:
+  - same model and revision
+  - same evaluation rows
+  - same capped layers
+  - same token positions
+  - same dtype
+  - same decoding
+  - same batch/shard ordering where execution permits
+  - same scoring
+  - same natural calibration corpus and serialization
+
+required_preproduction_validation:
+  - released Assistant-Axis file SHA-256 matches the T21 pin
+  - released capping-config file SHA-256 matches the T21 pin
+  - calibration axis_L matches the released Assistant Axis at every capped layer
+  - source capping-config vector is collinear with and negatively oriented to the released Assistant Axis at every capped layer
+  - source Axis-cap engagement is measured on natural_L using the released per-layer thresholds
+  - per-layer random unit norm
+  - per-layer Axis/random numerical orthogonality
+  - primary random engagement matches measured source Axis-cap engagement within tolerance
+  - primary sphere engagement matches measured source Axis-cap engagement within tolerance
+  - original q25/q75 parameters are retained as unmatched-engagement sensitivity/reference
+  - directional no-op correctness
+  - sphere no-op correctness
+  - sphere radial-boundary correctness
+  - production JSON and external NPZ hashes agree with the recovery receipt
+
+claim_boundary:
+  source_axis_cap: Source-matched T21 condition; fixed before T24 controls and unchanged by the deviation.
+  random_cap: Project control calibrated to the measured source engagement rate per layer; not a Lu source method.
+  sphere_cap: Project control calibrated to the measured source engagement rate per layer via the complementary radius quantile; not a Lu source method.
+  matching_limit: Engagement incidence is matched; intervention magnitude and geometry are not claimed to be matched.
+  engagement_gate_interpretation: The 0.03 engagement gate is a self-consistency and regression guard after the primary quantiles are derived from measured source engagement; it is not independent evidence of control comparability.
+  matched_control_strength_asymmetry: At layers 46-49 the source engagement exceeds 0.5, so matched controls engage a majority of natural rows; the spherical control specifically projects that majority toward the default-Assistant centroid. T29 must interpret positive sphere effects as potentially reflecting both intervention strength and geometry.
+  inference: T24 freezes controls only; causal-specificity conclusions require T29 outcomes.
+
+
+artifact_durability:
+  status: DURABLE_ARTIFACTS_PINNED
+  numerical_controls_repository_path: results/t24/source_control_parameters.npz
+  numerical_controls_sha256: adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291
+  numerical_controls_role: exact independently reviewed canonical artifact
+  calibration_hf_repo: [Author-B-HF]/[anonymized-repository-name]-artifacts
+  calibration_hf_repo_type: dataset
+  calibration_hf_path: t24-calibration/t24_qwen_calibration.npz
+  calibration_hf_revision: 1bdf7ce4f5e71e487c8e13735f85490afc1cee28
+  calibration_sha256: bb0670832e065f52a7c46dc99acf467960523f4cca888cca996347e3290d19c1
+  clean_recompute_sha256: bfa90a1a7377cd32e48f55d4ade4b0c168af2396b0bb878d4fb492d422b6ef41
+  clean_recompute_equivalence: PASS_OPERATIONAL_EQUIVALENCE
+  clean_recompute_exact_arrays: 44
+  clean_recompute_total_arrays: 56
+  clean_recompute_nonexact_arrays: 12
+  clean_recompute_max_abs_threshold_difference: 5.3290705182007514e-15
+  clean_recompute_all_nonthreshold_arrays_exact: true
+  clean_recompute_all_float32_thresholds_equal: true
+  clean_recompute_all_engagement_masks_equal: true
+  provenance_manifest: results/t24/T24_ARTIFACT_PROVENANCE.json

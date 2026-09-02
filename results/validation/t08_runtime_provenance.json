@@ -1,0 +1,13 @@
+{
+  "schema_version": "t08-runtime-provenance/1",
+  "task": "T08",
+  "created_at_utc": "2026-08-05T08:23:53.096254+00:00",
+  "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+  "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+  "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+  "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+  "code_git_sha_before_generated_artifact_commit": "b1ce82c66b870366f754bb9901514be78379bc9f",
+  "git_dirty_at_render_time": true,
+  "method_config_path": "configs/method_frozen.yaml",
+  "branch": "t08/question-manifest-2"
+}

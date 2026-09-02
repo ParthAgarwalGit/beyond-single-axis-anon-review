@@ -1,0 +1,78 @@
+{
+  "schema_version": "t10-technical-exclusion-review/1.0",
+  "task": "T10",
+  "block": "C80-A",
+  "decision": "ACCEPT_WITH_TECHNICAL_EXCLUSIONS",
+  "reason": "Two of 22,000 rollouts remained truncated after exhausting the predeclared 2048/8192/16384-token retry schedule. No additional post-hoc retry budget is added. These rows are retained for provenance but excluded from downstream behavioural scoring and geometry as technical execution failures.",
+  "n_expected_rollouts": 22000,
+  "n_role_judgeable": 21998,
+  "n_exhausted_technical": 2,
+  "role_judgeable_fraction": 0.9999090909090909,
+  "technical_exclusion_fraction": 9.09090909090909e-05,
+  "final_jsonl_sha256": "c7229c926066271eb99bc6b647ee8a7446e67071d0b60d5c6592d42566f1238c",
+  "exhausted_rollouts": [
+    {
+      "rollout_id": "885b75abc2900244",
+      "role_id": "luddite",
+      "question_id": 100,
+      "prompt_index": 0,
+      "retry_sequence": [
+        0,
+        1,
+        2
+      ],
+      "max_new_tokens_sequence": [
+        2048,
+        8192,
+        16384
+      ],
+      "validity_sequence": [
+        "truncated",
+        "truncated",
+        "truncated"
+      ],
+      "finish_reason_sequence": [
+        "length",
+        "length",
+        "length"
+      ],
+      "terminal_validity": "truncated",
+      "terminal_retry": 2
+    },
+    {
+      "rollout_id": "79331716c2cde644",
+      "role_id": "mentor",
+      "question_id": 37,
+      "prompt_index": 4,
+      "retry_sequence": [
+        0,
+        1,
+        2
+      ],
+      "max_new_tokens_sequence": [
+        2048,
+        8192,
+        16384
+      ],
+      "validity_sequence": [
+        "truncated",
+        "truncated",
+        "truncated"
+      ],
+      "finish_reason_sequence": [
+        "length",
+        "length",
+        "length"
+      ],
+      "terminal_validity": "truncated",
+      "terminal_retry": 2
+    }
+  ],
+  "retry_schedule": [
+    2048,
+    8192,
+    16384
+  ],
+  "additional_retry_performed": false,
+  "review_status": "PENDING_REVIEWER_CONFIRMATION"
+}

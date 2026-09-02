@@ -1,0 +1,5 @@
+benchmark,primary_metric,n,unsteered,capped,absolute_delta_capped_minus_unsteered,relative_performance_reduction_pct
+IFEval,strict_prompt_accuracy,541,0.8373382624768947,0.8354898336414048,-0.0018484288354899,0.220751
+MMLU-Pro,accuracy,1400,0.7078571428571429,0.6978571428571428,-0.0100000000000001,1.412714
+GSM8K,accuracy,1000,0.96,0.957,-0.003,0.312500
+EQ-Bench,eqbench_v2_score_0_100,171,82.3,82.04,-0.26,0.315917

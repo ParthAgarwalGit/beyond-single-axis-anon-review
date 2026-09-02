@@ -1,0 +1,65 @@
+{
+  "schema_version": "t10-c80-attempt-selection-audit/1.0",
+  "date": "2026-08-13",
+  "selection_rule": "lowest_retry_technically_valid_attempt",
+  "selection_description": "For each rollout, select the lowest retry with technical_validity == 'valid'. If no valid attempt exists after all declared retries, retain the highest-retry attempt for technical-failure provenance only; it is not eligible for downstream role scoring, activation pooling, retention, or geometry.",
+  "no_raw_generation_modified": true,
+  "C80-A": {
+    "block": "C80-A",
+    "raw_sha256": "c7229c926066271eb99bc6b647ee8a7446e67071d0b60d5c6592d42566f1238c",
+    "raw_rows_all_attempts": 22286,
+    "unique_rollouts": 22000,
+    "downstream_eligible": 21998,
+    "exhausted_technical": 2,
+    "rollouts_with_multiple_valid_attempts": 0,
+    "multiple_valid_with_different_text": 0,
+    "selected_retry_counts": {
+      "0": 21729,
+      "1": 256,
+      "2": 15
+    },
+    "selected_validity_counts": {
+      "truncated": 2,
+      "valid": 21998
+    },
+    "retry_sequence_counts": {
+      "0": 21729,
+      "0,1": 256,
+      "0,1,2": 15
+    },
+    "selection_index": "results/generation/c80_role_C80_A.selection.jsonl",
+    "selection_index_sha256": "082fee5d7650726f73720644c69c1a19cbf477cba089d69e569a0af83aa3c4d2",
+    "manifest": "results/generation/c80_role_C80_A.manifest.json",
+    "manifest_sha256_after_update": "a81536e90b3ab575544090dd75ae04933d6d2456242051d27eee00d8caa34a76"
+  },
+  "C80-B": {
+    "block": "C80-B",
+    "raw_sha256": "2d82dbe1ef2ab49068d8f2ad5f544db2da4bd3e1d7d44ec89415d0b8bb84c1b8",
+    "raw_rows_all_attempts": 22735,
+    "unique_rollouts": 22000,
+    "downstream_eligible": 22000,
+    "exhausted_technical": 0,
+    "rollouts_with_multiple_valid_attempts": 448,
+    "multiple_valid_with_different_text": 443,
+    "selected_retry_counts": {
+      "0": 21769,
+      "1": 220,
+      "2": 8,
+      "4": 3
+    },
+    "selected_validity_counts": {
+      "valid": 22000
+    },
+    "retry_sequence_counts": {
+      "0": 21318,
+      "0,1": 659,
+      "0,1,2": 8,
+      "0,1,2,3,4": 15
+    },
+    "selection_index": "results/generation/c80_role_C80_B.selection.jsonl",
+    "selection_index_sha256": "cd947ee31bf7b324892d093a5ea35794a8ac8fbec5d74befe349a1d674cc69a7",
+    "manifest": "external-review-artifact:c80_role_C80_B.manifest.attempt_selection_updated.json",
+    "manifest_sha256_after_update": "a61046a0acf3fe77502deeb7fba63a96d467f471ceb07a9fe8022042b2a612c7",
+    "manifest_location_note": "Reconciled derivative of the C80-B manifest recovered from PR #23. The updated derivative is retained outside [Author B]'s branch; integrity is identified by manifest_sha256_after_update."
+  }
+}

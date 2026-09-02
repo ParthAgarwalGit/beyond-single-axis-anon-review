@@ -1,0 +1,27 @@
+{
+  "kit_code_commit": "3e2105a2a27e6549eeec8e8fefbf402acabda6c7",
+  "execution_mode": "PARITY_WITH_C80_B_PROVISIONAL",
+  "config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+  "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+  "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+  "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+  "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+  "prompt_cache_sha256": "d6ea6d615a03e764ac60ae7df1f31d996fbfa20ffbc7b42acc835f8cc815ecce",
+  "manifest_rollouts_sha256": "60e4e7b5984a47db22e6e4b5def97832e7269c4d57863102449f4f9bad27bf33",
+  "budgets": [
+    2048,
+    8192,
+    16384
+  ],
+  "subbatch": 512,
+  "selected_gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA A100-SXM4-80GB",
+      "total_mb": 81920,
+      "free_mb": 81148,
+      "gpu_memory_utilization": 0.9
+    }
+  ],
+  "decoding_artifact_sha256": null
+}

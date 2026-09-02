@@ -1,0 +1,59 @@
+{
+  "schema_version": "g2-geometry-freeze-v1.0",
+  "task": "G2",
+  "freeze_status": "FROZEN",
+  "freeze_date": "2026-08-25",
+  "scope": "DeepSeek confirmatory prompt-conditioned geometry used by T15/T16, T17, and T18",
+  "frozen_before_any_real_t18_outcome_inspected": true,
+  "geometry": {
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "prompt_arm": "USER_TRANSLATED_LU",
+    "block_index": 16,
+    "pool": "ALL_RESPONSE_TOKENS",
+    "blocks": ["C80-A", "C80-B"],
+    "membership": "label_independent_technical_validity",
+    "membership_rule": "technical_validity == valid AND frozen block-16 all-response pool present",
+    "per_block_threshold": 10,
+    "retained_roles": 275
+  },
+  "authority": {
+    "canonical_result_path": "results/t15/confirmatory_reliability.json",
+    "canonical_result_git_blob_sha": "1c2631a2efa1380457cc4628d605e5254aa5ff9c",
+    "canonical_result_source_git_sha": "32a787d604e530ca3d1d8f32b8e8a859aedd83db",
+    "canonical_result_config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59",
+    "membership_authority_path": "docs/DEVIATION_2026-08-17_CONFIRMATORY_MEMBERSHIP.md",
+    "membership_authority_pr": 44,
+    "membership_authority_merge_commit": "3848b6ccb49bd37ccdb47d127aca688ffda60c11",
+    "t15_t16_merge_commit": "fb01dfbd8247448e494136edc3b50a8e3e7d8a14"
+  },
+  "input_provenance": {
+    "bundle_sha256": "d1b2fdeb37dc3e3d5cfbed95dc73ab577c1b90ad1c013d9f45d1601f2b517469",
+    "counts_sha256": "6fc68c91539c5f3c2625d089f2301fd1ada43847c5253de629e479f4158dd694",
+    "t12_manifest_sha256": {
+      "C80-A": "021524bf56416d7217baaae07b024d398e3fc5b869561015dff24b44abacb7e8",
+      "C80-B": "987571b3518b014296326fef853709df991a4e68c7ede3ac45a9832a9e09b58e"
+    },
+    "bundle_fetched_at_hf_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1"
+  },
+  "confirmatory_result": {
+    "cross_axis_pearson_r": 0.976528,
+    "bootstrap_ci95": [0.97101, 0.981079],
+    "independent_axis_cosine": 0.912713,
+    "common_orientation_sign_flip_p_ge_observed": 0.3784
+  },
+  "claim_boundary": {
+    "supported": "highly reproducible prompt-conditioned role geometry across independent question blocks",
+    "not_supported": [
+      "behaviourally verified role enactment",
+      "a uniquely privileged one-dimensional global orientation",
+      "one-dimensional sufficiency"
+    ]
+  },
+  "t18_compatibility": {
+    "required_membership": "label_independent_technical_validity",
+    "judge_filter_for_primary_rows": "FORBIDDEN",
+    "reason": "T07 failed the predeclared role-judge validation gate and PR #44 froze label-independent confirmatory membership before T15/T16 outcomes existed.",
+    "analysis_parameters_unchanged": true,
+    "canonical_production_wrapper": "tools/run_t18_g2_dimensional_adequacy.py"
+  }
+}

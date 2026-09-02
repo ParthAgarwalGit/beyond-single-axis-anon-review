@@ -1,0 +1,4 @@
+region_a,region_b,axis_cosine,same_role_own_axis_projection_pearson,same_role_all_response_reference_projection_pearson,n_roles,analysis_status,lu_comparable,scope_note
+all_response,answer,0.7654617701067957,0.9575101346394658,0.9767732016469393,275,SENSITIVITY,False,"Cross-region Axis/projection comparisons are sensitivity analyses, not the primary Lu-comparable estimand."
+all_response,reasoning,0.9624242897332549,0.9956949269978252,0.9975034414951516,275,SENSITIVITY,False,"Cross-region Axis/projection comparisons are sensitivity analyses, not the primary Lu-comparable estimand."
+answer,reasoning,0.5877841077999876,0.9546374089228963,0.9634341548695383,275,SENSITIVITY,False,"Cross-region Axis/projection comparisons are sensitivity analyses, not the primary Lu-comparable estimand."

@@ -1,0 +1,27 @@
+name: T07 judge uncertainty CI
+
+on:
+  pull_request:
+    paths:
+      - "tools/run_t07_judge_uncertainty.py"
+      - "tests/test_t07_judge_uncertainty.py"
+      - "results/t06/gold_consensus.csv"
+      - "results/t07/judge_validation.json"
+      - "configs/t07_uncertainty_frozen.json"
+      - ".github/workflows/t07-judge-uncertainty.yml"
+  workflow_dispatch:
+
+jobs:
+  t07-judge-uncertainty:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip numpy scikit-learn pytest
+      - name: Run focused tests
+        run: pytest -q tests/test_t07_judge_uncertainty.py
+      - name: Run no-private-data self-test
+        run: python tools/run_t07_judge_uncertainty.py self-test

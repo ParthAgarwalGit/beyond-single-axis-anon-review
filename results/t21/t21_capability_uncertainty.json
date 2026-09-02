@@ -1,0 +1,54 @@
+{
+  "schema_version": "t21-capability-uncertainty-v1",
+  "status": "APPROXIMATE_FROM_COMMITTED_AGGREGATES",
+  "delta_direction": "capped_minus_unsteered",
+  "confidence_level": 0.95,
+  "method": {
+    "binary_metrics": "Newcombe hybrid score interval using Wilson limits for two proportions, computed from committed aggregate counts.",
+    "paired_design_note": "The two conditions use the same benchmark items, but paired discordance counts are not committed. These aggregate-only intervals therefore treat the two condition proportions as independent and are not substitutes for preferred paired intervals.",
+    "eq_bench_note": "EQ-Bench is a continuous score, so a binomial interval is not appropriate. A valid interval would require per-item score dispersion or the raw paired item scores, which are not committed."
+  },
+  "binary_deltas": [
+    {
+      "benchmark": "IFEval",
+      "metric": "strict_prompt_accuracy",
+      "n_per_condition": 541,
+      "unsteered_successes": 453,
+      "capped_successes": 452,
+      "delta": -0.001848428835489857,
+      "approx_95ci": [-0.04603039230278541, 0.04233016343645136]
+    },
+    {
+      "benchmark": "MMLU-Pro",
+      "metric": "accuracy",
+      "n_per_condition": 1400,
+      "unsteered_successes": 991,
+      "capped_successes": 977,
+      "delta": -0.010000000000000009,
+      "approx_95ci": [-0.0438398115672726, 0.023808723049305723]
+    },
+    {
+      "benchmark": "GSM8K",
+      "metric": "accuracy",
+      "n_per_condition": 1000,
+      "unsteered_successes": 960,
+      "capped_successes": 957,
+      "delta": -0.0030000000000000027,
+      "approx_95ci": [-0.020763612799928288, 0.01483051723543024]
+    }
+  ],
+  "eq_bench": {
+    "metric": "eqbench_v2_score_0_100",
+    "n_per_condition": 171,
+    "unsteered": 82.3,
+    "capped": 82.04,
+    "delta": -0.2599999999999909,
+    "approx_95ci": null,
+    "reason": "Continuous score; binomial CI is not applicable and committed aggregates do not contain per-item variance."
+  },
+  "aggregate_relative_reduction": {
+    "sum_of_relative_performance_reductions_pct": 2.261882357200842,
+    "combined_95ci": null,
+    "interpretation": "Descriptive aggregate only. It combines heterogeneous metrics, and a defensible combined interval cannot be reconstructed from committed aggregates without paired/per-item covariance information."
+  }
+}

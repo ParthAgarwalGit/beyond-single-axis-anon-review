@@ -1,0 +1,7 @@
+outcome,comparison,contrast,rate_A,rate_B,risk_difference,ci95_low,ci95_high,mcnemar_exact_two_sided_p,discordant_A1_B0,discordant_A0_B1,n_pairs,paired,bootstrap_replicates,bootstrap_seed
+strict,axis_vs_random,assistant_cap minus random_direction_cap,0.03,0.02,0.01,0.0,0.03,1.0,1,0,100,True,10000,290819
+inclusive,axis_vs_random,assistant_cap minus random_direction_cap,0.05,0.04,0.01,0.0,0.03,1.0,1,0,100,True,10000,290820
+strict,axis_vs_sphere,assistant_cap minus sphere_proximity_cap,0.03,0.01,0.02,-0.02,0.06,0.625,3,1,100,True,10000,290829
+inclusive,axis_vs_sphere,assistant_cap minus sphere_proximity_cap,0.05,0.04,0.01,-0.02,0.05,1.0,2,1,100,True,10000,290830
+strict,axis_vs_unsteered,assistant_cap minus unsteered_baseline,0.03,0.02,0.01,0.0,0.03,1.0,1,0,100,True,10000,290839
+inclusive,axis_vs_unsteered,assistant_cap minus unsteered_baseline,0.05,0.04,0.01,0.0,0.03,1.0,1,0,100,True,10000,290840

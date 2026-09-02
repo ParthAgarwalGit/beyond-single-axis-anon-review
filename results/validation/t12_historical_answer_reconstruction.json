@@ -1,0 +1,90 @@
+{
+  "activation_site": "model.model.layers[L]",
+  "generation_native_historical_token_ids_available": false,
+  "historical_tensor_dtype": "float16",
+  "historical_tensor_shape": [
+    32,
+    4096
+  ],
+  "method_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+  "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+  "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+  "n_rows": 5,
+  "notes": [
+    "Generation-native historical token IDs were not persisted in run-003.",
+    "Historical n_out_tokens is retained only as an audit/provenance field and is not treated as the authoritative token sequence.",
+    "This report validates activation reconstruction from stored text; it does not claim byte-for-byte recovery of the original generation token IDs."
+  ],
+  "purpose": "Validate that teacher-forcing stored prompt/completion text reproduces the historical answer-only activation tensors closely enough to support T12 recomputation from stored text.",
+  "rows": [
+    {
+      "answer_tokens_reconstructed": 62,
+      "cosine_all": 0.9999831914901733,
+      "cosine_mean_layer": 0.999985933303833,
+      "cosine_min_layer": 0.9999712705612183,
+      "max_abs": 0.015625,
+      "mean_abs": 0.0006133815040811896,
+      "prompt_idx": 1,
+      "question_id": 99,
+      "role": "hacker",
+      "uid": "0001a3b4c9c8a6fe"
+    },
+    {
+      "answer_tokens_reconstructed": 252,
+      "cosine_all": 0.9999932050704956,
+      "cosine_mean_layer": 0.9999954700469971,
+      "cosine_min_layer": 0.9999892711639404,
+      "max_abs": 0.015625,
+      "mean_abs": 0.0003349563048686832,
+      "prompt_idx": 3,
+      "question_id": 15,
+      "role": "narrator",
+      "uid": "0006b6de23db55e9"
+    },
+    {
+      "answer_tokens_reconstructed": 213,
+      "cosine_all": 0.9999875426292419,
+      "cosine_mean_layer": 0.9999924302101135,
+      "cosine_min_layer": 0.9999849796295166,
+      "max_abs": 0.01171875,
+      "mean_abs": 0.00046288271551020443,
+      "prompt_idx": 3,
+      "question_id": 82,
+      "role": "jester",
+      "uid": "001d1dd2740fe702"
+    },
+    {
+      "answer_tokens_reconstructed": 141,
+      "cosine_all": 0.9999858736991882,
+      "cosine_mean_layer": 0.9999892115592957,
+      "cosine_min_layer": 0.9999752640724182,
+      "max_abs": 0.01953125,
+      "mean_abs": 0.0005373794701881707,
+      "prompt_idx": 4,
+      "question_id": 199,
+      "role": "programmer",
+      "uid": "0031ac8e958e39cc"
+    },
+    {
+      "answer_tokens_reconstructed": 128,
+      "cosine_all": 0.9999850988388062,
+      "cosine_mean_layer": 0.9999884366989136,
+      "cosine_min_layer": 0.9999750256538391,
+      "max_abs": 0.0234375,
+      "mean_abs": 0.00051488121971488,
+      "prompt_idx": 4,
+      "question_id": 51,
+      "role": "negotiator",
+      "uid": "0032be459d4c79ce"
+    }
+  ],
+  "status": "PASS",
+  "summary": {
+    "max_absolute_difference": 0.0234375,
+    "max_mean_absolute_error": 0.0006133815040811896,
+    "min_global_cosine": 0.9999831914901733,
+    "min_layer_cosine": 0.9999712705612183
+  },
+  "token_id_provenance": "reconstructed_from_stored_text",
+  "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1"
+}

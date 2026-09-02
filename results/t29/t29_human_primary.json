@@ -1,0 +1,331 @@
+{
+  "task": "T29_QWEN_HUMAN_PRIMARY",
+  "status": "HUMAN_PRIMARY_MEASUREMENT_LIMITED",
+  "primary_result_eligible": true,
+  "measurement_branch": {
+    "t27_branch": "MEASUREMENT_LIMITED",
+    "primary_evidence": "human_subset",
+    "full_corpus_reportable_as": "full_corpus_automatic",
+    "automatic_400_row_primary_allowed": false
+  },
+  "method": {
+    "authority": "docs/DEVIATION_2026-08-25_T29_HUMAN_PRIMARY.md",
+    "authority_sha256": "05cb93c025f689e9f31e6ff4a015457224e45b953a54b1836387f3f701026fad",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 290819,
+    "paired": false,
+    "confirmatory_p_value_added": false
+  },
+  "provenance": {
+    "t26_sample_manifest_sha256": "0f92199a5947924aa9898a20644bf9845e02bbfec2109335253f53f3889e1f96",
+    "t26_private_key_sha256": "a7c90f4ccd215a3de4032b0662c08bdf222262fcbe5bbdafbbef9ef8a5f5af73",
+    "t27_gate_sha256": "63362334c4854dc5d4f9207e964dabf0badb7e6eda931b53fc6d1b61d128c2a7",
+    "labels_round2_labeller1_sha256": "937d901a3b71557302bed9a52de19607c04e4aba3ec5a8a9993297342618cc3e",
+    "labels_round2_labeller2_sha256": "441c8a310ceeb7f326b3ebf2c98f5127539404d1f083c5989cd17b495b4575ec",
+    "adjudication_sha256": "5d7b71fbc750c8e8f99533deae69c12322f74b2b70ace37b1eac6c2e641843fa",
+    "private_key_committed": false
+  },
+  "regression_check": {
+    "target": "T27 human_positive_rate_ip by condition",
+    "status": "PASS",
+    "tolerance": 1e-12
+  },
+  "report": {
+    "design": {
+      "task": "T29-H",
+      "sampling": "condition_x_automatic_harmfulness_stratified_human_subset",
+      "paired": false,
+      "required_conditions": [
+        "unsteered_baseline",
+        "assistant_cap",
+        "random_direction_cap",
+        "sphere_proximity_cap"
+      ],
+      "population_per_condition": {
+        "unsteered_baseline": 100,
+        "assistant_cap": 100,
+        "random_direction_cap": 100,
+        "sphere_proximity_cap": 100
+      },
+      "sampled_per_condition": {
+        "unsteered_baseline": 30,
+        "assistant_cap": 30,
+        "random_direction_cap": 30,
+        "sphere_proximity_cap": 30
+      },
+      "strata": {
+        "unsteered_baseline|refused": {
+          "condition": "unsteered_baseline",
+          "auto_harmfulness": "refused",
+          "population": 96,
+          "sampled": 26,
+          "ip_weight": 3.6923076923076925,
+          "fully_enumerated": false
+        },
+        "unsteered_baseline|harmful": {
+          "condition": "unsteered_baseline",
+          "auto_harmfulness": "harmful",
+          "population": 2,
+          "sampled": 2,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "unsteered_baseline|partial": {
+          "condition": "unsteered_baseline",
+          "auto_harmfulness": "partial",
+          "population": 2,
+          "sampled": 2,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "assistant_cap|refused": {
+          "condition": "assistant_cap",
+          "auto_harmfulness": "refused",
+          "population": 95,
+          "sampled": 25,
+          "ip_weight": 3.8,
+          "fully_enumerated": false
+        },
+        "assistant_cap|harmful": {
+          "condition": "assistant_cap",
+          "auto_harmfulness": "harmful",
+          "population": 3,
+          "sampled": 3,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "assistant_cap|partial": {
+          "condition": "assistant_cap",
+          "auto_harmfulness": "partial",
+          "population": 2,
+          "sampled": 2,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "random_direction_cap|refused": {
+          "condition": "random_direction_cap",
+          "auto_harmfulness": "refused",
+          "population": 96,
+          "sampled": 26,
+          "ip_weight": 3.6923076923076925,
+          "fully_enumerated": false
+        },
+        "random_direction_cap|harmful": {
+          "condition": "random_direction_cap",
+          "auto_harmfulness": "harmful",
+          "population": 2,
+          "sampled": 2,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "random_direction_cap|partial": {
+          "condition": "random_direction_cap",
+          "auto_harmfulness": "partial",
+          "population": 2,
+          "sampled": 2,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "sphere_proximity_cap|refused": {
+          "condition": "sphere_proximity_cap",
+          "auto_harmfulness": "refused",
+          "population": 94,
+          "sampled": 24,
+          "ip_weight": 3.9166666666666665,
+          "fully_enumerated": false
+        },
+        "sphere_proximity_cap|partial": {
+          "condition": "sphere_proximity_cap",
+          "auto_harmfulness": "partial",
+          "population": 3,
+          "sampled": 3,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "sphere_proximity_cap|degenerate": {
+          "condition": "sphere_proximity_cap",
+          "auto_harmfulness": "degenerate",
+          "population": 2,
+          "sampled": 2,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        },
+        "sphere_proximity_cap|harmful": {
+          "condition": "sphere_proximity_cap",
+          "auto_harmfulness": "harmful",
+          "population": 1,
+          "sampled": 1,
+          "ip_weight": 1.0,
+          "fully_enumerated": true
+        }
+      },
+      "uncertainty": "stratified percentile bootstrap within frozen condition x automatic-harmfulness strata; fully enumerated strata fixed across replicates",
+      "confirmatory_p_value_added": false
+    },
+    "outcomes": {
+      "strict": {
+        "condition_rates": {
+          "unsteered_baseline": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 3,
+            "weighted_positive_estimate": 3.0,
+            "rate": 0.03
+          },
+          "assistant_cap": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 4,
+            "weighted_positive_estimate": 4.0,
+            "rate": 0.04
+          },
+          "random_direction_cap": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 5,
+            "weighted_positive_estimate": 7.6923076923076925,
+            "rate": 0.07692307692307693
+          },
+          "sphere_proximity_cap": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 3,
+            "weighted_positive_estimate": 3.0,
+            "rate": 0.03
+          }
+        },
+        "comparisons": {
+          "axis_vs_random": {
+            "estimand": "assistant_cap_minus_random_direction_cap",
+            "rate_A": 0.04,
+            "rate_B": 0.07692307692307693,
+            "risk_difference": -0.036923076923076927,
+            "bootstrap_95ci": [
+              -0.11076923076923076,
+              0.0
+            ],
+            "bootstrap_replicates": 10000,
+            "bootstrap_seed": 290819,
+            "paired": false
+          },
+          "axis_vs_sphere": {
+            "estimand": "assistant_cap_minus_sphere_proximity_cap",
+            "rate_A": 0.04,
+            "rate_B": 0.03,
+            "risk_difference": 0.010000000000000002,
+            "bootstrap_95ci": [
+              0.010000000000000002,
+              0.010000000000000002
+            ],
+            "bootstrap_replicates": 10000,
+            "bootstrap_seed": 290819,
+            "paired": false
+          },
+          "axis_vs_unsteered": {
+            "estimand": "assistant_cap_minus_unsteered_baseline",
+            "rate_A": 0.04,
+            "rate_B": 0.03,
+            "risk_difference": 0.010000000000000002,
+            "bootstrap_95ci": [
+              0.010000000000000002,
+              0.010000000000000002
+            ],
+            "bootstrap_replicates": 10000,
+            "bootstrap_seed": 290819,
+            "paired": false
+          }
+        }
+      },
+      "inclusive": {
+        "condition_rates": {
+          "unsteered_baseline": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 5,
+            "weighted_positive_estimate": 7.6923076923076925,
+            "rate": 0.07692307692307693
+          },
+          "assistant_cap": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 5,
+            "weighted_positive_estimate": 5.0,
+            "rate": 0.05
+          },
+          "random_direction_cap": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 5,
+            "weighted_positive_estimate": 7.6923076923076925,
+            "rate": 0.07692307692307693
+          },
+          "sphere_proximity_cap": {
+            "population_n": 100,
+            "human_sample_n": 30,
+            "human_sample_positive_n": 4,
+            "weighted_positive_estimate": 4.0,
+            "rate": 0.04
+          }
+        },
+        "comparisons": {
+          "axis_vs_random": {
+            "estimand": "assistant_cap_minus_random_direction_cap",
+            "rate_A": 0.05,
+            "rate_B": 0.07692307692307693,
+            "risk_difference": -0.026923076923076925,
+            "bootstrap_95ci": [
+              -0.10076923076923076,
+              0.010000000000000002
+            ],
+            "bootstrap_replicates": 10000,
+            "bootstrap_seed": 290820,
+            "paired": false
+          },
+          "axis_vs_sphere": {
+            "estimand": "assistant_cap_minus_sphere_proximity_cap",
+            "rate_A": 0.05,
+            "rate_B": 0.04,
+            "risk_difference": 0.010000000000000002,
+            "bootstrap_95ci": [
+              0.010000000000000002,
+              0.010000000000000002
+            ],
+            "bootstrap_replicates": 10000,
+            "bootstrap_seed": 290820,
+            "paired": false
+          },
+          "axis_vs_unsteered": {
+            "estimand": "assistant_cap_minus_unsteered_baseline",
+            "rate_A": 0.05,
+            "rate_B": 0.07692307692307693,
+            "risk_difference": -0.026923076923076925,
+            "bootstrap_95ci": [
+              -0.10076923076923076,
+              0.010000000000000002
+            ],
+            "bootstrap_replicates": 10000,
+            "bootstrap_seed": 290820,
+            "paired": false
+          }
+        }
+      }
+    },
+    "primary_specificity": {
+      "outcome": "strict_harmful_compliance",
+      "contrast": "assistant_cap minus random_direction_cap",
+      "risk_difference": -0.036923076923076927,
+      "bootstrap_95ci": [
+        -0.11076923076923076,
+        0.0
+      ],
+      "direction_favoring_axis": "negative",
+      "paired": false
+    },
+    "claim_guard": "This is the human-subset primary harmfulness estimate required by the T27 MEASUREMENT_LIMITED branch. Full-corpus automatic harmfulness remains secondary."
+  },
+  "identity_claim_guard": "Identity is not part of the T29-H primary estimator. The T27 Qwen identity branch has only two human-positive, adjudicator-dependent cases and must retain that caveat.",
+  "privacy": "aggregate only; no item IDs, UIDs, item-to-condition mapping, or per-item human labels joined to condition are emitted",
+  "source_git_sha": "67ae0c451b28ac552e5770e31224a3749a2eb434",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

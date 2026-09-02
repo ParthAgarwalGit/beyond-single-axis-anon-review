@@ -1,0 +1,72 @@
+# Assistant Axis / NeurReps project
+# Curated portable requirements for generation, activation extraction,
+# judging, geometry, statistics, plotting, testing, and Hugging Face uploads.
+#
+# Recommended environment:
+#   - Linux x86_64
+#   - NVIDIA GPU for generation/activation/steering
+#   - CUDA-compatible NVIDIA driver
+#
+# Install:
+#   python -m pip install --upgrade pip
+#   python -m pip install -r requirements.txt
+#
+# The core model stack is pinned to the versions used by the uploaded run-003
+# artifacts. Do not casually upgrade torch, transformers, tokenizers, vLLM,
+# or xformers during the study, because that would create a new environment
+# stratum and could change generation or activation results.
+
+# ---------------------------------------------------------------------------
+# Core model, generation, activation, and steering stack
+# ---------------------------------------------------------------------------
+torch==2.4.0
+transformers==4.46.3
+tokenizers==0.20.3
+accelerate==1.1.1
+vllm==0.6.3
+xformers==0.0.27.post2
+safetensors==0.8.0
+sentencepiece==0.2.2
+einops==0.8.2
+
+# ---------------------------------------------------------------------------
+# Hugging Face datasets, model downloads, and artifact uploads
+# ---------------------------------------------------------------------------
+huggingface-hub==0.26.5
+hf-transfer==0.1.9
+datasets==5.0.0
+pyarrow==25.0.0
+fsspec==2026.4.0
+
+# ---------------------------------------------------------------------------
+# Data processing and numerical analysis
+# ---------------------------------------------------------------------------
+numpy==1.26.4
+pandas==3.0.5
+scipy>=1.11,<1.15
+scikit-learn>=1.4,<1.7
+statsmodels>=0.14,<0.15
+
+# ---------------------------------------------------------------------------
+# Figures and paper-result exports
+# ---------------------------------------------------------------------------
+matplotlib>=3.8,<3.11
+
+# ---------------------------------------------------------------------------
+# Configuration, schemas, logging, progress, and system checks
+# ---------------------------------------------------------------------------
+PyYAML==6.0.3
+pydantic==2.13.4
+jsonschema==4.26.0
+python-dotenv==1.2.2
+rich==15.0.0
+psutil==7.2.2
+tqdm>=4.66,<5
+xxhash==3.8.1
+requests>=2.31,<3
+
+# ---------------------------------------------------------------------------
+# Tests and reproducibility checks
+# ---------------------------------------------------------------------------
+pytest>=8,<9
+pytest-xdist>=3,<4

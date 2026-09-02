@@ -1,0 +1,125 @@
+{
+  "complete": true,
+  "format_version": "t12-activation-recompute-v3",
+  "mode": "wrapper",
+  "pool_counts": {
+    "all_response": 22000,
+    "answer": 21961,
+    "reasoning": 21961
+  },
+  "pooling": {
+    "answer_sensitivity": "final-answer span under frozen text semantics; stored-text boundary reconstruction is used when generation-native token IDs are unavailable",
+    "primary": "all response tokens",
+    "reasoning_sensitivity": "reasoning span under frozen text semantics; stored-text boundary reconstruction is used when generation-native token IDs are unavailable; middle layer only"
+  },
+  "recomputed_metadata_count": 22000,
+  "segmentation_counts": {
+    "balanced_reasoning": 21961,
+    "malformed_reasoning": 39
+  },
+  "segmentation_provenance_counts": {
+    "prompt_seeded_reconstructed_from_stored_text_boundary": 21961,
+    "prompt_seeded_unclosed_open_marker": 39
+  },
+  "source_count": 22000,
+  "source_files": [
+    {
+      "bytes": 37212091,
+      "path": "/content/persona-artifacts-t12/lu-replication/run-003/extraction/rollouts_shard0.jsonl",
+      "sha256": "cf73eceed3fafb9e3c0c27ec22669fc8c9ac612094ec59b3e9b89b86b30fe85c"
+    },
+    {
+      "bytes": 36416780,
+      "path": "/content/persona-artifacts-t12/lu-replication/run-003/extraction/rollouts_shard1.jsonl",
+      "sha256": "4909b783f8eab1497f05fe9931bef6faf723eacb33cce59e8df1d9477e2f11e9"
+    },
+    {
+      "bytes": 40695306,
+      "path": "/content/persona-artifacts-t12/lu-replication/run-003/extraction/rollouts_shard2.jsonl",
+      "sha256": "aee523e4625ab6c269e33d1839d0e03ab898b988b010433d26d3aba2cefc9500"
+    }
+  ],
+  "token_count_delta_counts": {
+    "-1": 21709,
+    "-2": 196,
+    "-3": 23,
+    "-4": 1,
+    "0": 69,
+    "1": 1,
+    "2": 1
+  },
+  "token_provenance": {
+    "generation_native_token_ids_available": false,
+    "historical_n_out_tokens_used_as": "audit-only token-count field",
+    "method": "token IDs reconstructed deterministically from stored rendered_prompt and completion",
+    "reasoning_boundary_method": "use frozen segment_response when its strict prefix-token check passes; otherwise use the separately tokenized stored-text prefix through the final </think>, matching the historical worker procedure validated by the five-row reconstruction gate"
+  },
+  "validity_counts": {
+    "truncated": 41,
+    "valid": 21959
+  },
+  "prompt_seeded_unclosed_report": {
+    "count": 39,
+    "rendered_prompt_ends_with_open_marker": true,
+    "by_finish_reason": {
+      "length": 39
+    },
+    "classification": "malformed_reasoning per METHOD_FREEZE 6.2 (all-response retained; reasoning/answer pools unavailable; judge abstains)",
+    "uids": [
+      "96977f46a7433115",
+      "ce950e383b41ad01",
+      "a06c6ef47d76fb1c",
+      "72c73f7549e3585a",
+      "3af71f9d1650bcbe",
+      "72c0f81fc87ca2b3",
+      "6da5fbdd46fa482d",
+      "25d5fb06b1086336",
+      "ef1705b40c17f583",
+      "d3f070ad2a941aa1",
+      "9f4e9eec2bdd949a",
+      "c0937b4ddcf39817",
+      "015e9d7dc06e773f",
+      "5f477aa8deddea7c",
+      "bdb8dd6395674d5a",
+      "f07d90483b364051",
+      "4cbc1193bd7f7121",
+      "d68f1fb947bf610d",
+      "a8c840776f6805fb",
+      "b4bc03e22291d319",
+      "be852e45ca87edb1",
+      "10facb4ce4fba645",
+      "39a72cdb4c4d84ca",
+      "e665d4913a423599",
+      "d9c6aa2481cea76b",
+      "13d9d0197641bf54",
+      "83f5012e680e7b4d",
+      "a0b476568c7b5f83",
+      "0b07e365b14660af",
+      "7afd8105442ceaed",
+      "1874b05385f51d26",
+      "fbaa970913e79de1",
+      "df6fa3f294e05c44",
+      "4dd70d3eb5664d90",
+      "2a29b43dc5069dc6",
+      "76ce0f0cf0cfb348",
+      "199821851a50134f",
+      "65a7d9b92b073f7a",
+      "67d6102a7faf07e9"
+    ]
+  },
+  "frozen_boundary_prefix_check_report": {
+    "population": "prompt_seeded_reconstructed_from_stored_text_boundary",
+    "n_rows": 21961,
+    "counts": {
+      "True": 21961
+    },
+    "pass_rate": 1.0,
+    "note": "True means the separately tokenized prefix through the final </think> equals the stored content-ID prefix (exact reconstruction)."
+  },
+  "reclassification_applied": {
+    "source": "results/t12/provenance/review_fix_real_corpus_audit.json",
+    "audit_git_sha": "e4d6cef13719fff9c472f29c2ab0f507054b1d5b",
+    "activation_tensors_modified": false,
+    "note": "Metadata-only. The seeded-unclosed rows are malformed_reasoning: all-response retained, answer/reasoning pools unavailable. Stored tensors are unchanged; the off-repo meta_part has_answer_pool flags for the listed uids must be regenerated (no forward pass)."
+  }
+}

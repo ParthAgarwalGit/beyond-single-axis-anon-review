@@ -1,0 +1,90 @@
+{
+  "task": "retention_boundary_diagnostic",
+  "purpose": "supports docs/DEVIATION_2026-08-17_CONFIRMATORY_MEMBERSHIP.md",
+  "population": "scored (human validity ok AND archived lu_score present)",
+  "n_scored": 278,
+  "gate_reference": {
+    "score3_precision_min": 0.85,
+    "score3_recall_min": 0.85,
+    "macro_f1_min": 0.75,
+    "four_class_kappa_min": 0.7
+  },
+  "boundaries": {
+    "score_eq_3": {
+      "boundary": "score_eq_3",
+      "counts": {
+        "tp": 50,
+        "fp": 40,
+        "fn": 46,
+        "tn": 142
+      },
+      "precision_unweighted": 0.5555555555555556,
+      "recall_ip": 0.7978531419917161,
+      "recall_unweighted": 0.5208333333333334,
+      "macro_f1_ip": 0.7438786701898614,
+      "kappa_binary_ip": 0.496813032072815,
+      "kappa_binary_unweighted": 0.30556523759730453,
+      "comparison_status": "EXPLORATORY: this tool collapses the rubric to two classes, so its macro-F1 and kappa are binary and are NOT the frozen four-class criteria; see results/t07/judge_validation.json for those",
+      "meets_frozen_threshold": {
+        "precision": false,
+        "recall": false,
+        "macro_f1": "not_comparable_binary_vs_four_class",
+        "kappa": "not_comparable_binary_vs_four_class"
+      },
+      "n_comparable_thresholds_met": 0,
+      "n_comparable_thresholds": 2
+    },
+    "score_ge_2": {
+      "boundary": "score_ge_2",
+      "counts": {
+        "tp": 139,
+        "fp": 39,
+        "fn": 17,
+        "tn": 83
+      },
+      "precision_unweighted": 0.7808988764044944,
+      "recall_ip": 0.7256973591559907,
+      "recall_unweighted": 0.8910256410256411,
+      "macro_f1_ip": 0.7820735970415376,
+      "kappa_binary_ip": 0.5697680097545252,
+      "kappa_binary_unweighted": 0.5828063029263588,
+      "comparison_status": "EXPLORATORY: this tool collapses the rubric to two classes, so its macro-F1 and kappa are binary and are NOT the frozen four-class criteria; see results/t07/judge_validation.json for those",
+      "meets_frozen_threshold": {
+        "precision": false,
+        "recall": false,
+        "macro_f1": "not_comparable_binary_vs_four_class",
+        "kappa": "not_comparable_binary_vs_four_class"
+      },
+      "n_comparable_thresholds_met": 0,
+      "n_comparable_thresholds": 2
+    }
+  },
+  "confusion_4x4_counts": {
+    "human_3": {
+      "machine_3": 50,
+      "machine_2": 40,
+      "machine_1": 4,
+      "machine_0": 2
+    },
+    "human_1": {
+      "machine_0": 40,
+      "machine_1": 39,
+      "machine_2": 21,
+      "machine_3": 18
+    },
+    "human_2": {
+      "machine_0": 4,
+      "machine_2": 27,
+      "machine_3": 22,
+      "machine_1": 7
+    },
+    "human_0": {
+      "machine_0": 4
+    }
+  },
+  "privacy": "aggregate only; no uids, G-ids, or per-item scores",
+  "source_git_sha": "75cf6965b5c7b6fd5442a1d1366a894195e17ee6",
+  "source_git_dirty": true,
+  "config_sha256": "2fe1dbbbacdfec067463742f982bc2d8ca31cad1b880973a7164b678ea6c7683",
+  "working_tree_diff_sha256": "5239a2147d5023627401232fac6dae2a668adfa964147992fe2c7b2d38a4156c"
+}

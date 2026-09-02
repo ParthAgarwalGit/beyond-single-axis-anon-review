@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "config_path": "configs/method_frozen.yaml",
+  "config_sha256": "febbcbfc10ec40e98373c88a43fc31ba1c6ef2486eedeacca38d81301937e77b",
+  "question_blocks": {
+    "E80": 80,
+    "C80-A": 80,
+    "C80-B": 80
+  },
+  "question_union": 240,
+  "unique_prompt_counts_across_240": {
+    "0": 48,
+    "1": 48,
+    "2": 48,
+    "3": 48,
+    "4": 48
+  },
+  "duplicate_pair_block": "C80-A",
+  "assignment_sha256": "6f0213dd56073d3ce87b835e8c7b8a7759ab9b53e78486bced689e3f0c1e6172",
+  "review_note": "A PASS validates internal consistency only. Reviewer approval, runtime revision hashes, T04 hook validation, judge validation, coefficient freeze, and P50/Axis hashes remain separate gates."
+}

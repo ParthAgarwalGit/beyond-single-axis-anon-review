@@ -1,0 +1,75 @@
+{
+  "schema_version": "qwen-causal-scoring-production-receipt/1.0",
+  "status": "PRODUCTION_SCORING_PASS_DRAWABLE_BY_T26",
+  "created_utc": "2026-08-23T10:23:04.644376+00:00",
+  "repository": "[Author-B-GitHub]/[anonymized-repository-name]",
+  "source_git_sha": "5b60b8e7bd32e8422b0886d27c04c52fb61e29f5",
+  "source_git_dirty": false,
+  "hf_source": {
+    "repo_id": "[Author-B-HF]/[anonymized-repository-name]-artifacts",
+    "repo_type": "dataset",
+    "revision": "e29553fe75a7d89757258e7c6c38723de1960ca9",
+    "path": "t29-qwen-matched-controls/qwen_capping_400_generation_population.jsonl",
+    "sha256": "24a0c5a3699fd6b51a66d4be92bc054d14cb800db894c0162b65774c5667f06b"
+  },
+  "judge": {
+    "scientific_model": "deepseek-ai/DeepSeek-V3",
+    "provider_model_id": "deepseek/deepseek_v3",
+    "endpoint": "https://api.novita.ai/v3/openai"
+  },
+  "transport": {
+    "request_pacing_enabled": true,
+    "sdk_automatic_retries_disabled": true,
+    "observed_provider_limit_requests_per_minute": 10,
+    "min_request_interval_seconds": 7.0,
+    "rate_limit_backoff_seconds": 15.0,
+    "generic_request_error_backoff_seconds": 2.0,
+    "scope": "every hosted judge attempt, including canaries and retries",
+    "method_boundary": "Operational transport pacing only; no change to judge identity, prompt, schema, temperature, validation gate, sampling rule, or estimand."
+  },
+  "run_window": {
+    "started_utc": "2026-08-23T09:21:41.960309+00:00",
+    "finished_utc": "2026-08-23T10:23:04.359653+00:00"
+  },
+  "report_checks": {
+    "production": true,
+    "drawable_by_t26": true,
+    "n_rows": 400,
+    "n_coverage_failures": 0,
+    "n_request_error_attempts": 11,
+    "n_rate_limit_error_attempts": 11,
+    "canary": {
+      "n": 50,
+      "start_sha256": "6e48843fbd6222cde4afb17ee5416933654aad902a39bfcf34e3fe07b856b9f8",
+      "end_sha256": "6e48843fbd6222cde4afb17ee5416933654aad902a39bfcf34e3fe07b856b9f8",
+      "start_usable": true,
+      "end_usable": true,
+      "drift_detected": false,
+      "n_items_changed": 0,
+      "how_to_use": "Re-score this same canary slice later and compare against end_sha256. A mismatch means the endpoint moved."
+    },
+    "per_condition": {
+      "unsteered_baseline": {"n": 100, "coverage_failures": 0},
+      "assistant_cap": {"n": 100, "coverage_failures": 0},
+      "random_direction_cap": {"n": 100, "coverage_failures": 0},
+      "sphere_proximity_cap": {"n": 100, "coverage_failures": 0}
+    }
+  },
+  "artifacts": {
+    "input": {"path": "/content/drive/MyDrive/[anonymized-repository-name]-qwen-causal-scoring/production_5b60b8e7bd32_20260823T091319Z/input/qwen_capping_400_generation_population.jsonl", "sha256": "24a0c5a3699fd6b51a66d4be92bc054d14cb800db894c0162b65774c5667f06b"},
+    "scored": {"path": "/content/drive/MyDrive/[anonymized-repository-name]-qwen-causal-scoring/production_5b60b8e7bd32_20260823T091319Z[local-path]", "sha256": "d7f8feb34f8c2e8e8fff57764c95ff81b8128fbfa35d87c380322dce07565bd3"},
+    "raw": {"path": "/content/drive/MyDrive/[anonymized-repository-name]-qwen-causal-scoring/production_5b60b8e7bd32_20260823T091319Z[local-path]", "sha256": "130bff99ab2888c0989154d5fbf69970e77ceb7d6f1d508b9704d58745cfa2ed"},
+    "report": {"path": "/content/drive/MyDrive/[anonymized-repository-name]-qwen-causal-scoring/production_5b60b8e7bd32_20260823T091319Z/qwen_causal_scoring_report.json", "sha256": "e45bbae7dee21a49e32309576b5ba17b369a380a6fc22b4697d272b8f797ed0b"},
+    "stdout_log": {"path": "/content/drive/MyDrive/[anonymized-repository-name]-qwen-causal-scoring/production_5b60b8e7bd32_20260823T091319Z/audit/qwen_causal_scoring_stdout.log", "sha256": "05638bf577a9632b8c04c7f5056aea449add311659161903bd7a347f7cbd2cdb"},
+    "provider_probe": {"path": "/content/drive/MyDrive/[anonymized-repository-name]-qwen-causal-scoring/production_5b60b8e7bd32_20260823T091319Z/audit/novita_provider_probe.txt", "sha256": "e99f8ed257015e999e021a95f2c7143b5f7c84e703cc5d0a6794b3785d508164"},
+    "environment": {"path": "/content/drive/MyDrive/[anonymized-repository-name]-qwen-causal-scoring/production_5b60b8e7bd32_20260823T091319Z/audit/environment.json", "sha256": "e5d2ca2fd9cdc351a2101fc3a793de528ec79e98a8a784a1bc2a442893c56d32"}
+  },
+  "environment": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:23) [GCC 11.4.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "openai": "1.109.1",
+    "huggingface_hub": "0.26.5",
+    "pytest": "8.4.2"
+  },
+  "claim_boundary": "This receipt establishes a production/drawable automatic scoring artifact only. It does not establish T27 judge validity or T29 causal specificity."
+}

@@ -1,0 +1,42 @@
+{
+  "task": "T29_CLOSURE_VALIDATION",
+  "status": "PASS",
+  "checks": {
+    "human_primary_frozen": true,
+    "human_primary_primary_result_eligible": true,
+    "t27_harmfulness_branch_measurement_limited": true,
+    "automatic_full_corpus_secondary_only": true,
+    "automatic_scored_artifact_sha_matches_production": "d7f8feb34f8c2e8e8fff57764c95ff81b8128fbfa35d87c380322dce07565bd3",
+    "automatic_rows": 400,
+    "automatic_rows_per_condition": 100,
+    "automatic_underlying_items": 100,
+    "automatic_coverage_failures": 0,
+    "automatic_uid_pairing_contract": "PASS",
+    "automatic_cross_condition_metadata_match": "PASS",
+    "t27_automatic_rate_regression": "PASS",
+    "t24_primary_controls_engagement_matched_layers_46_53": "PASS",
+    "automatic_degeneration_reported_separately": true,
+    "focused_automatic_sensitivity_tests": "8 passed",
+    "runner_provenance_gate_checks": "4 passed",
+    "private_400_row_integration_run": "PASS",
+    "privacy_aggregate_only": true,
+    "final_causal_specificity_claim": "NOT_ESTABLISHED"
+  },
+  "artifacts": {
+    "human_primary": "results/t29/t29_human_primary.json",
+    "automatic_sensitivity": "results/t29/t29_automatic_sensitivity.json",
+    "final_synthesis": "results/t29/t29_final_synthesis.json",
+    "final_finding": "docs/T29_FINAL_FINDING.md",
+    "paper_result": "docs/T29_PAPER_RESULT.md",
+    "figure_sources": "design/figures/sources/t29/"
+  },
+  "frozen_bindings": {
+    "human_primary_sha256": "afaf7b678d7bdc48608f580b501a6ee5160fe87ddad61ff6ff57367fc8cdf77d",
+    "private_scored_sha256": "d7f8feb34f8c2e8e8fff57764c95ff81b8128fbfa35d87c380322dce07565bd3",
+    "source_scoring_report_sha256": "e45bbae7dee21a49e32309576b5ba17b369a380a6fc22b4697d272b8f797ed0b",
+    "generation_population_sha256": "24a0c5a3699fd6b51a66d4be92bc054d14cb800db894c0162b65774c5667f06b",
+    "t24_controls_npz_sha256": "adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291",
+    "t24_freeze_sha256": "08fb4bb67b366c81ddca33835fb97e130db49efb56a4cece64c0cd63dc6a99c4"
+  },
+  "claim_guard": "T29 is complete, but the harmfulness result does not establish robust direction-specific causal benefit. Human-primary evidence remains primary; automatic full-corpus evidence remains secondary."
+}

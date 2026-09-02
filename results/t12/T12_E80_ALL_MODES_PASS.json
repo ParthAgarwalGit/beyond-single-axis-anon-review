@@ -1,0 +1,32 @@
+{
+  "default": {
+    "all_response": 400,
+    "answer": 400,
+    "metadata_rows": 400,
+    "reasoning_middle": 400,
+    "segmentation_provenance": {
+      "prompt_seeded_reconstructed_from_stored_text_boundary": 400
+    },
+    "unique_uids": 400,
+    "validity_counts": {
+      "valid": 400
+    }
+  },
+  "status": "PASS",
+  "translated_status": "already previously PASS",
+  "wrapper": {
+    "all_response": 22000,
+    "answer": 22000,
+    "metadata_rows": 22000,
+    "reasoning_middle": 21961,
+    "segmentation_provenance": {
+      "frozen_segment_response": 39,
+      "prompt_seeded_reconstructed_from_stored_text_boundary": 21961
+    },
+    "unique_uids": 22000,
+    "validity_counts": {
+      "truncated": 41,
+      "valid": 21959
+    }
+  }
+}

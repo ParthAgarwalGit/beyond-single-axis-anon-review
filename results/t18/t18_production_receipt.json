@@ -1,0 +1,135 @@
+{
+  "claim_boundary": {
+    "not_supported": [
+      "A causal mechanism or causal necessity claim.",
+      "A unique higher-dimensional representation.",
+      "An exact estimate of the number of dimensions required.",
+      "A claim that nonlinear structure is needed.",
+      "Behaviorally verified role enactment."
+    ],
+    "supported": [
+      "The single Assistant Axis is not an adequate predictive summary of default-Assistant versus role-prompted response activations under the frozen unseen-role/unseen-question evaluation.",
+      "A regularized full-dimensional linear readout recovers substantially more held-out discriminative information than the one-dimensional Axis."
+    ]
+  },
+  "diagnostics": {
+    "nonlinear_convergence_warning_note": "Production emitted sklearn L-BFGS convergence warnings for some small_nonlinear fits at the frozen max_iter=2000. The run exited successfully; small_nonlinear did not determine the verdict, and the decisive full_linear family does not use MLPClassifier.",
+    "permutation_null_max_abs_deviation_from_chance": 0.10650652474445177,
+    "permutation_null_mean": 0.505365452575112,
+    "permutation_null_replicates": 20,
+    "permutation_null_status": "descriptive only; not an inferential test"
+  },
+  "execution": {
+    "backend": "multiprocessing_fork",
+    "outer_workers": 4,
+    "production_log_note": "Retain the full GCP production log outside git. The raw production JSON is also retained outside git; the committed JSON is a whitespace-normalized serialization of the same parsed report object.",
+    "production_machine": "n2-highmem-32",
+    "production_zone": "us-east1-b",
+    "serial_one_fold_benchmark_max_rss_gib": 9.17,
+    "serial_one_fold_benchmark_seconds": 1798.086,
+    "worker_blas_threads": 8
+  },
+  "fold_coverage": {
+    "dropped_rows_max": 15680,
+    "dropped_rows_min": 15676,
+    "outer_folds": 20,
+    "scored_rows_per_family": {
+      "axis_1d": 44795,
+      "full_linear": 44795,
+      "pca_linear": 44795,
+      "small_nonlinear": 44795
+    },
+    "test_rows_sum": 44795,
+    "train_rows_max": 26879,
+    "train_rows_min": 26875
+  },
+  "frozen_authorities": {
+    "compatibility_authority": "docs/deviations/2026-08-25-t18-g2-membership-compatibility.md",
+    "eligible_roles_sha256": "68be9fba61c9ac88da45c589d9892dbd374911efd82a2301f405d3f207ed3cea",
+    "g2_freeze_file": "docs/G2_GEOMETRY_FREEZE.json",
+    "g2_freeze_sha256": "54459154cf3a4dbdd4d44c2f6c1504eed8fce2b7f6c38384da95a98f47112937",
+    "membership": "label_independent_technical_validity",
+    "membership_authority": "docs/DEVIATION_2026-08-17_CONFIRMATORY_MEMBERSHIP.md",
+    "method_config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59",
+    "t18_config_sha256": "8a3c93deef7d87d92da94a7fb28413008e85eef89c81e035864ba010d7b34cdc"
+  },
+  "per_family_vs_axis": {
+    "full_linear": {
+      "ci95_marginal": [0.18091291747485944, 0.22065415427285345],
+      "difference": 0.19986945700974346
+    },
+    "pca_linear": {
+      "ci95_marginal": [-0.02005809351302428, 0.003281973797895303],
+      "difference": -0.00835438464022309
+    },
+    "small_nonlinear": {
+      "ci95_marginal": [-0.03270814495797324, 0.01021593516351018],
+      "difference": -0.01164028476889234
+    }
+  },
+  "population": {
+    "considered_rows": 44795,
+    "ineligible_role_rows": 0,
+    "invalid_rows": 0,
+    "judge_filter_applied": false,
+    "kept_default_rows": 797,
+    "kept_role_rows": 43998,
+    "missing_vectors": 0,
+    "n_default_conditions": 5,
+    "n_questions": 160,
+    "n_roles": 275,
+    "wrong_slice_rows": 0
+  },
+  "primary_result": {
+    "adequacy_margin_auroc": 0.02,
+    "axis_1d_auroc": 0.678327205225169,
+    "best_alternative": "full_linear",
+    "bootstrap_cluster": "role",
+    "bootstrap_replicates_used": 2000,
+    "full_linear_auroc": 0.8781966622349124,
+    "max_family_difference": 0.19986945700974346,
+    "pca_linear_auroc": 0.6699728205849459,
+    "simultaneous_ci95": [0.18091291747485944, 0.22065415427285345],
+    "small_nonlinear_auroc": 0.6666869204562766,
+    "verdict": "INADEQUATE"
+  },
+  "production_source": {
+    "cache_review_base_sha": "1e78be6340c66912824456ffe965f0c9bccadc94",
+    "cache_review_pr": 79,
+    "parallel_execution_commit": "e24847c0659d5c5cd66af33913a6c00524a006d6",
+    "production_exit_status": 0,
+    "source_git_dirty": false,
+    "source_git_sha": "e24847c0659d5c5cd66af33913a6c00524a006d6"
+  },
+  "raw_production_artifact": {
+    "bytes": 32307,
+    "sha256": "d4b0eea57b1ef95e9a2591c17d84a06e1e37e21021af78ddf11974f1171cbc21",
+    "note": "Exact bytes emitted by the GCP production runner and independently re-verified from the preserved production file. Not byte-identical to the committed JSON because the latter was whitespace-normalized during repository insertion; parsed JSON content is the same."
+  },
+  "result_artifact": {
+    "bytes": 23535,
+    "path": "results/t18/t18_report.json",
+    "sha256": "7cb2fc71f821290e7fea3b0cac1885b9c7ed821d5e55c473d82dc8487b060805",
+    "serialization_note": "Whitespace-normalized repository serialization of the raw production report. This hash binds the exact committed bytes."
+  },
+  "selection_summary": {
+    "axis_1d": {"axis_1d": 20},
+    "full_linear": {"full_linear_C0.01": 3, "full_linear_C0.1": 17},
+    "pca_linear": {"pca32_linear_C0.001": 20},
+    "small_nonlinear": {
+      "pca20_mlp4_a1.0": 1,
+      "pca20_mlp4_a10.0": 1,
+      "pca32_mlp4_a0.1": 6,
+      "pca32_mlp4_a1.0": 1,
+      "pca32_mlp4_a10.0": 11
+    }
+  },
+  "slice": {
+    "arm": "USER_TRANSLATED_LU",
+    "block_index": 16,
+    "blocks": ["C80-A", "C80-B"],
+    "pool": "ALL_RESPONSE_TOKENS"
+  },
+  "status": "PRODUCTION_COMPLETE_REPORTABLE",
+  "task": "T18"
+}

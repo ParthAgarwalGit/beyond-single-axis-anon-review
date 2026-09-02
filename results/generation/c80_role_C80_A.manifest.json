@@ -1,0 +1,127 @@
+{
+  "schema_version": "t10-output-manifest/1.0",
+  "task": "T10",
+  "block": "C80-A",
+  "arm": "USER_TRANSLATED_LU",
+  "status": "REVIEW_REQUIRED",
+  "owner": "[Author B]",
+  "note": "C80-A confirmatory translated-arm role generation. Raw/canonical output JSONL is not intended for git; commit this provenance manifest.",
+  "data_location": {
+    "hf_repo": null,
+    "hf_repo_type": null,
+    "hf_target_file": null,
+    "persistent_drive_file": "/content/drive/MyDrive/T10_C80A_PERSISTENT/final/c80_role_C80_A.final.jsonl",
+    "authoritative_sha256": "c7229c926066271eb99bc6b647ee8a7446e67071d0b60d5c6592d42566f1238c",
+    "authoritative_bytes": 337147591,
+    "authoritative_n_rows": 22286,
+    "local_ephemeral_file": "/content/t10_c80a_work/c80_role_C80_A.final.jsonl",
+    "storage_status": "authoritative_generation_artifact_preserved_in_google_drive"
+  },
+  "provenance": {
+    "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+    "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+    "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+    "method_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+    "manifest_rollouts_sha256": "60e4e7b5984a47db22e6e4b5def97832e7269c4d57863102449f4f9bad27bf33",
+    "kit_code_commit": "3e2105a2a27e6549eeec8e8fefbf402acabda6c7",
+    "row_git_sha": "0000000000000000000000000000000000000000",
+    "prompt_input_cache_sha256": "d6ea6d615a03e764ac60ae7df1f31d996fbfa20ffbc7b42acc835f8cc815ecce",
+    "execution_manifest": "/content/t10_c80a_work/provenance/c80_role_manifest_C80_A.execution.json"
+  },
+  "reconciliation": {
+    "n_rollouts_expected": 22000,
+    "n_rollouts_present": 22000,
+    "coverage_missing": 0,
+    "coverage_extra": 0,
+    "duplicate_rollout_retry_pairs": 0,
+    "role_judgeable_rollouts": 21998,
+    "role_judgeable_fraction": 0.9999090909090909,
+    "exhausted_retryable_rollouts": 2,
+    "single_config_sha256": true,
+    "single_model_revision": true,
+    "single_tokenizer_revision": true,
+    "single_chat_template_sha256": true,
+    "single_arm_and_block": true,
+    "per_prompt_index": {
+      "0": 4400,
+      "1": 4400,
+      "2": 4400,
+      "3": 4400,
+      "4": 4400
+    },
+    "attempt_selection_rule": "lowest_retry_technically_valid_attempt"
+  },
+  "row_distributions": {
+    "technical_validity_all_attempts": {
+      "valid": 21998,
+      "truncated": 288
+    },
+    "segmentation_case_all_attempts": {
+      "balanced_reasoning": 21998,
+      "None": 288
+    },
+    "retry_index_rows": {
+      "0": 22000,
+      "1": 271,
+      "2": 15
+    },
+    "terminal_technical_validity": {
+      "valid": 21998,
+      "truncated": 2
+    },
+    "terminal_segmentation_case": {
+      "balanced_reasoning": 21998,
+      "None": 2
+    }
+  },
+  "generation": {
+    "engine": "vLLM 0.26.0 data-parallel; one engine per selected GPU",
+    "decoding": "greedy parity with C80-B (temperature=0, do_sample=false, seed=0)",
+    "max_new_tokens_schedule": [
+      2048,
+      8192,
+      16384
+    ],
+    "decoding_artifact_sha256": null,
+    "decoding_provisional": true,
+    "execution_mode": "PARITY_WITH_C80_B_PROVISIONAL",
+    "subbatch": 512
+  },
+  "segmentation": {
+    "prefilled_open_handling": true,
+    "closing_marker_boundary": "token-authoritative </think> when single-token",
+    "expected_primary_case": "balanced_reasoning"
+  },
+  "caveats": [
+    "PROVISIONAL: T09 frozen_decoding and/or official T08 rendered-prompt hashes were not both available.",
+    "The notebook enforced a run-local exact prompt-hash guard, but this is not a substitute for the official T08 render-hash freeze.",
+    "vLLM greedy is not claimed to be token-identical to HF greedy."
+  ],
+  "attempt_selection": {
+    "schema_version": "t10-attempt-selection/1.0",
+    "rule": "lowest_retry_technically_valid_attempt",
+    "description": "For each rollout, select the lowest retry with technical_validity == 'valid'. If no valid attempt exists after all declared retries, retain the highest-retry attempt for technical-failure provenance only; it is not eligible for downstream role scoring, activation pooling, retention, or geometry.",
+    "technically_valid_value": "valid",
+    "if_no_valid_attempt": "retain_highest_retry_for_failure_provenance_only",
+    "selection_index": "results/generation/c80_role_C80_A.selection.jsonl",
+    "selection_index_sha256": "082fee5d7650726f73720644c69c1a19cbf477cba089d69e569a0af83aa3c4d2",
+    "raw_authoritative_sha256": "c7229c926066271eb99bc6b647ee8a7446e67071d0b60d5c6592d42566f1238c",
+    "n_selected_rollouts": 22000,
+    "n_downstream_eligible": 21998,
+    "n_exhausted_technical": 2,
+    "n_rollouts_with_multiple_valid_attempts": 0,
+    "n_multiple_valid_with_different_text": 0,
+    "selected_retry_counts": {
+      "0": 21729,
+      "1": 256,
+      "2": 15
+    },
+    "selected_technical_validity": {
+      "truncated": 2,
+      "valid": 21998
+    },
+    "frozen_date": "2026-08-13",
+    "deviation_record": "docs/deviations/2026-08-13-t10-attempt-selection.md"
+  }
+}

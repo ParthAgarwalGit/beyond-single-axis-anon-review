@@ -1,0 +1,117 @@
+{
+  "schema_version": "t10-output-manifest/1.0",
+  "task": "T10",
+  "block": "C80-B",
+  "arm": "USER_TRANSLATED_LU",
+  "status": "GENERATED",
+  "owner": "[Author A]",
+  "note": "Provenance/reconciliation record. The raw JSONL is a ~338 MB generation output and is NOT committed to git (see .gitignore / README): it lives on Hugging Face with its hash here. The per-rollout attempt-selection index IS committed (see attempt_selection).",
+
+  "data_location": {
+    "hf_repo": "[Author-A-HF]/persona-artifacts",
+    "hf_repo_type": "dataset",
+    "authoritative_file": "results/generation/c80_role_C80_B.final.jsonl",
+    "raw_pre_resegmentation_file": "results/generation/c80_role_C80_B.jsonl",
+    "authoritative_sha256": "2d82dbe1ef2ab49068d8f2ad5f544db2da4bd3e1d7d44ec89415d0b8bb84c1b8",
+    "authoritative_bytes": 337780471,
+    "authoritative_n_rows": 22735
+  },
+
+  "provenance": {
+    "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+    "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+    "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+    "method_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+    "manifest_rollouts_sha256": "e7b532e3816e47489d2d6c48cf43da7f16cace4c15f878f00d8c8c6a5eb86ac5"
+  },
+
+  "reconciliation": {
+    "n_rollouts_expected": 22000,
+    "n_rollouts_present": 22000,
+    "coverage_missing": 0,
+    "coverage_extra": 0,
+    "duplicate_rollout_retry_pairs": 0,
+    "role_judge_eligible_rollouts": 22000,
+    "role_judge_eligible_fraction": 1.0,
+    "role_judge_eligible_rule": "lowest_retry_technically_valid_attempt",
+    "role_judge_eligible_definition": "Under the frozen attempt-selection rule (lowest retry index whose technical_validity == valid; see attempt_selection below), every one of the 22,000 semantic rollouts has a selected valid attempt whose segmentation yields a non-empty final-answer region to feed the judge. This is TECHNICAL/SEGMENTATION eligibility only. It is NOT validated role-judge output: T07 (judge validation) and G1 have not passed, and no automatic role score has been applied to these outputs.",
+    "role_judge_eligible_note": "22,000 is the count UNDER the frozen lowest-valid-retry rule, not under terminal-attempt accounting. Terminal-attempt accounting yields 21,997 because 3 rollouts (a6491628..., b5414c14..., 1ad4b948...) are valid at retry 0 (2048) but truncated at their terminal retry 1 (8192). The frozen rule rescues them at retry 0. The eligibility count is therefore meaningful only with the selection rule stated, which it now is.",
+    "single_config_sha256": true,
+    "single_model_revision": true,
+    "single_arm_and_block": true,
+    "attempt_selection_rule": "lowest_retry_technically_valid_attempt"
+  },
+
+  "row_distributions": {
+    "technical_validity_all_attempts": { "valid": 22484, "truncated": 251 },
+    "segmentation_case_all_attempts": { "balanced_reasoning": 22484, "null_truncated": 251 },
+    "retry_sequence_counts": {
+      "0": 21318,
+      "0,1": 659,
+      "0,1,2": 8,
+      "0,1,2,3,4": 15
+    },
+    "selected_technical_validity": { "valid": 22000, "truncated": 0 },
+    "extra_rows_anatomy": "The 735 rows beyond the 22,000 semantic rollouts are earlier/parallel retry attempts sharing a rollout_id -- NOT solely retries of technically-failed cells. 682 rollouts have more than one attempt: 2048:valid -> 8192:valid x436; 2048:truncated -> 8192:valid x220; 2048:valid -> 8192:truncated x3 (these 3 are the terminal-truncated rollouts rescued at retry 0 by the frozen rule); full 2048 -> 8192 -> 16384 ladder x8; and 15 rollouts whose counter reaches retry 4 (retries 0-3 at 2048, retry 4 at 8192). 439 rollouts were retried although their retry-0 attempt is already valid post-resegmentation, so the earlier 'retries of technically-failed cells only' description was wrong.",
+    "resume_duplicate_attempt_defect": "In the 15 five-attempt histories, retries 0-3 all record max_new_tokens=2048 (same token budget); 3 of those 4 same-budget attempts are surplus, for 45 surplus same-budget attempts total (15 x 3). In 12 of the 15 histories the four same-budget attempts are byte-identical text -- a resume/idempotency defect that re-appended an already-completed attempt at incremented retry indices instead of skipping it. No raw generation is rewritten; the frozen lowest-valid-retry rule selects retry 0 for these 12, so the defect does not affect the selected set. Token budget must be read from per-row runtime provenance, never inferred from retry index."
+  },
+
+  "generation": {
+    "engine": "vLLM v0.26.0 (data-parallel, one engine per free GPU)",
+    "decoding": "greedy (temperature=0.0, do_sample=false, seed=0)",
+    "max_new_tokens_schedule": [2048, 8192, 16384],
+    "max_new_tokens_note": "Initial pass at 2048; truncated cells regenerated at 8192, then a final handful at 16384, all under the same rollout id with an incrementing retry counter. Retry index does NOT map 1:1 to token budget: in the 15 five-attempt histories retry 3 records 2048 and retry 4 records 8192, so token budget must be read from per-row runtime provenance.",
+    "decoding_artifact_sha256": null,
+    "decoding_provisional": true,
+    "decoding_deviation_record": "docs/deviations/2026-08-13-c80-greedy-decoding.md"
+  },
+
+  "segmentation": {
+    "issue": "DeepSeek-R1-Distill prefills the opening <think> into the prompt, so outputs are reasoning</think>answer (orphan close). The original marker-balance check mislabelled 100% of valid outputs as malformed_reasoning.",
+    "fix": "Prefilled-open handling with token-authoritative </think> boundary (token id 128014).",
+    "fix_reference": "src/generation.py; PR #26; deviation docs/deviations/2026-08-08-prefilled-think-segmentation.md",
+    "effect": "role-judgeable rollouts 0/22000 -> 22000/22000"
+  },
+
+  "caveats": [
+    "PROVISIONAL: T09 runtime decoding freeze is not merged, so decoding_artifact_sha256 is null and this is not freeze-grade evidence.",
+    "vLLM greedy is not guaranteed token-identical to HF greedy; every row is still canonically segmented/validated.",
+    "C80 greedy decoding (T=0) differs from the T09-accepted E80 settings (T=0.6, top_p=0.95, 2560). C80-A vs C80-B is the decoding-matched confirmatory comparison; any pooled E80+C80 240-ID analysis is a Method-Freeze section-16 deviation that must retain decoding-stratum provenance and needs the T02 owner's sign-off (docs/deviations/2026-08-13-c80-greedy-decoding.md).",
+    "RESOLVED in Method Freeze V4 (docs/METHOD_FREEZE_V4_13_AUG.md): response_segmentation.prompt_prefills_opening_marker: true is now in configs/method_frozen_v4.yaml. The historical method_config_sha256 above is preserved byte-for-byte because it is stamped into the raw generation; downstream analysis uses V4."
+  ],
+
+  "attempt_selection": {
+    "schema_version": "t10-attempt-selection/1.0",
+    "rule": "lowest_retry_technically_valid_attempt",
+    "description": "For each rollout, select the lowest retry with technical_validity == 'valid'. If no valid attempt exists after all declared retries, retain the highest-retry attempt for technical-failure provenance only; it is not eligible for downstream role scoring, activation pooling, retention, or geometry.",
+    "technically_valid_value": "valid",
+    "if_no_valid_attempt": "retain_highest_retry_for_failure_provenance_only",
+    "selection_index": "results/generation/c80_role_C80_B.selection.jsonl",
+    "selection_index_sha256": "cd947ee31bf7b324892d093a5ea35794a8ac8fbec5d74befe349a1d674cc69a7",
+    "raw_authoritative_sha256": "2d82dbe1ef2ab49068d8f2ad5f544db2da4bd3e1d7d44ec89415d0b8bb84c1b8",
+    "n_selected_rollouts": 22000,
+    "n_downstream_eligible": 22000,
+    "n_exhausted_technical": 0,
+    "n_rollouts_with_multiple_valid_attempts": 448,
+    "n_multiple_valid_with_different_text": 443,
+    "selected_retry_counts": {
+      "0": 21769,
+      "1": 220,
+      "2": 8,
+      "4": 3
+    },
+    "selected_technical_validity": {
+      "valid": 22000
+    },
+    "terminal_attempt_role_judgeable": 21997,
+    "terminal_attempt_note": "Terminal-attempt accounting gives 21,997 (3 rollouts valid at retry 0 but truncated at their terminal retry). The frozen lowest-valid-retry rule rescues those 3 at retry 0, giving 22,000/22,000. Unlike C80-A's 2 genuinely exhausted rollouts, C80-B has zero rollouts with no valid attempt at any budget.",
+    "multiple_valid_decision": "443 rollouts have >=2 technically-valid attempts with different generated text (greedy nondeterminism across budgets/batching), ~2% of the block. The frozen rule feeds the lowest-retry technically-valid attempt to the judge and geometry. This is consistent with the freeze principle that semantically completed outputs are not replaced merely because they are inconvenient, which points to the same lowest-retry attempt.",
+    "same_rule_as_other_block": "C80-A applies the identical rule (one frozen rule for both halves): C80-A = 21,998/22,000 eligible with 2 technical exclusions; C80-B = 22,000/22,000 with 0.",
+    "frozen_date": "2026-08-13",
+    "deviation_record": "docs/deviations/2026-08-13-t10-attempt-selection.md",
+    "audit_record": "results/audit/T10_C80_attempt_selection_13_aug.json"
+  },
+
+  "done_when_check": "One of the two C80 halves (C80-B) is generated, reconciles to its 22,000 frozen IDs under identical code/configuration, and is fully role-judgeable under the frozen lowest-valid-retry attempt-selection rule. C80-A ([Author B]) runs the same code and the same rule and reconciles to the other 22,000 (21,998 eligible + 2 technical exclusions); both blocks total 44,000."
+}

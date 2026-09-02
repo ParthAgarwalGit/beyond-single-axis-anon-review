@@ -1,0 +1,137 @@
+{
+  "format_version": "t17-pool-sensitivity-v4",
+  "stage": "reduce",
+  "analysis_status": "primary",
+  "provisional": false,
+  "middle_block_index": 16,
+  "default_valid_floor": 0.95,
+  "layout": "c80",
+  "arms": [
+    "C80-B"
+  ],
+  "default_mode": "DEFAULT-C80-B",
+  "membership_rule": "all_valid",
+  "membership_description": "PRIMARY C80 rule: label-independent technical validity; pool availability is enforced per analysis",
+  "membership_authority": "docs/DEVIATION_2026-08-17_CONFIRMATORY_MEMBERSHIP.md",
+  "membership_authority_sha256": "21afdeb5aa4f45eae6d8600a60a311af2b4ce7689013e48e7b385847ea6aee1a",
+  "retained_role_manifest": "results/t14/retained_roles.json",
+  "retained_role_manifest_sha256": "3c7d373cb67f96ac21d9b6cbd9097ce184d145b9d381af1ad12b3e0675524315",
+  "retained_role_count": 275,
+  "hf_dataset_repo": "[Author-A-HF]/persona-artifacts",
+  "hf_dataset_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1",
+  "t12_root": "C:\\t17data",
+  "t12_activation_manifests": {
+    "C80-B": {
+      "path": "C80-B\\manifest.json",
+      "sha256": "987571b3518b014296326fef853709df991a4e68c7ede3ac45a9832a9e09b58e"
+    },
+    "DEFAULT-C80-B": {
+      "path": "DEFAULT-C80-B\\manifest.json",
+      "sha256": "a5625a5cc83a57e4326cb8b3ee5582980cb388355e88d7e32904ed994d914dcd"
+    }
+  },
+  "npz_sha256": {
+    "C80-B/matched_f5.npz": "2c4538df83e7ebdd6c86e3fa5c3b7e85120eef05220549f6157786695614294a",
+    "C80-B/matched_triple.npz": "694080aae4cf82730578c085dc4752f28d1b49147eac864c55726ae14e795ca2",
+    "C80-B/available_all_response.npz": "1202e233c5b3b20ee8fd1ff28199ec873316ab3fbfd389f99fd092e2eaa3b058",
+    "C80-B/available_answer.npz": "f075c73a86dfda0583c576bb1f2c548674715e7787fcfeac3f412e1681cf51c5",
+    "C80-B/available_reasoning.npz": "4b1173b6caa583f8526125afe0a8c64ff6f4c78f790b8e80017e21548d121833",
+    "DEFAULT-C80-B/all_response.npz": "e2c018aeeeb2fa9ed7630a87e4f3e0431cd5dbbb59b48d2ef4eb95e6b24f436e",
+    "DEFAULT-C80-B/answer.npz": "de0ead6bc3d0c5b1c5c4b28f9d5e5fb99d2849ea5a4bc3d58d06297067286896",
+    "DEFAULT-C80-B/reasoning.npz": "0d0709645c4a1a67854a445af15b9871e1ece4d22cfddfb632e0e4f115f245ae"
+  },
+  "default_condition_counts": {
+    "0": {
+      "total": 80,
+      "valid": 80
+    },
+    "1": {
+      "total": 80,
+      "valid": 80
+    },
+    "2": {
+      "total": 80,
+      "valid": 80
+    },
+    "3": {
+      "total": 80,
+      "valid": 80
+    },
+    "4": {
+      "total": 80,
+      "valid": 80
+    }
+  },
+  "default_condition_counts_by_pool": {
+    "all_response": {
+      "0": {
+        "total": 80,
+        "eligible": 80
+      },
+      "1": {
+        "total": 80,
+        "eligible": 80
+      },
+      "2": {
+        "total": 80,
+        "eligible": 80
+      },
+      "3": {
+        "total": 80,
+        "eligible": 80
+      },
+      "4": {
+        "total": 80,
+        "eligible": 80
+      }
+    },
+    "answer": {
+      "0": {
+        "total": 80,
+        "eligible": 80
+      },
+      "1": {
+        "total": 80,
+        "eligible": 80
+      },
+      "2": {
+        "total": 80,
+        "eligible": 80
+      },
+      "3": {
+        "total": 80,
+        "eligible": 80
+      },
+      "4": {
+        "total": 80,
+        "eligible": 80
+      }
+    },
+    "reasoning": {
+      "0": {
+        "total": 80,
+        "eligible": 80
+      },
+      "1": {
+        "total": 80,
+        "eligible": 80
+      },
+      "2": {
+        "total": 80,
+        "eligible": 80
+      },
+      "3": {
+        "total": 80,
+        "eligible": 80
+      },
+      "4": {
+        "total": 80,
+        "eligible": 80
+      }
+    }
+  },
+  "claim_scope": "primary prompt-conditioned role geometry under label-independent technical-validity membership",
+  "source_git_sha": "c90c0f9022bbbcaa7391fe42f6e84f9acbe14921",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

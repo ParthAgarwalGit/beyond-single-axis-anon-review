@@ -1,0 +1,3094 @@
+{
+  "format_version": "t17-pool-sensitivity-v4",
+  "stage": "analyze",
+  "analysis_status": "primary",
+  "provisional": false,
+  "membership_rule": "all_valid",
+  "membership_description": "PRIMARY C80 rule: label-independent technical validity; pool availability is enforced per analysis",
+  "membership_authority_sha256": "21afdeb5aa4f45eae6d8600a60a311af2b4ce7689013e48e7b385847ea6aee1a",
+  "retained_role_manifest_sha256": "3c7d373cb67f96ac21d9b6cbd9097ce184d145b9d381af1ad12b3e0675524315",
+  "retained_role_count": 275,
+  "hf_dataset_repo": "[Author-A-HF]/persona-artifacts",
+  "hf_dataset_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1",
+  "primary_arm": "C80-A",
+  "middle_block_index": 16,
+  "default_valid_floor": 0.95,
+  "arms": {
+    "C80-A": {
+      "matched_f5": {
+        "cohort": "outputs with both all-response and answer pools (matched)",
+        "n_roles": 275,
+        "rows": [
+          {
+            "role_id": "aberration",
+            "proj_all_response": -0.745353,
+            "proj_answer_only": -1.43945
+          },
+          {
+            "role_id": "absurdist",
+            "proj_all_response": -1.133047,
+            "proj_answer_only": -1.652454
+          },
+          {
+            "role_id": "accountant",
+            "proj_all_response": -0.648372,
+            "proj_answer_only": -1.329986
+          },
+          {
+            "role_id": "activist",
+            "proj_all_response": -0.719694,
+            "proj_answer_only": -1.41687
+          },
+          {
+            "role_id": "actor",
+            "proj_all_response": -0.561685,
+            "proj_answer_only": -1.219571
+          },
+          {
+            "role_id": "addict",
+            "proj_all_response": -0.771749,
+            "proj_answer_only": -1.39121
+          },
+          {
+            "role_id": "adolescent",
+            "proj_all_response": -0.415049,
+            "proj_answer_only": -1.223586
+          },
+          {
+            "role_id": "advocate",
+            "proj_all_response": -0.567611,
+            "proj_answer_only": -1.253666
+          },
+          {
+            "role_id": "alien",
+            "proj_all_response": -0.773164,
+            "proj_answer_only": -1.493693
+          },
+          {
+            "role_id": "altruist",
+            "proj_all_response": -0.515671,
+            "proj_answer_only": -1.267185
+          },
+          {
+            "role_id": "amateur",
+            "proj_all_response": -0.33721,
+            "proj_answer_only": -1.152393
+          },
+          {
+            "role_id": "ambassador",
+            "proj_all_response": -0.541058,
+            "proj_answer_only": -1.225421
+          },
+          {
+            "role_id": "amnesiac",
+            "proj_all_response": -0.689004,
+            "proj_answer_only": -1.403795
+          },
+          {
+            "role_id": "analyst",
+            "proj_all_response": -0.403581,
+            "proj_answer_only": -1.166296
+          },
+          {
+            "role_id": "anarchist",
+            "proj_all_response": -1.08077,
+            "proj_answer_only": -1.714741
+          },
+          {
+            "role_id": "ancient",
+            "proj_all_response": -0.625631,
+            "proj_answer_only": -1.34307
+          },
+          {
+            "role_id": "angel",
+            "proj_all_response": -0.57463,
+            "proj_answer_only": -1.317354
+          },
+          {
+            "role_id": "anthropologist",
+            "proj_all_response": -0.66768,
+            "proj_answer_only": -1.369819
+          },
+          {
+            "role_id": "archaeologist",
+            "proj_all_response": -0.768663,
+            "proj_answer_only": -1.436516
+          },
+          {
+            "role_id": "architect",
+            "proj_all_response": -0.72597,
+            "proj_answer_only": -1.399415
+          },
+          {
+            "role_id": "archivist",
+            "proj_all_response": -0.595961,
+            "proj_answer_only": -1.31158
+          },
+          {
+            "role_id": "artisan",
+            "proj_all_response": -0.798615,
+            "proj_answer_only": -1.45485
+          },
+          {
+            "role_id": "ascetic",
+            "proj_all_response": -1.159421,
+            "proj_answer_only": -1.792251
+          },
+          {
+            "role_id": "assistant",
+            "proj_all_response": -0.291522,
+            "proj_answer_only": -1.091478
+          },
+          {
+            "role_id": "auctioneer",
+            "proj_all_response": -0.84593,
+            "proj_answer_only": -1.446175
+          },
+          {
+            "role_id": "auditor",
+            "proj_all_response": -0.555267,
+            "proj_answer_only": -1.271144
+          },
+          {
+            "role_id": "avatar",
+            "proj_all_response": -0.681059,
+            "proj_answer_only": -1.352941
+          },
+          {
+            "role_id": "bard",
+            "proj_all_response": -0.991286,
+            "proj_answer_only": -1.571692
+          },
+          {
+            "role_id": "bartender",
+            "proj_all_response": -0.757354,
+            "proj_answer_only": -1.390307
+          },
+          {
+            "role_id": "biologist",
+            "proj_all_response": -0.827598,
+            "proj_answer_only": -1.491967
+          },
+          {
+            "role_id": "blogger",
+            "proj_all_response": -0.549624,
+            "proj_answer_only": -1.175552
+          },
+          {
+            "role_id": "bohemian",
+            "proj_all_response": -1.227321,
+            "proj_answer_only": -1.840952
+          },
+          {
+            "role_id": "builder",
+            "proj_all_response": -0.577626,
+            "proj_answer_only": -1.292717
+          },
+          {
+            "role_id": "caregiver",
+            "proj_all_response": -0.577691,
+            "proj_answer_only": -1.240726
+          },
+          {
+            "role_id": "cartographer",
+            "proj_all_response": -0.573269,
+            "proj_answer_only": -1.271658
+          },
+          {
+            "role_id": "caveman",
+            "proj_all_response": -1.141132,
+            "proj_answer_only": -1.738947
+          },
+          {
+            "role_id": "celebrity",
+            "proj_all_response": -0.709024,
+            "proj_answer_only": -1.341047
+          },
+          {
+            "role_id": "chameleon",
+            "proj_all_response": -0.570692,
+            "proj_answer_only": -1.245519
+          },
+          {
+            "role_id": "chef",
+            "proj_all_response": -0.715869,
+            "proj_answer_only": -1.408999
+          },
+          {
+            "role_id": "chemist",
+            "proj_all_response": -0.774272,
+            "proj_answer_only": -1.472672
+          },
+          {
+            "role_id": "chimera",
+            "proj_all_response": -0.805798,
+            "proj_answer_only": -1.51229
+          },
+          {
+            "role_id": "coach",
+            "proj_all_response": -0.436362,
+            "proj_answer_only": -1.202363
+          },
+          {
+            "role_id": "collaborator",
+            "proj_all_response": -0.414276,
+            "proj_answer_only": -1.198556
+          },
+          {
+            "role_id": "collector",
+            "proj_all_response": -0.621941,
+            "proj_answer_only": -1.285754
+          },
+          {
+            "role_id": "comedian",
+            "proj_all_response": -0.598441,
+            "proj_answer_only": -1.177513
+          },
+          {
+            "role_id": "competitor",
+            "proj_all_response": -0.755699,
+            "proj_answer_only": -1.431983
+          },
+          {
+            "role_id": "composer",
+            "proj_all_response": -0.942629,
+            "proj_answer_only": -1.556295
+          },
+          {
+            "role_id": "conservator",
+            "proj_all_response": -0.796628,
+            "proj_answer_only": -1.446657
+          },
+          {
+            "role_id": "consultant",
+            "proj_all_response": -0.422501,
+            "proj_answer_only": -1.159786
+          },
+          {
+            "role_id": "contrarian",
+            "proj_all_response": -0.634594,
+            "proj_answer_only": -1.320569
+          },
+          {
+            "role_id": "coordinator",
+            "proj_all_response": -0.499113,
+            "proj_answer_only": -1.220492
+          },
+          {
+            "role_id": "coral_reef",
+            "proj_all_response": -1.275559,
+            "proj_answer_only": -1.861499
+          },
+          {
+            "role_id": "cosmopolitan",
+            "proj_all_response": -0.547514,
+            "proj_answer_only": -1.266156
+          },
+          {
+            "role_id": "counselor",
+            "proj_all_response": -0.422906,
+            "proj_answer_only": -1.158663
+          },
+          {
+            "role_id": "criminal",
+            "proj_all_response": -1.071243,
+            "proj_answer_only": -1.671968
+          },
+          {
+            "role_id": "critic",
+            "proj_all_response": -0.470645,
+            "proj_answer_only": -1.21809
+          },
+          {
+            "role_id": "crystalline",
+            "proj_all_response": -1.005517,
+            "proj_answer_only": -1.712352
+          },
+          {
+            "role_id": "curator",
+            "proj_all_response": -0.612473,
+            "proj_answer_only": -1.314768
+          },
+          {
+            "role_id": "cyborg",
+            "proj_all_response": -0.470806,
+            "proj_answer_only": -1.250678
+          },
+          {
+            "role_id": "cynic",
+            "proj_all_response": -1.019317,
+            "proj_answer_only": -1.631666
+          },
+          {
+            "role_id": "daredevil",
+            "proj_all_response": -0.794283,
+            "proj_answer_only": -1.464771
+          },
+          {
+            "role_id": "debugger",
+            "proj_all_response": -0.390424,
+            "proj_answer_only": -1.180197
+          },
+          {
+            "role_id": "demon",
+            "proj_all_response": -0.905601,
+            "proj_answer_only": -1.545756
+          },
+          {
+            "role_id": "designer",
+            "proj_all_response": -0.656333,
+            "proj_answer_only": -1.332742
+          },
+          {
+            "role_id": "destroyer",
+            "proj_all_response": -0.613097,
+            "proj_answer_only": -1.308993
+          },
+          {
+            "role_id": "detective",
+            "proj_all_response": -0.45052,
+            "proj_answer_only": -1.209217
+          },
+          {
+            "role_id": "devils_advocate",
+            "proj_all_response": -0.530475,
+            "proj_answer_only": -1.248098
+          },
+          {
+            "role_id": "dilettante",
+            "proj_all_response": -0.406189,
+            "proj_answer_only": -1.173016
+          },
+          {
+            "role_id": "dispatcher",
+            "proj_all_response": -0.460456,
+            "proj_answer_only": -1.195522
+          },
+          {
+            "role_id": "divorcee",
+            "proj_all_response": -0.702232,
+            "proj_answer_only": -1.364265
+          },
+          {
+            "role_id": "doctor",
+            "proj_all_response": -0.472118,
+            "proj_answer_only": -1.202731
+          },
+          {
+            "role_id": "dreamer",
+            "proj_all_response": -0.623147,
+            "proj_answer_only": -1.323642
+          },
+          {
+            "role_id": "echo",
+            "proj_all_response": -0.73569,
+            "proj_answer_only": -1.439515
+          },
+          {
+            "role_id": "economist",
+            "proj_all_response": -0.464779,
+            "proj_answer_only": -1.216467
+          },
+          {
+            "role_id": "ecosystem",
+            "proj_all_response": -0.72117,
+            "proj_answer_only": -1.416051
+          },
+          {
+            "role_id": "editor",
+            "proj_all_response": -0.491253,
+            "proj_answer_only": -1.179232
+          },
+          {
+            "role_id": "egregore",
+            "proj_all_response": -0.731692,
+            "proj_answer_only": -1.43799
+          },
+          {
+            "role_id": "elder",
+            "proj_all_response": -0.577742,
+            "proj_answer_only": -1.279105
+          },
+          {
+            "role_id": "eldritch",
+            "proj_all_response": -0.846068,
+            "proj_answer_only": -1.540893
+          },
+          {
+            "role_id": "emissary",
+            "proj_all_response": -0.476883,
+            "proj_answer_only": -1.239432
+          },
+          {
+            "role_id": "empath",
+            "proj_all_response": -0.472347,
+            "proj_answer_only": -1.207483
+          },
+          {
+            "role_id": "engineer",
+            "proj_all_response": -0.467211,
+            "proj_answer_only": -1.237367
+          },
+          {
+            "role_id": "entrepreneur",
+            "proj_all_response": -0.662363,
+            "proj_answer_only": -1.340703
+          },
+          {
+            "role_id": "evaluator",
+            "proj_all_response": -0.404071,
+            "proj_answer_only": -1.164132
+          },
+          {
+            "role_id": "evangelist",
+            "proj_all_response": -0.509927,
+            "proj_answer_only": -1.219583
+          },
+          {
+            "role_id": "examiner",
+            "proj_all_response": -0.435826,
+            "proj_answer_only": -1.158571
+          },
+          {
+            "role_id": "exile",
+            "proj_all_response": -0.777523,
+            "proj_answer_only": -1.386608
+          },
+          {
+            "role_id": "expatriate",
+            "proj_all_response": -0.607481,
+            "proj_answer_only": -1.298872
+          },
+          {
+            "role_id": "facilitator",
+            "proj_all_response": -0.427357,
+            "proj_answer_only": -1.176613
+          },
+          {
+            "role_id": "familiar",
+            "proj_all_response": -0.594977,
+            "proj_answer_only": -1.315048
+          },
+          {
+            "role_id": "fixer",
+            "proj_all_response": -0.523279,
+            "proj_answer_only": -1.255093
+          },
+          {
+            "role_id": "flaneur",
+            "proj_all_response": -0.714194,
+            "proj_answer_only": -1.41946
+          },
+          {
+            "role_id": "fool",
+            "proj_all_response": -0.465182,
+            "proj_answer_only": -1.189285
+          },
+          {
+            "role_id": "forecaster",
+            "proj_all_response": -0.436596,
+            "proj_answer_only": -1.191504
+          },
+          {
+            "role_id": "futurist",
+            "proj_all_response": -0.529283,
+            "proj_answer_only": -1.269686
+          },
+          {
+            "role_id": "gamer",
+            "proj_all_response": -0.763909,
+            "proj_answer_only": -1.453102
+          },
+          {
+            "role_id": "generalist",
+            "proj_all_response": -0.355087,
+            "proj_answer_only": -1.129373
+          },
+          {
+            "role_id": "genie",
+            "proj_all_response": -0.711184,
+            "proj_answer_only": -1.425112
+          },
+          {
+            "role_id": "geographer",
+            "proj_all_response": -0.695927,
+            "proj_answer_only": -1.354874
+          },
+          {
+            "role_id": "ghost",
+            "proj_all_response": -0.713202,
+            "proj_answer_only": -1.429123
+          },
+          {
+            "role_id": "golem",
+            "proj_all_response": -0.905905,
+            "proj_answer_only": -1.569917
+          },
+          {
+            "role_id": "gossip",
+            "proj_all_response": -0.490203,
+            "proj_answer_only": -1.215563
+          },
+          {
+            "role_id": "grader",
+            "proj_all_response": -0.384081,
+            "proj_answer_only": -1.135209
+          },
+          {
+            "role_id": "graduate",
+            "proj_all_response": -0.509826,
+            "proj_answer_only": -1.278909
+          },
+          {
+            "role_id": "grandparent",
+            "proj_all_response": -0.696832,
+            "proj_answer_only": -1.297718
+          },
+          {
+            "role_id": "guardian",
+            "proj_all_response": -0.529793,
+            "proj_answer_only": -1.249354
+          },
+          {
+            "role_id": "guide",
+            "proj_all_response": -0.391303,
+            "proj_answer_only": -1.1802
+          },
+          {
+            "role_id": "guru",
+            "proj_all_response": -0.532312,
+            "proj_answer_only": -1.259029
+          },
+          {
+            "role_id": "hacker",
+            "proj_all_response": -0.690586,
+            "proj_answer_only": -1.361841
+          },
+          {
+            "role_id": "healer",
+            "proj_all_response": -0.573518,
+            "proj_answer_only": -1.270514
+          },
+          {
+            "role_id": "hedonist",
+            "proj_all_response": -1.019258,
+            "proj_answer_only": -1.662165
+          },
+          {
+            "role_id": "hermit",
+            "proj_all_response": -0.838931,
+            "proj_answer_only": -1.537653
+          },
+          {
+            "role_id": "historian",
+            "proj_all_response": -0.611383,
+            "proj_answer_only": -1.285798
+          },
+          {
+            "role_id": "hive",
+            "proj_all_response": -0.546706,
+            "proj_answer_only": -1.32183
+          },
+          {
+            "role_id": "hoarder",
+            "proj_all_response": -0.925091,
+            "proj_answer_only": -1.579559
+          },
+          {
+            "role_id": "homunculus",
+            "proj_all_response": -0.954177,
+            "proj_answer_only": -1.600807
+          },
+          {
+            "role_id": "hybrid",
+            "proj_all_response": -0.567347,
+            "proj_answer_only": -1.297605
+          },
+          {
+            "role_id": "idealist",
+            "proj_all_response": -0.627589,
+            "proj_answer_only": -1.316043
+          },
+          {
+            "role_id": "immigrant",
+            "proj_all_response": -0.783241,
+            "proj_answer_only": -1.469999
+          },
+          {
+            "role_id": "improviser",
+            "proj_all_response": -0.4661,
+            "proj_answer_only": -1.219824
+          },
+          {
+            "role_id": "infant",
+            "proj_all_response": -0.879557,
+            "proj_answer_only": -1.548588
+          },
+          {
+            "role_id": "influencer",
+            "proj_all_response": -0.575787,
+            "proj_answer_only": -1.227864
+          },
+          {
+            "role_id": "instructor",
+            "proj_all_response": -0.403908,
+            "proj_answer_only": -1.123675
+          },
+          {
+            "role_id": "interpreter",
+            "proj_all_response": -0.41496,
+            "proj_answer_only": -1.176344
+          },
+          {
+            "role_id": "interviewer",
+            "proj_all_response": -0.408962,
+            "proj_answer_only": -1.173189
+          },
+          {
+            "role_id": "jester",
+            "proj_all_response": -0.712248,
+            "proj_answer_only": -1.306336
+          },
+          {
+            "role_id": "journalist",
+            "proj_all_response": -0.447999,
+            "proj_answer_only": -1.190182
+          },
+          {
+            "role_id": "judge",
+            "proj_all_response": -0.435425,
+            "proj_answer_only": -1.218549
+          },
+          {
+            "role_id": "lawyer",
+            "proj_all_response": -0.563206,
+            "proj_answer_only": -1.213775
+          },
+          {
+            "role_id": "leviathan",
+            "proj_all_response": -1.201223,
+            "proj_answer_only": -1.778814
+          },
+          {
+            "role_id": "librarian",
+            "proj_all_response": -0.489935,
+            "proj_answer_only": -1.2192
+          },
+          {
+            "role_id": "linguist",
+            "proj_all_response": -0.698972,
+            "proj_answer_only": -1.341165
+          },
+          {
+            "role_id": "loner",
+            "proj_all_response": -0.744636,
+            "proj_answer_only": -1.430489
+          },
+          {
+            "role_id": "luddite",
+            "proj_all_response": -1.077258,
+            "proj_answer_only": -1.711645
+          },
+          {
+            "role_id": "marketer",
+            "proj_all_response": -0.704372,
+            "proj_answer_only": -1.352681
+          },
+          {
+            "role_id": "martyr",
+            "proj_all_response": -0.824791,
+            "proj_answer_only": -1.45203
+          },
+          {
+            "role_id": "mathematician",
+            "proj_all_response": -0.517672,
+            "proj_answer_only": -1.252892
+          },
+          {
+            "role_id": "maverick",
+            "proj_all_response": -0.589987,
+            "proj_answer_only": -1.339258
+          },
+          {
+            "role_id": "mechanic",
+            "proj_all_response": -0.501477,
+            "proj_answer_only": -1.253752
+          },
+          {
+            "role_id": "mediator",
+            "proj_all_response": -0.444289,
+            "proj_answer_only": -1.242691
+          },
+          {
+            "role_id": "mentor",
+            "proj_all_response": -0.425339,
+            "proj_answer_only": -1.175098
+          },
+          {
+            "role_id": "merchant",
+            "proj_all_response": -0.767402,
+            "proj_answer_only": -1.375335
+          },
+          {
+            "role_id": "minimalist",
+            "proj_all_response": -0.90216,
+            "proj_answer_only": -1.546716
+          },
+          {
+            "role_id": "moderator",
+            "proj_all_response": -0.385331,
+            "proj_answer_only": -1.194772
+          },
+          {
+            "role_id": "musician",
+            "proj_all_response": -0.931102,
+            "proj_answer_only": -1.543875
+          },
+          {
+            "role_id": "mycorrhizal",
+            "proj_all_response": -0.966205,
+            "proj_answer_only": -1.607128
+          },
+          {
+            "role_id": "mystic",
+            "proj_all_response": -0.757751,
+            "proj_answer_only": -1.45217
+          },
+          {
+            "role_id": "narcissist",
+            "proj_all_response": -1.010468,
+            "proj_answer_only": -1.603003
+          },
+          {
+            "role_id": "narrator",
+            "proj_all_response": -0.54132,
+            "proj_answer_only": -1.200479
+          },
+          {
+            "role_id": "naturalist",
+            "proj_all_response": -0.724342,
+            "proj_answer_only": -1.413346
+          },
+          {
+            "role_id": "navigator",
+            "proj_all_response": -0.445966,
+            "proj_answer_only": -1.194023
+          },
+          {
+            "role_id": "negotiator",
+            "proj_all_response": -0.527207,
+            "proj_answer_only": -1.254782
+          },
+          {
+            "role_id": "networker",
+            "proj_all_response": -0.493624,
+            "proj_answer_only": -1.233833
+          },
+          {
+            "role_id": "newlywed",
+            "proj_all_response": -0.6859,
+            "proj_answer_only": -1.368483
+          },
+          {
+            "role_id": "nomad",
+            "proj_all_response": -0.835473,
+            "proj_answer_only": -1.502063
+          },
+          {
+            "role_id": "novelist",
+            "proj_all_response": -0.872132,
+            "proj_answer_only": -1.424885
+          },
+          {
+            "role_id": "nutritionist",
+            "proj_all_response": -0.687666,
+            "proj_answer_only": -1.306399
+          },
+          {
+            "role_id": "observer",
+            "proj_all_response": -0.37984,
+            "proj_answer_only": -1.141756
+          },
+          {
+            "role_id": "optimist",
+            "proj_all_response": -0.573888,
+            "proj_answer_only": -1.29648
+          },
+          {
+            "role_id": "oracle",
+            "proj_all_response": -0.487273,
+            "proj_answer_only": -1.250251
+          },
+          {
+            "role_id": "organizer",
+            "proj_all_response": -0.468211,
+            "proj_answer_only": -1.17265
+          },
+          {
+            "role_id": "orphan",
+            "proj_all_response": -0.698967,
+            "proj_answer_only": -1.355245
+          },
+          {
+            "role_id": "pacifist",
+            "proj_all_response": -0.719183,
+            "proj_answer_only": -1.400502
+          },
+          {
+            "role_id": "paramedic",
+            "proj_all_response": -0.653085,
+            "proj_answer_only": -1.349253
+          },
+          {
+            "role_id": "parasite",
+            "proj_all_response": -0.975426,
+            "proj_answer_only": -1.620269
+          },
+          {
+            "role_id": "parent",
+            "proj_all_response": -0.639217,
+            "proj_answer_only": -1.284234
+          },
+          {
+            "role_id": "patient",
+            "proj_all_response": -0.559123,
+            "proj_answer_only": -1.239278
+          },
+          {
+            "role_id": "peacekeeper",
+            "proj_all_response": -0.442814,
+            "proj_answer_only": -1.221097
+          },
+          {
+            "role_id": "perfectionist",
+            "proj_all_response": -0.573031,
+            "proj_answer_only": -1.276551
+          },
+          {
+            "role_id": "pharmacist",
+            "proj_all_response": -0.606666,
+            "proj_answer_only": -1.273138
+          },
+          {
+            "role_id": "philosopher",
+            "proj_all_response": -0.517097,
+            "proj_answer_only": -1.257689
+          },
+          {
+            "role_id": "photographer",
+            "proj_all_response": -0.982166,
+            "proj_answer_only": -1.571656
+          },
+          {
+            "role_id": "physicist",
+            "proj_all_response": -0.690939,
+            "proj_answer_only": -1.415369
+          },
+          {
+            "role_id": "pilgrim",
+            "proj_all_response": -0.879975,
+            "proj_answer_only": -1.569742
+          },
+          {
+            "role_id": "pilot",
+            "proj_all_response": -0.77093,
+            "proj_answer_only": -1.408681
+          },
+          {
+            "role_id": "pirate",
+            "proj_all_response": -1.184045,
+            "proj_answer_only": -1.734439
+          },
+          {
+            "role_id": "planner",
+            "proj_all_response": -0.42894,
+            "proj_answer_only": -1.1628
+          },
+          {
+            "role_id": "playwright",
+            "proj_all_response": -0.792256,
+            "proj_answer_only": -1.347983
+          },
+          {
+            "role_id": "podcaster",
+            "proj_all_response": -0.520148,
+            "proj_answer_only": -1.218875
+          },
+          {
+            "role_id": "poet",
+            "proj_all_response": -1.011749,
+            "proj_answer_only": -1.407925
+          },
+          {
+            "role_id": "polymath",
+            "proj_all_response": -0.432551,
+            "proj_answer_only": -1.192089
+          },
+          {
+            "role_id": "pragmatist",
+            "proj_all_response": -0.515269,
+            "proj_answer_only": -1.223753
+          },
+          {
+            "role_id": "predator",
+            "proj_all_response": -0.738907,
+            "proj_answer_only": -1.407946
+          },
+          {
+            "role_id": "presenter",
+            "proj_all_response": -0.451023,
+            "proj_answer_only": -1.213764
+          },
+          {
+            "role_id": "prey",
+            "proj_all_response": -0.854207,
+            "proj_answer_only": -1.484186
+          },
+          {
+            "role_id": "prisoner",
+            "proj_all_response": -0.758244,
+            "proj_answer_only": -1.405396
+          },
+          {
+            "role_id": "procrastinator",
+            "proj_all_response": -0.589125,
+            "proj_answer_only": -1.265724
+          },
+          {
+            "role_id": "prodigy",
+            "proj_all_response": -0.399163,
+            "proj_answer_only": -1.176078
+          },
+          {
+            "role_id": "producer",
+            "proj_all_response": -0.639036,
+            "proj_answer_only": -1.327524
+          },
+          {
+            "role_id": "programmer",
+            "proj_all_response": -0.453227,
+            "proj_answer_only": -1.171972
+          },
+          {
+            "role_id": "proofreader",
+            "proj_all_response": -0.385123,
+            "proj_answer_only": -1.107581
+          },
+          {
+            "role_id": "prophet",
+            "proj_all_response": -0.719301,
+            "proj_answer_only": -1.354684
+          },
+          {
+            "role_id": "provincial",
+            "proj_all_response": -0.835722,
+            "proj_answer_only": -1.445605
+          },
+          {
+            "role_id": "provocateur",
+            "proj_all_response": -0.69715,
+            "proj_answer_only": -1.389015
+          },
+          {
+            "role_id": "psychologist",
+            "proj_all_response": -0.530494,
+            "proj_answer_only": -1.263625
+          },
+          {
+            "role_id": "publisher",
+            "proj_all_response": -0.568685,
+            "proj_answer_only": -1.259581
+          },
+          {
+            "role_id": "purist",
+            "proj_all_response": -0.603441,
+            "proj_answer_only": -1.297989
+          },
+          {
+            "role_id": "realist",
+            "proj_all_response": -0.45029,
+            "proj_answer_only": -1.211039
+          },
+          {
+            "role_id": "rebel",
+            "proj_all_response": -0.77816,
+            "proj_answer_only": -1.478493
+          },
+          {
+            "role_id": "recruiter",
+            "proj_all_response": -0.598559,
+            "proj_answer_only": -1.278206
+          },
+          {
+            "role_id": "refugee",
+            "proj_all_response": -0.669437,
+            "proj_answer_only": -1.317888
+          },
+          {
+            "role_id": "reporter",
+            "proj_all_response": -0.455728,
+            "proj_answer_only": -1.170769
+          },
+          {
+            "role_id": "researcher",
+            "proj_all_response": -0.392322,
+            "proj_answer_only": -1.174518
+          },
+          {
+            "role_id": "retiree",
+            "proj_all_response": -0.576376,
+            "proj_answer_only": -1.296296
+          },
+          {
+            "role_id": "revenant",
+            "proj_all_response": -0.856778,
+            "proj_answer_only": -1.508185
+          },
+          {
+            "role_id": "reviewer",
+            "proj_all_response": -0.415134,
+            "proj_answer_only": -1.18132
+          },
+          {
+            "role_id": "revolutionary",
+            "proj_all_response": -0.845218,
+            "proj_answer_only": -1.484484
+          },
+          {
+            "role_id": "robot",
+            "proj_all_response": -0.454246,
+            "proj_answer_only": -1.22536
+          },
+          {
+            "role_id": "rogue",
+            "proj_all_response": -0.822343,
+            "proj_answer_only": -1.502079
+          },
+          {
+            "role_id": "romantic",
+            "proj_all_response": -0.969332,
+            "proj_answer_only": -1.525014
+          },
+          {
+            "role_id": "saboteur",
+            "proj_all_response": -0.822402,
+            "proj_answer_only": -1.482447
+          },
+          {
+            "role_id": "sage",
+            "proj_all_response": -0.462517,
+            "proj_answer_only": -1.269508
+          },
+          {
+            "role_id": "scheduler",
+            "proj_all_response": -0.527929,
+            "proj_answer_only": -1.235484
+          },
+          {
+            "role_id": "scholar",
+            "proj_all_response": -0.419477,
+            "proj_answer_only": -1.168619
+          },
+          {
+            "role_id": "scientist",
+            "proj_all_response": -0.463738,
+            "proj_answer_only": -1.22392
+          },
+          {
+            "role_id": "scout",
+            "proj_all_response": -0.517362,
+            "proj_answer_only": -1.256934
+          },
+          {
+            "role_id": "screener",
+            "proj_all_response": -0.426339,
+            "proj_answer_only": -1.177101
+          },
+          {
+            "role_id": "secretary",
+            "proj_all_response": -0.552558,
+            "proj_answer_only": -1.218483
+          },
+          {
+            "role_id": "shaman",
+            "proj_all_response": -1.192246,
+            "proj_answer_only": -1.767458
+          },
+          {
+            "role_id": "shapeshifter",
+            "proj_all_response": -0.756984,
+            "proj_answer_only": -1.428919
+          },
+          {
+            "role_id": "simulacrum",
+            "proj_all_response": -0.68186,
+            "proj_answer_only": -1.36323
+          },
+          {
+            "role_id": "skeptic",
+            "proj_all_response": -0.454459,
+            "proj_answer_only": -1.198272
+          },
+          {
+            "role_id": "smuggler",
+            "proj_all_response": -1.064248,
+            "proj_answer_only": -1.648901
+          },
+          {
+            "role_id": "sociologist",
+            "proj_all_response": -0.538711,
+            "proj_answer_only": -1.271507
+          },
+          {
+            "role_id": "soldier",
+            "proj_all_response": -0.903726,
+            "proj_answer_only": -1.525174
+          },
+          {
+            "role_id": "sommelier",
+            "proj_all_response": -0.902893,
+            "proj_answer_only": -1.516284
+          },
+          {
+            "role_id": "specialist",
+            "proj_all_response": -0.38307,
+            "proj_answer_only": -1.185427
+          },
+          {
+            "role_id": "spirit",
+            "proj_all_response": -0.624247,
+            "proj_answer_only": -1.341256
+          },
+          {
+            "role_id": "spy",
+            "proj_all_response": -0.683889,
+            "proj_answer_only": -1.361436
+          },
+          {
+            "role_id": "statistician",
+            "proj_all_response": -0.519803,
+            "proj_answer_only": -1.249731
+          },
+          {
+            "role_id": "stoic",
+            "proj_all_response": -0.889901,
+            "proj_answer_only": -1.588157
+          },
+          {
+            "role_id": "strategist",
+            "proj_all_response": -0.497706,
+            "proj_answer_only": -1.213367
+          },
+          {
+            "role_id": "student",
+            "proj_all_response": -0.344799,
+            "proj_answer_only": -1.14645
+          },
+          {
+            "role_id": "summarizer",
+            "proj_all_response": -0.344572,
+            "proj_answer_only": -1.129198
+          },
+          {
+            "role_id": "supervisor",
+            "proj_all_response": -0.496952,
+            "proj_answer_only": -1.227474
+          },
+          {
+            "role_id": "surfer",
+            "proj_all_response": -0.853827,
+            "proj_answer_only": -1.516387
+          },
+          {
+            "role_id": "survivor",
+            "proj_all_response": -0.652273,
+            "proj_answer_only": -1.32856
+          },
+          {
+            "role_id": "swarm",
+            "proj_all_response": -0.591187,
+            "proj_answer_only": -1.352671
+          },
+          {
+            "role_id": "symbiont",
+            "proj_all_response": -0.721973,
+            "proj_answer_only": -1.411568
+          },
+          {
+            "role_id": "synthesizer",
+            "proj_all_response": -0.427074,
+            "proj_answer_only": -1.199642
+          },
+          {
+            "role_id": "teacher",
+            "proj_all_response": -0.433048,
+            "proj_answer_only": -1.220643
+          },
+          {
+            "role_id": "technologist",
+            "proj_all_response": -0.48426,
+            "proj_answer_only": -1.213061
+          },
+          {
+            "role_id": "teenager",
+            "proj_all_response": -0.3629,
+            "proj_answer_only": -1.15584
+          },
+          {
+            "role_id": "theorist",
+            "proj_all_response": -0.547339,
+            "proj_answer_only": -1.277293
+          },
+          {
+            "role_id": "therapist",
+            "proj_all_response": -0.472984,
+            "proj_answer_only": -1.236936
+          },
+          {
+            "role_id": "toddler",
+            "proj_all_response": -0.542866,
+            "proj_answer_only": -1.196501
+          },
+          {
+            "role_id": "traditionalist",
+            "proj_all_response": -0.976909,
+            "proj_answer_only": -1.619909
+          },
+          {
+            "role_id": "trainer",
+            "proj_all_response": -0.55238,
+            "proj_answer_only": -1.250974
+          },
+          {
+            "role_id": "translator",
+            "proj_all_response": -0.436695,
+            "proj_answer_only": -1.052175
+          },
+          {
+            "role_id": "tree",
+            "proj_all_response": -1.062382,
+            "proj_answer_only": -1.682043
+          },
+          {
+            "role_id": "trickster",
+            "proj_all_response": -0.64719,
+            "proj_answer_only": -1.291499
+          },
+          {
+            "role_id": "tulpa",
+            "proj_all_response": -0.547393,
+            "proj_answer_only": -1.292602
+          },
+          {
+            "role_id": "tutor",
+            "proj_all_response": -0.368914,
+            "proj_answer_only": -1.158059
+          },
+          {
+            "role_id": "validator",
+            "proj_all_response": -0.36348,
+            "proj_answer_only": -1.111812
+          },
+          {
+            "role_id": "vampire",
+            "proj_all_response": -1.300381,
+            "proj_answer_only": -1.867207
+          },
+          {
+            "role_id": "vegan",
+            "proj_all_response": -0.870579,
+            "proj_answer_only": -1.462606
+          },
+          {
+            "role_id": "veteran",
+            "proj_all_response": -0.752615,
+            "proj_answer_only": -1.419815
+          },
+          {
+            "role_id": "veterinarian",
+            "proj_all_response": -0.745961,
+            "proj_answer_only": -1.367688
+          },
+          {
+            "role_id": "vigilante",
+            "proj_all_response": -0.709926,
+            "proj_answer_only": -1.372985
+          },
+          {
+            "role_id": "virtuoso",
+            "proj_all_response": -0.575976,
+            "proj_answer_only": -1.283841
+          },
+          {
+            "role_id": "virus",
+            "proj_all_response": -0.747105,
+            "proj_answer_only": -1.412802
+          },
+          {
+            "role_id": "visionary",
+            "proj_all_response": -0.585241,
+            "proj_answer_only": -1.325745
+          },
+          {
+            "role_id": "void",
+            "proj_all_response": -0.885353,
+            "proj_answer_only": -1.55874
+          },
+          {
+            "role_id": "wanderer",
+            "proj_all_response": -0.700662,
+            "proj_answer_only": -1.421134
+          },
+          {
+            "role_id": "warrior",
+            "proj_all_response": -0.657716,
+            "proj_answer_only": -1.36845
+          },
+          {
+            "role_id": "whale",
+            "proj_all_response": -0.820175,
+            "proj_answer_only": -1.466832
+          },
+          {
+            "role_id": "widow",
+            "proj_all_response": -0.873591,
+            "proj_answer_only": -1.476873
+          },
+          {
+            "role_id": "wind",
+            "proj_all_response": -0.952032,
+            "proj_answer_only": -1.59989
+          },
+          {
+            "role_id": "witch",
+            "proj_all_response": -1.117031,
+            "proj_answer_only": -1.680693
+          },
+          {
+            "role_id": "witness",
+            "proj_all_response": -0.46489,
+            "proj_answer_only": -1.164794
+          },
+          {
+            "role_id": "workaholic",
+            "proj_all_response": -0.924865,
+            "proj_answer_only": -1.557324
+          },
+          {
+            "role_id": "wraith",
+            "proj_all_response": -1.107881,
+            "proj_answer_only": -1.787465
+          },
+          {
+            "role_id": "writer",
+            "proj_all_response": -0.509923,
+            "proj_answer_only": -1.172341
+          },
+          {
+            "role_id": "zealot",
+            "proj_all_response": -0.681984,
+            "proj_answer_only": -1.327791
+          },
+          {
+            "role_id": "zeitgeist",
+            "proj_all_response": -0.512107,
+            "proj_answer_only": -1.234968
+          }
+        ],
+        "pearson_all_vs_answer": 0.975064,
+        "mean_abs_shift_all_vs_answer": 0.692417
+      },
+      "matched_triple": {
+        "cohort": "outputs with all-response, answer, and reasoning pools (matched)",
+        "n_roles": 275,
+        "rows": [
+          {
+            "role_id": "aberration",
+            "proj_all_response": -0.745353,
+            "proj_answer_only": -1.43945,
+            "proj_reasoning_only": -0.431821
+          },
+          {
+            "role_id": "absurdist",
+            "proj_all_response": -1.133047,
+            "proj_answer_only": -1.652454,
+            "proj_reasoning_only": -0.913731
+          },
+          {
+            "role_id": "accountant",
+            "proj_all_response": -0.648372,
+            "proj_answer_only": -1.329986,
+            "proj_reasoning_only": -0.299456
+          },
+          {
+            "role_id": "activist",
+            "proj_all_response": -0.719694,
+            "proj_answer_only": -1.41687,
+            "proj_reasoning_only": -0.364687
+          },
+          {
+            "role_id": "actor",
+            "proj_all_response": -0.561685,
+            "proj_answer_only": -1.219571,
+            "proj_reasoning_only": -0.243141
+          },
+          {
+            "role_id": "addict",
+            "proj_all_response": -0.771749,
+            "proj_answer_only": -1.39121,
+            "proj_reasoning_only": -0.462745
+          },
+          {
+            "role_id": "adolescent",
+            "proj_all_response": -0.415049,
+            "proj_answer_only": -1.223586,
+            "proj_reasoning_only": -0.048442
+          },
+          {
+            "role_id": "advocate",
+            "proj_all_response": -0.567611,
+            "proj_answer_only": -1.253666,
+            "proj_reasoning_only": -0.225872
+          },
+          {
+            "role_id": "alien",
+            "proj_all_response": -0.773164,
+            "proj_answer_only": -1.493693,
+            "proj_reasoning_only": -0.445282
+          },
+          {
+            "role_id": "altruist",
+            "proj_all_response": -0.515671,
+            "proj_answer_only": -1.267185,
+            "proj_reasoning_only": -0.153394
+          },
+          {
+            "role_id": "amateur",
+            "proj_all_response": -0.33721,
+            "proj_answer_only": -1.152393,
+            "proj_reasoning_only": 0.036862
+          },
+          {
+            "role_id": "ambassador",
+            "proj_all_response": -0.541058,
+            "proj_answer_only": -1.225421,
+            "proj_reasoning_only": -0.208254
+          },
+          {
+            "role_id": "amnesiac",
+            "proj_all_response": -0.689004,
+            "proj_answer_only": -1.403795,
+            "proj_reasoning_only": -0.367704
+          },
+          {
+            "role_id": "analyst",
+            "proj_all_response": -0.403581,
+            "proj_answer_only": -1.166296,
+            "proj_reasoning_only": -0.019554
+          },
+          {
+            "role_id": "anarchist",
+            "proj_all_response": -1.08077,
+            "proj_answer_only": -1.714741,
+            "proj_reasoning_only": -0.782517
+          },
+          {
+            "role_id": "ancient",
+            "proj_all_response": -0.625631,
+            "proj_answer_only": -1.34307,
+            "proj_reasoning_only": -0.279912
+          },
+          {
+            "role_id": "angel",
+            "proj_all_response": -0.57463,
+            "proj_answer_only": -1.317354,
+            "proj_reasoning_only": -0.216821
+          },
+          {
+            "role_id": "anthropologist",
+            "proj_all_response": -0.66768,
+            "proj_answer_only": -1.369819,
+            "proj_reasoning_only": -0.314357
+          },
+          {
+            "role_id": "archaeologist",
+            "proj_all_response": -0.768663,
+            "proj_answer_only": -1.436516,
+            "proj_reasoning_only": -0.455983
+          },
+          {
+            "role_id": "architect",
+            "proj_all_response": -0.72597,
+            "proj_answer_only": -1.399415,
+            "proj_reasoning_only": -0.373641
+          },
+          {
+            "role_id": "archivist",
+            "proj_all_response": -0.595961,
+            "proj_answer_only": -1.31158,
+            "proj_reasoning_only": -0.24588
+          },
+          {
+            "role_id": "artisan",
+            "proj_all_response": -0.798615,
+            "proj_answer_only": -1.45485,
+            "proj_reasoning_only": -0.483825
+          },
+          {
+            "role_id": "ascetic",
+            "proj_all_response": -1.159421,
+            "proj_answer_only": -1.792251,
+            "proj_reasoning_only": -0.876026
+          },
+          {
+            "role_id": "assistant",
+            "proj_all_response": -0.291522,
+            "proj_answer_only": -1.091478,
+            "proj_reasoning_only": 0.109166
+          },
+          {
+            "role_id": "auctioneer",
+            "proj_all_response": -0.84593,
+            "proj_answer_only": -1.446175,
+            "proj_reasoning_only": -0.562631
+          },
+          {
+            "role_id": "auditor",
+            "proj_all_response": -0.555267,
+            "proj_answer_only": -1.271144,
+            "proj_reasoning_only": -0.212223
+          },
+          {
+            "role_id": "avatar",
+            "proj_all_response": -0.681059,
+            "proj_answer_only": -1.352941,
+            "proj_reasoning_only": -0.344519
+          },
+          {
+            "role_id": "bard",
+            "proj_all_response": -0.991286,
+            "proj_answer_only": -1.571692,
+            "proj_reasoning_only": -0.744296
+          },
+          {
+            "role_id": "bartender",
+            "proj_all_response": -0.757354,
+            "proj_answer_only": -1.390307,
+            "proj_reasoning_only": -0.451739
+          },
+          {
+            "role_id": "biologist",
+            "proj_all_response": -0.827598,
+            "proj_answer_only": -1.491967,
+            "proj_reasoning_only": -0.518314
+          },
+          {
+            "role_id": "blogger",
+            "proj_all_response": -0.549624,
+            "proj_answer_only": -1.175552,
+            "proj_reasoning_only": -0.230446
+          },
+          {
+            "role_id": "bohemian",
+            "proj_all_response": -1.227321,
+            "proj_answer_only": -1.840952,
+            "proj_reasoning_only": -0.941659
+          },
+          {
+            "role_id": "builder",
+            "proj_all_response": -0.577626,
+            "proj_answer_only": -1.292717,
+            "proj_reasoning_only": -0.233502
+          },
+          {
+            "role_id": "caregiver",
+            "proj_all_response": -0.577691,
+            "proj_answer_only": -1.240726,
+            "proj_reasoning_only": -0.247083
+          },
+          {
+            "role_id": "cartographer",
+            "proj_all_response": -0.573269,
+            "proj_answer_only": -1.271658,
+            "proj_reasoning_only": -0.226015
+          },
+          {
+            "role_id": "caveman",
+            "proj_all_response": -1.141132,
+            "proj_answer_only": -1.738947,
+            "proj_reasoning_only": -0.901432
+          },
+          {
+            "role_id": "celebrity",
+            "proj_all_response": -0.709024,
+            "proj_answer_only": -1.341047,
+            "proj_reasoning_only": -0.410155
+          },
+          {
+            "role_id": "chameleon",
+            "proj_all_response": -0.570692,
+            "proj_answer_only": -1.245519,
+            "proj_reasoning_only": -0.235835
+          },
+          {
+            "role_id": "chef",
+            "proj_all_response": -0.715869,
+            "proj_answer_only": -1.408999,
+            "proj_reasoning_only": -0.385051
+          },
+          {
+            "role_id": "chemist",
+            "proj_all_response": -0.774272,
+            "proj_answer_only": -1.472672,
+            "proj_reasoning_only": -0.46171
+          },
+          {
+            "role_id": "chimera",
+            "proj_all_response": -0.805798,
+            "proj_answer_only": -1.51229,
+            "proj_reasoning_only": -0.474615
+          },
+          {
+            "role_id": "coach",
+            "proj_all_response": -0.436362,
+            "proj_answer_only": -1.202363,
+            "proj_reasoning_only": -0.058255
+          },
+          {
+            "role_id": "collaborator",
+            "proj_all_response": -0.414276,
+            "proj_answer_only": -1.198556,
+            "proj_reasoning_only": -0.018428
+          },
+          {
+            "role_id": "collector",
+            "proj_all_response": -0.621941,
+            "proj_answer_only": -1.285754,
+            "proj_reasoning_only": -0.286356
+          },
+          {
+            "role_id": "comedian",
+            "proj_all_response": -0.598441,
+            "proj_answer_only": -1.177513,
+            "proj_reasoning_only": -0.339001
+          },
+          {
+            "role_id": "competitor",
+            "proj_all_response": -0.755699,
+            "proj_answer_only": -1.431983,
+            "proj_reasoning_only": -0.43252
+          },
+          {
+            "role_id": "composer",
+            "proj_all_response": -0.942629,
+            "proj_answer_only": -1.556295,
+            "proj_reasoning_only": -0.61892
+          },
+          {
+            "role_id": "conservator",
+            "proj_all_response": -0.796628,
+            "proj_answer_only": -1.446657,
+            "proj_reasoning_only": -0.473482
+          },
+          {
+            "role_id": "consultant",
+            "proj_all_response": -0.422501,
+            "proj_answer_only": -1.159786,
+            "proj_reasoning_only": -0.039937
+          },
+          {
+            "role_id": "contrarian",
+            "proj_all_response": -0.634594,
+            "proj_answer_only": -1.320569,
+            "proj_reasoning_only": -0.298589
+          },
+          {
+            "role_id": "coordinator",
+            "proj_all_response": -0.499113,
+            "proj_answer_only": -1.220492,
+            "proj_reasoning_only": -0.14321
+          },
+          {
+            "role_id": "coral_reef",
+            "proj_all_response": -1.275559,
+            "proj_answer_only": -1.861499,
+            "proj_reasoning_only": -1.031903
+          },
+          {
+            "role_id": "cosmopolitan",
+            "proj_all_response": -0.547514,
+            "proj_answer_only": -1.266156,
+            "proj_reasoning_only": -0.184798
+          },
+          {
+            "role_id": "counselor",
+            "proj_all_response": -0.422906,
+            "proj_answer_only": -1.158663,
+            "proj_reasoning_only": -0.051114
+          },
+          {
+            "role_id": "criminal",
+            "proj_all_response": -1.071243,
+            "proj_answer_only": -1.671968,
+            "proj_reasoning_only": -0.799119
+          },
+          {
+            "role_id": "critic",
+            "proj_all_response": -0.470645,
+            "proj_answer_only": -1.21809,
+            "proj_reasoning_only": -0.10513
+          },
+          {
+            "role_id": "crystalline",
+            "proj_all_response": -1.005517,
+            "proj_answer_only": -1.712352,
+            "proj_reasoning_only": -0.713434
+          },
+          {
+            "role_id": "curator",
+            "proj_all_response": -0.612473,
+            "proj_answer_only": -1.314768,
+            "proj_reasoning_only": -0.262045
+          },
+          {
+            "role_id": "cyborg",
+            "proj_all_response": -0.470806,
+            "proj_answer_only": -1.250678,
+            "proj_reasoning_only": -0.11272
+          },
+          {
+            "role_id": "cynic",
+            "proj_all_response": -1.019317,
+            "proj_answer_only": -1.631666,
+            "proj_reasoning_only": -0.72851
+          },
+          {
+            "role_id": "daredevil",
+            "proj_all_response": -0.794283,
+            "proj_answer_only": -1.464771,
+            "proj_reasoning_only": -0.4811
+          },
+          {
+            "role_id": "debugger",
+            "proj_all_response": -0.390424,
+            "proj_answer_only": -1.180197,
+            "proj_reasoning_only": -0.00015
+          },
+          {
+            "role_id": "demon",
+            "proj_all_response": -0.905601,
+            "proj_answer_only": -1.545756,
+            "proj_reasoning_only": -0.613842
+          },
+          {
+            "role_id": "designer",
+            "proj_all_response": -0.656333,
+            "proj_answer_only": -1.332742,
+            "proj_reasoning_only": -0.316182
+          },
+          {
+            "role_id": "destroyer",
+            "proj_all_response": -0.613097,
+            "proj_answer_only": -1.308993,
+            "proj_reasoning_only": -0.27092
+          },
+          {
+            "role_id": "detective",
+            "proj_all_response": -0.45052,
+            "proj_answer_only": -1.209217,
+            "proj_reasoning_only": -0.106615
+          },
+          {
+            "role_id": "devils_advocate",
+            "proj_all_response": -0.530475,
+            "proj_answer_only": -1.248098,
+            "proj_reasoning_only": -0.16631
+          },
+          {
+            "role_id": "dilettante",
+            "proj_all_response": -0.406189,
+            "proj_answer_only": -1.173016,
+            "proj_reasoning_only": -0.040858
+          },
+          {
+            "role_id": "dispatcher",
+            "proj_all_response": -0.460456,
+            "proj_answer_only": -1.195522,
+            "proj_reasoning_only": -0.10204
+          },
+          {
+            "role_id": "divorcee",
+            "proj_all_response": -0.702232,
+            "proj_answer_only": -1.364265,
+            "proj_reasoning_only": -0.36468
+          },
+          {
+            "role_id": "doctor",
+            "proj_all_response": -0.472118,
+            "proj_answer_only": -1.202731,
+            "proj_reasoning_only": -0.121769
+          },
+          {
+            "role_id": "dreamer",
+            "proj_all_response": -0.623147,
+            "proj_answer_only": -1.323642,
+            "proj_reasoning_only": -0.285695
+          },
+          {
+            "role_id": "echo",
+            "proj_all_response": -0.73569,
+            "proj_answer_only": -1.439515,
+            "proj_reasoning_only": -0.420093
+          },
+          {
+            "role_id": "economist",
+            "proj_all_response": -0.464779,
+            "proj_answer_only": -1.216467,
+            "proj_reasoning_only": -0.118533
+          },
+          {
+            "role_id": "ecosystem",
+            "proj_all_response": -0.72117,
+            "proj_answer_only": -1.416051,
+            "proj_reasoning_only": -0.40523
+          },
+          {
+            "role_id": "editor",
+            "proj_all_response": -0.491253,
+            "proj_answer_only": -1.179232,
+            "proj_reasoning_only": -0.144927
+          },
+          {
+            "role_id": "egregore",
+            "proj_all_response": -0.731692,
+            "proj_answer_only": -1.43799,
+            "proj_reasoning_only": -0.400206
+          },
+          {
+            "role_id": "elder",
+            "proj_all_response": -0.577742,
+            "proj_answer_only": -1.279105,
+            "proj_reasoning_only": -0.231489
+          },
+          {
+            "role_id": "eldritch",
+            "proj_all_response": -0.846068,
+            "proj_answer_only": -1.540893,
+            "proj_reasoning_only": -0.525199
+          },
+          {
+            "role_id": "emissary",
+            "proj_all_response": -0.476883,
+            "proj_answer_only": -1.239432,
+            "proj_reasoning_only": -0.098212
+          },
+          {
+            "role_id": "empath",
+            "proj_all_response": -0.472347,
+            "proj_answer_only": -1.207483,
+            "proj_reasoning_only": -0.110248
+          },
+          {
+            "role_id": "engineer",
+            "proj_all_response": -0.467211,
+            "proj_answer_only": -1.237367,
+            "proj_reasoning_only": -0.104555
+          },
+          {
+            "role_id": "entrepreneur",
+            "proj_all_response": -0.662363,
+            "proj_answer_only": -1.340703,
+            "proj_reasoning_only": -0.322952
+          },
+          {
+            "role_id": "evaluator",
+            "proj_all_response": -0.404071,
+            "proj_answer_only": -1.164132,
+            "proj_reasoning_only": -0.02019
+          },
+          {
+            "role_id": "evangelist",
+            "proj_all_response": -0.509927,
+            "proj_answer_only": -1.219583,
+            "proj_reasoning_only": -0.153977
+          },
+          {
+            "role_id": "examiner",
+            "proj_all_response": -0.435826,
+            "proj_answer_only": -1.158571,
+            "proj_reasoning_only": -0.064439
+          },
+          {
+            "role_id": "exile",
+            "proj_all_response": -0.777523,
+            "proj_answer_only": -1.386608,
+            "proj_reasoning_only": -0.470933
+          },
+          {
+            "role_id": "expatriate",
+            "proj_all_response": -0.607481,
+            "proj_answer_only": -1.298872,
+            "proj_reasoning_only": -0.268056
+          },
+          {
+            "role_id": "facilitator",
+            "proj_all_response": -0.427357,
+            "proj_answer_only": -1.176613,
+            "proj_reasoning_only": -0.053984
+          },
+          {
+            "role_id": "familiar",
+            "proj_all_response": -0.594977,
+            "proj_answer_only": -1.315048,
+            "proj_reasoning_only": -0.247735
+          },
+          {
+            "role_id": "fixer",
+            "proj_all_response": -0.523279,
+            "proj_answer_only": -1.255093,
+            "proj_reasoning_only": -0.186073
+          },
+          {
+            "role_id": "flaneur",
+            "proj_all_response": -0.714194,
+            "proj_answer_only": -1.41946,
+            "proj_reasoning_only": -0.36633
+          },
+          {
+            "role_id": "fool",
+            "proj_all_response": -0.465182,
+            "proj_answer_only": -1.189285,
+            "proj_reasoning_only": -0.14915
+          },
+          {
+            "role_id": "forecaster",
+            "proj_all_response": -0.436596,
+            "proj_answer_only": -1.191504,
+            "proj_reasoning_only": -0.075357
+          },
+          {
+            "role_id": "futurist",
+            "proj_all_response": -0.529283,
+            "proj_answer_only": -1.269686,
+            "proj_reasoning_only": -0.159836
+          },
+          {
+            "role_id": "gamer",
+            "proj_all_response": -0.763909,
+            "proj_answer_only": -1.453102,
+            "proj_reasoning_only": -0.440246
+          },
+          {
+            "role_id": "generalist",
+            "proj_all_response": -0.355087,
+            "proj_answer_only": -1.129373,
+            "proj_reasoning_only": 0.026928
+          },
+          {
+            "role_id": "genie",
+            "proj_all_response": -0.711184,
+            "proj_answer_only": -1.425112,
+            "proj_reasoning_only": -0.371915
+          },
+          {
+            "role_id": "geographer",
+            "proj_all_response": -0.695927,
+            "proj_answer_only": -1.354874,
+            "proj_reasoning_only": -0.369059
+          },
+          {
+            "role_id": "ghost",
+            "proj_all_response": -0.713202,
+            "proj_answer_only": -1.429123,
+            "proj_reasoning_only": -0.383969
+          },
+          {
+            "role_id": "golem",
+            "proj_all_response": -0.905905,
+            "proj_answer_only": -1.569917,
+            "proj_reasoning_only": -0.611803
+          },
+          {
+            "role_id": "gossip",
+            "proj_all_response": -0.490203,
+            "proj_answer_only": -1.215563,
+            "proj_reasoning_only": -0.16109
+          },
+          {
+            "role_id": "grader",
+            "proj_all_response": -0.384081,
+            "proj_answer_only": -1.135209,
+            "proj_reasoning_only": -0.014205
+          },
+          {
+            "role_id": "graduate",
+            "proj_all_response": -0.509826,
+            "proj_answer_only": -1.278909,
+            "proj_reasoning_only": -0.152572
+          },
+          {
+            "role_id": "grandparent",
+            "proj_all_response": -0.696832,
+            "proj_answer_only": -1.297718,
+            "proj_reasoning_only": -0.404187
+          },
+          {
+            "role_id": "guardian",
+            "proj_all_response": -0.529793,
+            "proj_answer_only": -1.249354,
+            "proj_reasoning_only": -0.180897
+          },
+          {
+            "role_id": "guide",
+            "proj_all_response": -0.391303,
+            "proj_answer_only": -1.1802,
+            "proj_reasoning_only": 0.002676
+          },
+          {
+            "role_id": "guru",
+            "proj_all_response": -0.532312,
+            "proj_answer_only": -1.259029,
+            "proj_reasoning_only": -0.1627
+          },
+          {
+            "role_id": "hacker",
+            "proj_all_response": -0.690586,
+            "proj_answer_only": -1.361841,
+            "proj_reasoning_only": -0.379911
+          },
+          {
+            "role_id": "healer",
+            "proj_all_response": -0.573518,
+            "proj_answer_only": -1.270514,
+            "proj_reasoning_only": -0.200194
+          },
+          {
+            "role_id": "hedonist",
+            "proj_all_response": -1.019258,
+            "proj_answer_only": -1.662165,
+            "proj_reasoning_only": -0.725697
+          },
+          {
+            "role_id": "hermit",
+            "proj_all_response": -0.838931,
+            "proj_answer_only": -1.537653,
+            "proj_reasoning_only": -0.51241
+          },
+          {
+            "role_id": "historian",
+            "proj_all_response": -0.611383,
+            "proj_answer_only": -1.285798,
+            "proj_reasoning_only": -0.260476
+          },
+          {
+            "role_id": "hive",
+            "proj_all_response": -0.546706,
+            "proj_answer_only": -1.32183,
+            "proj_reasoning_only": -0.187693
+          },
+          {
+            "role_id": "hoarder",
+            "proj_all_response": -0.925091,
+            "proj_answer_only": -1.579559,
+            "proj_reasoning_only": -0.642754
+          },
+          {
+            "role_id": "homunculus",
+            "proj_all_response": -0.954177,
+            "proj_answer_only": -1.600807,
+            "proj_reasoning_only": -0.674012
+          },
+          {
+            "role_id": "hybrid",
+            "proj_all_response": -0.567347,
+            "proj_answer_only": -1.297605,
+            "proj_reasoning_only": -0.217278
+          },
+          {
+            "role_id": "idealist",
+            "proj_all_response": -0.627589,
+            "proj_answer_only": -1.316043,
+            "proj_reasoning_only": -0.288635
+          },
+          {
+            "role_id": "immigrant",
+            "proj_all_response": -0.783241,
+            "proj_answer_only": -1.469999,
+            "proj_reasoning_only": -0.449648
+          },
+          {
+            "role_id": "improviser",
+            "proj_all_response": -0.4661,
+            "proj_answer_only": -1.219824,
+            "proj_reasoning_only": -0.108045
+          },
+          {
+            "role_id": "infant",
+            "proj_all_response": -0.879557,
+            "proj_answer_only": -1.548588,
+            "proj_reasoning_only": -0.624928
+          },
+          {
+            "role_id": "influencer",
+            "proj_all_response": -0.575787,
+            "proj_answer_only": -1.227864,
+            "proj_reasoning_only": -0.2707
+          },
+          {
+            "role_id": "instructor",
+            "proj_all_response": -0.403908,
+            "proj_answer_only": -1.123675,
+            "proj_reasoning_only": -0.046149
+          },
+          {
+            "role_id": "interpreter",
+            "proj_all_response": -0.41496,
+            "proj_answer_only": -1.176344,
+            "proj_reasoning_only": -0.039877
+          },
+          {
+            "role_id": "interviewer",
+            "proj_all_response": -0.408962,
+            "proj_answer_only": -1.173189,
+            "proj_reasoning_only": -0.03118
+          },
+          {
+            "role_id": "jester",
+            "proj_all_response": -0.712248,
+            "proj_answer_only": -1.306336,
+            "proj_reasoning_only": -0.433159
+          },
+          {
+            "role_id": "journalist",
+            "proj_all_response": -0.447999,
+            "proj_answer_only": -1.190182,
+            "proj_reasoning_only": -0.081135
+          },
+          {
+            "role_id": "judge",
+            "proj_all_response": -0.435425,
+            "proj_answer_only": -1.218549,
+            "proj_reasoning_only": -0.059515
+          },
+          {
+            "role_id": "lawyer",
+            "proj_all_response": -0.563206,
+            "proj_answer_only": -1.213775,
+            "proj_reasoning_only": -0.231516
+          },
+          {
+            "role_id": "leviathan",
+            "proj_all_response": -1.201223,
+            "proj_answer_only": -1.778814,
+            "proj_reasoning_only": -0.938963
+          },
+          {
+            "role_id": "librarian",
+            "proj_all_response": -0.489935,
+            "proj_answer_only": -1.2192,
+            "proj_reasoning_only": -0.121482
+          },
+          {
+            "role_id": "linguist",
+            "proj_all_response": -0.698972,
+            "proj_answer_only": -1.341165,
+            "proj_reasoning_only": -0.38581
+          },
+          {
+            "role_id": "loner",
+            "proj_all_response": -0.744636,
+            "proj_answer_only": -1.430489,
+            "proj_reasoning_only": -0.430672
+          },
+          {
+            "role_id": "luddite",
+            "proj_all_response": -1.077258,
+            "proj_answer_only": -1.711645,
+            "proj_reasoning_only": -0.81254
+          },
+          {
+            "role_id": "marketer",
+            "proj_all_response": -0.704372,
+            "proj_answer_only": -1.352681,
+            "proj_reasoning_only": -0.366119
+          },
+          {
+            "role_id": "martyr",
+            "proj_all_response": -0.824791,
+            "proj_answer_only": -1.45203,
+            "proj_reasoning_only": -0.526963
+          },
+          {
+            "role_id": "mathematician",
+            "proj_all_response": -0.517672,
+            "proj_answer_only": -1.252892,
+            "proj_reasoning_only": -0.186081
+          },
+          {
+            "role_id": "maverick",
+            "proj_all_response": -0.589987,
+            "proj_answer_only": -1.339258,
+            "proj_reasoning_only": -0.232389
+          },
+          {
+            "role_id": "mechanic",
+            "proj_all_response": -0.501477,
+            "proj_answer_only": -1.253752,
+            "proj_reasoning_only": -0.136721
+          },
+          {
+            "role_id": "mediator",
+            "proj_all_response": -0.444289,
+            "proj_answer_only": -1.242691,
+            "proj_reasoning_only": -0.057028
+          },
+          {
+            "role_id": "mentor",
+            "proj_all_response": -0.425339,
+            "proj_answer_only": -1.175098,
+            "proj_reasoning_only": -0.049596
+          },
+          {
+            "role_id": "merchant",
+            "proj_all_response": -0.767402,
+            "proj_answer_only": -1.375335,
+            "proj_reasoning_only": -0.459059
+          },
+          {
+            "role_id": "minimalist",
+            "proj_all_response": -0.90216,
+            "proj_answer_only": -1.546716,
+            "proj_reasoning_only": -0.585602
+          },
+          {
+            "role_id": "moderator",
+            "proj_all_response": -0.385331,
+            "proj_answer_only": -1.194772,
+            "proj_reasoning_only": -0.013844
+          },
+          {
+            "role_id": "musician",
+            "proj_all_response": -0.931102,
+            "proj_answer_only": -1.543875,
+            "proj_reasoning_only": -0.621998
+          },
+          {
+            "role_id": "mycorrhizal",
+            "proj_all_response": -0.966205,
+            "proj_answer_only": -1.607128,
+            "proj_reasoning_only": -0.681586
+          },
+          {
+            "role_id": "mystic",
+            "proj_all_response": -0.757751,
+            "proj_answer_only": -1.45217,
+            "proj_reasoning_only": -0.401856
+          },
+          {
+            "role_id": "narcissist",
+            "proj_all_response": -1.010468,
+            "proj_answer_only": -1.603003,
+            "proj_reasoning_only": -0.751146
+          },
+          {
+            "role_id": "narrator",
+            "proj_all_response": -0.54132,
+            "proj_answer_only": -1.200479,
+            "proj_reasoning_only": -0.220778
+          },
+          {
+            "role_id": "naturalist",
+            "proj_all_response": -0.724342,
+            "proj_answer_only": -1.413346,
+            "proj_reasoning_only": -0.398304
+          },
+          {
+            "role_id": "navigator",
+            "proj_all_response": -0.445966,
+            "proj_answer_only": -1.194023,
+            "proj_reasoning_only": -0.093481
+          },
+          {
+            "role_id": "negotiator",
+            "proj_all_response": -0.527207,
+            "proj_answer_only": -1.254782,
+            "proj_reasoning_only": -0.155518
+          },
+          {
+            "role_id": "networker",
+            "proj_all_response": -0.493624,
+            "proj_answer_only": -1.233833,
+            "proj_reasoning_only": -0.120432
+          },
+          {
+            "role_id": "newlywed",
+            "proj_all_response": -0.6859,
+            "proj_answer_only": -1.368483,
+            "proj_reasoning_only": -0.353935
+          },
+          {
+            "role_id": "nomad",
+            "proj_all_response": -0.835473,
+            "proj_answer_only": -1.502063,
+            "proj_reasoning_only": -0.525482
+          },
+          {
+            "role_id": "novelist",
+            "proj_all_response": -0.872132,
+            "proj_answer_only": -1.424885,
+            "proj_reasoning_only": -0.586547
+          },
+          {
+            "role_id": "nutritionist",
+            "proj_all_response": -0.687666,
+            "proj_answer_only": -1.306399,
+            "proj_reasoning_only": -0.366427
+          },
+          {
+            "role_id": "observer",
+            "proj_all_response": -0.37984,
+            "proj_answer_only": -1.141756,
+            "proj_reasoning_only": -0.008284
+          },
+          {
+            "role_id": "optimist",
+            "proj_all_response": -0.573888,
+            "proj_answer_only": -1.29648,
+            "proj_reasoning_only": -0.226224
+          },
+          {
+            "role_id": "oracle",
+            "proj_all_response": -0.487273,
+            "proj_answer_only": -1.250251,
+            "proj_reasoning_only": -0.105019
+          },
+          {
+            "role_id": "organizer",
+            "proj_all_response": -0.468211,
+            "proj_answer_only": -1.17265,
+            "proj_reasoning_only": -0.102041
+          },
+          {
+            "role_id": "orphan",
+            "proj_all_response": -0.698967,
+            "proj_answer_only": -1.355245,
+            "proj_reasoning_only": -0.375496
+          },
+          {
+            "role_id": "pacifist",
+            "proj_all_response": -0.719183,
+            "proj_answer_only": -1.400502,
+            "proj_reasoning_only": -0.392918
+          },
+          {
+            "role_id": "paramedic",
+            "proj_all_response": -0.653085,
+            "proj_answer_only": -1.349253,
+            "proj_reasoning_only": -0.31892
+          },
+          {
+            "role_id": "parasite",
+            "proj_all_response": -0.975426,
+            "proj_answer_only": -1.620269,
+            "proj_reasoning_only": -0.712596
+          },
+          {
+            "role_id": "parent",
+            "proj_all_response": -0.639217,
+            "proj_answer_only": -1.284234,
+            "proj_reasoning_only": -0.326194
+          },
+          {
+            "role_id": "patient",
+            "proj_all_response": -0.559123,
+            "proj_answer_only": -1.239278,
+            "proj_reasoning_only": -0.227418
+          },
+          {
+            "role_id": "peacekeeper",
+            "proj_all_response": -0.442814,
+            "proj_answer_only": -1.221097,
+            "proj_reasoning_only": -0.071217
+          },
+          {
+            "role_id": "perfectionist",
+            "proj_all_response": -0.573031,
+            "proj_answer_only": -1.276551,
+            "proj_reasoning_only": -0.213859
+          },
+          {
+            "role_id": "pharmacist",
+            "proj_all_response": -0.606666,
+            "proj_answer_only": -1.273138,
+            "proj_reasoning_only": -0.274634
+          },
+          {
+            "role_id": "philosopher",
+            "proj_all_response": -0.517097,
+            "proj_answer_only": -1.257689,
+            "proj_reasoning_only": -0.155744
+          },
+          {
+            "role_id": "photographer",
+            "proj_all_response": -0.982166,
+            "proj_answer_only": -1.571656,
+            "proj_reasoning_only": -0.689889
+          },
+          {
+            "role_id": "physicist",
+            "proj_all_response": -0.690939,
+            "proj_answer_only": -1.415369,
+            "proj_reasoning_only": -0.362363
+          },
+          {
+            "role_id": "pilgrim",
+            "proj_all_response": -0.879975,
+            "proj_answer_only": -1.569742,
+            "proj_reasoning_only": -0.546347
+          },
+          {
+            "role_id": "pilot",
+            "proj_all_response": -0.77093,
+            "proj_answer_only": -1.408681,
+            "proj_reasoning_only": -0.46319
+          },
+          {
+            "role_id": "pirate",
+            "proj_all_response": -1.184045,
+            "proj_answer_only": -1.734439,
+            "proj_reasoning_only": -0.95534
+          },
+          {
+            "role_id": "planner",
+            "proj_all_response": -0.42894,
+            "proj_answer_only": -1.1628,
+            "proj_reasoning_only": -0.05889
+          },
+          {
+            "role_id": "playwright",
+            "proj_all_response": -0.792256,
+            "proj_answer_only": -1.347983,
+            "proj_reasoning_only": -0.518219
+          },
+          {
+            "role_id": "podcaster",
+            "proj_all_response": -0.520148,
+            "proj_answer_only": -1.218875,
+            "proj_reasoning_only": -0.178053
+          },
+          {
+            "role_id": "poet",
+            "proj_all_response": -1.011749,
+            "proj_answer_only": -1.407925,
+            "proj_reasoning_only": -0.830373
+          },
+          {
+            "role_id": "polymath",
+            "proj_all_response": -0.432551,
+            "proj_answer_only": -1.192089,
+            "proj_reasoning_only": -0.059791
+          },
+          {
+            "role_id": "pragmatist",
+            "proj_all_response": -0.515269,
+            "proj_answer_only": -1.223753,
+            "proj_reasoning_only": -0.159092
+          },
+          {
+            "role_id": "predator",
+            "proj_all_response": -0.738907,
+            "proj_answer_only": -1.407946,
+            "proj_reasoning_only": -0.436219
+          },
+          {
+            "role_id": "presenter",
+            "proj_all_response": -0.451023,
+            "proj_answer_only": -1.213764,
+            "proj_reasoning_only": -0.080647
+          },
+          {
+            "role_id": "prey",
+            "proj_all_response": -0.854207,
+            "proj_answer_only": -1.484186,
+            "proj_reasoning_only": -0.55807
+          },
+          {
+            "role_id": "prisoner",
+            "proj_all_response": -0.758244,
+            "proj_answer_only": -1.405396,
+            "proj_reasoning_only": -0.439585
+          },
+          {
+            "role_id": "procrastinator",
+            "proj_all_response": -0.589125,
+            "proj_answer_only": -1.265724,
+            "proj_reasoning_only": -0.306388
+          },
+          {
+            "role_id": "prodigy",
+            "proj_all_response": -0.399163,
+            "proj_answer_only": -1.176078,
+            "proj_reasoning_only": -0.021588
+          },
+          {
+            "role_id": "producer",
+            "proj_all_response": -0.639036,
+            "proj_answer_only": -1.327524,
+            "proj_reasoning_only": -0.304114
+          },
+          {
+            "role_id": "programmer",
+            "proj_all_response": -0.453227,
+            "proj_answer_only": -1.171972,
+            "proj_reasoning_only": -0.094819
+          },
+          {
+            "role_id": "proofreader",
+            "proj_all_response": -0.385123,
+            "proj_answer_only": -1.107581,
+            "proj_reasoning_only": -0.053348
+          },
+          {
+            "role_id": "prophet",
+            "proj_all_response": -0.719301,
+            "proj_answer_only": -1.354684,
+            "proj_reasoning_only": -0.405389
+          },
+          {
+            "role_id": "provincial",
+            "proj_all_response": -0.835722,
+            "proj_answer_only": -1.445605,
+            "proj_reasoning_only": -0.529914
+          },
+          {
+            "role_id": "provocateur",
+            "proj_all_response": -0.69715,
+            "proj_answer_only": -1.389015,
+            "proj_reasoning_only": -0.36674
+          },
+          {
+            "role_id": "psychologist",
+            "proj_all_response": -0.530494,
+            "proj_answer_only": -1.263625,
+            "proj_reasoning_only": -0.164975
+          },
+          {
+            "role_id": "publisher",
+            "proj_all_response": -0.568685,
+            "proj_answer_only": -1.259581,
+            "proj_reasoning_only": -0.222213
+          },
+          {
+            "role_id": "purist",
+            "proj_all_response": -0.603441,
+            "proj_answer_only": -1.297989,
+            "proj_reasoning_only": -0.266471
+          },
+          {
+            "role_id": "realist",
+            "proj_all_response": -0.45029,
+            "proj_answer_only": -1.211039,
+            "proj_reasoning_only": -0.076555
+          },
+          {
+            "role_id": "rebel",
+            "proj_all_response": -0.77816,
+            "proj_answer_only": -1.478493,
+            "proj_reasoning_only": -0.459628
+          },
+          {
+            "role_id": "recruiter",
+            "proj_all_response": -0.598559,
+            "proj_answer_only": -1.278206,
+            "proj_reasoning_only": -0.259994
+          },
+          {
+            "role_id": "refugee",
+            "proj_all_response": -0.669437,
+            "proj_answer_only": -1.317888,
+            "proj_reasoning_only": -0.345651
+          },
+          {
+            "role_id": "reporter",
+            "proj_all_response": -0.455728,
+            "proj_answer_only": -1.170769,
+            "proj_reasoning_only": -0.102443
+          },
+          {
+            "role_id": "researcher",
+            "proj_all_response": -0.392322,
+            "proj_answer_only": -1.174518,
+            "proj_reasoning_only": 0.000968
+          },
+          {
+            "role_id": "retiree",
+            "proj_all_response": -0.576376,
+            "proj_answer_only": -1.296296,
+            "proj_reasoning_only": -0.23651
+          },
+          {
+            "role_id": "revenant",
+            "proj_all_response": -0.856778,
+            "proj_answer_only": -1.508185,
+            "proj_reasoning_only": -0.547872
+          },
+          {
+            "role_id": "reviewer",
+            "proj_all_response": -0.415134,
+            "proj_answer_only": -1.18132,
+            "proj_reasoning_only": -0.040644
+          },
+          {
+            "role_id": "revolutionary",
+            "proj_all_response": -0.845218,
+            "proj_answer_only": -1.484484,
+            "proj_reasoning_only": -0.530764
+          },
+          {
+            "role_id": "robot",
+            "proj_all_response": -0.454246,
+            "proj_answer_only": -1.22536,
+            "proj_reasoning_only": -0.091877
+          },
+          {
+            "role_id": "rogue",
+            "proj_all_response": -0.822343,
+            "proj_answer_only": -1.502079,
+            "proj_reasoning_only": -0.510352
+          },
+          {
+            "role_id": "romantic",
+            "proj_all_response": -0.969332,
+            "proj_answer_only": -1.525014,
+            "proj_reasoning_only": -0.705788
+          },
+          {
+            "role_id": "saboteur",
+            "proj_all_response": -0.822402,
+            "proj_answer_only": -1.482447,
+            "proj_reasoning_only": -0.521547
+          },
+          {
+            "role_id": "sage",
+            "proj_all_response": -0.462517,
+            "proj_answer_only": -1.269508,
+            "proj_reasoning_only": -0.077394
+          },
+          {
+            "role_id": "scheduler",
+            "proj_all_response": -0.527929,
+            "proj_answer_only": -1.235484,
+            "proj_reasoning_only": -0.185768
+          },
+          {
+            "role_id": "scholar",
+            "proj_all_response": -0.419477,
+            "proj_answer_only": -1.168619,
+            "proj_reasoning_only": -0.046062
+          },
+          {
+            "role_id": "scientist",
+            "proj_all_response": -0.463738,
+            "proj_answer_only": -1.22392,
+            "proj_reasoning_only": -0.112406
+          },
+          {
+            "role_id": "scout",
+            "proj_all_response": -0.517362,
+            "proj_answer_only": -1.256934,
+            "proj_reasoning_only": -0.140598
+          },
+          {
+            "role_id": "screener",
+            "proj_all_response": -0.426339,
+            "proj_answer_only": -1.177101,
+            "proj_reasoning_only": -0.07285
+          },
+          {
+            "role_id": "secretary",
+            "proj_all_response": -0.552558,
+            "proj_answer_only": -1.218483,
+            "proj_reasoning_only": -0.242558
+          },
+          {
+            "role_id": "shaman",
+            "proj_all_response": -1.192246,
+            "proj_answer_only": -1.767458,
+            "proj_reasoning_only": -0.906493
+          },
+          {
+            "role_id": "shapeshifter",
+            "proj_all_response": -0.756984,
+            "proj_answer_only": -1.428919,
+            "proj_reasoning_only": -0.453369
+          },
+          {
+            "role_id": "simulacrum",
+            "proj_all_response": -0.68186,
+            "proj_answer_only": -1.36323,
+            "proj_reasoning_only": -0.373508
+          },
+          {
+            "role_id": "skeptic",
+            "proj_all_response": -0.454459,
+            "proj_answer_only": -1.198272,
+            "proj_reasoning_only": -0.106377
+          },
+          {
+            "role_id": "smuggler",
+            "proj_all_response": -1.064248,
+            "proj_answer_only": -1.648901,
+            "proj_reasoning_only": -0.802011
+          },
+          {
+            "role_id": "sociologist",
+            "proj_all_response": -0.538711,
+            "proj_answer_only": -1.271507,
+            "proj_reasoning_only": -0.166563
+          },
+          {
+            "role_id": "soldier",
+            "proj_all_response": -0.903726,
+            "proj_answer_only": -1.525174,
+            "proj_reasoning_only": -0.596004
+          },
+          {
+            "role_id": "sommelier",
+            "proj_all_response": -0.902893,
+            "proj_answer_only": -1.516284,
+            "proj_reasoning_only": -0.613852
+          },
+          {
+            "role_id": "specialist",
+            "proj_all_response": -0.38307,
+            "proj_answer_only": -1.185427,
+            "proj_reasoning_only": -0.002254
+          },
+          {
+            "role_id": "spirit",
+            "proj_all_response": -0.624247,
+            "proj_answer_only": -1.341256,
+            "proj_reasoning_only": -0.276231
+          },
+          {
+            "role_id": "spy",
+            "proj_all_response": -0.683889,
+            "proj_answer_only": -1.361436,
+            "proj_reasoning_only": -0.351417
+          },
+          {
+            "role_id": "statistician",
+            "proj_all_response": -0.519803,
+            "proj_answer_only": -1.249731,
+            "proj_reasoning_only": -0.182436
+          },
+          {
+            "role_id": "stoic",
+            "proj_all_response": -0.889901,
+            "proj_answer_only": -1.588157,
+            "proj_reasoning_only": -0.560182
+          },
+          {
+            "role_id": "strategist",
+            "proj_all_response": -0.497706,
+            "proj_answer_only": -1.213367,
+            "proj_reasoning_only": -0.139417
+          },
+          {
+            "role_id": "student",
+            "proj_all_response": -0.344799,
+            "proj_answer_only": -1.14645,
+            "proj_reasoning_only": 0.038215
+          },
+          {
+            "role_id": "summarizer",
+            "proj_all_response": -0.344572,
+            "proj_answer_only": -1.129198,
+            "proj_reasoning_only": 0.026523
+          },
+          {
+            "role_id": "supervisor",
+            "proj_all_response": -0.496952,
+            "proj_answer_only": -1.227474,
+            "proj_reasoning_only": -0.153502
+          },
+          {
+            "role_id": "surfer",
+            "proj_all_response": -0.853827,
+            "proj_answer_only": -1.516387,
+            "proj_reasoning_only": -0.538358
+          },
+          {
+            "role_id": "survivor",
+            "proj_all_response": -0.652273,
+            "proj_answer_only": -1.32856,
+            "proj_reasoning_only": -0.325003
+          },
+          {
+            "role_id": "swarm",
+            "proj_all_response": -0.591187,
+            "proj_answer_only": -1.352671,
+            "proj_reasoning_only": -0.236926
+          },
+          {
+            "role_id": "symbiont",
+            "proj_all_response": -0.721973,
+            "proj_answer_only": -1.411568,
+            "proj_reasoning_only": -0.411165
+          },
+          {
+            "role_id": "synthesizer",
+            "proj_all_response": -0.427074,
+            "proj_answer_only": -1.199642,
+            "proj_reasoning_only": -0.047582
+          },
+          {
+            "role_id": "teacher",
+            "proj_all_response": -0.433048,
+            "proj_answer_only": -1.220643,
+            "proj_reasoning_only": -0.049884
+          },
+          {
+            "role_id": "technologist",
+            "proj_all_response": -0.48426,
+            "proj_answer_only": -1.213061,
+            "proj_reasoning_only": -0.125141
+          },
+          {
+            "role_id": "teenager",
+            "proj_all_response": -0.3629,
+            "proj_answer_only": -1.15584,
+            "proj_reasoning_only": -0.001815
+          },
+          {
+            "role_id": "theorist",
+            "proj_all_response": -0.547339,
+            "proj_answer_only": -1.277293,
+            "proj_reasoning_only": -0.181266
+          },
+          {
+            "role_id": "therapist",
+            "proj_all_response": -0.472984,
+            "proj_answer_only": -1.236936,
+            "proj_reasoning_only": -0.103208
+          },
+          {
+            "role_id": "toddler",
+            "proj_all_response": -0.542866,
+            "proj_answer_only": -1.196501,
+            "proj_reasoning_only": -0.265188
+          },
+          {
+            "role_id": "traditionalist",
+            "proj_all_response": -0.976909,
+            "proj_answer_only": -1.619909,
+            "proj_reasoning_only": -0.682228
+          },
+          {
+            "role_id": "trainer",
+            "proj_all_response": -0.55238,
+            "proj_answer_only": -1.250974,
+            "proj_reasoning_only": -0.196845
+          },
+          {
+            "role_id": "translator",
+            "proj_all_response": -0.436695,
+            "proj_answer_only": -1.052175,
+            "proj_reasoning_only": -0.105992
+          },
+          {
+            "role_id": "tree",
+            "proj_all_response": -1.062382,
+            "proj_answer_only": -1.682043,
+            "proj_reasoning_only": -0.779958
+          },
+          {
+            "role_id": "trickster",
+            "proj_all_response": -0.64719,
+            "proj_answer_only": -1.291499,
+            "proj_reasoning_only": -0.342315
+          },
+          {
+            "role_id": "tulpa",
+            "proj_all_response": -0.547393,
+            "proj_answer_only": -1.292602,
+            "proj_reasoning_only": -0.188931
+          },
+          {
+            "role_id": "tutor",
+            "proj_all_response": -0.368914,
+            "proj_answer_only": -1.158059,
+            "proj_reasoning_only": 0.001144
+          },
+          {
+            "role_id": "validator",
+            "proj_all_response": -0.36348,
+            "proj_answer_only": -1.111812,
+            "proj_reasoning_only": -0.009583
+          },
+          {
+            "role_id": "vampire",
+            "proj_all_response": -1.300381,
+            "proj_answer_only": -1.867207,
+            "proj_reasoning_only": -1.039589
+          },
+          {
+            "role_id": "vegan",
+            "proj_all_response": -0.870579,
+            "proj_answer_only": -1.462606,
+            "proj_reasoning_only": -0.57248
+          },
+          {
+            "role_id": "veteran",
+            "proj_all_response": -0.752615,
+            "proj_answer_only": -1.419815,
+            "proj_reasoning_only": -0.431191
+          },
+          {
+            "role_id": "veterinarian",
+            "proj_all_response": -0.745961,
+            "proj_answer_only": -1.367688,
+            "proj_reasoning_only": -0.437017
+          },
+          {
+            "role_id": "vigilante",
+            "proj_all_response": -0.709926,
+            "proj_answer_only": -1.372985,
+            "proj_reasoning_only": -0.396359
+          },
+          {
+            "role_id": "virtuoso",
+            "proj_all_response": -0.575976,
+            "proj_answer_only": -1.283841,
+            "proj_reasoning_only": -0.227194
+          },
+          {
+            "role_id": "virus",
+            "proj_all_response": -0.747105,
+            "proj_answer_only": -1.412802,
+            "proj_reasoning_only": -0.459474
+          },
+          {
+            "role_id": "visionary",
+            "proj_all_response": -0.585241,
+            "proj_answer_only": -1.325745,
+            "proj_reasoning_only": -0.212372
+          },
+          {
+            "role_id": "void",
+            "proj_all_response": -0.885353,
+            "proj_answer_only": -1.55874,
+            "proj_reasoning_only": -0.584308
+          },
+          {
+            "role_id": "wanderer",
+            "proj_all_response": -0.700662,
+            "proj_answer_only": -1.421134,
+            "proj_reasoning_only": -0.364719
+          },
+          {
+            "role_id": "warrior",
+            "proj_all_response": -0.657716,
+            "proj_answer_only": -1.36845,
+            "proj_reasoning_only": -0.32151
+          },
+          {
+            "role_id": "whale",
+            "proj_all_response": -0.820175,
+            "proj_answer_only": -1.466832,
+            "proj_reasoning_only": -0.518159
+          },
+          {
+            "role_id": "widow",
+            "proj_all_response": -0.873591,
+            "proj_answer_only": -1.476873,
+            "proj_reasoning_only": -0.576599
+          },
+          {
+            "role_id": "wind",
+            "proj_all_response": -0.952032,
+            "proj_answer_only": -1.59989,
+            "proj_reasoning_only": -0.664006
+          },
+          {
+            "role_id": "witch",
+            "proj_all_response": -1.117031,
+            "proj_answer_only": -1.680693,
+            "proj_reasoning_only": -0.833866
+          },
+          {
+            "role_id": "witness",
+            "proj_all_response": -0.46489,
+            "proj_answer_only": -1.164794,
+            "proj_reasoning_only": -0.125128
+          },
+          {
+            "role_id": "workaholic",
+            "proj_all_response": -0.924865,
+            "proj_answer_only": -1.557324,
+            "proj_reasoning_only": -0.652825
+          },
+          {
+            "role_id": "wraith",
+            "proj_all_response": -1.107881,
+            "proj_answer_only": -1.787465,
+            "proj_reasoning_only": -0.811238
+          },
+          {
+            "role_id": "writer",
+            "proj_all_response": -0.509923,
+            "proj_answer_only": -1.172341,
+            "proj_reasoning_only": -0.189495
+          },
+          {
+            "role_id": "zealot",
+            "proj_all_response": -0.681984,
+            "proj_answer_only": -1.327791,
+            "proj_reasoning_only": -0.382841
+          },
+          {
+            "role_id": "zeitgeist",
+            "proj_all_response": -0.512107,
+            "proj_answer_only": -1.234968,
+            "proj_reasoning_only": -0.16598
+          }
+        ],
+        "pearson_all_vs_answer": 0.975064,
+        "pearson_all_vs_reasoning": 0.99696,
+        "pearson_answer_vs_reasoning": 0.960601,
+        "own_axis": {
+          "all_response": {
+            "sign_check_passed": true,
+            "note": "sign check passed"
+          },
+          "answer": {
+            "sign_check_passed": true,
+            "note": "sign check passed"
+          },
+          "reasoning": {
+            "sign_check_passed": true,
+            "note": "sign check passed"
+          }
+        },
+        "cosine_own_axis_to_reference": {
+          "all_response": 1.0,
+          "answer": 0.385501,
+          "reasoning": 0.050409
+        }
+      },
+      "available_case_sensitivity": {
+        "cohort": "available-case (per-pool, unmatched) — SENSITIVITY ONLY",
+        "n_roles_all_response": 275,
+        "pearson_all_response_vs_answer": 0.975064,
+        "n_roles_all_response_vs_answer": 275,
+        "pearson_all_response_vs_reasoning": 0.99696,
+        "n_roles_all_response_vs_reasoning": 275
+      }
+    }
+  },
+  "interpretation": "Primary C80 membership is label-independent technical validity under the 2026-08-17 deviation record. Direct region comparisons use matched output cohorts. A low all-vs-reasoning correlation means the reasoning trace does not preserve the same role ordering along the all-response Assistant Axis; it does not show that persona information is absent from reasoning. PCA in T17 is role-space variance structure, not intrinsic dimensionality of one persona.",
+  "layout": "c80",
+  "source_git_sha": "6a564253a45d431f825feb7f08e6a5b5d1a27e7e",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

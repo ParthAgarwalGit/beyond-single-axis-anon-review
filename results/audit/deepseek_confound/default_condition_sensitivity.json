@@ -1,0 +1,148 @@
+{
+  "question": "is the recovery materially dependent on any single default prompt, or is the equal-weight five-condition default reference stable?",
+  "per_block": {
+    "C80-A": {
+      "pairwise_cosines": {
+        "0|1": 0.9983480454645606,
+        "0|2": 0.9967076944251346,
+        "0|3": 0.9944445126426575,
+        "0|4": 0.9981293611456385,
+        "1|2": 0.9982047700058243,
+        "1|3": 0.9953235109952635,
+        "1|4": 0.9981653904941186,
+        "2|3": 0.9959417228147905,
+        "2|4": 0.9975592864433235,
+        "3|4": 0.9930130469841076
+      },
+      "pairwise_cosine_min": 0.9930130469841076,
+      "proj_on_opposite_frozen_axis": {
+        "0": -0.011047916424898885,
+        "1": -0.06144653116982232,
+        "2": -0.10028148290250627,
+        "3": -0.05497266737785485,
+        "4": -0.02695140731180351
+      },
+      "proj_range": 0.08923356647760738,
+      "proj_sd": 0.034380453929319425,
+      "dist_from_equal_weight_centroid": {
+        "0": 0.2297733088669385,
+        "1": 0.17282948143026017,
+        "2": 0.2159690289120146,
+        "3": 0.3735187993216063,
+        "4": 0.2516501539818093
+      }
+    },
+    "C80-B": {
+      "pairwise_cosines": {
+        "0|1": 0.9987659532424507,
+        "0|2": 0.9975820046791972,
+        "0|3": 0.9949330500923053,
+        "0|4": 0.9986188088139298,
+        "1|2": 0.9988679153177901,
+        "1|3": 0.9964113993371496,
+        "1|4": 0.9987190895005399,
+        "2|3": 0.9971995844977697,
+        "2|4": 0.9978044656335222,
+        "3|4": 0.9953650155491797
+      },
+      "pairwise_cosine_min": 0.9949330500923053,
+      "proj_on_opposite_frozen_axis": {
+        "0": -0.2896544538861019,
+        "1": -0.33432678831526363,
+        "2": -0.3543363775988677,
+        "3": -0.24822925654113112,
+        "4": -0.34144682976781715
+      },
+      "proj_range": 0.10610712105773659,
+      "proj_sd": 0.04390678026511544,
+      "dist_from_equal_weight_centroid": {
+        "0": 0.21652902150992942,
+        "1": 0.14448692734640012,
+        "2": 0.1802624092550076,
+        "3": 0.32324325297547873,
+        "4": 0.20490904074990673
+      }
+    }
+  },
+  "axis_variants": [
+    {
+      "variant": "single_cond_0",
+      "axis_cos_vs_primary_A": 0.8822472539082702,
+      "axis_cos_vs_primary_B": 0.894461918241809,
+      "recovery_r": 0.9652396188773864,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "single_cond_1",
+      "axis_cos_vs_primary_A": 0.908400100812242,
+      "axis_cos_vs_primary_B": 0.9310141892525335,
+      "recovery_r": 0.9755450013911466,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "single_cond_2",
+      "axis_cos_vs_primary_A": 0.8545279411662795,
+      "axis_cos_vs_primary_B": 0.8852503297746934,
+      "recovery_r": 0.9496643934286136,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "single_cond_3",
+      "axis_cos_vs_primary_A": 0.7821038818701368,
+      "axis_cos_vs_primary_B": 0.7553077285513999,
+      "recovery_r": 0.9714540199400322,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "single_cond_4",
+      "axis_cos_vs_primary_A": 0.8303474761358967,
+      "axis_cos_vs_primary_B": 0.8736328389185414,
+      "recovery_r": 0.9773246144429776,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "loo_cond_0",
+      "axis_cos_vs_primary_A": 0.989414863923648,
+      "axis_cos_vs_primary_B": 0.9894978379719669,
+      "recovery_r": 0.9779604185828161,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "loo_cond_1",
+      "axis_cos_vs_primary_A": 0.9943772072286658,
+      "axis_cos_vs_primary_B": 0.9953845984884938,
+      "recovery_r": 0.97521737443668,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "loo_cond_2",
+      "axis_cos_vs_primary_A": 0.9918353029846324,
+      "axis_cos_vs_primary_B": 0.993434663695364,
+      "recovery_r": 0.9773394365784043,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "loo_cond_3",
+      "axis_cos_vs_primary_A": 0.9718807972614181,
+      "axis_cos_vs_primary_B": 0.9773739086260977,
+      "recovery_r": 0.9752880669272367,
+      "sign_check": "PASS"
+    },
+    {
+      "variant": "loo_cond_4",
+      "axis_cos_vs_primary_A": 0.9880326563115864,
+      "axis_cos_vs_primary_B": 0.9907848535550234,
+      "recovery_r": 0.9746113092671844,
+      "sign_check": "PASS"
+    }
+  ],
+  "summary": {
+    "recovery_r_min": 0.9496643934286136,
+    "recovery_r_max": 0.9779604185828161,
+    "recovery_r_range": 0.028296025154202487,
+    "axis_cos_vs_primary_min": 0.7553077285513999,
+    "axis_cos_vs_primary_median": 0.94014044903683,
+    "frozen_headline_r": 0.976528,
+    "n_sign_check_failures": 0
+  }
+}

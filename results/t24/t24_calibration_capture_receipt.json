@@ -1,0 +1,146 @@
+{
+  "schema_version": "t24-calibration-recovery-receipt/1.0",
+  "task": "T24",
+  "status": "REAL_QWEN_CALIBRATION_CAPTURED_AND_FREEZE_RECOVERED",
+  "created_utc": "2026-08-21T09:13:37.978730+00:00",
+  "capture_source_git_sha": "736b94c8b1929a1b2e54cf1c1ae535c1d022bbec",
+  "freeze_source_git_sha": "a880b4102de910ef08b57bd43fd00ca87b3de48e",
+  "freeze_source_git_dirty": false,
+  "calibration_archive": {
+    "repo_id": "[Author-B-HF]/[anonymized-repository-name]-artifacts",
+    "repo_type": "dataset",
+    "path": "t24-calibration/t24_qwen_calibration.npz",
+    "revision": "1bdf7ce4f5e71e487c8e13735f85490afc1cee28"
+  },
+  "model": {
+    "id": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "dtype": "bfloat16",
+    "thinking": false
+  },
+  "manifest_sha256": "d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793",
+  "n_items": 100,
+  "layers": [
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53
+  ],
+  "calibration_npz_external_path": "/content/drive/MyDrive/[anonymized-repository-name]-t24/real_calibration_736b94c8b192/t24_qwen_calibration.npz",
+  "calibration_npz_sha256": "bb0670832e065f52a7c46dc99acf467960523f4cca888cca996347e3290d19c1",
+  "numerical_controls_npz_external_path": "/content/[anonymized-repository-name]/results/t24/source_control_parameters.npz",
+  "numerical_controls_npz_sha256": "adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291",
+  "freeze_json": "/content/[anonymized-repository-name]/results/t24/source_control_freeze.json",
+  "freeze_json_sha256": "08fb4bb67b366c81ddca33835fb97e130db49efb56a4cece64c0cd63dc6a99c4",
+  "assistant_axis_sha256": "a207fe7a36563280b7b29010880aa0082bd8e3113c141cb4a2eed6b46c140211",
+  "capping_config_sha256": "6aec1220487473aaeab80b05d5d960ac54b5dd9080b51ac4bb0bbd1f4330db24",
+  "deviation_id": "T24_ENGAGEMENT_MATCHING_2026-08-21",
+  "outcome_labels_used": false,
+  "expensive_capture_reused": true,
+  "canonical_controls_reproduction": {
+    "status": "PASS_OPERATIONAL_EQUIVALENCE",
+    "canonical_reviewed_sha256": "adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291",
+    "fresh_recompute_sha256": "bfa90a1a7377cd32e48f55d4ade4b0c168af2396b0bb878d4fb492d422b6ef41",
+    "byte_identical_reproduction": false,
+    "array_count": 56,
+    "exact_array_count": 44,
+    "nonexact_array_count": 12,
+    "nonexact_arrays": [
+      {
+        "key": "random_threshold_46",
+        "fresh": 4.057421741802223,
+        "canonical": 4.057421741802221,
+        "absolute_difference": 1.7763568394002505e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_46",
+        "fresh": 1.107237828336101,
+        "canonical": 1.1072378283361033,
+        "absolute_difference": 2.220446049250313e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_47",
+        "fresh": 3.957489253106382,
+        "canonical": 3.957489253106384,
+        "absolute_difference": 2.220446049250313e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_47",
+        "fresh": 0.44539303291152255,
+        "canonical": 0.4453930329115201,
+        "absolute_difference": 2.4424906541753444e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_48",
+        "fresh": -2.6982132101969984,
+        "canonical": -2.6982132101970002,
+        "absolute_difference": 1.7763568394002505e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_49",
+        "fresh": 3.5712377720369406,
+        "canonical": 3.5712377720369397,
+        "absolute_difference": 8.881784197001252e-16,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_49",
+        "fresh": 0.2778204539071851,
+        "canonical": 0.2778204539071836,
+        "absolute_difference": 1.5543122344752192e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_50",
+        "fresh": 1.349646984433345,
+        "canonical": 1.3496469844333456,
+        "absolute_difference": 6.661338147750939e-16,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_50",
+        "fresh": -1.7993022723422043,
+        "canonical": -1.7993022723422019,
+        "absolute_difference": 2.4424906541753444e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_51",
+        "fresh": -11.488558486311533,
+        "canonical": -11.488558486311538,
+        "absolute_difference": 5.329070518200751e-15,
+        "float32_equal": true
+      },
+      {
+        "key": "random_threshold_53",
+        "fresh": 5.603240796353361,
+        "canonical": 5.6032407963533615,
+        "absolute_difference": 8.881784197001252e-16,
+        "float32_equal": true
+      },
+      {
+        "key": "original_q25_random_threshold_53",
+        "fresh": 0.14401982500159383,
+        "canonical": 0.14401982500159338,
+        "absolute_difference": 4.440892098500626e-16,
+        "float32_equal": true
+      }
+    ],
+    "allowed_absolute_tolerance": 1e-12,
+    "maximum_absolute_difference": 5.329070518200751e-15,
+    "all_nonthreshold_arrays_exact": true,
+    "all_differing_thresholds_float32_equal": true,
+    "all_calibration_engagement_masks_equal": true,
+    "canonicalization_rule": "Preserve the exact independently reviewed artifact when a fresh clean-tree recomputation differs only by <=1e-12 in float64 random-projection threshold scalars, with identical float32 values and identical frozen-calibration engagement."
+  },
+  "claim_boundary": "Recovery/freeze provenance only; causal specificity requires T29 outcomes."
+}

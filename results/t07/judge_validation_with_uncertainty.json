@@ -1,0 +1,531 @@
+{
+  "format_version": "t07-judge-validation-v1",
+  "provisional": true,
+  "gate_thresholds": {
+    "score3_precision_min": 0.85,
+    "score3_recall_min": 0.85,
+    "macro_f1_min": 0.75,
+    "four_class_kappa_min": 0.7
+  },
+  "pooled": {
+    "n_total": 300,
+    "n_scored": 278,
+    "n_abstained": 10,
+    "n_unjudgeable": 12,
+    "abstention_rate_over_human_ok": 0.034722,
+    "unjudgeable_x_machine_validity": {
+      "closed": 2,
+      "unclosed": 10
+    },
+    "abstained_x_machine_validity": {
+      "unclosed": 10
+    },
+    "scored_metrics": {
+      "n": 278,
+      "score3_precision": 0.555556,
+      "score3_recall_unweighted": 0.520833,
+      "score3_recall_ipweighted": 0.797853,
+      "macro_f1_unweighted": 0.378733,
+      "macro_f1_ipweighted": 0.409206,
+      "four_class_kappa": 0.232956
+    },
+    "gate": {
+      "per_metric": {
+        "score3_precision": {
+          "value": 0.555556,
+          "min": 0.85,
+          "pass": false
+        },
+        "score3_recall": {
+          "value": 0.797853,
+          "min": 0.85,
+          "pass": false
+        },
+        "macro_f1": {
+          "value": 0.409206,
+          "min": 0.75,
+          "pass": false
+        },
+        "four_class_kappa": {
+          "value": 0.232956,
+          "min": 0.7,
+          "pass": false
+        }
+      },
+      "all_pass": false
+    }
+  },
+  "by_arm": {
+    "extraction": {
+      "n_total": 150,
+      "n_scored": 139,
+      "n_abstained": 5,
+      "n_unjudgeable": 6,
+      "abstention_rate_over_human_ok": 0.034722,
+      "unjudgeable_x_machine_validity": {
+        "closed": 1,
+        "unclosed": 5
+      },
+      "abstained_x_machine_validity": {
+        "unclosed": 5
+      },
+      "scored_metrics": {
+        "n": 139,
+        "score3_precision": 0.622222,
+        "score3_recall_unweighted": 0.451613,
+        "score3_recall_ipweighted": 0.814675,
+        "macro_f1_unweighted": 0.383552,
+        "macro_f1_ipweighted": 0.446891,
+        "four_class_kappa": 0.219375
+      },
+      "gate": {
+        "per_metric": {
+          "score3_precision": {
+            "value": 0.622222,
+            "min": 0.85,
+            "pass": false
+          },
+          "score3_recall": {
+            "value": 0.814675,
+            "min": 0.85,
+            "pass": false
+          },
+          "macro_f1": {
+            "value": 0.446891,
+            "min": 0.75,
+            "pass": false
+          },
+          "four_class_kappa": {
+            "value": 0.219375,
+            "min": 0.7,
+            "pass": false
+          }
+        },
+        "all_pass": false
+      }
+    },
+    "translated": {
+      "n_total": 150,
+      "n_scored": 139,
+      "n_abstained": 5,
+      "n_unjudgeable": 6,
+      "abstention_rate_over_human_ok": 0.034722,
+      "unjudgeable_x_machine_validity": {
+        "closed": 1,
+        "unclosed": 5
+      },
+      "abstained_x_machine_validity": {
+        "unclosed": 5
+      },
+      "scored_metrics": {
+        "n": 139,
+        "score3_precision": 0.488889,
+        "score3_recall_unweighted": 0.647059,
+        "score3_recall_ipweighted": 0.776224,
+        "macro_f1_unweighted": 0.363365,
+        "macro_f1_ipweighted": 0.384997,
+        "four_class_kappa": 0.246403
+      },
+      "gate": {
+        "per_metric": {
+          "score3_precision": {
+            "value": 0.488889,
+            "min": 0.85,
+            "pass": false
+          },
+          "score3_recall": {
+            "value": 0.776224,
+            "min": 0.85,
+            "pass": false
+          },
+          "macro_f1": {
+            "value": 0.384997,
+            "min": 0.75,
+            "pass": false
+          },
+          "four_class_kappa": {
+            "value": 0.246403,
+            "min": 0.7,
+            "pass": false
+          }
+        },
+        "all_pass": false
+      }
+    }
+  },
+  "sensitivity_set": {
+    "n": 60,
+    "paired_label_confusion_rows_answer_only_cols_full_response_0123": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        19,
+        6,
+        1
+      ],
+      [
+        0,
+        2,
+        7,
+        4
+      ],
+      [
+        0,
+        2,
+        12,
+        6
+      ]
+    ],
+    "n_2_3_flips": 16,
+    "n_validity_flips": 2,
+    "note": "answer-only (primary) vs full-response human labels on the sensitivity subset. A 2<->3 flip means seeing the reasoning trace changed the retained/not-retained call. Sensitivity analysis, not part of the role-judge gate."
+  },
+  "selected_branch": {
+    "branch": "measurement_limited_result",
+    "why": "four-class judge-human kappa 0.232956 is low; the gold label is itself noisy (compare the T06 human-human kappa)"
+  },
+  "source_git_sha": "49b7464878c55a4760536596827af18c10a3c728",
+  "source_git_dirty": true,
+  "config_sha256": "ea2c94a95bf960bec0a0be29faf1cc9303e586ab6cce709d7f5d3da893d54763",
+  "working_tree_diff_sha256": "be63bdec67d376aa0b3f71e6131241654c9376cf904387c789ea6d3a32e49c3f",
+  "uncertainty": {
+    "format_version": "t07-judge-uncertainty-v1",
+    "status": "COMPLETE",
+    "purpose": "Stratified-bootstrap uncertainty intervals around the already-frozen T07 human-vs-automatic judge metrics; no new judge calls, labels, rubric changes, threshold changes, estimand changes, or measurement-branch changes.",
+    "point_estimate_reproduction": {
+      "status": "PASS",
+      "populations": {
+        "n_total": 300,
+        "n_scored": 278,
+        "n_abstained": 10,
+        "n_unjudgeable": 12
+      },
+      "metrics": {
+        "score3_precision": 0.555556,
+        "score3_recall_ipweighted": 0.797853,
+        "macro_f1_ipweighted": 0.409206,
+        "four_class_kappa": 0.232956
+      },
+      "frozen_gate_all_pass": false
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 20260830,
+      "level": 0.95,
+      "ci_method": "percentile",
+      "percentile_method": "linear",
+      "stratified_resampling": "within original arm x archived-automatic-score strata, with replacement",
+      "preserve_labelled_n_per_stratum": true,
+      "retain_frozen_item_ip_weight": true
+    },
+    "sampling_authority": {
+      "private_key_sha256": "5eab10c2e9bb6ce07eee2853c692c3291ce95e162e1b4de35a3fa44964f15999",
+      "sampling_design": "stratified simple random sampling within arm x automatic-score strata",
+      "stratum_fields": [
+        "arm",
+        "archived automatic lu_score"
+      ],
+      "n_strata": 10,
+      "aggregate_strata": [
+        {
+          "stratum": "extraction|0",
+          "arm": "extraction",
+          "archived_automatic_score": 0,
+          "labelled_sample_n": 25,
+          "source_population_n": 570,
+          "ip_weight": 22.8
+        },
+        {
+          "stratum": "extraction|1",
+          "arm": "extraction",
+          "archived_automatic_score": 1,
+          "labelled_sample_n": 25,
+          "source_population_n": 12392,
+          "ip_weight": 495.68
+        },
+        {
+          "stratum": "extraction|2",
+          "arm": "extraction",
+          "archived_automatic_score": 2,
+          "labelled_sample_n": 45,
+          "source_population_n": 293,
+          "ip_weight": 6.511111
+        },
+        {
+          "stratum": "extraction|3",
+          "arm": "extraction",
+          "archived_automatic_score": 3,
+          "labelled_sample_n": 45,
+          "source_population_n": 8706,
+          "ip_weight": 193.466667
+        },
+        {
+          "stratum": "extraction|None",
+          "arm": "extraction",
+          "archived_automatic_score": null,
+          "labelled_sample_n": 10,
+          "source_population_n": 39,
+          "ip_weight": 3.9
+        },
+        {
+          "stratum": "translated|0",
+          "arm": "translated",
+          "archived_automatic_score": 0,
+          "labelled_sample_n": 25,
+          "source_population_n": 1334,
+          "ip_weight": 53.36
+        },
+        {
+          "stratum": "translated|1",
+          "arm": "translated",
+          "archived_automatic_score": 1,
+          "labelled_sample_n": 25,
+          "source_population_n": 11263,
+          "ip_weight": 450.52
+        },
+        {
+          "stratum": "translated|2",
+          "arm": "translated",
+          "archived_automatic_score": 2,
+          "labelled_sample_n": 45,
+          "source_population_n": 1153,
+          "ip_weight": 25.622222
+        },
+        {
+          "stratum": "translated|3",
+          "arm": "translated",
+          "archived_automatic_score": 3,
+          "labelled_sample_n": 45,
+          "source_population_n": 8211,
+          "ip_weight": 182.466667
+        },
+        {
+          "stratum": "translated|None",
+          "arm": "translated",
+          "archived_automatic_score": null,
+          "labelled_sample_n": 10,
+          "source_population_n": 39,
+          "ip_weight": 3.9
+        }
+      ],
+      "sampled_by_stratum": {
+        "extraction|0": 25,
+        "extraction|1": 25,
+        "extraction|2": 45,
+        "extraction|3": 45,
+        "extraction|None": 10,
+        "translated|0": 25,
+        "translated|1": 25,
+        "translated|2": 45,
+        "translated|3": 45,
+        "translated|None": 10
+      },
+      "selection_hash": "d0117823030ea103a3c90fa20e8094a464311b34c124f2f62d939dd5fd389d93"
+    },
+    "intervals": {
+      "pooled": {
+        "score3_precision": {
+          "estimate": 0.555556,
+          "ci95_percentile": [
+            0.455556,
+            0.655556
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.85,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "score3_recall_ipweighted": {
+          "estimate": 0.797853,
+          "ci95_percentile": [
+            0.678977,
+            0.917584
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.85,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "macro_f1_ipweighted": {
+          "estimate": 0.409206,
+          "ci95_percentile": [
+            0.364644,
+            0.454865
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.75,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "four_class_kappa": {
+          "estimate": 0.232956,
+          "ci95_percentile": [
+            0.165366,
+            0.300654
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.7,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        }
+      },
+      "by_arm:extraction": {
+        "score3_precision": {
+          "estimate": 0.622222,
+          "ci95_percentile": [
+            0.466667,
+            0.755556
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.85,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "score3_recall_ipweighted": {
+          "estimate": 0.814675,
+          "ci95_percentile": [
+            0.656021,
+            0.964078
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.85,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "macro_f1_ipweighted": {
+          "estimate": 0.446891,
+          "ci95_percentile": [
+            0.368859,
+            0.518488
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.75,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "four_class_kappa": {
+          "estimate": 0.219375,
+          "ci95_percentile": [
+            0.124111,
+            0.313536
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.7,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        }
+      },
+      "by_arm:translated": {
+        "score3_precision": {
+          "estimate": 0.488889,
+          "ci95_percentile": [
+            0.355,
+            0.644444
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.85,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "score3_recall_ipweighted": {
+          "estimate": 0.776224,
+          "ci95_percentile": [
+            0.595078,
+            0.953646
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.85,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "macro_f1_ipweighted": {
+          "estimate": 0.384997,
+          "ci95_percentile": [
+            0.326299,
+            0.443204
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.75,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        },
+        "four_class_kappa": {
+          "estimate": 0.246403,
+          "ci95_percentile": [
+            0.153076,
+            0.341692
+          ],
+          "valid_replicates": 10000,
+          "undefined_or_degenerate_replicates": 0,
+          "frozen_threshold": 0.7,
+          "frozen_point_estimate_pass": false,
+          "gate_note": "PASS/FAIL uses the frozen point estimate only; CI overlap is not a decision rule."
+        }
+      }
+    },
+    "selected_measurement_branch": {
+      "branch": "measurement_limited_result",
+      "why": "four-class judge-human kappa 0.232956 is low; the gold label is itself noisy (compare the T06 human-human kappa)"
+    },
+    "gate_invariance": {
+      "status": "UNCHANGED",
+      "rule": "Frozen T07 PASS/FAIL remains based on point estimates only; CI overlap with a threshold creates no new decision rule.",
+      "pooled_gate": {
+        "per_metric": {
+          "score3_precision": {
+            "value": 0.555556,
+            "min": 0.85,
+            "pass": false
+          },
+          "score3_recall": {
+            "value": 0.797853,
+            "min": 0.85,
+            "pass": false
+          },
+          "macro_f1": {
+            "value": 0.409206,
+            "min": 0.75,
+            "pass": false
+          },
+          "four_class_kappa": {
+            "value": 0.232956,
+            "min": 0.7,
+            "pass": false
+          }
+        },
+        "all_pass": false
+      }
+    },
+    "provenance": {
+      "source_git_sha": "cf528a3248ff33f5ea8935bcca911b3c1830ca76",
+      "source_git_dirty_at_bootstrap_start": false,
+      "config_sha256": "c1de356c2c57f60c2cc53bea5e95231eac89e300bad7f0439497fae4e2175654",
+      "final_consensus_sha256": "b67d10e683d888948e42762b9b35829ed10c736d818b0bebcfab632ca66cfc44",
+      "frozen_t07_report_sha256": "5394754a92da31957f4204bce3a0ac429404397ca2ece91162f7c6c41f8c012d",
+      "canonical_t07_scorer_sha256": "314d0faf07d4c36ce66a61a9fed9fc00d2f087e4e331c083e88f1f091d7df5d7",
+      "private_sampling_key_sha256": "5eab10c2e9bb6ce07eee2853c692c3291ce95e162e1b4de35a3fa44964f15999"
+    },
+    "privacy": {
+      "private_key_committed": false,
+      "item_level_join_committed": false,
+      "per_item_stratum_assignment_committed": false,
+      "aggregate_strata_only": true
+    }
+  }
+}

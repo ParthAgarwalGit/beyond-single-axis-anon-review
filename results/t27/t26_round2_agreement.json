@@ -1,0 +1,81 @@
+{
+  "schema_version": "t26-round2-agreement/1.0",
+  "task": "T26",
+  "branch": "qwen_capping",
+  "stage": "ROUND_2_REVERIFICATION_COMPLETE_ADJUDICATION_PENDING",
+  "created_utc": "2026-08-24T16:11:44.221111+00:00",
+  "round2": {
+    "n_items_revisited": 88,
+    "both_complete": true,
+    "n_blank": 0,
+    "blinding": "new opaque ids, independently randomised order per labeller; content byte-identical to issued worksheets",
+    "harmfulness": {
+      "n": 88,
+      "n_agree": 81,
+      "raw_agreement": 0.9204545454545454,
+      "cohen_kappa": 0.6744186046511625
+    },
+    "identity_7way": {
+      "n": 88,
+      "n_agree": 83,
+      "raw_agreement": 0.9431818181818182,
+      "cohen_kappa": 0.27392739273927375
+    }
+  },
+  "merged_full_sample": {
+    "note": "round-2 labels supersede round-1 on the 88 revisited items; round-1 retained on the 32 that already agreed",
+    "harmfulness": {
+      "n": 120,
+      "n_agree": 113,
+      "raw_agreement": 0.9416666666666667,
+      "cohen_kappa": 0.7963142580019398
+    },
+    "identity_7way": {
+      "n": 120,
+      "n_agree": 115,
+      "raw_agreement": 0.9583333333333334,
+      "cohen_kappa": 0.2771084337349406
+    },
+    "identity_binary": {
+      "n": 120,
+      "n_agree": 118,
+      "raw_agreement": 0.9833333333333333,
+      "cohen_kappa": 0.0,
+      "labeller_1_positives": 2,
+      "labeller_2_positives": 0,
+      "kappa_is_degenerate_because": "one labeller assigns zero role-enacting labels across all 120 items, so the expected-agreement term equals observed agreement and kappa collapses to 0 regardless of the 98.3% raw agreement. The statistic is uninformative here, not evidence of poor labelling."
+    }
+  },
+  "improvement_round1_to_merged": {
+    "harmfulness_kappa": [
+      0.49114492392117737,
+      0.7963142580019398
+    ],
+    "identity_7way_kappa": [
+      -0.01459346768589304,
+      0.2771084337349406
+    ]
+  },
+  "residual_disagreements": {
+    "n": 10,
+    "item_ids": [
+      "C0001",
+      "C0020",
+      "C0026",
+      "C0035",
+      "C0039",
+      "C0047",
+      "C0057",
+      "C0067",
+      "C0083",
+      "C0118"
+    ],
+    "worksheet": "annotations/t26_causal/round2/adjudication_worksheet.csv",
+    "status": "ADJUDICATION_PENDING - T27 cannot emit a gating result until these are resolved"
+  },
+  "inputs_sha256": {
+    "labels_round2_labeller1": "937d901a3b71557302bed9a52de19607c04e4aba3ec5a8a9993297342618cc3e",
+    "labels_round2_labeller2": "441c8a310ceeb7f326b3ebf2c98f5127539404d1f083c5989cd17b495b4575ec"
+  },
+  "claim_boundary": "Inter-labeller reliability only. No T27 gate claim and no causal claim."
+}

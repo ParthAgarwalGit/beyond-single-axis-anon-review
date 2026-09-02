@@ -1,0 +1,122 @@
+{
+  "task": "T26_causal_human_validation_sample",
+  "branch": "qwen_capping",
+  "judge_model": "deepseek-ai/DeepSeek-V3",
+  "judge_provider": "Novita (hosted API)",
+  "judge_provider_model_id": "deepseek/deepseek_v3",
+  "judge_endpoint": "https://api.novita.ai/v3/openai",
+  "judge_source_git_sha": "5b60b8e7bd32e8422b0886d27c04c52fb61e29f5",
+  "source_scoring_report_sha256": "e45bbae7dee21a49e32309576b5ba17b369a380a6fc22b4697d272b8f797ed0b",
+  "source_scored_artifact_sha256": "d7f8feb34f8c2e8e8fff57764c95ff81b8128fbfa35d87c380322dce07565bd3",
+  "validation_window_constraint": "The T26 validation items MUST be scored in the same judge invocation window as that branch's production rows. If validation runs later against a drifted endpoint it does not characterise the instrument that produced the production labels, and the gate becomes decorative.",
+  "authority": "docs/DEVIATION_2026-08-18_T27_CAUSAL_JUDGE_GATE.md",
+  "execution_status_at_draw": {
+    "derived_from": "bound scoring report (source_scoring_report_sha256)",
+    "all_frozen_conditions_generated_and_scored": true,
+    "n_rows_scored": 400,
+    "rows_per_condition": {
+      "unsteered_baseline": 100,
+      "assistant_cap": 100,
+      "random_direction_cap": 100,
+      "sphere_proximity_cap": 100
+    },
+    "n_coverage_failures": 0,
+    "scoring_production": true,
+    "scoring_drawable_by_t26": true
+  },
+  "frozen_config_execution_status_text": {
+    "text": "T21 execution complete on the public substitute set: 200/200 safety generations and 6,224/6,224 capability generations, covering unsteered_baseline and assistant_cap only. The random-direction and sphere/proximity control conditions are T24/T29 and are NOT yet generated.",
+    "status": "PREREGISTRATION_TEXT_MAY_PREDATE_EXECUTION",
+    "note": "Retained verbatim from configs/t27_causal_judge_frozen.json for audit. It is preregistration prose, not a statement about draw-time state, and the frozen config is deliberately not edited to keep it stale-proof. Use execution_status_at_draw for what was true when this sample was drawn."
+  },
+  "seed": 20260818,
+  "n_items": 120,
+  "per_condition_target": 30,
+  "conditions": [
+    "unsteered_baseline",
+    "assistant_cap",
+    "random_direction_cap",
+    "sphere_proximity_cap"
+  ],
+  "strata": {
+    "unsteered_baseline|refused": {
+      "population": 96,
+      "sampled": 26,
+      "ip_weight": 3.6923076923076925
+    },
+    "unsteered_baseline|harmful": {
+      "population": 2,
+      "sampled": 2,
+      "ip_weight": 1.0
+    },
+    "unsteered_baseline|partial": {
+      "population": 2,
+      "sampled": 2,
+      "ip_weight": 1.0
+    },
+    "assistant_cap|refused": {
+      "population": 95,
+      "sampled": 25,
+      "ip_weight": 3.8
+    },
+    "assistant_cap|harmful": {
+      "population": 3,
+      "sampled": 3,
+      "ip_weight": 1.0
+    },
+    "assistant_cap|partial": {
+      "population": 2,
+      "sampled": 2,
+      "ip_weight": 1.0
+    },
+    "random_direction_cap|refused": {
+      "population": 96,
+      "sampled": 26,
+      "ip_weight": 3.6923076923076925
+    },
+    "random_direction_cap|harmful": {
+      "population": 2,
+      "sampled": 2,
+      "ip_weight": 1.0
+    },
+    "random_direction_cap|partial": {
+      "population": 2,
+      "sampled": 2,
+      "ip_weight": 1.0
+    },
+    "sphere_proximity_cap|refused": {
+      "population": 94,
+      "sampled": 24,
+      "ip_weight": 3.9166666666666665
+    },
+    "sphere_proximity_cap|partial": {
+      "population": 3,
+      "sampled": 3,
+      "ip_weight": 1.0
+    },
+    "sphere_proximity_cap|degenerate": {
+      "population": 2,
+      "sampled": 2,
+      "ip_weight": 1.0
+    },
+    "sphere_proximity_cap|harmful": {
+      "population": 1,
+      "sampled": 1,
+      "ip_weight": 1.0
+    }
+  },
+  "worksheet_sha256": "e59b021b93843c91594cee71a65981a243aeab24df6093c33c99099ddf60ef06",
+  "private_key_sha256": "a7c90f4ccd215a3de4032b0662c08bdf222262fcbe5bbdafbbef9ef8a5f5af73",
+  "private_key_committed": false,
+  "blinded_from_labellers": [
+    "auto_harmfulness",
+    "auto_identity",
+    "condition",
+    "judge_coverage_failure",
+    "stratum",
+    "uid"
+  ],
+  "source_git_sha": "1daa1f513ed420b41d831c948bbbd5c7594bf168",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

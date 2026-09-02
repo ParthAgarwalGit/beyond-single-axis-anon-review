@@ -1,0 +1,184 @@
+{
+  "task": "T09_MINIMAL_PROVENANCE_CLOSURE",
+  "title": "E80/C80 acceptance and provenance closure",
+  "owner_executor": "[Reviewer]",
+  "reviewer": "[Author B]",
+  "review_status": "AWAITING_REVIEWER",
+  "scope": "Acceptance note for the already-generated E80 and C80 raw-text artifacts. No artifact was rerun, regenerated, or rewritten for this closure. Every accepted status below is derived fail-closed from the referenced audit reports; the closure refuses to build if any source records a failure or sources disagree.",
+  "main_commit_for_committed_artifacts": "3b5643c299a74b1f63de07da4f092958cdd46593",
+  "configurations": {
+    "generation_time_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+    "generation_time_config_note": "All accepted generation artifacts are stamped with this historical config. The audit tools verify at run time that the config they load hashes to exactly this value (issue #31 documents an in-place mutation on main; bytes recoverable at git 855d683:configs/method_frozen.yaml).",
+    "downstream_analysis_config": {
+      "path": "configs/method_frozen_v4.yaml",
+      "sha256": "2fe1dbbbacdfec067463742f982bc2d8ca31cad1b880973a7164b678ea6c7683",
+      "status": "APPROVED (PR #38, reviewer-signed; not used by any accepted artifact here; recorded for downstream analyses)"
+    }
+  },
+  "accepted_pins": {
+    "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+    "model_revision": {
+      "value": "6a6f4aa4197940add57724a7707d069478df56b1",
+      "E80": "POST_HOC_SUPPORTED: run-003 never recorded a generation-time weights revision; this revision was resolved afterwards and is supported (not proven) by T12's activation reconstruction.",
+      "C80": "DIRECTLY_RECORDED: every C80-A/C80-B row carries model_revision and tokenizer_revision explicitly; verified uniform by the row-level audit."
+    }
+  },
+  "decoding_regimes": {
+    "E80_accepted_T09_settings": {
+      "sampling": "ancestral",
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "max_new_tokens": 2560,
+      "seed": 0,
+      "source": "results/audit/E80_acceptance_report.json (generation_settings, 44,400/44,400 rows identical)"
+    },
+    "C80_executed_settings": {
+      "sampling": "greedy",
+      "temperature": 0.0,
+      "do_sample": false,
+      "seed": 0,
+      "max_new_tokens_retry_ladder": [
+        2048,
+        8192,
+        16384
+      ],
+      "deviation_record": "docs/deviations/2026-08-13-c80-greedy-decoding.md"
+    },
+    "statement": "C80-A versus C80-B is the decoding-matched primary confirmatory comparison. E80 is exploratory. E80-to-C80 is not decoding-identical; any pooled 240-ID analysis must retain decoding-stratum provenance."
+  },
+  "attempt_selection": {
+    "rule": "lowest retry index with technical_validity == 'valid'; rollouts with no valid attempt are retained for provenance only and excluded downstream",
+    "deviation_record": "docs/deviations/2026-08-13-t10-attempt-selection.md",
+    "selection_indexes": {
+      "C80-A": "results/generation/c80_role_C80_A.selection.jsonl",
+      "C80-B": "results/generation/c80_role_C80_B.selection.jsonl"
+    },
+    "independent_verification": "All 44,000 selection rows re-derived from the raw files by the reviewer-side check (13 Aug): 0 rule violations, 0 eligibility errors, all stored raw-line and canonical-row hashes reproduce."
+  },
+  "blocks": {
+    "E80": {
+      "role_in_design": "exploratory",
+      "status": "ACCEPTED_WITH_RECORDED_GAP",
+      "data_location": "hf-dataset:[Author-A-HF]/persona-artifacts@d918c2a157eba4d6fb91899c6d08f90342949ab8",
+      "raw_snapshot_sha256s": {
+        "translated": [
+          {
+            "path": "rollouts_shard0.jsonl",
+            "bytes": 141395740,
+            "sha256": "6b8c3ef5f2f1e69f6ba7241b3b3c7c98c1dad27178d6640a1c68b4313da5675f"
+          }
+        ],
+        "wrapper": [
+          {
+            "path": "rollouts_shard0.jsonl",
+            "bytes": 37212091,
+            "sha256": "cf73eceed3fafb9e3c0c27ec22669fc8c9ac612094ec59b3e9b89b86b30fe85c"
+          },
+          {
+            "path": "rollouts_shard1.jsonl",
+            "bytes": 36416780,
+            "sha256": "4909b783f8eab1497f05fe9931bef6faf723eacb33cce59e8df1d9477e2f11e9"
+          },
+          {
+            "path": "rollouts_shard2.jsonl",
+            "bytes": 40695306,
+            "sha256": "aee523e4625ab6c269e33d1839d0e03ab898b988b010433d26d3aba2cefc9500"
+          }
+        ],
+        "default": [
+          {
+            "path": "rollouts_shard0.jsonl",
+            "bytes": 2482950,
+            "sha256": "375a77c0a8c1756c6b0fa2976d12efbf986b6feb2c17c7de54a30e5ee5308978"
+          }
+        ]
+      },
+      "coverage": {
+        "translated_USER_TRANSLATED_LU": 22000,
+        "wrapper_USER_EXPLICIT": 22000,
+        "default_5_conditions": 400
+      },
+      "acceptance_basis": "results/audit/E80_acceptance_report.json \u2014 10/11 checks PASS (IDs, prompt bytes, chat template, settings, closure, no default wrapper, shards, duplicates); one GAP: generation-time model revision unrecorded.",
+      "known_quirks": [
+        "39 unclosed-<think> rows in each role arm (handled per docs/deviations/2026-08-08-prefilled-think-segmentation.md: malformed => no final-answer region, judge abstains).",
+        "Default worker's `condition` metadata field mislabelled USER_EXPLICIT; rendered prompts verified unwrapped."
+      ]
+    },
+    "C80-A": {
+      "role_in_design": "confirmatory (decoding-matched with C80-B)",
+      "status": "ACCEPTED",
+      "raw_sha256": "c7229c926066271eb99bc6b647ee8a7446e67071d0b60d5c6592d42566f1238c",
+      "rows_all_attempts": 22286,
+      "rollouts": 22000,
+      "downstream_eligible": 21998,
+      "technical_exclusions": {
+        "count": 2,
+        "rollouts": [
+          "79331716c2cde644",
+          "885b75abc2900244"
+        ],
+        "decision": "ACCEPT_WITH_TECHNICAL_EXCLUSIONS",
+        "reviewer_confirmation": "confirmed (PR #29, merged)"
+      },
+      "acceptance_basis": "Row-level verification (verdict PASS in results/audit/T10_C80_reconciliation_report.json): raw SHA match; all IDs recompute; prompt bytes reproduce from frozen templates; pins uniform; 4,400/prompt-index; zero duplicates; zero multi-valid ambiguity."
+    },
+    "C80-B": {
+      "role_in_design": "confirmatory (decoding-matched with C80-A)",
+      "status": "ACCEPTED_UNDER_SELECTION_RULE",
+      "raw_sha256": "2d82dbe1ef2ab49068d8f2ad5f544db2da4bd3e1d7d44ec89415d0b8bb84c1b8",
+      "rows_all_attempts": 22735,
+      "rollouts": 22000,
+      "downstream_eligible": 22000,
+      "technical_exclusions": {
+        "count": 0
+      },
+      "acceptance_basis": "Row-level verification (verdict PASS in results/audit/T10_C80_reconciliation_report.json): raw SHA match; all IDs recompute; prompt bytes reproduce; pins uniform; 4,400/prompt-index; zero duplicates. 448 rollouts hold >1 technically valid attempt; the frozen lowest-valid-retry rule resolves every case deterministically (verified).",
+      "known_quirks": [
+        "15 retry histories contain same-budget repeat attempts (resume defect); token budget must be read from per-row runtime provenance, not inferred from retry index."
+      ]
+    }
+  },
+  "artifact_register": {
+    "accepted": [
+      "E80 raw arms (translated/wrapper/default) @ hf-dataset:[Author-A-HF]/persona-artifacts@d918c2a157eba4d6fb91899c6d08f90342949ab8, shard SHA-256s bound in the E80 acceptance report",
+      "C80-A raw c80_role_C80_A.final.jsonl sha256=c7229c926066271eb99bc6b647ee8a7446e67071d0b60d5c6592d42566f1238c",
+      "C80-B raw c80_role_C80_B.final.jsonl sha256=2d82dbe1ef2ab49068d8f2ad5f544db2da4bd3e1d7d44ec89415d0b8bb84c1b8",
+      "C80 deterministic rollout manifests (C80-A 60e4e7b5\u2026bf33, C80-B e7b532e3\u20266ac5; both reproduce from tools/build_t10_c80_manifest.py)",
+      "C80 attempt-selection indexes (verified 44,000/44,000)",
+      "C80-A provenance manifest results/generation/c80_role_C80_A.manifest.json (cross-checked against raw data by this closure)",
+      "Deviation records: 2026-08-08 prefilled-think segmentation; 2026-08-13 attempt selection; 2026-08-13 greedy decoding"
+    ],
+    "provisional": [
+      "C80-B provenance manifest results/generation/c80_role_C80_B.manifest.json: its retry narrative predates the reconciliation findings and is not cross-checked by this closure (corrections requested on PR #23). The C80-B RAW DATA is accepted above under the verified selection rule; only this descriptive manifest remains provisional.",
+      "T12 E80 activation recompute outputs (PR #28 under re-review)",
+      "Prefilled-<think> segmentation code (frozen in V4 but implementing code still unmerged: PRs #23/#26)",
+      "Existing role-judge scores and geometry (unchanged status: provisional pending T07 judge validation)"
+    ],
+    "rejected_or_superseded": [
+      "c80_role_C80_B.jsonl (pre-resegmentation raw; superseded by c80_role_C80_B.final.jsonl)",
+      "C80-A rollouts 885b75abc2900244 (luddite/q100) and 79331716c2cde644 (mentor/q37): technical execution failures, provenance-only, excluded from scoring/pooling/geometry",
+      "run-003 extraction/geometry.json and h2_reliability_corrected.json (superseded per run MANIFEST)"
+    ]
+  },
+  "references": {
+    "audit_reports": [
+      "results/audit/E80_acceptance_report.json",
+      "results/audit/T10_C80_reconciliation_report.json",
+      "results/audit/T10_C80_attempt_selection_13_aug.json"
+    ],
+    "reviews": [
+      "PR #23 (C80-B findings)",
+      "PR #28 (T12 findings)",
+      "PR #29 (C80-A approval, merged)",
+      "issue #31 (V4 freeze blockers)"
+    ],
+    "method": [
+      "docs/METHOD_FREEZE.md (V3)",
+      "docs/METHOD_FREEZE_V4_13_AUG.md (V4 approved, PR #38)"
+    ]
+  },
+  "source_git_sha": "d9ec52c35d6cf05518e457041ccc61efe1a6ecc0",
+  "source_git_dirty": false,
+  "config_sha256": "2fe1dbbbacdfec067463742f982bc2d8ca31cad1b880973a7164b678ea6c7683"
+}

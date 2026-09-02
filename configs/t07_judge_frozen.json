@@ -1,0 +1,73 @@
+{
+  "schema_version": "t07-judge-freeze-v2",
+  "purpose": "Frozen record for T07 validation of archived production role-judge scores against the final adjudicated T06 human consensus. This records the production scoring procedure and the recoverable provenance boundary; it must not be described as a fresh bit-for-bit rerun of a revision-pinned judge model.",
+  "validation_basis": "ARCHIVED_PRODUCTION_SCORES",
+  "judge_model": {
+    "model_id": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "model_revision": null,
+    "model_revision_status": "NOT_RECORDED_IN_RECOVERABLE_ARCHIVED_ARTIFACTS",
+    "note": "The archived production worker and repository reference identify the model ID but do not record the exact historical Hugging Face commit. Do not substitute the current model revision or invent a historical SHA. T07 therefore validates the archived production lu_score values, not a fresh revision-pinned judge rerun."
+  },
+  "archived_reference": {
+    "repository_path": "replications/assistant-axis-8b/production_judge_reference.py",
+    "source_dataset": "[Author-A-HF]/persona-artifacts",
+    "source_path": "lu-replication/run-003/code/worker_faithful.py",
+    "source_stage": "judge"
+  },
+  "decoding": {
+    "temperature": 0.0,
+    "max_tokens": 8,
+    "seed": "SEED (production constant; exact numeric value not independently recovered here)"
+  },
+  "answer_region": {
+    "rule": "completion text after the LAST </think>, stripped; '' when there is no closing tag",
+    "reference": "production_judge_reference.answer_region"
+  },
+  "prompt_construction": {
+    "rule": "Lu et al. per-role eval_prompt with the answer substituted: tmpl.replace('{response}', answer) if '{response}' in tmpl else tmpl + '\n\nResponse:\n' + answer",
+    "judge_sees": [
+      "the role's own eval_prompt",
+      "the final-answer-only text"
+    ],
+    "judge_does_not_see": [
+      "question text",
+      "role_description",
+      "prompt variant",
+      "arm/condition",
+      "reasoning trace"
+    ],
+    "reference": "production_judge_reference.judge_body"
+  },
+  "parser": {
+    "rule": "re.search('[0-3]', judge_raw); score = int(match) if (match AND answer_region non-empty AND closed_think) else None",
+    "forced_abstention": "an unclosed trace or empty answer region forces None regardless of judge output; None is missing data/abstention, never zero",
+    "reference": "production_judge_reference.parse_score"
+  },
+  "label_map": {
+    "0": "no_role_playing",
+    "1": "no_role_playing",
+    "2": "somewhat_role_playing",
+    "3": "fully_role_playing",
+    "note": "0 and 1 collapse to plan_label; archived scores.jsonl stores raw lu_score alongside. The T07 gate is evaluated on raw 0-3 labels."
+  },
+  "gate": {
+    "score3_precision_min": 0.85,
+    "score3_recall_min": 0.85,
+    "macro_f1_min": 0.75,
+    "four_class_kappa_min": 0.7,
+    "evaluated_on": "scored population only (human adjudicated ok AND archived lu_score is not None)",
+    "abstention_reported_separately": true
+  },
+  "weighting": {
+    "score3_precision": "unweighted; selection stratification conditions on the automatic-score strata",
+    "recall_and_macro_f1": "ip-weighted for corpus validity; unweighted values reported alongside as sample-only",
+    "four_class_kappa": "reported unweighted; ip weights remain in the private sampling key"
+  },
+  "arms": [
+    "translated",
+    "extraction"
+  ],
+  "arm_note": "The historical T05 builder names the explicit-wrapper condition 'extraction'. In prose this may be written as 'extraction (explicit-wrapper)' to avoid ambiguity.",
+  "reporting": "translated and extraction/explicit-wrapper arms separately as well as pooled; scored, abstained, and unjudgeable populations never merged",
+  "provenance_rule": "If the exact historical judge-model commit is later recovered from an immutable archived artifact, add it in a reviewed follow-up. Until then, never replace model_revision with the current Hub revision."
+}

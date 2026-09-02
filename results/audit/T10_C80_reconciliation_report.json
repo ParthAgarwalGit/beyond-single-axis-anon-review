@@ -1,0 +1,412 @@
+{
+  "task": "T10_C80_RECONCILIATION",
+  "title": "C80-A / C80-B role-generation reconciliation",
+  "frozen_pins": {
+    "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+    "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+    "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+    "method_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79"
+  },
+  "manifest_check": {
+    "a_rollouts": 22000,
+    "b_rollouts": 22000,
+    "total": 44000,
+    "rollout_id_overlap": 0,
+    "question_id_overlap": [],
+    "a_rollouts_sha256": "60e4e7b5984a47db22e6e4b5def97832e7269c4d57863102449f4f9bad27bf33",
+    "b_rollouts_sha256": "e7b532e3816e47489d2d6c48cf43da7f16cace4c15f878f00d8c8c6a5eb86ac5"
+  },
+  "blocks": {
+    "C80-A": {
+      "status": "VERIFIED",
+      "verdict": "PASS",
+      "failed_checks": [],
+      "summary": {
+        "rows": 22286,
+        "rollouts_covered": 22000,
+        "rollouts_missing": 0,
+        "unknown_rollouts": 0,
+        "id_recompute_mismatches": 0,
+        "manifest_field_mismatches": 0,
+        "stored_hash_failures": 0,
+        "render_reconstruction_mismatches": 0,
+        "frozen_pin_violations": {},
+        "settings_excluding_token_ladder": {
+          "{\"decoding_artifact_sha256\": null, \"do_sample\": false, \"execution_mode\": \"PARITY_WITH_C80_B_PROVISIONAL\", \"retry_budget_index\": 0, \"seed\": 0, \"temperature\": 0.0}": 22000,
+          "{\"decoding_artifact_sha256\": null, \"do_sample\": false, \"execution_mode\": \"PARITY_WITH_C80_B_PROVISIONAL\", \"retry_budget_index\": 1, \"seed\": 0, \"temperature\": 0.0}": 271,
+          "{\"decoding_artifact_sha256\": null, \"do_sample\": false, \"execution_mode\": \"PARITY_WITH_C80_B_PROVISIONAL\", \"retry_budget_index\": 2, \"seed\": 0, \"temperature\": 0.0}": 15
+        },
+        "token_ladder_values": {
+          "2048": 22000,
+          "8192": 271,
+          "16384": 15
+        },
+        "prompt_index_balance_terminal": {
+          "0": 4400,
+          "1": 4400,
+          "2": 4400,
+          "3": 4400,
+          "4": 4400
+        },
+        "finish_reasons_terminal": {
+          "stop": 21998,
+          "length": 2
+        },
+        "technical_validity_all_attempts": {
+          "valid": 21998,
+          "truncated": 288
+        },
+        "technical_validity_terminal": {
+          "valid": 21998,
+          "truncated": 2
+        },
+        "segmentation_terminal": {
+          "balanced_reasoning": 21998,
+          "None": 2
+        },
+        "duplicate_row_ids": 0,
+        "duplicate_rollout_retry_pairs": 0,
+        "noncontiguous_retry_ladders": 0,
+        "attempts_per_rollout": {
+          "1": 21729,
+          "2": 256,
+          "3": 15
+        },
+        "attempt_patterns_budget_validity": {
+          "2048:truncated -> 8192:valid": 256,
+          "2048:truncated -> 8192:truncated -> 16384:valid": 13,
+          "2048:truncated -> 8192:truncated -> 16384:truncated": 2
+        },
+        "same_budget_repeat_attempts": 0,
+        "rollouts_with_multiple_valid_attempts": 0,
+        "rollouts_with_multiple_valid_attempts_differing_text": 0,
+        "rollouts_where_a_valid_attempt_was_retried": 0,
+        "region_count_errors": 0,
+        "exhausted_rollouts": [
+          {
+            "rollout_id": "885b75abc2900244",
+            "attempts": 3,
+            "terminal": {
+              "validity": "truncated",
+              "finish_reason": "length",
+              "failure_code": "truncated",
+              "prompt_index": 0,
+              "segmentation": null,
+              "budget": 16384,
+              "text_sha": "3adf77c5b4fc360a"
+            }
+          },
+          {
+            "rollout_id": "79331716c2cde644",
+            "attempts": 3,
+            "terminal": {
+              "validity": "truncated",
+              "finish_reason": "length",
+              "failure_code": "truncated",
+              "prompt_index": 4,
+              "segmentation": null,
+              "budget": 16384,
+              "text_sha": "4ec602161c23cb56"
+            }
+          }
+        ],
+        "n_exhausted_rollouts": 2,
+        "parse_errors": 0
+      }
+    },
+    "C80-B": {
+      "status": "VERIFIED",
+      "verdict": "PASS",
+      "failed_checks": [],
+      "summary": {
+        "rows": 22735,
+        "rollouts_covered": 22000,
+        "rollouts_missing": 0,
+        "unknown_rollouts": 0,
+        "id_recompute_mismatches": 0,
+        "manifest_field_mismatches": 0,
+        "stored_hash_failures": 0,
+        "render_reconstruction_mismatches": 0,
+        "frozen_pin_violations": {},
+        "settings_excluding_token_ladder": {
+          "{\"decoding_artifact_sha256\": null, \"do_sample\": false, \"seed\": 0, \"temperature\": 0.0}": 22045,
+          "{\"decoding_artifact_sha256\": null, \"do_sample\": false, \"regen_higher_budget\": true, \"seed\": 0, \"temperature\": 0.0}": 682,
+          "{\"decoding_artifact_sha256\": null, \"do_sample\": false, \"regen_16k\": true, \"seed\": 0, \"temperature\": 0.0}": 8
+        },
+        "token_ladder_values": {
+          "2048": 22045,
+          "8192": 682,
+          "16384": 8
+        },
+        "prompt_index_balance_terminal": {
+          "0": 4400,
+          "1": 4400,
+          "2": 4400,
+          "3": 4400,
+          "4": 4400
+        },
+        "finish_reasons_terminal": {
+          "stop": 21997,
+          "length": 3
+        },
+        "technical_validity_all_attempts": {
+          "valid": 22484,
+          "truncated": 251
+        },
+        "technical_validity_terminal": {
+          "valid": 21997,
+          "truncated": 3
+        },
+        "segmentation_terminal": {
+          "balanced_reasoning": 21997,
+          "None": 3
+        },
+        "duplicate_row_ids": 0,
+        "duplicate_rollout_retry_pairs": 0,
+        "noncontiguous_retry_ladders": 0,
+        "attempts_per_rollout": {
+          "1": 21318,
+          "2": 659,
+          "3": 8,
+          "5": 15
+        },
+        "attempt_patterns_budget_validity": {
+          "2048:valid -> 8192:valid": 436,
+          "2048:truncated -> 8192:valid": 220,
+          "2048:valid -> 2048:valid -> 2048:valid -> 2048:valid -> 8192:valid": 12,
+          "2048:truncated -> 8192:truncated -> 16384:valid": 8,
+          "2048:truncated -> 2048:truncated -> 2048:truncated -> 2048:truncated -> 8192:valid": 3,
+          "2048:valid -> 8192:truncated": 3
+        },
+        "same_budget_repeat_attempts": 45,
+        "rollouts_with_multiple_valid_attempts": 448,
+        "rollouts_with_multiple_valid_attempts_differing_text": 443,
+        "rollouts_where_a_valid_attempt_was_retried": 451,
+        "region_count_errors": 0,
+        "exhausted_rollouts": [
+          {
+            "rollout_id": "a6491628d84ca019",
+            "attempts": 2,
+            "terminal": {
+              "validity": "truncated",
+              "finish_reason": "length",
+              "failure_code": "truncated",
+              "prompt_index": 1,
+              "segmentation": null,
+              "budget": 8192,
+              "text_sha": "aa4c1fd7e5dc7a85"
+            }
+          },
+          {
+            "rollout_id": "b5414c14b152ccd2",
+            "attempts": 2,
+            "terminal": {
+              "validity": "truncated",
+              "finish_reason": "length",
+              "failure_code": "truncated",
+              "prompt_index": 1,
+              "segmentation": null,
+              "budget": 8192,
+              "text_sha": "466848970144ee50"
+            }
+          },
+          {
+            "rollout_id": "1ad4b948305f9101",
+            "attempts": 2,
+            "terminal": {
+              "validity": "truncated",
+              "finish_reason": "length",
+              "failure_code": "truncated",
+              "prompt_index": 1,
+              "segmentation": null,
+              "budget": 8192,
+              "text_sha": "5fce4d8cce9acad4"
+            }
+          }
+        ],
+        "n_exhausted_rollouts": 3,
+        "parse_errors": 0
+      }
+    }
+  },
+  "committed_provenance": {
+    "C80-A": {
+      "schema_version": "t10-output-manifest/1.0",
+      "task": "T10",
+      "block": "C80-A",
+      "arm": "USER_TRANSLATED_LU",
+      "status": "REVIEW_REQUIRED",
+      "owner": "[Author B]",
+      "note": "C80-A confirmatory translated-arm role generation. Raw/canonical output JSONL is not intended for git; commit this provenance manifest.",
+      "data_location": {
+        "hf_repo": null,
+        "hf_repo_type": null,
+        "hf_target_file": null,
+        "persistent_drive_file": "/content/drive/MyDrive/T10_C80A_PERSISTENT/final/c80_role_C80_A.final.jsonl",
+        "authoritative_sha256": "c7229c926066271eb99bc6b647ee8a7446e67071d0b60d5c6592d42566f1238c",
+        "authoritative_bytes": 337147591,
+        "authoritative_n_rows": 22286,
+        "local_ephemeral_file": "/content/t10_c80a_work/c80_role_C80_A.final.jsonl",
+        "storage_status": "authoritative_generation_artifact_preserved_in_google_drive"
+      },
+      "provenance": {
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+        "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+        "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+        "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+        "method_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+        "manifest_rollouts_sha256": "60e4e7b5984a47db22e6e4b5def97832e7269c4d57863102449f4f9bad27bf33",
+        "kit_code_commit": "3e2105a2a27e6549eeec8e8fefbf402acabda6c7",
+        "row_git_sha": "0000000000000000000000000000000000000000",
+        "prompt_input_cache_sha256": "d6ea6d615a03e764ac60ae7df1f31d996fbfa20ffbc7b42acc835f8cc815ecce",
+        "execution_manifest": "/content/t10_c80a_work/provenance/c80_role_manifest_C80_A.execution.json"
+      },
+      "reconciliation": {
+        "n_rollouts_expected": 22000,
+        "n_rollouts_present": 22000,
+        "coverage_missing": 0,
+        "coverage_extra": 0,
+        "duplicate_rollout_retry_pairs": 0,
+        "role_judgeable_rollouts": 21998,
+        "role_judgeable_fraction": 0.9999090909090909,
+        "exhausted_retryable_rollouts": 2,
+        "single_config_sha256": true,
+        "single_model_revision": true,
+        "single_tokenizer_revision": true,
+        "single_chat_template_sha256": true,
+        "single_arm_and_block": true,
+        "per_prompt_index": {
+          "0": 4400,
+          "1": 4400,
+          "2": 4400,
+          "3": 4400,
+          "4": 4400
+        }
+      },
+      "row_distributions": {
+        "technical_validity_all_attempts": {
+          "valid": 21998,
+          "truncated": 288
+        },
+        "segmentation_case_all_attempts": {
+          "balanced_reasoning": 21998,
+          "None": 288
+        },
+        "retry_index_rows": {
+          "0": 22000,
+          "1": 271,
+          "2": 15
+        },
+        "terminal_technical_validity": {
+          "valid": 21998,
+          "truncated": 2
+        },
+        "terminal_segmentation_case": {
+          "balanced_reasoning": 21998,
+          "None": 2
+        }
+      },
+      "generation": {
+        "engine": "vLLM 0.26.0 data-parallel; one engine per selected GPU",
+        "decoding": "greedy parity with C80-B (temperature=0, do_sample=false, seed=0)",
+        "max_new_tokens_schedule": [
+          2048,
+          8192,
+          16384
+        ],
+        "decoding_artifact_sha256": null,
+        "decoding_provisional": true,
+        "execution_mode": "PARITY_WITH_C80_B_PROVISIONAL",
+        "subbatch": 512
+      },
+      "segmentation": {
+        "prefilled_open_handling": true,
+        "closing_marker_boundary": "token-authoritative </think> when single-token",
+        "expected_primary_case": "balanced_reasoning"
+      },
+      "caveats": [
+        "PROVISIONAL: T09 frozen_decoding and/or official T08 rendered-prompt hashes were not both available.",
+        "The notebook enforced a run-local exact prompt-hash guard, but this is not a substitute for the official T08 render-hash freeze.",
+        "vLLM greedy is not claimed to be token-identical to HF greedy."
+      ]
+    },
+    "C80-B": {
+      "schema_version": "t10-output-manifest/1.0",
+      "task": "T10",
+      "block": "C80-B",
+      "arm": "USER_TRANSLATED_LU",
+      "status": "GENERATED",
+      "owner": "[Author A]",
+      "note": "Provenance/reconciliation record. The raw JSONL is a ~338 MB generation output and is NOT committed to git (see .gitignore / README): it lives on Hugging Face with its hash here.",
+      "data_location": {
+        "hf_repo": "[Author-A-HF]/persona-artifacts",
+        "hf_repo_type": "dataset",
+        "authoritative_file": "results/generation/c80_role_C80_B.final.jsonl",
+        "raw_pre_resegmentation_file": "results/generation/c80_role_C80_B.jsonl",
+        "authoritative_sha256": "2d82dbe1ef2ab49068d8f2ad5f544db2da4bd3e1d7d44ec89415d0b8bb84c1b8",
+        "authoritative_bytes": 337780471,
+        "authoritative_n_rows": 22735
+      },
+      "provenance": {
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+        "model_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+        "tokenizer_revision": "6a6f4aa4197940add57724a7707d069478df56b1",
+        "chat_template_sha256": "56a1447ad31926fdc21fb07e56e5642bd9c850c4f52d8c8af7bbe5f079a84f5f",
+        "method_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+        "manifest_rollouts_sha256": "e7b532e3816e47489d2d6c48cf43da7f16cace4c15f878f00d8c8c6a5eb86ac5"
+      },
+      "reconciliation": {
+        "n_rollouts_expected": 22000,
+        "n_rollouts_present": 22000,
+        "coverage_missing": 0,
+        "coverage_extra": 0,
+        "duplicate_rollout_retry_pairs": 0,
+        "role_judge_eligible_rollouts": 22000,
+        "role_judge_eligible_fraction": 1.0,
+        "role_judge_eligible_definition": "technical_validity == valid AND segmentation yields a non-empty final-answer region to feed the judge. This is TECHNICAL/SEGMENTATION eligibility only. It is NOT validated role-judge output: T07 (judge validation) and G1 have not passed, and no automatic role score has been applied to these outputs.",
+        "single_config_sha256": true,
+        "single_model_revision": true,
+        "single_arm_and_block": true
+      },
+      "row_distributions": {
+        "technical_validity": {
+          "valid": 22484,
+          "truncated": 251
+        },
+        "segmentation_case": {
+          "balanced_reasoning": 22484,
+          "null_truncated": 251
+        },
+        "extra_rows_are_retry_attempts": "735 rows beyond 22000 are retry attempts (retry>=1) of technically-failed cells; every rollout has exactly one terminal valid outcome. The 251 truncated rows are non-terminal earlier attempts retained per validity.technical_retries."
+      },
+      "generation": {
+        "engine": "vLLM v0.26.0 (data-parallel, one engine per free GPU)",
+        "decoding": "greedy (temperature=0.0, do_sample=false, seed=0)",
+        "max_new_tokens_schedule": [
+          2048,
+          8192,
+          16384
+        ],
+        "max_new_tokens_note": "Initial pass at 2048; truncated cells regenerated at 8192, then a final handful at 16384, all under the same rollout id with an incrementing retry counter.",
+        "decoding_artifact_sha256": null,
+        "decoding_provisional": true
+      },
+      "segmentation": {
+        "issue": "DeepSeek-R1-Distill prefills the opening <think> into the prompt, so outputs are reasoning</think>answer (orphan close). The original marker-balance check mislabelled 100% of valid outputs as malformed_reasoning.",
+        "fix": "Prefilled-open handling with token-authoritative </think> boundary (token id 128014).",
+        "fix_reference": "src/generation.py; PR #26; deviation docs/deviations/2026-08-08-prefilled-think-segmentation.md",
+        "effect": "role-judgeable rollouts 0/22000 -> 22000/22000"
+      },
+      "caveats": [
+        "PROVISIONAL: T09 runtime decoding freeze is not merged, so decoding_artifact_sha256 is null and this is not freeze-grade evidence.",
+        "vLLM greedy is not guaranteed token-identical to HF greedy; every row is still canonically segmented/validated.",
+        "T02 owner should add response_segmentation.prompt_prefills_opening_marker: true so the prefilled-open behaviour is frozen in the spec."
+      ],
+      "done_when_check": "One of the two C80 halves (C80-B) is generated, reconciles to its 22,000 frozen IDs under identical code/configuration, and is fully role-judgeable. C80-A ([Author B]) runs the same code and reconciles to the other 22,000; both blocks total 44,000."
+    }
+  },
+  "source_git_sha": "05b5fef484be9054dc7e3775c68be3f8b098035b",
+  "source_git_dirty": false,
+  "config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79"
+}

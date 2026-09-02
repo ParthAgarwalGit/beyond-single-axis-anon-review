@@ -1,0 +1,25 @@
+{
+  "default_rows": 400,
+  "files": {
+    "lu-replication/run-003/default/rollouts_shard0.jsonl": {
+      "path": "/content/persona-artifacts-t12/lu-replication/run-003/default/rollouts_shard0.jsonl",
+      "sha256": "375a77c0a8c1756c6b0fa2976d12efbf986b6feb2c17c7de54a30e5ee5308978"
+    },
+    "lu-replication/run-003/extraction/rollouts_shard0.jsonl": {
+      "path": "/content/persona-artifacts-t12/lu-replication/run-003/extraction/rollouts_shard0.jsonl",
+      "sha256": "cf73eceed3fafb9e3c0c27ec22669fc8c9ac612094ec59b3e9b89b86b30fe85c"
+    },
+    "lu-replication/run-003/extraction/rollouts_shard1.jsonl": {
+      "path": "/content/persona-artifacts-t12/lu-replication/run-003/extraction/rollouts_shard1.jsonl",
+      "sha256": "4909b783f8eab1497f05fe9931bef6faf723eacb33cce59e8df1d9477e2f11e9"
+    },
+    "lu-replication/run-003/extraction/rollouts_shard2.jsonl": {
+      "path": "/content/persona-artifacts-t12/lu-replication/run-003/extraction/rollouts_shard2.jsonl",
+      "sha256": "aee523e4625ab6c269e33d1839d0e03ab898b988b010433d26d3aba2cefc9500"
+    }
+  },
+  "hf_repo": "[Author-A-HF]/persona-artifacts",
+  "hf_revision": "d918c2a157eba4d6fb91899c6d08f90342949ab8",
+  "status": "PASS",
+  "wrapper_rows": 22000
+}

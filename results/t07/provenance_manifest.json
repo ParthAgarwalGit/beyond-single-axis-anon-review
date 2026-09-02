@@ -1,0 +1,47 @@
+{
+  "format_version": "t07-provenance-manifest-v1",
+  "purpose": "Preserve the reproducibility boundary for the T07 archived-production-score validation without committing the private sampling key.",
+  "pull_request": {
+    "number": 37,
+    "branch": "t06-t07/measurement-metrics"
+  },
+  "scorer": {
+    "path": "tools/run_t07_judge_validation.py",
+    "canonical_reviewed_commit": "07bf0d34af5f8132fe1550ae29111be6c475aa76",
+    "sha256_at_canonical_reviewed_commit": "314d0faf07d4c36ce66a61a9fed9fc00d2f087e4e331c083e88f1f091d7df5d7",
+    "historical_result_source_git_sha": "49b7464878c55a4760536596827af18c10a3c728",
+    "historical_result_source_git_dirty": true,
+    "historical_result_working_tree_diff_sha256": "be63bdec67d376aa0b3f71e6131241654c9376cf904387c789ea6d3a32e49c3f",
+    "note": "The committed T07 result records a dirty historical working tree. Therefore the historical source_git_sha alone is not a claim of bit-for-bit reconstruction of the executed working tree. The current reviewed scorer is pinned separately by commit and SHA-256."
+  },
+  "final_gold_consensus": {
+    "path": "results/t06/gold_consensus.csv",
+    "sha256": "b67d10e683d888948e42762b9b35829ed10c736d818b0bebcfab632ca66cfc44",
+    "n_items": 300,
+    "status": "FINAL"
+  },
+  "committed_t07_result": {
+    "path": "results/t07/judge_validation.json",
+    "sha256": "5394754a92da31957f4204bce3a0ac429404397ca2ece91162f7c6c41f8c012d"
+  },
+  "private_sampling_key": {
+    "expected_filename": "annotations/t14_gold_v3/sampling_key_PRIVATE.json",
+    "must_not_be_committed": true,
+    "gitignore_patterns_present": [
+      "sampling_key_PRIVATE.json",
+      "*_PRIVATE.json"
+    ],
+    "repository_checkout_verification": "ABSENT_FROM_REPOSITORY",
+    "secure_team_storage_status": "NOT_VERIFIABLE_FROM_CONNECTED_REPOSITORY_OR_FILE_LIBRARY",
+    "sha256": "5eab10c2e9bb6ce07eee2853c692c3291ce95e162e1b4de35a3fa44964f15999",
+    "hash_status": "RECOVERED_AND_VERIFIED_BEFORE_T07_UNCERTAINTY_BOOTSTRAP",
+    "required_action_when_recovered": "COMPLETED: the exact recovered private file was verified against the frozen 300-item consensus, public sampling authority, and T07 point estimates; only its SHA-256 is recorded in Git and the private file remains uncommitted."
+  },
+  "exact_reproduction_command": "python tools/run_t07_judge_validation.py run --consensus results/t06/gold_consensus.csv --key annotations/t14_gold_v3/sampling_key_PRIVATE.json --sensitivity annotations/t14_gold_v3/sensitivity_labeller_1.csv --out results/t07",
+  "judge_model_provenance": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "historical_model_revision": null,
+    "historical_model_revision_status": "NOT_RECORDED_IN_RECOVERABLE_ARTIFACTS",
+    "interpretation": "T07 validates archived production judge scores against adjudicated human gold. It is not claimed to be a fresh bit-for-bit rerun of a revision-pinned judge model."
+  }
+}

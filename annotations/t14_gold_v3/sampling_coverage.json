@@ -1,0 +1,224 @@
+{
+  "task": "T05 (draw) / T06 (human labelling)",
+  "n_primary": 300,
+  "n_sensitivity": 60,
+  "sampling_design": {
+    "method": "stratified simple random sampling within arm x automatic-score strata",
+    "implementation": "random.Random(seed).sample(candidates, want) per stratum",
+    "inclusion_probability": "exactly want/len(stratum_candidates)",
+    "ip_weight": "len(stratum_candidates)/want, the exact inverse; recorded per item in the private key",
+    "covariate_balancing": "NONE. Prompt index, length, role and question are REPORTED below, not engineered into the draw. An earlier version balanced them deterministically, which made the true inclusion probability depend on those covariates and invalidated the arm x score weights.",
+    "estimator_validity": "Because selection within each stratum is SRS, score-3 precision is unbiased and ip-weighted recall and macro-F1 are valid estimates for the full E80 corpus. Unweighted recall and macro-F1 are NOT, because strata are deliberately disproportionate.",
+    "seed": 0,
+    "selection_hash": "d0117823030ea103a3c90fa20e8094a464311b34c124f2f62d939dd5fd389d93",
+    "reproducibility": "Same seed + same source hashes must reproduce selection_hash."
+  },
+  "cross_tabs": {
+    "arm_x_score": {
+      "extraction|0": 25,
+      "extraction|1": 25,
+      "extraction|2": 45,
+      "extraction|3": 45,
+      "extraction|None": 10,
+      "translated|0": 25,
+      "translated|1": 25,
+      "translated|2": 45,
+      "translated|3": 45,
+      "translated|None": 10
+    },
+    "arm_x_prompt_idx": {
+      "extraction|0": 27,
+      "extraction|1": 32,
+      "extraction|2": 30,
+      "extraction|3": 30,
+      "extraction|4": 31,
+      "translated|0": 22,
+      "translated|1": 28,
+      "translated|2": 30,
+      "translated|3": 33,
+      "translated|4": 37
+    },
+    "arm_x_machine_validity": {
+      "extraction|closed": 140,
+      "extraction|unclosed": 10,
+      "translated|closed": 140,
+      "translated|unclosed": 10
+    },
+    "arm_x_length_tercile": {
+      "extraction|0": 62,
+      "extraction|1": 39,
+      "extraction|2": 49,
+      "translated|0": 64,
+      "translated|1": 40,
+      "translated|2": 46
+    },
+    "score_x_length_tercile": {
+      "0|0": 20,
+      "0|1": 17,
+      "0|2": 13,
+      "1|0": 10,
+      "1|1": 20,
+      "1|2": 20,
+      "2|0": 46,
+      "2|1": 22,
+      "2|2": 22,
+      "3|0": 50,
+      "3|1": 20,
+      "3|2": 20,
+      "None|2": 20
+    },
+    "population_by_stratum": {
+      "translated|1": 11263,
+      "translated|3": 8211,
+      "translated|0": 1334,
+      "translated|2": 1153,
+      "translated|None": 39,
+      "extraction|1": 12392,
+      "extraction|3": 8706,
+      "extraction|0": 570,
+      "extraction|2": 293,
+      "extraction|None": 39
+    },
+    "sampled_by_stratum": {
+      "translated|3": 45,
+      "translated|2": 45,
+      "translated|1": 25,
+      "translated|0": 25,
+      "translated|None": 10,
+      "extraction|3": 45,
+      "extraction|2": 45,
+      "extraction|1": 25,
+      "extraction|0": 25,
+      "extraction|None": 10
+    }
+  },
+  "coverage_observed_not_engineered": {
+    "distinct_roles": 160,
+    "distinct_questions": 79,
+    "prompt_indices_present": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "length_terciles_present": [
+      0,
+      1,
+      2
+    ]
+  },
+  "machine_validity_aggregate": {
+    "note": "Aggregate only. Per-item machine validity is deliberately NOT shown to labellers and is not published here; it lives in the private key.",
+    "n_unclosed_think": 20,
+    "rows_showing_raw_completion_because_answer_region_empty": 20
+  },
+  "annotation_burden": {
+    "primary_answer_words_total": 104650,
+    "primary_word_distribution": {
+      "median": 242,
+      "p90": 395,
+      "max": 2251,
+      "n_over_1000_words": 20
+    },
+    "sensitivity_full_response_words_total": 44859,
+    "burden_concentration": {
+      "n_long_items": 20,
+      "words_in_long_items": 43236,
+      "share_of_primary_words": 0.4131,
+      "note": "20 of 300 items (6.7%) carry 41% of the primary word count. These are the rows whose answer region was empty, so the raw completion is shown instead; they are long unterminated outputs. Labellers are told they may stop reading a long item once they can judge it, which is why the time estimate below is not simply total_words / reading_rate."
+    },
+    "estimate": "Primary: 104,650 words over 300 items (median 242, p90 395). Sensitivity: 44,859 words over 60 items. At roughly 200-250 wpm plus a judgement pause per item, the arithmetic upper bound is 11-17 hours per labeller for both sets. Realistically less, because the 20 long items can be judged unjudgeable well before the end. Estimated from measured counts, not a target."
+  },
+  "blinding": {
+    "shown_columns_primary": [
+      "item_id",
+      "role",
+      "role_description",
+      "question",
+      "answer",
+      "human_validity",
+      "label_0_to_3"
+    ],
+    "shown_columns_sensitivity": [
+      "item_id",
+      "role",
+      "role_description",
+      "question",
+      "full_response",
+      "human_validity",
+      "label_0_to_3"
+    ],
+    "never_shown": [
+      "prompt condition / arm",
+      "wrapper text",
+      "automatic score",
+      "machine validity flag",
+      "ip_weight",
+      "uid",
+      "file path"
+    ],
+    "validity_note_removed": "An earlier version showed a machine-derived validity_note ('Complete reply.', 'no closed reasoning block'). It was removed because it anchors the human validity judgement it was sitting next to.",
+    "row_order": "Independently randomized per labeller; item_id is stable so labels still join. Order hashes recorded below.",
+    "sensitivity_ids": "Opaque S-prefixed ids in an independently randomized order. The S->G mapping is in the private key only, so a labeller cannot align a sensitivity item with the primary item they already labelled.",
+    "row_order_hashes": {
+      "labeller_1.csv": "9c09079a45644488424369c10ae375d7dc2cd3191f10b70c5d92db5c62c0b9c2",
+      "sensitivity_labeller_1.csv": "26eeea4d50517262d18d318c5d067f58a8fb94911f704a7e6785805949215c04",
+      "labeller_2.csv": "7c8a85ac085428c111277aeb21e31b6095478f6749a881f730dc5a1f6fcb122a",
+      "sensitivity_labeller_2.csv": "cd0081a21dce940d3efe5d583ffda0650286db4450eefe39eab1726d40a4f477"
+    }
+  },
+  "source_file_hashes": {
+    "design/panel_E80.json": {
+      "sha256": "7968a66a80c36e5c5cc535ed146cb1be53eb73c7dcf56ed7c91138d3f50532df",
+      "bytes": 1926
+    },
+    "vendor/assistant-axis/data/roles/role_list.json": {
+      "sha256": "4efb9fa40ce7f848d12da754d3cb3e9e29d541e6302e75e5250fff358f7f5826",
+      "bytes": 25444
+    },
+    "vendor/assistant-axis/data/extraction_questions.jsonl": {
+      "sha256": "df0e0390a6a8da3fd8f5e6fe7fcad1b7e65f3d3a16527b42c8ee5adaa2a3ecc7",
+      "bytes": 23194
+    },
+    "translated/scores.jsonl": {
+      "sha256": "e8b45d1d2b6515b3438244630fd22d9a4f4e9300cbfcf307b42f1dba7a2a8fab",
+      "bytes": 4523177
+    },
+    "translated/rollouts_shard0.jsonl": {
+      "sha256": "6b8c3ef5f2f1e69f6ba7241b3b3c7c98c1dad27178d6640a1c68b4313da5675f",
+      "bytes": 141395740
+    },
+    "extraction/scores.jsonl": {
+      "sha256": "08007d102ef1c2964a1f52d31ef9a484022822a364bcd8a3d958433baed69224",
+      "bytes": 4539007
+    },
+    "extraction/rollouts_shard0.jsonl": {
+      "sha256": "cf73eceed3fafb9e3c0c27ec22669fc8c9ac612094ec59b3e9b89b86b30fe85c",
+      "bytes": 37212091
+    },
+    "extraction/rollouts_shard1.jsonl": {
+      "sha256": "4909b783f8eab1497f05fe9931bef6faf723eacb33cce59e8df1d9477e2f11e9",
+      "bytes": 36416780
+    },
+    "extraction/rollouts_shard2.jsonl": {
+      "sha256": "aee523e4625ab6c269e33d1839d0e03ab898b988b010433d26d3aba2cefc9500",
+      "bytes": 40695306
+    }
+  },
+  "output_hashes_note": "SHA-256 of the exact LF bytes written. With the repository .gitattributes these equal the committed blob content, so they match `git show HEAD:<path> | sha256sum`.",
+  "output_hashes": {
+    "labeller_1.csv": "fb8cb48b2c1688cfecb791ff222afcdfa3db6c75fd9be1de7948bc5022683fe4",
+    "sensitivity_labeller_1.csv": "0775ac68aebec961f9bad296bd0cbbc3819b2f3e24122b32ef3002c01f76ede4",
+    "labeller_2.csv": "688c36b7dd12a7945de20781e981dd7acad21c613e9c780305d8785b925694b0",
+    "sensitivity_labeller_2.csv": "4ecc5fa0b2b5dec9050ddf6d5a2624c83dd54e26f95ea253a47152034b85551d",
+    "LABELLING_INSTRUCTIONS.md": "6b75ac2e71541170e1e1d2a8fd40987446c2566ddbbbeb1a5cec01a1fe346568",
+    "SENSITIVITY_INSTRUCTIONS.md": "26bf71d8484066ea73e051c57c6d01c58aee14f65cd57656060e0be22619ff3f",
+    "T07_SCORING_SPEC.md": "0d0bd9d758bfaf5fc8c086581d8c0a212ba11388055758d603094681b575576b"
+  },
+  "judge_input_equivalence": {
+    "primary_answer_column": "final-answer-only text, produced by the same extraction as the production judge (rfind('</think>') + strip)",
+    "reference_implementation": "replications/assistant-axis-8b/production_judge_reference.py",
+    "declared_asymmetry": "Labellers additionally see role, role_description and question; the judge sees the role only inside its own eval_prompt and never sees the question. Declared, not hidden."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "t32-claims/2.0",
+  "task": "T32",
+  "status": "DRAFT_NOT_FROZEN",
+  "freeze_rule": "Frozen at T32 after T28, one branch per outcome. The permitted final claim narrows to the branch whose gate expectations all match (TODO T32 / 'Strongest permitted final claim').",
+  "selection_rule": "Exactly one branch is frozen at T32. A branch is eligible only when every entry in its gate_expectations matches the observed gate outcome. Eligibility is evaluated after T28; judge-dependent branches may not be evaluated before T06-T07-G1.",
+  "gate_states": [
+    "PASS",
+    "FAIL",
+    "INCOMPLETE",
+    "NOT_APPLICABLE"
+  ],
+  "core_evidence_branches": {
+    "validated_transfer": {
+      "claim": "A behaviourally validated Assistant contrast direction transfers to the reasoning-distilled model and reproduces across untouched question blocks.",
+      "gate_expectations": {
+        "P1_ROLE_JUDGE_GATE": "PASS",
+        "G1": "PASS",
+        "P3_CONFIRMATORY_GEOMETRY": "PASS",
+        "G2": "PASS"
+      }
+    },
+    "prompt_conditioned_geometry": {
+      "claim": "The instruction channel changes measured role expression behaviourally, and separately the recovered direction differs between prompt regimes geometrically. These are two distinct pieces of evidence and are reported separately, never merged into one channel-effect claim.",
+      "gate_expectations": {
+        "P2_CHANNEL_INTERACTION": "PASS",
+        "G2": "PASS"
+      },
+      "evidence_components": {
+        "behavioural_channel_interaction": "P2_CHANNEL_INTERACTION: model x channel interaction in valid score-3 probability (T19, table T_channel_calibration, F2).",
+        "prompt_regime_geometry": "Wrapper-versus-translated role-projection difference (T15 sensitivity, F6). Geometric, not behavioural."
+      }
+    },
+    "reliable_but_not_causally_specific": {
+      "claim": "Confirmatory geometry reproduces, but the causal effect of the Assistant Axis is not distinguishable from a norm-matched random direction.",
+      "gate_expectations": {
+        "P3_CONFIRMATORY_GEOMETRY": "PASS",
+        "P4_CAUSAL_HARMFULNESS_SPECIFICITY": "FAIL"
+      }
+    },
+    "security_effect_without_identity_specificity": {
+      "claim": "Steering changes harmful compliance with an Axis-versus-random difference, while the identity mechanism shows no such specificity.",
+      "gate_expectations": {
+        "P4_CAUSAL_HARMFULNESS_SPECIFICITY": "PASS",
+        "P5_CAUSAL_IDENTITY_SPECIFICITY": "FAIL"
+      }
+    },
+    "measurement_limited_result": {
+      "claim": "The available evidence does not separate representational structure from measurement choices (pooling region, judge coverage), so no structural conclusion is drawn in either direction.",
+      "gate_expectations": {
+        "G2": "INCOMPLETE"
+      }
+    },
+    "one_model_pilot": {
+      "claim": "Only the DeepSeek arm is complete; the Llama control is an incomplete pilot and is not reported as a cross-model result.",
+      "gate_expectations": {
+        "T20": "INCOMPLETE",
+        "T21": "INCOMPLETE"
+      }
+    },
+    "negative_result": {
+      "claim": "One or more primary gates fail; the strongest claim narrows to a rigorous transfer/sensitivity audit or a negative result.",
+      "gate_expectations": {
+        "ANY_PRIMARY_GATE": "FAIL"
+      },
+      "eligibility_rule": "Eligible only when at least one primary analysis-registry gate (P1-P5) or blocking gate (G1/G2) actually FAILS. An empty gate list would have made this branch universally eligible, including when every gate passed."
+    }
+  },
+  "venue_emphasis": {
+    "NeurReps": "PRIMARY: geometry of neural representations, independent reconstruction, prompt/token-region dependence, layerwise dynamics, linear-vs-multidimensional structure, causal tests of geometric meaning.",
+    "FLMSec": "secondary: channel integrity, jailbreak harm, reproducible security evaluation, Axis vs random.",
+    "IAB": "secondary: interpretable behaviour categories, identity mechanism, runtime behaviour.",
+    "VerifyAgents": "secondary: verifier validity, human agreement, silent evaluation regressions.",
+    "EIML": "secondary: construct validity, uncertainty, measurement artifacts vs representational structure."
+  },
+  "gate_dependent_do_not_freeze_before": "T06-T07-G1 for judge-dependent branches; T28 for causal branches."
+}

@@ -1,0 +1,68 @@
+{
+  "task": "T29_QWEN_AUTOMATIC_SENSITIVITY",
+  "status": "SECONDARY_AUTOMATIC_MEASUREMENT_LIMITED",
+  "primary_result_eligible": false,
+  "measurement_branch": {
+    "t27_branch": "MEASUREMENT_LIMITED",
+    "primary_evidence": "human_subset",
+    "full_corpus_reportable_as": "full_corpus_automatic",
+    "automatic_400_row_primary_allowed": false
+  },
+  "method": {
+    "paired": true,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 290819,
+    "mcnemar_role": "secondary automatic-label diagnostic only"
+  },
+  "provenance": {
+    "private_scored_sha256": "d7f8feb34f8c2e8e8fff57764c95ff81b8128fbfa35d87c380322dce07565bd3",
+    "t26_sample_manifest_sha256": "0f92199a5947924aa9898a20644bf9845e02bbfec2109335253f53f3889e1f96",
+    "t27_gate_sha256": "63362334c4854dc5d4f9207e964dabf0badb7e6eda931b53fc6d1b61d128c2a7",
+    "human_primary_sha256": "afaf7b678d7bdc48608f580b501a6ee5160fe87ddad61ff6ff57367fc8cdf77d",
+    "source_scoring_report_sha256": "e45bbae7dee21a49e32309576b5ba17b369a380a6fc22b4697d272b8f797ed0b",
+    "generation_population_sha256": "24a0c5a3699fd6b51a66d4be92bc054d14cb800db894c0162b65774c5667f06b",
+    "t24_controls_npz_sha256": "adf1c43cd2715676169351f69fced45d0046e70c5a74f52baa2dc5f2aa243291",
+    "t24_freeze_sha256": "08fb4bb67b366c81ddca33835fb97e130db49efb56a4cece64c0cd63dc6a99c4",
+    "assistant_axis_sha256": "a207fe7a36563280b7b29010880aa0082bd8e3113c141cb4a2eed6b46c140211",
+    "source_capping_config_sha256": "6aec1220487473aaeab80b05d5d960ac54b5dd9080b51ac4bb0bbd1f4330db24"
+  },
+  "regression_check": {
+    "target": "T27 IP-weighted automatic strict-harm rate by condition",
+    "status": "PASS",
+    "tolerance": 1e-12
+  },
+  "report": {
+    "design": {
+      "population_rows": 400,
+      "rows_per_condition": 100,
+      "underlying_items": 100,
+      "paired": true,
+      "pairing_key": "underlying item parsed from frozen uid qwen_capping::<item>::<condition>",
+      "matched_metadata_fields": ["role", "role_description", "question", "arm", "question_id"],
+      "automatic_harmfulness_labels": ["harmful", "partial", "refused", "degenerate"]
+    },
+    "condition_rates": {
+      "unsteered_baseline": {"n": 100, "strict_harmful_n": 2, "strict_harmful_rate": 0.02, "inclusive_harmful_n": 4, "inclusive_harmful_rate": 0.04, "refusal_n": 96, "refusal_rate": 0.96, "degenerate_n": 0, "degenerate_rate": 0.0, "coverage_failure_n": 0},
+      "assistant_cap": {"n": 100, "strict_harmful_n": 3, "strict_harmful_rate": 0.03, "inclusive_harmful_n": 5, "inclusive_harmful_rate": 0.05, "refusal_n": 95, "refusal_rate": 0.95, "degenerate_n": 0, "degenerate_rate": 0.0, "coverage_failure_n": 0},
+      "random_direction_cap": {"n": 100, "strict_harmful_n": 2, "strict_harmful_rate": 0.02, "inclusive_harmful_n": 4, "inclusive_harmful_rate": 0.04, "refusal_n": 96, "refusal_rate": 0.96, "degenerate_n": 0, "degenerate_rate": 0.0, "coverage_failure_n": 0},
+      "sphere_proximity_cap": {"n": 100, "strict_harmful_n": 1, "strict_harmful_rate": 0.01, "inclusive_harmful_n": 4, "inclusive_harmful_rate": 0.04, "refusal_n": 94, "refusal_rate": 0.94, "degenerate_n": 2, "degenerate_rate": 0.02, "coverage_failure_n": 0}
+    },
+    "comparisons": {
+      "axis_vs_random": {
+        "strict": {"outcome": "strict", "contrast": "assistant_cap minus random_direction_cap", "n_pairs": 100, "rate_A": 0.03, "rate_B": 0.02, "risk_difference": 0.01, "bootstrap_95ci": [0.0, 0.03], "bootstrap_replicates": 10000, "bootstrap_seed": 290819, "discordant_A1_B0": 1, "discordant_A0_B1": 0, "mcnemar_exact_two_sided_p": 1.0, "paired": true},
+        "inclusive": {"outcome": "inclusive", "contrast": "assistant_cap minus random_direction_cap", "n_pairs": 100, "rate_A": 0.05, "rate_B": 0.04, "risk_difference": 0.01, "bootstrap_95ci": [0.0, 0.03], "bootstrap_replicates": 10000, "bootstrap_seed": 290820, "discordant_A1_B0": 1, "discordant_A0_B1": 0, "mcnemar_exact_two_sided_p": 1.0, "paired": true}
+      },
+      "axis_vs_sphere": {
+        "strict": {"outcome": "strict", "contrast": "assistant_cap minus sphere_proximity_cap", "n_pairs": 100, "rate_A": 0.03, "rate_B": 0.01, "risk_difference": 0.02, "bootstrap_95ci": [-0.02, 0.06], "bootstrap_replicates": 10000, "bootstrap_seed": 290829, "discordant_A1_B0": 3, "discordant_A0_B1": 1, "mcnemar_exact_two_sided_p": 0.625, "paired": true},
+        "inclusive": {"outcome": "inclusive", "contrast": "assistant_cap minus sphere_proximity_cap", "n_pairs": 100, "rate_A": 0.05, "rate_B": 0.04, "risk_difference": 0.01, "bootstrap_95ci": [-0.02, 0.05], "bootstrap_replicates": 10000, "bootstrap_seed": 290830, "discordant_A1_B0": 2, "discordant_A0_B1": 1, "mcnemar_exact_two_sided_p": 1.0, "paired": true}
+      },
+      "axis_vs_unsteered": {
+        "strict": {"outcome": "strict", "contrast": "assistant_cap minus unsteered_baseline", "n_pairs": 100, "rate_A": 0.03, "rate_B": 0.02, "risk_difference": 0.01, "bootstrap_95ci": [0.0, 0.03], "bootstrap_replicates": 10000, "bootstrap_seed": 290839, "discordant_A1_B0": 1, "discordant_A0_B1": 0, "mcnemar_exact_two_sided_p": 1.0, "paired": true},
+        "inclusive": {"outcome": "inclusive", "contrast": "assistant_cap minus unsteered_baseline", "n_pairs": 100, "rate_A": 0.05, "rate_B": 0.04, "risk_difference": 0.01, "bootstrap_95ci": [0.0, 0.03], "bootstrap_replicates": 10000, "bootstrap_seed": 290840, "discordant_A1_B0": 1, "discordant_A0_B1": 0, "mcnemar_exact_two_sided_p": 1.0, "paired": true}
+      }
+    },
+    "automatic_specificity_diagnostic": {"outcome": "strict", "contrast": "assistant_cap minus random_direction_cap", "n_pairs": 100, "rate_A": 0.03, "rate_B": 0.02, "risk_difference": 0.01, "bootstrap_95ci": [0.0, 0.03], "bootstrap_replicates": 10000, "bootstrap_seed": 290819, "discordant_A1_B0": 1, "discordant_A0_B1": 0, "mcnemar_exact_two_sided_p": 1.0, "paired": true}
+  },
+  "claim_guard": "T27 harmfulness is MEASUREMENT_LIMITED. These paired full-corpus automatic-label statistics are secondary sensitivity evidence only and cannot override the human-primary T29-H result.",
+  "privacy": "aggregate only; no item IDs, UIDs, completions, rationales, or per-item automatic labels are emitted"
+}

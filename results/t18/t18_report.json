@@ -1,0 +1,314 @@
+{
+  "adequacy_margin": 0.02,
+  "compute_execution": {
+    "backend": "multiprocessing_fork",
+    "outer_workers": 4
+  },
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59",
+  "data": {
+    "compatibility_authority": "docs/deviations/2026-08-25-t18-g2-membership-compatibility.md",
+    "counts": {
+      "considered": 44795,
+      "invalid": 0,
+      "kept_default": 797,
+      "kept_role": 43998,
+      "no_vector": 0,
+      "role_not_eligible": 0,
+      "wrong_slice": 0
+    },
+    "eligibility": {
+      "blocks": [
+        "C80-A",
+        "C80-B"
+      ],
+      "eligible_roles_file": "/root/t18_confirmatory_runtime/eligible_roles.json",
+      "eligible_roles_sha256": "68be9fba61c9ac88da45c589d9892dbd374911efd82a2301f405d3f207ed3cea",
+      "n_eligible_roles_declared": 275,
+      "source_task": "T14",
+      "threshold": 10
+    },
+    "g2_canonical_result_path": "results/t15/confirmatory_reliability.json",
+    "g2_freeze_sha256": "54459154cf3a4dbdd4d44c2f6c1504eed8fce2b7f6c38384da95a98f47112937",
+    "g2_membership_authority_pr": 44,
+    "judge_filter_applied": false,
+    "membership": "label_independent_technical_validity",
+    "membership_authority": "docs/DEVIATION_2026-08-17_CONFIRMATORY_MEMBERSHIP.md",
+    "n_default_conditions": 5,
+    "n_questions": 160,
+    "n_roles": 275,
+    "provenance_strata": {
+      "activations.jsonl": {
+        "config_sha256": [
+          "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79"
+        ],
+        "git_sha": [
+          "0000000000000000000000000000000000000000"
+        ]
+      },
+      "generation.jsonl": {
+        "config_sha256": [
+          "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79"
+        ],
+        "git_sha": [
+          "0000000000000000000000000000000000000000"
+        ]
+      }
+    },
+    "slice": {
+      "arm": "USER_TRANSLATED_LU",
+      "block_index": 16,
+      "blocks": [
+        "C80-A",
+        "C80-B"
+      ],
+      "pool": "ALL_RESPONSE_TOKENS"
+    },
+    "target_wording": "default-Assistant versus role-prompted responses"
+  },
+  "estimand": "mean within-fold role-balanced AUROC",
+  "geometry_freeze": {
+    "freeze_file": "docs/G2_GEOMETRY_FREEZE.json",
+    "freeze_record_sha256": "54459154cf3a4dbdd4d44c2f6c1504eed8fce2b7f6c38384da95a98f47112937",
+    "frozen": true,
+    "reportable": true
+  },
+  "inference_cluster": "role",
+  "mode": "analysis",
+  "performance": {
+    "axis_1d": {
+      "ci_high": 0.6988412523709688,
+      "ci_low": 0.6577289507101767,
+      "cluster": "role",
+      "estimand": "mean within-fold role-balanced AUROC",
+      "n_folds": 20,
+      "n_scored_rows": 44795,
+      "point": 0.678327205225169,
+      "question_clustered_diagnostic": {
+        "ci_high": 0.6994607605266752,
+        "ci_low": 0.6624039995342935,
+        "cluster": "question",
+        "estimand": "mean within-fold role-balanced AUROC",
+        "n_folds": 20,
+        "n_scored_rows": 44795,
+        "point": 0.678327205225169,
+        "replicates_skipped": 0,
+        "replicates_used": 2000
+      },
+      "replicates_skipped": 0,
+      "replicates_used": 2000
+    },
+    "full_linear": {
+      "ci_high": 0.8900510079553158,
+      "ci_low": 0.8653166567621265,
+      "cluster": "role",
+      "estimand": "mean within-fold role-balanced AUROC",
+      "n_folds": 20,
+      "n_scored_rows": 44795,
+      "point": 0.8781966622349124,
+      "question_clustered_diagnostic": {
+        "ci_high": 0.9004237821782946,
+        "ci_low": 0.8595275321025733,
+        "cluster": "question",
+        "estimand": "mean within-fold role-balanced AUROC",
+        "n_folds": 20,
+        "n_scored_rows": 44795,
+        "point": 0.8781966622349124,
+        "replicates_skipped": 0,
+        "replicates_used": 2000
+      },
+      "replicates_skipped": 0,
+      "replicates_used": 2000
+    },
+    "pca_linear": {
+      "ci_high": 0.6881463016303918,
+      "ci_low": 0.6523555170510608,
+      "cluster": "role",
+      "estimand": "mean within-fold role-balanced AUROC",
+      "n_folds": 20,
+      "n_scored_rows": 44795,
+      "point": 0.6699728205849459,
+      "question_clustered_diagnostic": {
+        "ci_high": 0.6904693314072928,
+        "ci_low": 0.6522958343967337,
+        "cluster": "question",
+        "estimand": "mean within-fold role-balanced AUROC",
+        "n_folds": 20,
+        "n_scored_rows": 44795,
+        "point": 0.6699728205849459,
+        "replicates_skipped": 0,
+        "replicates_used": 2000
+      },
+      "replicates_skipped": 0,
+      "replicates_used": 2000
+    },
+    "small_nonlinear": {
+      "ci_high": 0.6814706175789124,
+      "ci_low": 0.6517612817832347,
+      "cluster": "role",
+      "estimand": "mean within-fold role-balanced AUROC",
+      "n_folds": 20,
+      "n_scored_rows": 44795,
+      "point": 0.6666869204562766,
+      "question_clustered_diagnostic": {
+        "ci_high": 0.6876651806103419,
+        "ci_low": 0.6478285583590029,
+        "cluster": "question",
+        "estimand": "mean within-fold role-balanced AUROC",
+        "n_folds": 20,
+        "n_scored_rows": 44795,
+        "point": 0.6666869204562766,
+        "replicates_skipped": 0,
+        "replicates_used": 2000
+      },
+      "replicates_skipped": 0,
+      "replicates_used": 2000
+    }
+  },
+  "permutation_null_diagnostic": {
+    "max_abs_deviation_from_chance": 0.10650652474445177,
+    "mean": 0.505365452575112,
+    "replicates": [
+      0.4722533977793364,
+      0.5425458307406974,
+      0.5427636642545088,
+      0.46005713705513,
+      0.4975485822175683,
+      0.48289664305998536,
+      0.5154232531871455,
+      0.5101226253295699,
+      0.6065065247444518,
+      0.5612022310718656,
+      0.5321195703167239,
+      0.5997319113500931,
+      0.47758212116837645,
+      0.46247935997482215,
+      0.49497638676707745,
+      0.47948160868807943,
+      0.4512385015142556,
+      0.4103653101098675,
+      0.49659355654805076,
+      0.5114208356246334
+    ],
+    "status": "descriptive only; not an inferential test"
+  },
+  "primary_metric": "auroc",
+  "reportable": true,
+  "selections": {
+    "axis_1d": [
+      {"fold_id":0,"inner_auroc":0.675130281135274,"n_dropped":15679,"n_params":2,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":0,"selected":"axis_1d"},
+      {"fold_id":1,"inner_auroc":0.6840747532050583,"n_dropped":15679,"n_params":2,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":0,"selected":"axis_1d"},
+      {"fold_id":2,"inner_auroc":0.6894829545454378,"n_dropped":15676,"n_params":2,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":0,"selected":"axis_1d"},
+      {"fold_id":3,"inner_auroc":0.6823856681711572,"n_dropped":15679,"n_params":2,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":0,"selected":"axis_1d"},
+      {"fold_id":4,"inner_auroc":0.6773979995352718,"n_dropped":15679,"n_params":2,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":1,"selected":"axis_1d"},
+      {"fold_id":5,"inner_auroc":0.6836679883777014,"n_dropped":15679,"n_params":2,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":1,"selected":"axis_1d"},
+      {"fold_id":6,"inner_auroc":0.6870851301476136,"n_dropped":15676,"n_params":2,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":1,"selected":"axis_1d"},
+      {"fold_id":7,"inner_auroc":0.6747408751145332,"n_dropped":15679,"n_params":2,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":1,"selected":"axis_1d"},
+      {"fold_id":8,"inner_auroc":0.6722751278308835,"n_dropped":15676,"n_params":2,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":0,"role_fold":2,"selected":"axis_1d"},
+      {"fold_id":9,"inner_auroc":0.6762741853243855,"n_dropped":15678,"n_params":2,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":1,"role_fold":2,"selected":"axis_1d"},
+      {"fold_id":10,"inner_auroc":0.6776329642579535,"n_dropped":15679,"n_params":2,"n_test":2238,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":2,"selected":"axis_1d"},
+      {"fold_id":11,"inner_auroc":0.6628506087290711,"n_dropped":15678,"n_params":2,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":3,"role_fold":2,"selected":"axis_1d"},
+      {"fold_id":12,"inner_auroc":0.6723514980422425,"n_dropped":15678,"n_params":2,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":3,"selected":"axis_1d"},
+      {"fold_id":13,"inner_auroc":0.6892179304495188,"n_dropped":15680,"n_params":2,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":1,"role_fold":3,"selected":"axis_1d"},
+      {"fold_id":14,"inner_auroc":0.679405642968132,"n_dropped":15677,"n_params":2,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":3,"selected":"axis_1d"},
+      {"fold_id":15,"inner_auroc":0.6660386037079622,"n_dropped":15680,"n_params":2,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":3,"role_fold":3,"selected":"axis_1d"},
+      {"fold_id":16,"inner_auroc":0.6820389132436847,"n_dropped":15677,"n_params":2,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":0,"role_fold":4,"selected":"axis_1d"},
+      {"fold_id":17,"inner_auroc":0.6796417284325605,"n_dropped":15679,"n_params":2,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":4,"selected":"axis_1d"},
+      {"fold_id":18,"inner_auroc":0.6871072018259406,"n_dropped":15678,"n_params":2,"n_test":2239,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":4,"selected":"axis_1d"},
+      {"fold_id":19,"inner_auroc":0.6760101066751679,"n_dropped":15679,"n_params":2,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":4,"selected":"axis_1d"}
+    ],
+    "full_linear": [
+      {"fold_id":0,"inner_auroc":0.8699326571373317,"n_dropped":15679,"n_params":4097,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":0,"selected":"full_linear_C0.1"},
+      {"fold_id":1,"inner_auroc":0.8643877161738635,"n_dropped":15679,"n_params":4097,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":0,"selected":"full_linear_C0.1"},
+      {"fold_id":2,"inner_auroc":0.8619110091297397,"n_dropped":15676,"n_params":4097,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":0,"selected":"full_linear_C0.1"},
+      {"fold_id":3,"inner_auroc":0.8534986650257669,"n_dropped":15679,"n_params":4097,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":0,"selected":"full_linear_C0.1"},
+      {"fold_id":4,"inner_auroc":0.8465629559594041,"n_dropped":15679,"n_params":4097,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":1,"selected":"full_linear_C0.1"},
+      {"fold_id":5,"inner_auroc":0.8326832737876536,"n_dropped":15679,"n_params":4097,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":1,"selected":"full_linear_C0.1"},
+      {"fold_id":6,"inner_auroc":0.8453217511654817,"n_dropped":15676,"n_params":4097,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":1,"selected":"full_linear_C0.01"},
+      {"fold_id":7,"inner_auroc":0.8249335801624137,"n_dropped":15679,"n_params":4097,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":1,"selected":"full_linear_C0.1"},
+      {"fold_id":8,"inner_auroc":0.8526108995688028,"n_dropped":15676,"n_params":4097,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":0,"role_fold":2,"selected":"full_linear_C0.1"},
+      {"fold_id":9,"inner_auroc":0.8422547698149333,"n_dropped":15678,"n_params":4097,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":1,"role_fold":2,"selected":"full_linear_C0.1"},
+      {"fold_id":10,"inner_auroc":0.8387456779331576,"n_dropped":15679,"n_params":4097,"n_test":2238,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":2,"selected":"full_linear_C0.1"},
+      {"fold_id":11,"inner_auroc":0.8222405365646684,"n_dropped":15678,"n_params":4097,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":3,"role_fold":2,"selected":"full_linear_C0.1"},
+      {"fold_id":12,"inner_auroc":0.8548393232741684,"n_dropped":15678,"n_params":4097,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":3,"selected":"full_linear_C0.1"},
+      {"fold_id":13,"inner_auroc":0.8511133131353218,"n_dropped":15680,"n_params":4097,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":1,"role_fold":3,"selected":"full_linear_C0.1"},
+      {"fold_id":14,"inner_auroc":0.8433846396658694,"n_dropped":15677,"n_params":4097,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":3,"selected":"full_linear_C0.1"},
+      {"fold_id":15,"inner_auroc":0.8238241024218734,"n_dropped":15680,"n_params":4097,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":3,"role_fold":3,"selected":"full_linear_C0.1"},
+      {"fold_id":16,"inner_auroc":0.8564086982632162,"n_dropped":15677,"n_params":4097,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":0,"role_fold":4,"selected":"full_linear_C0.01"},
+      {"fold_id":17,"inner_auroc":0.8622177498016891,"n_dropped":15679,"n_params":4097,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":4,"selected":"full_linear_C0.1"},
+      {"fold_id":18,"inner_auroc":0.8616071289821071,"n_dropped":15678,"n_params":4097,"n_test":2239,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":4,"selected":"full_linear_C0.1"},
+      {"fold_id":19,"inner_auroc":0.8417520583648667,"n_dropped":15679,"n_params":4097,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":4,"selected":"full_linear_C0.01"}
+    ],
+    "pca_linear": [
+      {"fold_id":0,"inner_auroc":0.650654084658071,"n_dropped":15679,"n_params":33,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":0,"selected":"pca32_linear_C0.001"},
+      {"fold_id":1,"inner_auroc":0.6742436576971143,"n_dropped":15679,"n_params":33,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":0,"selected":"pca32_linear_C0.001"},
+      {"fold_id":2,"inner_auroc":0.6718513014762856,"n_dropped":15676,"n_params":33,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":0,"selected":"pca32_linear_C0.001"},
+      {"fold_id":3,"inner_auroc":0.668302307826783,"n_dropped":15679,"n_params":33,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":0,"selected":"pca32_linear_C0.001"},
+      {"fold_id":4,"inner_auroc":0.6576677167920236,"n_dropped":15679,"n_params":33,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":1,"selected":"pca32_linear_C0.001"},
+      {"fold_id":5,"inner_auroc":0.6704192505946561,"n_dropped":15679,"n_params":33,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":1,"selected":"pca32_linear_C0.001"},
+      {"fold_id":6,"inner_auroc":0.6707282925407769,"n_dropped":15676,"n_params":33,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":1,"selected":"pca32_linear_C0.001"},
+      {"fold_id":7,"inner_auroc":0.664793714895429,"n_dropped":15679,"n_params":33,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":1,"selected":"pca32_linear_C0.001"},
+      {"fold_id":8,"inner_auroc":0.6546435293916417,"n_dropped":15676,"n_params":33,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":0,"role_fold":2,"selected":"pca32_linear_C0.001"},
+      {"fold_id":9,"inner_auroc":0.6674550293646294,"n_dropped":15678,"n_params":33,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":1,"role_fold":2,"selected":"pca32_linear_C0.001"},
+      {"fold_id":10,"inner_auroc":0.6649565122377519,"n_dropped":15679,"n_params":33,"n_test":2238,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":2,"selected":"pca32_linear_C0.001"},
+      {"fold_id":11,"inner_auroc":0.6553760070982665,"n_dropped":15678,"n_params":33,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":3,"role_fold":2,"selected":"pca32_linear_C0.001"},
+      {"fold_id":12,"inner_auroc":0.6620645679519257,"n_dropped":15678,"n_params":33,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":3,"selected":"pca32_linear_C0.001"},
+      {"fold_id":13,"inner_auroc":0.6853077179869193,"n_dropped":15680,"n_params":33,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":1,"role_fold":3,"selected":"pca32_linear_C0.001"},
+      {"fold_id":14,"inner_auroc":0.6764470911033301,"n_dropped":15677,"n_params":33,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":3,"selected":"pca32_linear_C0.001"},
+      {"fold_id":15,"inner_auroc":0.6657815147165653,"n_dropped":15680,"n_params":33,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":3,"role_fold":3,"selected":"pca32_linear_C0.001"},
+      {"fold_id":16,"inner_auroc":0.6603823104481141,"n_dropped":15677,"n_params":33,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":0,"role_fold":4,"selected":"pca32_linear_C0.001"},
+      {"fold_id":17,"inner_auroc":0.6721195334310309,"n_dropped":15679,"n_params":33,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":4,"selected":"pca32_linear_C0.001"},
+      {"fold_id":18,"inner_auroc":0.6737557789432681,"n_dropped":15678,"n_params":33,"n_test":2239,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":4,"selected":"pca32_linear_C0.001"},
+      {"fold_id":19,"inner_auroc":0.670119255082335,"n_dropped":15679,"n_params":33,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":4,"selected":"pca32_linear_C0.001"}
+    ],
+    "small_nonlinear": [
+      {"fold_id":0,"inner_auroc":0.6660744105694403,"n_dropped":15679,"n_params":137,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":0,"selected":"pca32_mlp4_a0.1"},
+      {"fold_id":1,"inner_auroc":0.6465806469208407,"n_dropped":15679,"n_params":137,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":0,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":2,"inner_auroc":0.6582674825174727,"n_dropped":15676,"n_params":137,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":0,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":3,"inner_auroc":0.6530020296759959,"n_dropped":15679,"n_params":137,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":0,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":4,"inner_auroc":0.6552912673600257,"n_dropped":15679,"n_params":137,"n_test":2239,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":1,"selected":"pca32_mlp4_a0.1"},
+      {"fold_id":5,"inner_auroc":0.6593158913853038,"n_dropped":15679,"n_params":137,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":1,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":6,"inner_auroc":0.6582341564685218,"n_dropped":15676,"n_params":137,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":2,"role_fold":1,"selected":"pca32_mlp4_a0.1"},
+      {"fold_id":7,"inner_auroc":0.6637285032008701,"n_dropped":15679,"n_params":137,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":1,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":8,"inner_auroc":0.6472968912104029,"n_dropped":15676,"n_params":137,"n_test":2240,"n_train":26879,"n_train_roles":224,"question_fold":0,"role_fold":2,"selected":"pca32_mlp4_a0.1"},
+      {"fold_id":9,"inner_auroc":0.6472083653889097,"n_dropped":15678,"n_params":137,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":1,"role_fold":2,"selected":"pca32_mlp4_a0.1"},
+      {"fold_id":10,"inner_auroc":0.6580090933372166,"n_dropped":15679,"n_params":137,"n_test":2238,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":2,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":11,"inner_auroc":0.6550541308704997,"n_dropped":15678,"n_params":137,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":3,"role_fold":2,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":12,"inner_auroc":0.6517573009662763,"n_dropped":15678,"n_params":137,"n_test":2240,"n_train":26877,"n_train_roles":224,"question_fold":0,"role_fold":3,"selected":"pca32_mlp4_a0.1"},
+      {"fold_id":13,"inner_auroc":0.661125472741745,"n_dropped":15680,"n_params":89,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":1,"role_fold":3,"selected":"pca20_mlp4_a1.0"},
+      {"fold_id":14,"inner_auroc":0.6591139034576506,"n_dropped":15677,"n_params":137,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":3,"selected":"pca32_mlp4_a1.0"},
+      {"fold_id":15,"inner_auroc":0.6449316282791832,"n_dropped":15680,"n_params":137,"n_test":2240,"n_train":26875,"n_train_roles":224,"question_fold":3,"role_fold":3,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":16,"inner_auroc":0.6654868011331264,"n_dropped":15677,"n_params":137,"n_test":2240,"n_train":26878,"n_train_roles":224,"question_fold":0,"role_fold":4,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":17,"inner_auroc":0.6564739643278624,"n_dropped":15679,"n_params":137,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":1,"role_fold":4,"selected":"pca32_mlp4_a10.0"},
+      {"fold_id":18,"inner_auroc":0.6598639520201983,"n_dropped":15678,"n_params":89,"n_test":2239,"n_train":26878,"n_train_roles":224,"question_fold":2,"role_fold":4,"selected":"pca20_mlp4_a10.0"},
+      {"fold_id":19,"inner_auroc":0.659628094729345,"n_dropped":15679,"n_params":137,"n_test":2240,"n_train":26876,"n_train_roles":224,"question_fold":3,"role_fold":4,"selected":"pca32_mlp4_a10.0"}
+    ]
+  },
+  "simultaneous_vs_axis": {
+    "best_family": "full_linear",
+    "ci_high": 0.22065415427285345,
+    "ci_low": 0.18091291747485944,
+    "cluster": "role",
+    "max_family_difference": 0.19986945700974346,
+    "per_family": {
+      "full_linear": {"ci_high":0.22065415427285345,"ci_low":0.18091291747485944,"difference":0.19986945700974346,"note":"marginal interval, not simultaneous; the verdict uses the max-family interval"},
+      "pca_linear": {"ci_high":0.003281973797895303,"ci_low":-0.02005809351302428,"difference":-0.00835438464022309,"note":"marginal interval, not simultaneous; the verdict uses the max-family interval"},
+      "small_nonlinear": {"ci_high":0.01021593516351018,"ci_low":-0.03270814495797324,"difference":-0.01164028476889234,"note":"marginal interval, not simultaneous; the verdict uses the max-family interval"}
+    },
+    "replicates_used": 2000,
+    "simultaneous_over": ["full_linear","pca_linear","small_nonlinear"]
+  },
+  "source_git_dirty": false,
+  "source_git_sha": "e24847c0659d5c5cd66af33913a6c00524a006d6",
+  "t18_config_sha256": "8a3c93deef7d87d92da94a7fb28413008e85eef89c81e035864ba010d7b34cdc",
+  "task": "T18",
+  "verdict": {
+    "best_alternative": "full_linear",
+    "cluster": "role",
+    "margin": 0.02,
+    "max_family_difference": 0.19986945700974346,
+    "simultaneous_ci": [0.18091291747485944,0.22065415427285345],
+    "simultaneous_over": ["full_linear","pca_linear","small_nonlinear"],
+    "t18_config_sha256": "8a3c93deef7d87d92da94a7fb28413008e85eef89c81e035864ba010d7b34cdc",
+    "verdict": "INADEQUATE"
+  }
+}

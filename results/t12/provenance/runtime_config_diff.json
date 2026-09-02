@@ -1,0 +1,7 @@
+{
+  "base_config_sha256": "73be73df4640c2d32bfbc8b6009741c0fadd8c466acb703d1f99df35d5c8cd79",
+  "explanation": "The runtime-resolved YAML and frozen base YAML parse to identical configuration objects. Their file SHA256 hashes differ because the runtime configuration was serialized separately; there are no configuration-value differences and no frozen scientific fields changed.",
+  "runtime_config_sha256": "7b8bd2918a61cf53cf97fcc8bc45d43e5f96a3987170467a2aff5ba8631c3a3e",
+  "semantic_config_equal": true,
+  "semantic_differences": []
+}

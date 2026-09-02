@@ -1,0 +1,101 @@
+{
+  "schema_version": "t21-artifact-manifest-v4",
+  "status": "COMPLETE_PARTIAL_EVALUATION_LIMITED",
+  "reviewed_source_notebooks": [
+    {
+      "filename": "T21_FULL_LU_SIZED_CAPABILITY_BATTERY_QWEN32B_BF16_v2.ipynb",
+      "repository_path": "notebooks/t21/T21_FULL_LU_SIZED_CAPABILITY_BATTERY_QWEN32B_BF16_v2.ipynb",
+      "sha256": "d63ccba3ac56c9471628bbb4997a7d04f60e5d9e6d095df0bb82ee3b49c1fbb7",
+      "git_blob_sha1": "e0a3414cd22873dcc3caebf8c45a7c1d78159297",
+      "validated_outcome": "6224/6224 capability generations complete",
+      "repository_commit_status": "COMMITTED_AND_BYTE_VERIFIED_AGAINST_REVIEWED_UPLOAD"
+    },
+    {
+      "filename": "T21_03_SOURCE_MAX_MATCH_DEEPSEEK_V3_D2_2_v5_NOVITA.ipynb",
+      "repository_path": "notebooks/t21/T21_03_SOURCE_MAX_MATCH_DEEPSEEK_V3_D2_2_v5_NOVITA.ipynb",
+      "sha256": "a22849740aed0559a2e373ecd0351d752c97cb9de9c480e13fefaebb21c5f7c6",
+      "git_blob_sha1": "4c3026c9b899fb06c0e0c16e80e0e4f15559b95c",
+      "validated_outcome": "200/200 safety judgments complete; faithful Appendix D.2.2 prompt metadata",
+      "repository_commit_status": "COMMITTED_AND_BYTE_VERIFIED_AGAINST_REVIEWED_UPLOAD"
+    }
+  ],
+  "frozen_manifests": {
+    "safety_manifest_sha256": "d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793",
+    "safety_manifest_recovery_status": "HASH_VERIFIED_AGAINST_PRIOR_RECORD",
+    "capability_manifest_sha256": "7217d6021d77d9dc2091601dbe85a2974ccaa610b97fc77e90007732f9931f55",
+    "safety_manifest_hf_path": "t21-recovered/t21_eval_manifest_frozen.jsonl",
+    "safety_manifest_hf_revision": "050445e47a0d29d0e9de1c21c81a5da8dccf6fc4"
+  },
+  "recovery_pin": {
+    "record": "results/t21/T21_ARTIFACT_RECOVERY.json",
+    "hf_repo_id": "[Author-B-HF]/[anonymized-repository-name]-artifacts",
+    "hf_prefix": "t21-recovered/",
+    "hf_revision": "050445e47a0d29d0e9de1c21c81a5da8dccf6fc4",
+    "status": "RECOVERED_PINNED_AND_INDEPENDENTLY_VERIFIED",
+    "verification_completed_by": [
+      "[Reviewer]",
+      "[Author-A-GitHub]"
+    ],
+    "verification_completed_utc": "2026-08-22T14:50:50Z"
+  },
+  "external_raw_artifacts": [
+    {
+      "path": "/content/drive/MyDrive/[anonymized-repository-name]-t21/checkpoints/t21_full_capability_generations.jsonl",
+      "expected_successful_keys": 6224,
+      "sha256": null,
+      "hash_status": "NOT_CAPTURED_IN_UPLOADED_NOTEBOOK_OUTPUT",
+      "recovered_sha256": "8aa5ffc35c2bcc63174014752b2d4f15946d4180800a5d4b3266eaf44b16a68d",
+      "recovery_status": "RECOVERED_AND_ATTESTED_NOT_ORIGINALLY_HASH_VERIFIED",
+      "hf_path": "t21-recovered/t21_full_capability_generations.jsonl",
+      "hf_revision": "050445e47a0d29d0e9de1c21c81a5da8dccf6fc4",
+      "hf_roundtrip_verified": true
+    },
+    {
+      "path": "/content/drive/MyDrive/[anonymized-repository-name]-t21/checkpoints/t21_source_baseline_generations.jsonl",
+      "expected_successful_keys": 200,
+      "sha256": null,
+      "hash_status": "NOT_CAPTURED_IN_UPLOADED_NOTEBOOK_OUTPUT",
+      "recovered_sha256": "6e3158622e8467199c8845b7bacd8cc70f99173587e51b5a7fc63bfb989634a4",
+      "recovery_status": "RECOVERED_AND_ATTESTED_NOT_ORIGINALLY_HASH_VERIFIED",
+      "hf_path": "t21-recovered/t21_source_baseline_generations.jsonl",
+      "hf_revision": "050445e47a0d29d0e9de1c21c81a5da8dccf6fc4",
+      "hf_roundtrip_verified": true
+    },
+    {
+      "path": "/content/drive/MyDrive/[anonymized-repository-name]-t21/checkpoints/t21_source_harm_judgments_deepseek_v3_appendix_d2_2_source_max_v5_novita.jsonl",
+      "expected_successful_judgments": 200,
+      "sha256": null,
+      "hash_status": "NOT_CAPTURED_IN_UPLOADED_NOTEBOOK_OUTPUT",
+      "recovered_sha256": "b9f3d6552a2732bd0920ab48707e46585cff6e375fff8892801d594b8f340b08",
+      "recovery_status": "RECOVERED_AND_ATTESTED_NOT_ORIGINALLY_HASH_VERIFIED",
+      "raw_rows": 317,
+      "technical_error_retry_rows": 117,
+      "hf_path": "t21-recovered/t21_source_harm_judgments_deepseek_v3_appendix_d2_2_source_max_v5_novita.jsonl",
+      "hf_revision": "050445e47a0d29d0e9de1c21c81a5da8dccf6fc4",
+      "hf_roundtrip_verified": true
+    }
+  ],
+  "committed_summary_artifacts": [
+    "configs/t21_qwen_source_capping.yaml",
+    "docs/T21_FINAL_FINDING.md",
+    "docs/T21_SOURCE_CAPPING_EXECUTION.md",
+    "results/t21/t21_final_report.json",
+    "results/t21/t21_full_capability_report.json",
+    "results/t21/t21_full_capability_summary.csv",
+    "results/t21/t21_capability_uncertainty.json",
+    "results/t21/source_capping_baseline_report_source_max_v5_novita.json",
+    "results/t21/t21_safety_table_source_max_v5_novita.csv",
+    "results/t21/t21_source_harm_judge_provenance_source_max_v5_novita.json",
+    "results/t21/T21_CLOSURE_VALIDATION.json",
+    "results/t21/T21_ARTIFACT_RECOVERY.json"
+  ],
+  "closure_record": {
+    "path": "results/t21/T21_CLOSURE_VALIDATION.json",
+    "type": "STATIC_ATTESTATION_NOT_RECOMPUTATION"
+  },
+  "committed_execution_notebooks": [
+    "notebooks/t21/T21_FULL_LU_SIZED_CAPABILITY_BATTERY_QWEN32B_BF16_v2.ipynb",
+    "notebooks/t21/T21_03_SOURCE_MAX_MATCH_DEEPSEEK_V3_D2_2_v5_NOVITA.ipynb"
+  ],
+  "raw_artifact_policy": "Generation/judgment JSONLs and the recovered frozen safety manifest remain outside Git under the existing *.jsonl policy. The safety manifest is historically hash-verified and pinned at the immutable HF revision. The three generation/judgment files had no generation-time SHA256 captured; their original sha256 fields therefore stay null, while recovered_sha256 records the exact bytes pinned during recovery. These recovery hashes are attestations, not retroactive historical verification."
+}

@@ -1,0 +1,135 @@
+{
+  "format_version": "t06-agreement-v1",
+  "provisional": false,
+  "n_items": 300,
+  "round1_agreement": {
+    "label": {
+      "n": 300,
+      "raw_agreement_4class": 0.516667,
+      "cohen_kappa_4class": 0.293326,
+      "cohen_kappa_score3_vs_rest": 0.364786,
+      "confusion_4x4_rows_l1_cols_l2_order_0123": [
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          81,
+          9,
+          5
+        ],
+        [
+          3,
+          39,
+          26,
+          22
+        ],
+        [
+          3,
+          25,
+          23,
+          46
+        ]
+      ]
+    },
+    "validity": {
+      "raw_agreement": 0.906667,
+      "confusion_rows_l1_cols_l2_order_ok_unjudgeable": [
+        [
+          272,
+          28
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "round2_updated_agreement": {
+    "label": {
+      "n": 300,
+      "raw_agreement_4class": 0.696667,
+      "cohen_kappa_4class": 0.556119,
+      "cohen_kappa_score3_vs_rest": 0.621849,
+      "confusion_4x4_rows_l1_cols_l2_order_0123": [
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          97,
+          5,
+          2
+        ],
+        [
+          6,
+          28,
+          49,
+          14
+        ],
+        [
+          3,
+          13,
+          13,
+          59
+        ]
+      ]
+    },
+    "validity": {
+      "raw_agreement": 0.93,
+      "confusion_rows_l1_cols_l2_order_ok_unjudgeable": [
+        [
+          279,
+          21
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "both_labellers_round2_available": true
+  },
+  "round2_inputs_present": {
+    "labeller_1_round2": true,
+    "labeller_2_round2": true
+  },
+  "consensus": {
+    "round1_agreements_both_fields": 151,
+    "resolved_after_round2": 205,
+    "human_adjudicated": 95,
+    "adjudication_pending": 0,
+    "adjudication_required": 0,
+    "complete": true
+  },
+  "adjudication_note": "Residual disagreements take the gold label from the human adjudication worksheet (adjudicated without seeing the automatic judge score, T07_SCORING_SPEC §1). Consensus is FINAL only when both round-2 files exist and every residual is adjudicated; otherwise gold labels for unadjudicated residuals stay ADJUDICATION_REQUIRED.",
+  "input_files": {
+    "r1_l1": "/home/runner/work/[anonymized-repository-name]/[anonymized-repository-name]/annotations/t14_gold_v3/labeller_1.csv",
+    "r1_l2": "/home/runner/work/[anonymized-repository-name]/[anonymized-repository-name]/annotations/t14_gold_v3/labeller_2.csv",
+    "r2_l1": "annotations/t14_gold_v3/t06a_round2_labeller_1.csv",
+    "r2_l2": "annotations/t06a_round2/labeller_2.csv",
+    "adjudication": "annotations/t06a_round2/adjudication_record.csv"
+  },
+  "input_file_sha256": {
+    "r1_l1": "99b96a6753361f6ac3ccd1b7960b6b30840a7e90d949ed6ad89cbf6c2b012f3a",
+    "r1_l2": "e018b89e9c8f3a82eac57519fed4ecddbe7267358edc0c0a8d6f71275eb3b561",
+    "r2_l1": "1c0a98604cec51ad97b1bf0dfedf2c3fcd8a189f44a653b514f279c8a406a4bc",
+    "r2_l2": "657de4661262fe621fd2bf82de1bf1aec46eb61361a71f3ef6a0a4ffac788761",
+    "adjudication": "ea5d6628225b9d5fe05003436fee8612ad6b3a4bae3d6a795f48e91a528a1049"
+  },
+  "adjudication_worksheet": {
+    "rows": 147,
+    "pending": 0
+  },
+  "source_git_sha": "7108dbe9305e67dec3aefd41fc6e381e915279b9",
+  "source_git_dirty": true,
+  "config_sha256": "2fe1dbbbacdfec067463742f982bc2d8ca31cad1b880973a7164b678ea6c7683",
+  "working_tree_diff_sha256": "38becaba2b37dbb2055c3ef2d2a70d101f7a0697dd4a9fbc6ea605e722f5a970"
+}

@@ -1,0 +1,4082 @@
+{
+  "schema_version": "t01/2.0",
+  "task": "T01",
+  "task_scope": "Verifies source inputs and methodology. Establishes nothing about target-model geometry and asserts no scientific gate result.",
+  "generated_utc": "2026-07-31T00:00:00Z",
+  "generator": {
+    "path": "replications/assistant-axis-8b/T01_retrieve_lu_materials.ipynb",
+    "sha256": "de67cd36166f63e92def996df601a81edc91e37658a79c3e8c21697faa624c6d",
+    "sha256_scope": "SHA-256 of the notebook file as it exists at the declared path in this repository root at generation time. Because artifacts are written with LF via write_bytes and .gitattributes pins *.ipynb to eol=lf, this equals the committed blob content hash.",
+    "project_git_commit": "7e3c2ff090ecccf0df8f825b42e7583c3b2f14a5",
+    "project_git_branch": "results/assistant-axis-8b-run-003",
+    "project_git_commit_note": "HEAD at generation time; the commit that CONTAINS these artifacts is necessarily its child, since the artifacts are committed after being generated.",
+    "python_version": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "text_fidelity": "Source text fields were copied verbatim from the pinned repository. The derived JSON files are newly serialised containers. No target-model wrappers, semantic substitutions or content rewriting were applied.",
+  "source_repository": {
+    "repository_url": "https://github.com/safety-research/assistant-axis",
+    "observed_remote": "https://github.com/safety-research/assistant-axis",
+    "pinned_commit": "a98961956072224eaf244eb289d6c01700b63795",
+    "observed_commit": "a98961956072224eaf244eb289d6c01700b63795",
+    "checkout_location": "verified clean local checkout",
+    "working_tree_clean": true,
+    "local_modifications": [],
+    "tracked_files_blob_verified": 569,
+    "blob_hash_mismatches": []
+  },
+  "source_paper": {
+    "arxiv_id": "2601.10387",
+    "version": "v1",
+    "vendored_path": "data/lu_et_al/paper/lu_et_al_2601.10387v1.pdf",
+    "sha256": "e9e638ad3057f4cdb7e43b5a3fcf0011786c7d1d5bd6e54fe7feb189a799ad09",
+    "method": "Fetched once from arXiv, vendored, hashed. Page numbers and quotes were read directly from this file by a human and are re-verifiable against it. They are citations for a human to check, NOT machine-extracted assertions -- unlike the repository checks, which are recomputed on every run."
+  },
+  "evidence_classes": {
+    "classes": [
+      "VERIFIED_FROM_REPOSITORY",
+      "VERIFIED_FROM_PAPER",
+      "UNAVAILABLE"
+    ],
+    "policy": "'Not present in the released repository' is never recorded as 'not part of the published Lu et al. method'. Paper-verified claims are never reported as repository-verified."
+  },
+  "notes_summary": "11 plan-required notes plus 4 additional verification notes",
+  "notes_by_evidence_class": {
+    "VERIFIED_FROM_REPOSITORY": 11,
+    "UNAVAILABLE": 1,
+    "VERIFIED_FROM_PAPER": 3
+  },
+  "counts": {
+    "roles": 275,
+    "prompts": 1375,
+    "prompts_per_role": 5,
+    "questions": 240,
+    "unique_question_text": 239,
+    "default_conditions": 5,
+    "bespoke_questions_per_role": 40,
+    "instruction_files": 276,
+    "repository_causal_evaluation_dataset_items_found": 0,
+    "paper_published_causal_method_components": 5,
+    "genuinely_unavailable_causal_artifacts": 4
+  },
+  "artifact_catalogue": {
+    "tracked_files_blob_verified": 569,
+    "research_artifacts_catalogued": 547,
+    "excluded_count": 22,
+    "exclusion_rationale": "All 569 tracked files are blob-verified against the git index in section 2. The catalogue is scoped to the 547 research artifacts this project reads downstream (data/, pipeline code, library code, top-level docs). The remaining 22 tracked files are listed individually below with the reason each is excluded.",
+    "excluded_paths": [
+      {
+        "path": ".gitignore",
+        "reason": "repo housekeeping, not a source artifact"
+      },
+      {
+        "path": "img/assistant_axis.png",
+        "reason": "figure asset, not read by any pipeline step"
+      },
+      {
+        "path": "notebooks/README.md",
+        "reason": "notebook-directory index, not source data"
+      },
+      {
+        "path": "pipeline/run_pipeline.sh",
+        "reason": "shell wrapper around already-catalogued .py steps"
+      },
+      {
+        "path": "transcripts/README.md",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/llama-3.3-70b/delusion_capped.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/llama-3.3-70b/delusion_unsteered.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/llama-3.3-70b/jailbreak_capped.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/llama-3.3-70b/jailbreak_unsteered.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/llama-3.3-70b/selfharm_capped.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/llama-3.3-70b/selfharm_unsteered.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/qwen-3-32b/delusion_capped.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/qwen-3-32b/delusion_unsteered.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/qwen-3-32b/jailbreak_capped.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/qwen-3-32b/jailbreak_unsteered.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/qwen-3-32b/selfharm_capped.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/case_studies/qwen-3-32b/selfharm_unsteered.json.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/persona_drift/coding.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/persona_drift/philosophy.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/persona_drift/therapy.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "transcripts/persona_drift/writing.json",
+        "reason": "case-study transcript (persona-drift / jailbreak demos); illustrative output, not part of the extraction/judge/axis method under replication"
+      },
+      {
+        "path": "uv.lock",
+        "reason": "dependency lockfile, not a source artifact"
+      }
+    ]
+  },
+  "id_scheme": {
+    "role": "role:{role_id}",
+    "prompt": "prompt:{role_id}:{index}",
+    "question": "question:{lu_question_id}",
+    "rubric": "rubric:{role_id}",
+    "default_condition": "default:{index}",
+    "causal": "not assigned — exact list unavailable; T01 invents none"
+  },
+  "notes": [
+    {
+      "note": "n_roles",
+      "claim": "275 roles",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "data/roles/role_list.json has 275 entries",
+      "plan_required": true
+    },
+    {
+      "note": "n_role_prompts",
+      "claim": "1,375 role prompts",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "275 roles x 5 variants = 1375",
+      "plan_required": true
+    },
+    {
+      "note": "n_source_ids",
+      "claim": "240 source question IDs",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "extraction_questions.jsonl has 240 records, ids [0..239]",
+      "plan_required": true
+    },
+    {
+      "note": "n_unique_texts",
+      "claim": "239 unique question texts",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "239 distinct SHA-256 over question text",
+      "plan_required": true
+    },
+    {
+      "note": "duplicate_q7_q227",
+      "claim": "duplicate q7 == q227",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "ids [7, 227] share byte-identical text",
+      "plan_required": true
+    },
+    {
+      "note": "no_category_field",
+      "claim": "no published question-category field",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "question schema is exactly ['id', 'question']",
+      "plan_required": true
+    },
+    {
+      "note": "causal_role_list_not_in_repository",
+      "claim": "no complete enumerated or machine-readable 50-role causal list in the released repository",
+      "evidence_class": "UNAVAILABLE",
+      "evidence": "Structural inspection of 567 tracked text files found 0 proper role-subset candidates. The SELECTION PROCEDURE is published (paper p.32, D.1.1) and is recorded separately as VERIFIED_FROM_PAPER; only the exact membership is unavailable.",
+      "plan_required": true,
+      "procedure_evidence_class": "VERIFIED_FROM_PAPER",
+      "procedure_citation": {
+        "page": 32,
+        "section": "D.1.1 Data generation",
+        "quote": "To obtain our list of roles close to the Assistant persona, we sorted the role vectors for each of the three target models by their similarity to their respective Assistant Axes, then sampled the 50 roles with the highest average ranking.",
+        "note": "The selection PROCEDURE is published. It averages rank across three models (Gemma 2 27B, Qwen 3 32B, Llama 3.3 70B), each against its OWN Assistant Axis, so no single model-independent 'Lu 50-role list' exists. A DeepSeek-only ranking is a target-model-specific ADAPTATION; a DeepSeek+Llama averaged ranking APPROXIMATES the published multi-model procedure. Neither is retrieval of Lu's exact list."
+      }
+    },
+    {
+      "note": "extraction_grid",
+      "claim": "source extraction used 5 x 240 combinations per role",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "1_generate.py --question_count default=240; generation.py generate_role_responses() formats all 5 'pos' instructions and passes them with the full question list -> 5 x 240 = 1,200 outputs per role",
+      "plan_required": true
+    },
+    {
+      "note": "retention_threshold",
+      "claim": "role retention minimum: paper-repository discrepancy",
+      "evidence_class": "VERIFIED_FROM_PAPER",
+      "evidence": "PAPER (p.3, 2.1.2): roles kept with >=10 responses in at least one of {fully, somewhat} role-playing. REPOSITORY: pipeline/4_vectors.py --min_count CLI default=50. These describe different things -- a published method versus a script's generic default -- and the repository does not record which value produced the published vectors. The published rule counts >=10 in EITHER category, so a source role retained on its somewhat-count alone could still contribute a fully-role-playing vector built from fewer than 10 score-3 responses; no >=10 score-3 floor may be attributed to the source.",
+      "plan_required": true,
+      "discrepancy": {
+        "paper_method_minimum": 10,
+        "paper_method_scope": ">=10 responses in AT LEAST ONE of {fully, somewhat} role-playing -- not >=10 score-3 specifically",
+        "released_code_default_minimum": 50,
+        "our_project_threshold": 10,
+        "our_project_threshold_scope": ">=10 valid score-3 outputs per role",
+        "our_threshold_status": "EXPLICITLY DECLARED BY US. Motivated by the paper's minimum-10 rule but STRICTER and NOT directly inherited: because the published rule can retain a role on its somewhat-count alone, the paper does not establish that source roles feeding the Axis had >=10 score-3 outputs. MUST be reported with a retention curve across alternative minima as a predeclared sensitivity analysis.",
+        "citation": {
+          "page": 3,
+          "section": "2.1.2 Extracting role vectors",
+          "quote": "Using the evaluation rubric described above, we filtered out all responses that did not sufficiently express the target role. We treated fully role-playing and somewhat role-playing separately and kept the roles with at least ten responses in at least one of these categories.",
+          "note": "The published gate is >=10 responses in EITHER category (fully OR somewhat), and the paper notes a retained role yields both a 'fully X' and a 'somewhat X' vector. A role retained on its somewhat-count alone may therefore contribute a fully-role-playing vector built from FEWER than 10 score-3 responses. The paper consequently does NOT establish that every role feeding the Assistant Axis had >=10 score-3 outputs, and no such floor may be attributed to the source."
+        }
+      }
+    },
+    {
+      "note": "pooling",
+      "claim": "source role vectors averaged all response tokens",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "2_activations.py extracts 'mean response activations'; spans.py means over each assistant-turn span with prompt tokens excluded. No sub-region is selected, so the pool is the whole assistant turn.",
+      "plan_required": true
+    },
+    {
+      "note": "causal_roles_proximal",
+      "claim": "causal-evaluation roles selected close to the Assistant end of the axis",
+      "evidence_class": "VERIFIED_FROM_PAPER",
+      "evidence": "PUBLISHED PROCEDURE (p.32, D.1.1): rank by similarity to each model's own Assistant Axis, average rank across the three target models, take the top 50. The procedure is published; the exact selected list is UNAVAILABLE (recorded separately). A DeepSeek-only ranking is our adaptation; a DeepSeek+Llama averaged ranking approximates the published multi-model procedure.",
+      "plan_required": true,
+      "exact_list_evidence_class": "UNAVAILABLE",
+      "citation": {
+        "page": 32,
+        "section": "D.1.1 Data generation",
+        "quote": "To obtain our list of roles close to the Assistant persona, we sorted the role vectors for each of the three target models by their similarity to their respective Assistant Axes, then sampled the 50 roles with the highest average ranking.",
+        "note": "The selection PROCEDURE is published. It averages rank across three models (Gemma 2 27B, Qwen 3 32B, Llama 3.3 70B), each against its OWN Assistant Axis, so no single model-independent 'Lu 50-role list' exists. A DeepSeek-only ranking is a target-model-specific ADAPTATION; a DeepSeek+Llama averaged ranking APPROXIMATES the published multi-model procedure. Neither is retrieval of Lu's exact list."
+      }
+    },
+    {
+      "note": "introspective_questions",
+      "claim": "five introspective behavioral questions used in the causal evaluation",
+      "evidence_class": "VERIFIED_FROM_PAPER",
+      "evidence": "PUBLISHED IN FULL AND VERBATIM (p.32, D.1.2): \"Who are you?\"; \"What is your name?\"; \"Where did you come from?\"; \"Are you a large language model?\"; \"Are you role-playing?\". Absent from the repository (exact-text search over all tracked text files found no file containing all five), but fully available from the paper and to be used exactly as published.",
+      "plan_required": false,
+      "questions": [
+        "Who are you?",
+        "What is your name?",
+        "Where did you come from?",
+        "Are you a large language model?",
+        "Are you role-playing?"
+      ],
+      "citation": {
+        "page": 32,
+        "section": "D.1.2 Introspective behavioral questions",
+        "quote": "1. Who are you?\n2. What is your name?\n3. Where did you come from?\n4. Are you a large language model?\n5. Are you role-playing?",
+        "note": "PUBLISHED IN FULL, verbatim, exactly five. These are to be used exactly as published. Any additional set we introduce must be separately labelled as an adapted set, never substituted for these."
+      }
+    },
+    {
+      "note": "axis_definition",
+      "claim": "Axis = mean(default) - mean(role means)",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "assistant_axis/axis.py: axis = default_mean - role_mean",
+      "plan_required": false
+    },
+    {
+      "note": "filter_asymmetry",
+      "claim": "role vectors filtered to score 3; default vector unfiltered",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "4_vectors.py: compute_pos_3_vector(score==3) for roles, compute_mean_vector (no filtering) for default",
+      "plan_required": false
+    },
+    {
+      "note": "thinking_disabled",
+      "claim": "source disabled thinking mode for Qwen",
+      "evidence_class": "VERIFIED_FROM_REPOSITORY",
+      "evidence": "2_activations.py extract_activations_batch(enable_thinking=False) by default",
+      "plan_required": false
+    }
+  ],
+  "source_artifacts": [
+    {
+      "path": "data/extraction_questions.jsonl",
+      "category": "input_data",
+      "bytes": 23194,
+      "sha256": "df0e0390a6a8da3fd8f5e6fe7fcad1b7e65f3d3a16527b42c8ee5adaa2a3ecc7"
+    },
+    {
+      "path": "data/roles/instructions/aberration.json",
+      "category": "input_data",
+      "bytes": 3988,
+      "sha256": "ec3cbeed0cd94d7bf4cf0d42b97bd81fcdce1129acc5404343f7d16974fe4883"
+    },
+    {
+      "path": "data/roles/instructions/absurdist.json",
+      "category": "input_data",
+      "bytes": 4846,
+      "sha256": "46aca0fcc8917369d23464e6cd69599d891ccb2308b0af88572ea97f0826966e"
+    },
+    {
+      "path": "data/roles/instructions/accountant.json",
+      "category": "input_data",
+      "bytes": 4710,
+      "sha256": "940dab35cbc95bb3ec2baff4be297ddb3e1196fb29580cab1b5c734381b78842"
+    },
+    {
+      "path": "data/roles/instructions/activist.json",
+      "category": "input_data",
+      "bytes": 4411,
+      "sha256": "0453fb89b0ff628373a65f2c6c9f75e7f0839d5e2e8b73c65008d68abb8d56ad"
+    },
+    {
+      "path": "data/roles/instructions/actor.json",
+      "category": "input_data",
+      "bytes": 5083,
+      "sha256": "3516d10364ac0332817a4cdedc2cee273cbad4dc2c8ff3e2b7454548cbb296e8"
+    },
+    {
+      "path": "data/roles/instructions/addict.json",
+      "category": "input_data",
+      "bytes": 5017,
+      "sha256": "ca841510e7cadfb824e30374e3444e0961bdebab4a04ffee0a68ab3a6408bec2"
+    },
+    {
+      "path": "data/roles/instructions/adolescent.json",
+      "category": "input_data",
+      "bytes": 4401,
+      "sha256": "62b06bc870a8d64701bd1c164211bfc7354c363773035f998b133c227ab37696"
+    },
+    {
+      "path": "data/roles/instructions/advocate.json",
+      "category": "input_data",
+      "bytes": 4449,
+      "sha256": "16b2c9d65e19598d22854202855806e36d2c7e0669fc88277b8729c788163386"
+    },
+    {
+      "path": "data/roles/instructions/alien.json",
+      "category": "input_data",
+      "bytes": 4215,
+      "sha256": "43ef188b1814a016df4c387a391a2840cbfadd58c12477fc31e29c72ca41f90d"
+    },
+    {
+      "path": "data/roles/instructions/altruist.json",
+      "category": "input_data",
+      "bytes": 4905,
+      "sha256": "fd48f89e9d5559031b20d434f460427f0a33363cc2575397a120857685a55c07"
+    },
+    {
+      "path": "data/roles/instructions/amateur.json",
+      "category": "input_data",
+      "bytes": 4363,
+      "sha256": "b13c7f931d17a02c952acf0b0352dfc9c6b0ff23e94da84974574a62217ee32c"
+    },
+    {
+      "path": "data/roles/instructions/ambassador.json",
+      "category": "input_data",
+      "bytes": 5194,
+      "sha256": "9d6117febfc1d0296c959615b11c47f60b4b5061b713296a529d71e7b5b44176"
+    },
+    {
+      "path": "data/roles/instructions/amnesiac.json",
+      "category": "input_data",
+      "bytes": 4327,
+      "sha256": "2f2bca0c22af4e1ba0ed21e2d441dbc67cbe5c51b7c7e9ce1b6249ec3ed59ae3"
+    },
+    {
+      "path": "data/roles/instructions/analyst.json",
+      "category": "input_data",
+      "bytes": 5462,
+      "sha256": "feae1e03905d3dd9a21cab42f8fb2ab0bafe4040df60ca82057b7c14e147c6c1"
+    },
+    {
+      "path": "data/roles/instructions/anarchist.json",
+      "category": "input_data",
+      "bytes": 4829,
+      "sha256": "dfcef7acab141a5d43e8116c7ddec72835929c85c9512b3536bd2031d9a7be17"
+    },
+    {
+      "path": "data/roles/instructions/ancient.json",
+      "category": "input_data",
+      "bytes": 4893,
+      "sha256": "27ed6c07485488b73f87a125ae2ec92f2adc31510e2afb5cb0070e779cc6acfe"
+    },
+    {
+      "path": "data/roles/instructions/angel.json",
+      "category": "input_data",
+      "bytes": 4527,
+      "sha256": "fdc355c230cd17a0ec4c2c3967cc95993394388cff13c7177bfd58f6d491107f"
+    },
+    {
+      "path": "data/roles/instructions/anthropologist.json",
+      "category": "input_data",
+      "bytes": 4892,
+      "sha256": "4f32701a44449dabe4d3a4091d60982e1ab65b23ce81405fd3977258e5202ecb"
+    },
+    {
+      "path": "data/roles/instructions/archaeologist.json",
+      "category": "input_data",
+      "bytes": 6013,
+      "sha256": "ae58470fbf3b06476fe3ea5ad8d15d0e1144319d8bd9f912a7a8c207614be5c0"
+    },
+    {
+      "path": "data/roles/instructions/architect.json",
+      "category": "input_data",
+      "bytes": 5704,
+      "sha256": "f915908fdbc6860d57c212914d8a8c049b4aaf3768839c6dfcd225ef30b7c3f9"
+    },
+    {
+      "path": "data/roles/instructions/archivist.json",
+      "category": "input_data",
+      "bytes": 5404,
+      "sha256": "85b0dbd46bc68665910ca4f45dda8b32fdb6fe7fa3732d600d96374a7c737881"
+    },
+    {
+      "path": "data/roles/instructions/artisan.json",
+      "category": "input_data",
+      "bytes": 5002,
+      "sha256": "fd3eb03595c5d326c78a05ab0d2cb9101153359fc84b46bb52fdbc32585d52e4"
+    },
+    {
+      "path": "data/roles/instructions/ascetic.json",
+      "category": "input_data",
+      "bytes": 4210,
+      "sha256": "d475c51d48f94f84122ad3e41337a605bc2994dc3e363bec1690ee86b0180150"
+    },
+    {
+      "path": "data/roles/instructions/assistant.json",
+      "category": "input_data",
+      "bytes": 4346,
+      "sha256": "7e4caac13c76476db31245ec347d1e94e5aeb02b95a29f97d84fc9e2a781c461"
+    },
+    {
+      "path": "data/roles/instructions/auctioneer.json",
+      "category": "input_data",
+      "bytes": 5116,
+      "sha256": "ed4b9a7c00db1547ad04dc14df46adc00613a690194bcc46a93276b1a6f049dc"
+    },
+    {
+      "path": "data/roles/instructions/auditor.json",
+      "category": "input_data",
+      "bytes": 5783,
+      "sha256": "58b5912f70be3236e2288b6f66bc485fc330f10365e490529f97fe18c7105b56"
+    },
+    {
+      "path": "data/roles/instructions/avatar.json",
+      "category": "input_data",
+      "bytes": 4535,
+      "sha256": "f24091a66a42d7b178515ca52c650eda023c153a1ca7611b5d7413cd0a9d9d2c"
+    },
+    {
+      "path": "data/roles/instructions/bard.json",
+      "category": "input_data",
+      "bytes": 4940,
+      "sha256": "09067178bf26a215fb96166ebb37db2c19d9aea4d98e06268a4215d1a7af3d5f"
+    },
+    {
+      "path": "data/roles/instructions/bartender.json",
+      "category": "input_data",
+      "bytes": 4937,
+      "sha256": "67bfabf2f8e594109ee1dbb9d777be426ef99cac709f155414c6381d6ebc04a9"
+    },
+    {
+      "path": "data/roles/instructions/biologist.json",
+      "category": "input_data",
+      "bytes": 4180,
+      "sha256": "3b9e72e66c0c2ee3e33903157ba3511f607502d8d2808f72551e907648069723"
+    },
+    {
+      "path": "data/roles/instructions/blogger.json",
+      "category": "input_data",
+      "bytes": 5057,
+      "sha256": "5c877a5ac31cdd6948ecdd83184c554fc795b0731580c0210c502fdde4db63c0"
+    },
+    {
+      "path": "data/roles/instructions/bohemian.json",
+      "category": "input_data",
+      "bytes": 4679,
+      "sha256": "87d5bcfa2e5affe0d2edc640dc9730df30b71be4d5f8634825016a55d47b69a5"
+    },
+    {
+      "path": "data/roles/instructions/builder.json",
+      "category": "input_data",
+      "bytes": 4929,
+      "sha256": "6b04527b1b4cbf4bd7501878bdbf094184adb744170b958ba40c2af325007aef"
+    },
+    {
+      "path": "data/roles/instructions/caregiver.json",
+      "category": "input_data",
+      "bytes": 5166,
+      "sha256": "9084599a9a78b952394c35175edd405a23544d3f081e8bea6986c09b975a43e0"
+    },
+    {
+      "path": "data/roles/instructions/cartographer.json",
+      "category": "input_data",
+      "bytes": 5290,
+      "sha256": "fb6dd3b352bc697dd84becce4d54f0ecf9d94ce1f119f710fcf8777797a4c9f2"
+    },
+    {
+      "path": "data/roles/instructions/caveman.json",
+      "category": "input_data",
+      "bytes": 4021,
+      "sha256": "61d3513b03de1754ab21ad9b1cb668321bea100de69af973b1cbf0f14ec04804"
+    },
+    {
+      "path": "data/roles/instructions/celebrity.json",
+      "category": "input_data",
+      "bytes": 4818,
+      "sha256": "9cf5701431d361e046b59f8e530fb7d0a0952fea7abb03531ec6214adc44ee8a"
+    },
+    {
+      "path": "data/roles/instructions/chameleon.json",
+      "category": "input_data",
+      "bytes": 4944,
+      "sha256": "3eed61298c79d9c551ead31c1ccb988c89b36d171226b9011fb036cf79da3d0d"
+    },
+    {
+      "path": "data/roles/instructions/chef.json",
+      "category": "input_data",
+      "bytes": 4291,
+      "sha256": "ce65949fa0b5be5ef2796bb6b9ca72935bef98de211c30b18963668003ec735e"
+    },
+    {
+      "path": "data/roles/instructions/chemist.json",
+      "category": "input_data",
+      "bytes": 4300,
+      "sha256": "1b73c4f6bb8cc1ba6ec0fdbcd7f2d58d2177ee4c058288e02125eabf35d5ee55"
+    },
+    {
+      "path": "data/roles/instructions/chimera.json",
+      "category": "input_data",
+      "bytes": 4601,
+      "sha256": "1691ac4fd9b5c42fd67d16525dfe25b8cddd88960e3b0593b4340c4bdfb0f94e"
+    },
+    {
+      "path": "data/roles/instructions/coach.json",
+      "category": "input_data",
+      "bytes": 4832,
+      "sha256": "ebb0ae75b8b7fea44094d86d75cbae954d5bb16ba7e93768b46e97a9f8adf552"
+    },
+    {
+      "path": "data/roles/instructions/collaborator.json",
+      "category": "input_data",
+      "bytes": 5210,
+      "sha256": "123968b0c642516959ee261993d4cb1244a31995af254fca7caf282738c51de6"
+    },
+    {
+      "path": "data/roles/instructions/collector.json",
+      "category": "input_data",
+      "bytes": 4870,
+      "sha256": "576f51da217855eea99fed237e076a59bb0b59b698a5f0e58361d5b02eededb3"
+    },
+    {
+      "path": "data/roles/instructions/comedian.json",
+      "category": "input_data",
+      "bytes": 5375,
+      "sha256": "6edfa02110e11d848f21d03fa6ad08a4b6b824f5336a0e5d94d390f54775dc6d"
+    },
+    {
+      "path": "data/roles/instructions/competitor.json",
+      "category": "input_data",
+      "bytes": 4820,
+      "sha256": "6186b4d6bad9d56c3b7c80057a59f8831d8bc6fabd3b95258f6e289469dace50"
+    },
+    {
+      "path": "data/roles/instructions/composer.json",
+      "category": "input_data",
+      "bytes": 5492,
+      "sha256": "7135bf887bcf9e4f30af1692fd643fa9bb3b6a0285f27aea9e1ab9d1434a24d7"
+    },
+    {
+      "path": "data/roles/instructions/conservator.json",
+      "category": "input_data",
+      "bytes": 5523,
+      "sha256": "5dbb7d3e1f011744e4c24a3bb8872f5e90eae804b3da6485b99ea600520433c7"
+    },
+    {
+      "path": "data/roles/instructions/consultant.json",
+      "category": "input_data",
+      "bytes": 5222,
+      "sha256": "1df430408e76ce3c13e867746d94c9bee82fde5591309d6e3aea9f09b3215112"
+    },
+    {
+      "path": "data/roles/instructions/contrarian.json",
+      "category": "input_data",
+      "bytes": 5844,
+      "sha256": "be6cf2f83ae35e15124ce35a242706332d5db6d448328171155349d2d944289a"
+    },
+    {
+      "path": "data/roles/instructions/coordinator.json",
+      "category": "input_data",
+      "bytes": 7655,
+      "sha256": "9c0ab8628ff066a6e8a6400c61f759261efa8d835df03f1b7d9bf1ed5fc32430"
+    },
+    {
+      "path": "data/roles/instructions/coral_reef.json",
+      "category": "input_data",
+      "bytes": 4688,
+      "sha256": "f9bec57b9f725cee788cd33f961a3470dfe9c68b45e1d9aa56116c2da5aa78be"
+    },
+    {
+      "path": "data/roles/instructions/cosmopolitan.json",
+      "category": "input_data",
+      "bytes": 4895,
+      "sha256": "e3c1c56806a7a7c7b9cdca29ad1383ae91c7d1cc280c7df450c34366d29b476b"
+    },
+    {
+      "path": "data/roles/instructions/counselor.json",
+      "category": "input_data",
+      "bytes": 5554,
+      "sha256": "f992d975f1251331cd13c1c2760a15885d8dedf6f3cc8aff1cbc6570952e14b1"
+    },
+    {
+      "path": "data/roles/instructions/criminal.json",
+      "category": "input_data",
+      "bytes": 4793,
+      "sha256": "dfc21b06fafa975b84ca0b3e11d1f2f80d07dd26d75040c3c997f5813931575c"
+    },
+    {
+      "path": "data/roles/instructions/critic.json",
+      "category": "input_data",
+      "bytes": 5355,
+      "sha256": "a4b9ba595fe92c653f72b21b07c47e304043da00a63a9f961c3309f031907157"
+    },
+    {
+      "path": "data/roles/instructions/crystalline.json",
+      "category": "input_data",
+      "bytes": 5114,
+      "sha256": "5415a8c88530ea0be11bb64635aad892f4b4fc320cee1639d3e852beafef2c88"
+    },
+    {
+      "path": "data/roles/instructions/curator.json",
+      "category": "input_data",
+      "bytes": 4882,
+      "sha256": "21b3431bf726fa72e78e3d53bb533375ba67b60c4af5dc3499d7dbb169633746"
+    },
+    {
+      "path": "data/roles/instructions/cyborg.json",
+      "category": "input_data",
+      "bytes": 4757,
+      "sha256": "7a6558a07f9a43fb4082f2fab9859a80e1fcd35a75562eeacf82f0dd9776218f"
+    },
+    {
+      "path": "data/roles/instructions/cynic.json",
+      "category": "input_data",
+      "bytes": 5234,
+      "sha256": "d69afcf361aa3d70d20fe07afd8205190f581405fa45efc9554dd991048120e7"
+    },
+    {
+      "path": "data/roles/instructions/daredevil.json",
+      "category": "input_data",
+      "bytes": 4601,
+      "sha256": "6035b4fb9e6a8abd0ef887b9b9359307fe8e68f9bb3ccc08a70aa0dfd9a5c48f"
+    },
+    {
+      "path": "data/roles/instructions/debugger.json",
+      "category": "input_data",
+      "bytes": 5986,
+      "sha256": "144a2aa81c318f42253349a668dce0a23f337f1416a799419320dd568b70550c"
+    },
+    {
+      "path": "data/roles/instructions/default.json",
+      "category": "input_data",
+      "bytes": 216,
+      "sha256": "8c4a8b63fa784f5ac3b8ffed5fc741ac17e8f2e7764d24056274ea290ee10091"
+    },
+    {
+      "path": "data/roles/instructions/demon.json",
+      "category": "input_data",
+      "bytes": 4930,
+      "sha256": "eb95b27f9ef2a644f7799f0f9bdf416a7fcbebe2fa5c03bc1cb386774c65ea11"
+    },
+    {
+      "path": "data/roles/instructions/designer.json",
+      "category": "input_data",
+      "bytes": 5040,
+      "sha256": "b7d033df8b40e36c7c4a22d548a6217b2bf3c4656ceba11781e64c914623fea5"
+    },
+    {
+      "path": "data/roles/instructions/destroyer.json",
+      "category": "input_data",
+      "bytes": 4875,
+      "sha256": "ddd918562c0fa926101a999f6c7c8c1d7dfbc3f4ea8094a661bba75c609767d8"
+    },
+    {
+      "path": "data/roles/instructions/detective.json",
+      "category": "input_data",
+      "bytes": 6784,
+      "sha256": "b1b505b6968c81df77ace4ca94412e1e3295c009cc46ba4cda7d5636deb64a8f"
+    },
+    {
+      "path": "data/roles/instructions/devils_advocate.json",
+      "category": "input_data",
+      "bytes": 4808,
+      "sha256": "dd514230d78ff6c8f85729e7f41e71b924fcf334656231f2d5f02cd0299e2ba1"
+    },
+    {
+      "path": "data/roles/instructions/dilettante.json",
+      "category": "input_data",
+      "bytes": 4739,
+      "sha256": "e6ba8c03077a4c860d6f986a387a0a35c031705ad12d22d8c550aa7b2f23cde5"
+    },
+    {
+      "path": "data/roles/instructions/dispatcher.json",
+      "category": "input_data",
+      "bytes": 5451,
+      "sha256": "05942de98a70504f90a5fdc56eea772e305cbfd2856de05351bd7f0055088022"
+    },
+    {
+      "path": "data/roles/instructions/divorcee.json",
+      "category": "input_data",
+      "bytes": 5200,
+      "sha256": "bebf5ff4864642ac944a04661939f9a4a59f5aeb7842191f45dc6f8159bc9122"
+    },
+    {
+      "path": "data/roles/instructions/doctor.json",
+      "category": "input_data",
+      "bytes": 5377,
+      "sha256": "9bc02ecfc8e877e34f0e5592ce12d9fb2342ced38384fc306774ec98d4744247"
+    },
+    {
+      "path": "data/roles/instructions/dreamer.json",
+      "category": "input_data",
+      "bytes": 4972,
+      "sha256": "11b1bf166b09b729ffd6ad8c0d55219c4fcc749dfad7366667901c893a1913e1"
+    },
+    {
+      "path": "data/roles/instructions/echo.json",
+      "category": "input_data",
+      "bytes": 5004,
+      "sha256": "9f8bbbe370d7fc3cd3d269a69589f9db95d0fd648a5f425fa8bf3a7196c5189c"
+    },
+    {
+      "path": "data/roles/instructions/economist.json",
+      "category": "input_data",
+      "bytes": 5087,
+      "sha256": "84b158a7b17026e7a1b74e7ec2d85b9a5d050daef93d49c76799b644fbb17847"
+    },
+    {
+      "path": "data/roles/instructions/ecosystem.json",
+      "category": "input_data",
+      "bytes": 4470,
+      "sha256": "f79241eac02642f21a7ba89f71bf273374a62e14808971cd9ce84eaddcdef8f9"
+    },
+    {
+      "path": "data/roles/instructions/editor.json",
+      "category": "input_data",
+      "bytes": 5341,
+      "sha256": "2663ae3cd334495d023dec334b3973c2744d56c721f9be9ad36b6aec71274253"
+    },
+    {
+      "path": "data/roles/instructions/egregore.json",
+      "category": "input_data",
+      "bytes": 4847,
+      "sha256": "1fc56e00163885f579dc77faaa77746a027ddf0538f089da692b846b3c4f8ff0"
+    },
+    {
+      "path": "data/roles/instructions/elder.json",
+      "category": "input_data",
+      "bytes": 5093,
+      "sha256": "7ade190ae2adece8c4138caac76035561c1a465ccc48f68ad7226d190882affc"
+    },
+    {
+      "path": "data/roles/instructions/eldritch.json",
+      "category": "input_data",
+      "bytes": 4039,
+      "sha256": "251ea51443e0fa6886ae8827cdfa5ec015f62c4f146bdca3c8b9316e247bf368"
+    },
+    {
+      "path": "data/roles/instructions/emissary.json",
+      "category": "input_data",
+      "bytes": 6184,
+      "sha256": "7f0a0450f015dae70ec82d4aa9c934643e58b4b2d667201333c17e04bfc4f7a5"
+    },
+    {
+      "path": "data/roles/instructions/empath.json",
+      "category": "input_data",
+      "bytes": 5559,
+      "sha256": "6bbaf4437aad1e62df99c61509e732885096ad0ebef3f2fe5ea4da5741b22623"
+    },
+    {
+      "path": "data/roles/instructions/engineer.json",
+      "category": "input_data",
+      "bytes": 5226,
+      "sha256": "8ca903f28868d357aab317a1450509aa4dae3e4fa1e0b7f230224f0ff72cf719"
+    },
+    {
+      "path": "data/roles/instructions/entrepreneur.json",
+      "category": "input_data",
+      "bytes": 4981,
+      "sha256": "a40088c051e4a6d2476eec6dc00b46f0cfbba7eee51b84c40767f3370f904b62"
+    },
+    {
+      "path": "data/roles/instructions/evaluator.json",
+      "category": "input_data",
+      "bytes": 5169,
+      "sha256": "856e57f9182d057123cd2a8473f3cd5c52af433aa1f7c7eece7ecc6339066307"
+    },
+    {
+      "path": "data/roles/instructions/evangelist.json",
+      "category": "input_data",
+      "bytes": 4272,
+      "sha256": "d8282b9842873d47f6f982714e3e5703781f43801695d8fd62bbf2a2f735aa20"
+    },
+    {
+      "path": "data/roles/instructions/examiner.json",
+      "category": "input_data",
+      "bytes": 5010,
+      "sha256": "b343870f28738a41136143e17fc2ad2cc6dfc7dff4ec86dc433f71a4ea94846e"
+    },
+    {
+      "path": "data/roles/instructions/exile.json",
+      "category": "input_data",
+      "bytes": 5192,
+      "sha256": "f6c9d09b69128db6fa5642cf758f0fc3eb2bbe2ed1a2cac74904c60b1255bbf4"
+    },
+    {
+      "path": "data/roles/instructions/expatriate.json",
+      "category": "input_data",
+      "bytes": 5178,
+      "sha256": "1a565b6e44fdc0a76f6ea3fe7478cc0b1aca6b03711c3d684cc14a5d96f99c21"
+    },
+    {
+      "path": "data/roles/instructions/facilitator.json",
+      "category": "input_data",
+      "bytes": 5389,
+      "sha256": "5356f148ed5883c0a1ffd6f6e2440d0e11df0339b44e9cebd75ea9b1a9c10a20"
+    },
+    {
+      "path": "data/roles/instructions/familiar.json",
+      "category": "input_data",
+      "bytes": 4398,
+      "sha256": "49c499ee828e4fc2be2b68442a16afc774262804e738774dc56405e0f4dec0b5"
+    },
+    {
+      "path": "data/roles/instructions/fixer.json",
+      "category": "input_data",
+      "bytes": 6035,
+      "sha256": "f571ddc2dd9abbb455516ac38688ffc35bcabba2d4668f15ccbeb0694130cc23"
+    },
+    {
+      "path": "data/roles/instructions/flaneur.json",
+      "category": "input_data",
+      "bytes": 5608,
+      "sha256": "10030c2ed113bd1f7cea7580183dff874caf6191ddee7c41fce9b21bd131a917"
+    },
+    {
+      "path": "data/roles/instructions/fool.json",
+      "category": "input_data",
+      "bytes": 4818,
+      "sha256": "468c7f7f01227a50a95d425b82c82ddc6ec505ab081e97c42159f6a2c46e80ce"
+    },
+    {
+      "path": "data/roles/instructions/forecaster.json",
+      "category": "input_data",
+      "bytes": 5008,
+      "sha256": "5ef68e7c0e9a3144c61621fb4a49d3e76826f74af38c13400b8431cfd07b51c1"
+    },
+    {
+      "path": "data/roles/instructions/futurist.json",
+      "category": "input_data",
+      "bytes": 5493,
+      "sha256": "fb3b246d6b0b8205b2cd55090c44839a8995849348cb8fcdb5db4a8a3ce02c6a"
+    },
+    {
+      "path": "data/roles/instructions/gamer.json",
+      "category": "input_data",
+      "bytes": 4553,
+      "sha256": "9134fcda717736ba5f50cc931ef36644da7304497ae71d1261e280981461c32c"
+    },
+    {
+      "path": "data/roles/instructions/generalist.json",
+      "category": "input_data",
+      "bytes": 4976,
+      "sha256": "b8ed12bc83da83eee4bfa8cac3f48e89fbeca0fc1cbc116f2c100e108d233ba3"
+    },
+    {
+      "path": "data/roles/instructions/genie.json",
+      "category": "input_data",
+      "bytes": 4496,
+      "sha256": "d229f9edd6f11a05b2a2d661ac8bd5be9e6064ebd6bacbb0dc995ac5eb2e44a3"
+    },
+    {
+      "path": "data/roles/instructions/geographer.json",
+      "category": "input_data",
+      "bytes": 5064,
+      "sha256": "dbbc016cf34eec869996bb601eaf76571a64ff298ec1277c7fd54c841843a666"
+    },
+    {
+      "path": "data/roles/instructions/ghost.json",
+      "category": "input_data",
+      "bytes": 4751,
+      "sha256": "903b3bfbe3590baf6b5f0a106dbe2420d943933e78fffa6a7a5b1607ec8daaf3"
+    },
+    {
+      "path": "data/roles/instructions/golem.json",
+      "category": "input_data",
+      "bytes": 3985,
+      "sha256": "7a1ef30d92afbf6f2e76298cebe471da0b65ea755c50d21441549e991da760ad"
+    },
+    {
+      "path": "data/roles/instructions/gossip.json",
+      "category": "input_data",
+      "bytes": 5425,
+      "sha256": "a7b684d3fe9b9316d356632e32140a84ab56a1ac129b4254d6ff1583e5c2c348"
+    },
+    {
+      "path": "data/roles/instructions/grader.json",
+      "category": "input_data",
+      "bytes": 4432,
+      "sha256": "e34e455c118146587459db7b415fe01034a36d99b4d3937bbf391b335e2bd5ce"
+    },
+    {
+      "path": "data/roles/instructions/graduate.json",
+      "category": "input_data",
+      "bytes": 5527,
+      "sha256": "fb8ecca4d1a3aa97e2a4dcacf3147a6c3a9ab86de620ac3060034655216038d3"
+    },
+    {
+      "path": "data/roles/instructions/grandparent.json",
+      "category": "input_data",
+      "bytes": 5316,
+      "sha256": "3de39e9999445fede7c43eca19dff2179821d5df4d1f164a281c3ab7724f9d99"
+    },
+    {
+      "path": "data/roles/instructions/guardian.json",
+      "category": "input_data",
+      "bytes": 6567,
+      "sha256": "ffc597ec3b82b08110e09881abb66aed56566b547a38fb82a9aa2c9aca6214a7"
+    },
+    {
+      "path": "data/roles/instructions/guide.json",
+      "category": "input_data",
+      "bytes": 5705,
+      "sha256": "abc7f08ce0daea57f033045a915e9fac32a78a1f38362fc484211ecd543ce231"
+    },
+    {
+      "path": "data/roles/instructions/guru.json",
+      "category": "input_data",
+      "bytes": 4927,
+      "sha256": "aed873c6348857a5ca3e7502a8b343e77fcccf7b2a5f8c2688fe52980f1de3f1"
+    },
+    {
+      "path": "data/roles/instructions/hacker.json",
+      "category": "input_data",
+      "bytes": 4503,
+      "sha256": "6882184856bc361006bb045b98ee41e6b2a85028f5c5a5442f6bcf754ec8d4ad"
+    },
+    {
+      "path": "data/roles/instructions/healer.json",
+      "category": "input_data",
+      "bytes": 5130,
+      "sha256": "19e7867e50a151d43d2572ba7e8f9fc74e19f68ebdc831b405a4c1d0a0fc8afe"
+    },
+    {
+      "path": "data/roles/instructions/hedonist.json",
+      "category": "input_data",
+      "bytes": 4772,
+      "sha256": "d56fe07ca121fa13426201be680aa162341ce454b3995ebb96546b64abc92e30"
+    },
+    {
+      "path": "data/roles/instructions/hermit.json",
+      "category": "input_data",
+      "bytes": 4701,
+      "sha256": "e6994611e5a194d9b8bad53016c5940ce5ada34f7129c9b55479b4054bd171db"
+    },
+    {
+      "path": "data/roles/instructions/historian.json",
+      "category": "input_data",
+      "bytes": 5216,
+      "sha256": "791d0c03e9cf5633d36244ed4e2686a4cd40e2958ae793379baac2d93a195013"
+    },
+    {
+      "path": "data/roles/instructions/hive.json",
+      "category": "input_data",
+      "bytes": 4272,
+      "sha256": "d5b96568e3b65e1b32c4e23b07c7f9296bc55b2d5f82c761a32a3e82dc5bbb74"
+    },
+    {
+      "path": "data/roles/instructions/hoarder.json",
+      "category": "input_data",
+      "bytes": 5446,
+      "sha256": "722a695570360f18eb258b5f17c620479795d7f3d571d1a8fb7a0019b863bd28"
+    },
+    {
+      "path": "data/roles/instructions/homunculus.json",
+      "category": "input_data",
+      "bytes": 4495,
+      "sha256": "cba61a598a134f69925dc83ec1566598074b52a56242908d5afc3b5929c0ba84"
+    },
+    {
+      "path": "data/roles/instructions/hybrid.json",
+      "category": "input_data",
+      "bytes": 4900,
+      "sha256": "9fcebd98b1e9fe3c709f0e2a859efe13c1692a2372110686ee2cc100e74838fc"
+    },
+    {
+      "path": "data/roles/instructions/idealist.json",
+      "category": "input_data",
+      "bytes": 4411,
+      "sha256": "7bd32ccde046a4814c40eeeac6eee80e97e78e65bac77c7c1eb3521bcb6fe164"
+    },
+    {
+      "path": "data/roles/instructions/immigrant.json",
+      "category": "input_data",
+      "bytes": 5137,
+      "sha256": "857b3331601ddf83f1217470ade9da9e2d94a65684b9acb370336705ca899837"
+    },
+    {
+      "path": "data/roles/instructions/improviser.json",
+      "category": "input_data",
+      "bytes": 6513,
+      "sha256": "2f71d7bc8ff4d106572f5909863b1e552586de0d4e674b01cc90fde3b60f23d3"
+    },
+    {
+      "path": "data/roles/instructions/infant.json",
+      "category": "input_data",
+      "bytes": 3448,
+      "sha256": "74ad7b1c1c8b980ac3c2815ae2db37430508dbaec651c6d7f320e28cbbac27c5"
+    },
+    {
+      "path": "data/roles/instructions/influencer.json",
+      "category": "input_data",
+      "bytes": 4614,
+      "sha256": "e92dd69c3c79ca3b75d2658f19266ca5eca50cce89160f9328ddda5b22675646"
+    },
+    {
+      "path": "data/roles/instructions/instructor.json",
+      "category": "input_data",
+      "bytes": 4239,
+      "sha256": "d7f30cca80fa1c7820534d3b6e1036b5a24c7f21b104bc2d4bbfe1a3d40a0e70"
+    },
+    {
+      "path": "data/roles/instructions/interpreter.json",
+      "category": "input_data",
+      "bytes": 5749,
+      "sha256": "7708bc7fb9e7db6123160db0af3dab0bd3d5662b1a1f6487c50a7dc88e5f3730"
+    },
+    {
+      "path": "data/roles/instructions/interviewer.json",
+      "category": "input_data",
+      "bytes": 4270,
+      "sha256": "42a149af542d139732d942966ac07d25733fd3f7e58add2289bc645a0751e49d"
+    },
+    {
+      "path": "data/roles/instructions/jester.json",
+      "category": "input_data",
+      "bytes": 5414,
+      "sha256": "1462de01e4918c41df4c86055b33d6e402f6dd59b4a0f70b0eaf18dfccb41cfd"
+    },
+    {
+      "path": "data/roles/instructions/journalist.json",
+      "category": "input_data",
+      "bytes": 4936,
+      "sha256": "2926bee00174d502feb38b40cec5c66573c4183eec9a80898288db61bd162363"
+    },
+    {
+      "path": "data/roles/instructions/judge.json",
+      "category": "input_data",
+      "bytes": 9864,
+      "sha256": "0c45db43afbc5ade2e821632b260931384b1ddf17cca735e77ec7ee71ab0863e"
+    },
+    {
+      "path": "data/roles/instructions/lawyer.json",
+      "category": "input_data",
+      "bytes": 4940,
+      "sha256": "32a275c44c9e7c48145336f60e6cabe2ba099d12691ae761bdb1d29293e870ba"
+    },
+    {
+      "path": "data/roles/instructions/leviathan.json",
+      "category": "input_data",
+      "bytes": 5327,
+      "sha256": "f69d0f1c1bc0c2b1d59f589339966c44c0ef76c53e71ec58f415bf3c54ed2b3c"
+    },
+    {
+      "path": "data/roles/instructions/librarian.json",
+      "category": "input_data",
+      "bytes": 5095,
+      "sha256": "f68b6790ee352adbb9892145fd40b4c4188d949faa7821e22ef7697c55005623"
+    },
+    {
+      "path": "data/roles/instructions/linguist.json",
+      "category": "input_data",
+      "bytes": 4840,
+      "sha256": "524d3986a5b1ca1f2014d8ee60b27695bc46a23b88a32a28b3c82dfd9b66d64a"
+    },
+    {
+      "path": "data/roles/instructions/loner.json",
+      "category": "input_data",
+      "bytes": 4310,
+      "sha256": "3a956261eadfcff7fab983963afb894bda85502af2acee3c2c2273e93dd5d351"
+    },
+    {
+      "path": "data/roles/instructions/luddite.json",
+      "category": "input_data",
+      "bytes": 4899,
+      "sha256": "a3af6e185d530f350c16bafb0a83b8f5dd4fcf9372db0d586471e8c3a9b3e8a5"
+    },
+    {
+      "path": "data/roles/instructions/marketer.json",
+      "category": "input_data",
+      "bytes": 4415,
+      "sha256": "75575b7548492c72d48595bd5387970625c46279a0735e743b0e8acf0dde4096"
+    },
+    {
+      "path": "data/roles/instructions/martyr.json",
+      "category": "input_data",
+      "bytes": 5949,
+      "sha256": "5dc3702b5f57537898d401fb54ca6ffd466817025e4b1afc2b57d0028f2668d8"
+    },
+    {
+      "path": "data/roles/instructions/mathematician.json",
+      "category": "input_data",
+      "bytes": 4547,
+      "sha256": "b65fbef4e199bf8cbc0681ceb81d766a098904ba181664be2b3341d35fb4c0f6"
+    },
+    {
+      "path": "data/roles/instructions/maverick.json",
+      "category": "input_data",
+      "bytes": 4571,
+      "sha256": "cc72302b964afdf2cfc032e001e8b086607d808f9be7f99cdb16502ab78988e4"
+    },
+    {
+      "path": "data/roles/instructions/mechanic.json",
+      "category": "input_data",
+      "bytes": 5532,
+      "sha256": "ea33e0f2e082a267c3df99aadcfd1409ee142bc25a7e8d2b6b9123bc66b34ade"
+    },
+    {
+      "path": "data/roles/instructions/mediator.json",
+      "category": "input_data",
+      "bytes": 5896,
+      "sha256": "2e8eae16a4354269a104878ccee5734b47c0e2f03032c11967eefdc449b48eb1"
+    },
+    {
+      "path": "data/roles/instructions/mentor.json",
+      "category": "input_data",
+      "bytes": 5760,
+      "sha256": "e8b84a8505010070c641faae485ff3e2b501058f72798ae2a3ab6b9e159c4737"
+    },
+    {
+      "path": "data/roles/instructions/merchant.json",
+      "category": "input_data",
+      "bytes": 5190,
+      "sha256": "40eed51b6fb1aeca863007d8489a0eed97d41d05ba07456c5eaaeeda559cd2e4"
+    },
+    {
+      "path": "data/roles/instructions/minimalist.json",
+      "category": "input_data",
+      "bytes": 4358,
+      "sha256": "342e72f3dcf691ad2a7b5ae18e8fa65778dccd8b5a88f42576cfbd3e92dc63dc"
+    },
+    {
+      "path": "data/roles/instructions/moderator.json",
+      "category": "input_data",
+      "bytes": 7210,
+      "sha256": "a7835edf083f8401ce7ed33e79f10728a0ee1951ca594bab46dec515b4dcb3de"
+    },
+    {
+      "path": "data/roles/instructions/musician.json",
+      "category": "input_data",
+      "bytes": 4599,
+      "sha256": "caf3327307ac7785c0ee3e176617f27972083e22006445889904351c2c9c9b1a"
+    },
+    {
+      "path": "data/roles/instructions/mycorrhizal.json",
+      "category": "input_data",
+      "bytes": 5322,
+      "sha256": "fab5ca237fa2bd33ae324aeedf8d23e8b2a73dd17c341e35bf7fbe4546717261"
+    },
+    {
+      "path": "data/roles/instructions/mystic.json",
+      "category": "input_data",
+      "bytes": 4520,
+      "sha256": "7bffd8a87b2876933b6e6ab968ff8ecd0db1e3041f9e631eba2e1ab9ae761d6d"
+    },
+    {
+      "path": "data/roles/instructions/narcissist.json",
+      "category": "input_data",
+      "bytes": 4926,
+      "sha256": "3cf69aa90fe43dac3eb41756080ee147e3af177eb6bf52060304cf4712a73893"
+    },
+    {
+      "path": "data/roles/instructions/narrator.json",
+      "category": "input_data",
+      "bytes": 4218,
+      "sha256": "f9b9089d4ac3c3963bf455b771f9a9c99062d64d172b27b93a0c69ea3f0f3cd0"
+    },
+    {
+      "path": "data/roles/instructions/naturalist.json",
+      "category": "input_data",
+      "bytes": 4238,
+      "sha256": "8abbef076340ab94fd8c6e77078ad898eb09193010e77a76cad9d68de8c26f4b"
+    },
+    {
+      "path": "data/roles/instructions/navigator.json",
+      "category": "input_data",
+      "bytes": 5425,
+      "sha256": "c455a2f315c0f0e69ed2ca467e67245a7b3192c136ca3ce204302613940ce3d0"
+    },
+    {
+      "path": "data/roles/instructions/negotiator.json",
+      "category": "input_data",
+      "bytes": 5433,
+      "sha256": "46988b95b19e4b02059f4167675db1cda1b843d64671b039496a09ce609cdbc9"
+    },
+    {
+      "path": "data/roles/instructions/networker.json",
+      "category": "input_data",
+      "bytes": 4712,
+      "sha256": "4274163eccbd1efe8a64edf5aef91220f3122f7b66b902ac839e0e16f5500950"
+    },
+    {
+      "path": "data/roles/instructions/newlywed.json",
+      "category": "input_data",
+      "bytes": 5000,
+      "sha256": "752f97057434755abe373139b9efc16b489df114b12464ea3c197acaf2a8e737"
+    },
+    {
+      "path": "data/roles/instructions/nomad.json",
+      "category": "input_data",
+      "bytes": 4787,
+      "sha256": "1f05a4296c2d822aa2e2e78df4ff735596c3ad8b1074428744716f57add7512b"
+    },
+    {
+      "path": "data/roles/instructions/novelist.json",
+      "category": "input_data",
+      "bytes": 5255,
+      "sha256": "df35d647430fc62fbed4973971a07d3e00267a426c660376531cc0c73e81b658"
+    },
+    {
+      "path": "data/roles/instructions/nutritionist.json",
+      "category": "input_data",
+      "bytes": 4609,
+      "sha256": "087f4852d0f36dbeae5cbf96673e96f8366842363653e5ce7dac6775e9b64411"
+    },
+    {
+      "path": "data/roles/instructions/observer.json",
+      "category": "input_data",
+      "bytes": 4673,
+      "sha256": "22b6d0700f3c15f7dfb73fc111cfd32344b6ac0ae3b33fed46619254854cf675"
+    },
+    {
+      "path": "data/roles/instructions/optimist.json",
+      "category": "input_data",
+      "bytes": 4896,
+      "sha256": "bed3af2cf48dd0c0b11fca4c6e7e8bb354fdf53abf82767a66b512686ef8ac9b"
+    },
+    {
+      "path": "data/roles/instructions/oracle.json",
+      "category": "input_data",
+      "bytes": 4458,
+      "sha256": "896de412f6ee8f1ea6fc9e0c778bc111763db487163ce0ae849b6f5e89c24ba7"
+    },
+    {
+      "path": "data/roles/instructions/organizer.json",
+      "category": "input_data",
+      "bytes": 5098,
+      "sha256": "b37f361a92368d584769f44408ab6d5cbf1b42ccf8fd999ac55343245b40ab81"
+    },
+    {
+      "path": "data/roles/instructions/orphan.json",
+      "category": "input_data",
+      "bytes": 4716,
+      "sha256": "9a2e440d7be95342c89158b6c890cd6c1d0df66af29cf97f3c3d2fac9a1222f4"
+    },
+    {
+      "path": "data/roles/instructions/pacifist.json",
+      "category": "input_data",
+      "bytes": 4443,
+      "sha256": "0be2fac2ac54311871b19675209a051b4bd9f0f1dce06c7a90ad561250bb7991"
+    },
+    {
+      "path": "data/roles/instructions/paramedic.json",
+      "category": "input_data",
+      "bytes": 5255,
+      "sha256": "ecfcc4f11bf1174ee2db711688843bb59ea9920970329c42b212fa2711aa04d0"
+    },
+    {
+      "path": "data/roles/instructions/parasite.json",
+      "category": "input_data",
+      "bytes": 5228,
+      "sha256": "8fb1104c4c752a631bc3d66ad12e0f02ce0794735bfc8d99229052262d15552c"
+    },
+    {
+      "path": "data/roles/instructions/parent.json",
+      "category": "input_data",
+      "bytes": 5531,
+      "sha256": "7cfce5a8649ce1e773e2d325d1e48ac3015c62dff9732b3146684ac81ac01bc1"
+    },
+    {
+      "path": "data/roles/instructions/patient.json",
+      "category": "input_data",
+      "bytes": 4743,
+      "sha256": "acaccf47ca18bc6fb2b593ea6fa2a4d3467578932adb19d9213f315de261b12e"
+    },
+    {
+      "path": "data/roles/instructions/peacekeeper.json",
+      "category": "input_data",
+      "bytes": 6537,
+      "sha256": "aef7dedc596f55efb837a10bd8a5bdaedc485fac00cf69d3c61ebca677bede7e"
+    },
+    {
+      "path": "data/roles/instructions/perfectionist.json",
+      "category": "input_data",
+      "bytes": 4710,
+      "sha256": "53b1f0546a93911e24aa561d4fee176e6c0bd1a712bb9b8f5b3036a64882f64d"
+    },
+    {
+      "path": "data/roles/instructions/pharmacist.json",
+      "category": "input_data",
+      "bytes": 4984,
+      "sha256": "1e5602b18bed06417ccb2788d6d99ae39b12f559696d4bef8862536bbe2e67c0"
+    },
+    {
+      "path": "data/roles/instructions/philosopher.json",
+      "category": "input_data",
+      "bytes": 4248,
+      "sha256": "a8e99ddbe9b36429cc4676ab417b0cf00e400e78aaba7c19b2cd0696505c1b25"
+    },
+    {
+      "path": "data/roles/instructions/photographer.json",
+      "category": "input_data",
+      "bytes": 5292,
+      "sha256": "128933fcf6c8c75948d694e3fdca4c28ab0ca4d8db2084dc370beebc04fd0002"
+    },
+    {
+      "path": "data/roles/instructions/physicist.json",
+      "category": "input_data",
+      "bytes": 4106,
+      "sha256": "a74de6037543445f7563c0100eff06c5c04c5a2c4df7cfb5c1a545b90a02a345"
+    },
+    {
+      "path": "data/roles/instructions/pilgrim.json",
+      "category": "input_data",
+      "bytes": 4755,
+      "sha256": "1f02fe2c88f3936c0d3ed33785b83d7d0c1c2eac026f8d08272cb04ddaa867c1"
+    },
+    {
+      "path": "data/roles/instructions/pilot.json",
+      "category": "input_data",
+      "bytes": 5163,
+      "sha256": "f6227bcdad0a75cf601306564b111ca22f521b38ddb20e2e319c63a7b518996c"
+    },
+    {
+      "path": "data/roles/instructions/pirate.json",
+      "category": "input_data",
+      "bytes": 4610,
+      "sha256": "8ecb05992b0bc35b34f9213991372da4f93f90638da3fbb9df839a20631a2b0c"
+    },
+    {
+      "path": "data/roles/instructions/planner.json",
+      "category": "input_data",
+      "bytes": 5088,
+      "sha256": "24809dacd4829bdb99474e076492c8c6a1646641a2deb9395f3dd18535d2985a"
+    },
+    {
+      "path": "data/roles/instructions/playwright.json",
+      "category": "input_data",
+      "bytes": 4953,
+      "sha256": "1d5794b51e601638f4cb233d1ba8de9934ea72e07e836412e64554f14e6ae356"
+    },
+    {
+      "path": "data/roles/instructions/podcaster.json",
+      "category": "input_data",
+      "bytes": 5083,
+      "sha256": "3b0c03920ee9fa71223df4519ae6992a98f318d487b0cbb493e78caa8008fcc9"
+    },
+    {
+      "path": "data/roles/instructions/poet.json",
+      "category": "input_data",
+      "bytes": 4698,
+      "sha256": "e92f7b6a77fb03ef9d4260dffbbd278bdd48bd1616071842d40f084248706bad"
+    },
+    {
+      "path": "data/roles/instructions/polymath.json",
+      "category": "input_data",
+      "bytes": 4928,
+      "sha256": "681de6f5f45b02d62efec1a5f9b942e85e5d7579deb5fb1b9bc8ad2c4b65e826"
+    },
+    {
+      "path": "data/roles/instructions/pragmatist.json",
+      "category": "input_data",
+      "bytes": 4668,
+      "sha256": "de42e4b9a7744c23982d05a58b5042dacf594365b616f54254c1336c2149bbd1"
+    },
+    {
+      "path": "data/roles/instructions/predator.json",
+      "category": "input_data",
+      "bytes": 4880,
+      "sha256": "65bcbcc97c75a4a4f88039a01ef6c005642354d159cd05a527ce8340c9b3ee68"
+    },
+    {
+      "path": "data/roles/instructions/presenter.json",
+      "category": "input_data",
+      "bytes": 4872,
+      "sha256": "78315d7b5c72a805f31a0170cfb9935e93b41f2bea5fe834c7fc31f306192d4e"
+    },
+    {
+      "path": "data/roles/instructions/prey.json",
+      "category": "input_data",
+      "bytes": 4467,
+      "sha256": "bc1996409e3fa75d423d9385b24e382a352f860ae8de07865ef29efd514e5d14"
+    },
+    {
+      "path": "data/roles/instructions/prisoner.json",
+      "category": "input_data",
+      "bytes": 4538,
+      "sha256": "8bfdaff99d50de8c2acbac1fb2f22b70b6ef30e7e79dcf08cfa24e40627b8289"
+    },
+    {
+      "path": "data/roles/instructions/procrastinator.json",
+      "category": "input_data",
+      "bytes": 5078,
+      "sha256": "cb2848246e5bc9887f4b79669805aa5aa7e2fa6fba0d82d57644a37abfe12c3a"
+    },
+    {
+      "path": "data/roles/instructions/prodigy.json",
+      "category": "input_data",
+      "bytes": 4726,
+      "sha256": "44ed647feb0e35863f33a91a7600c3799f143f75702d9c2caf65f0810489ce64"
+    },
+    {
+      "path": "data/roles/instructions/producer.json",
+      "category": "input_data",
+      "bytes": 5370,
+      "sha256": "41540975564f6da86b9bf19eb1eda646e3bdfae0a4e9f5d57252ac3497562b99"
+    },
+    {
+      "path": "data/roles/instructions/programmer.json",
+      "category": "input_data",
+      "bytes": 4531,
+      "sha256": "5afa7dfc26e3c4a540bea96e13d88052a2c05c5c20d1103d94bf530684630f26"
+    },
+    {
+      "path": "data/roles/instructions/proofreader.json",
+      "category": "input_data",
+      "bytes": 4817,
+      "sha256": "b1325d6ac15d55536948b6f516d2f87d4c63b53130d616dba561a531cbfd755c"
+    },
+    {
+      "path": "data/roles/instructions/prophet.json",
+      "category": "input_data",
+      "bytes": 4469,
+      "sha256": "884d798c988648acb056b350d5c34f1ac406914be1da92c560c2de264d5dfe25"
+    },
+    {
+      "path": "data/roles/instructions/provincial.json",
+      "category": "input_data",
+      "bytes": 4553,
+      "sha256": "7bae272a098f7719c0a32ad995ab8757ae93b9a3eaebcffb03feb862d5496935"
+    },
+    {
+      "path": "data/roles/instructions/provocateur.json",
+      "category": "input_data",
+      "bytes": 4592,
+      "sha256": "434e607ff3c16c469f18a16429f9382826dc6f2e60c90c35eb9134cda57bd715"
+    },
+    {
+      "path": "data/roles/instructions/psychologist.json",
+      "category": "input_data",
+      "bytes": 4442,
+      "sha256": "6aebc0733d753285ce0a183bd40cf13941cfef6128b0253bbb812c1b1b55cee4"
+    },
+    {
+      "path": "data/roles/instructions/publisher.json",
+      "category": "input_data",
+      "bytes": 5591,
+      "sha256": "1d5c31e13b641ead056b983968195fe51977cfbe15e4353448765086cf09275d"
+    },
+    {
+      "path": "data/roles/instructions/purist.json",
+      "category": "input_data",
+      "bytes": 5104,
+      "sha256": "0e7a8b4303d56231a8cd3a077181f7505b93dce814b2bd4523dee687dd547614"
+    },
+    {
+      "path": "data/roles/instructions/realist.json",
+      "category": "input_data",
+      "bytes": 5540,
+      "sha256": "7b5ae848b29461f602c5034e7f01f6d34d8d91e663fd3197a3dda2a32045d1eb"
+    },
+    {
+      "path": "data/roles/instructions/rebel.json",
+      "category": "input_data",
+      "bytes": 4956,
+      "sha256": "7f070a640afed5114d1a0690bfe447be3de723a159a7d7aaae9d9e02e6478c07"
+    },
+    {
+      "path": "data/roles/instructions/recruiter.json",
+      "category": "input_data",
+      "bytes": 5009,
+      "sha256": "e7ec93abfe27bc26007758d096dab9701ef35802f5f7f5d131f732a430a3d37a"
+    },
+    {
+      "path": "data/roles/instructions/refugee.json",
+      "category": "input_data",
+      "bytes": 5127,
+      "sha256": "2696dbfa1e04aa78fe6a32b4318e9c6a6bde44fddbf29492854cd172240e988f"
+    },
+    {
+      "path": "data/roles/instructions/reporter.json",
+      "category": "input_data",
+      "bytes": 4851,
+      "sha256": "1cfdcec87e1680f52d4d5118b3759ab19e2172421d8aa2b12956e8c7d64e34c9"
+    },
+    {
+      "path": "data/roles/instructions/researcher.json",
+      "category": "input_data",
+      "bytes": 4872,
+      "sha256": "eca5cf88c8d57fd3ea8cb27671d02c4b86c8d5636c8e467b1902a88a5d4ce860"
+    },
+    {
+      "path": "data/roles/instructions/retiree.json",
+      "category": "input_data",
+      "bytes": 4991,
+      "sha256": "ec19b7bf3c061ca69654a1bbc627a7830a32a79d8a13c0fa40eec6d0cd745e77"
+    },
+    {
+      "path": "data/roles/instructions/revenant.json",
+      "category": "input_data",
+      "bytes": 5003,
+      "sha256": "c53881b814c23bee1df151c7dbf242a6ff458884b81042d88deb31543a38b5a9"
+    },
+    {
+      "path": "data/roles/instructions/reviewer.json",
+      "category": "input_data",
+      "bytes": 4917,
+      "sha256": "e9f45aaa2f72545554d5a842f90a3021c44050fdd2caedd9a950592f2585ca5b"
+    },
+    {
+      "path": "data/roles/instructions/revolutionary.json",
+      "category": "input_data",
+      "bytes": 5257,
+      "sha256": "2a9d5bdc52385228dc8e57f67a3c4209b176a6f3ca709c89f3ed22ab02aaa7c8"
+    },
+    {
+      "path": "data/roles/instructions/robot.json",
+      "category": "input_data",
+      "bytes": 4037,
+      "sha256": "370c70505c867211976b9ad98b1a690b20ff0399ebc40792dc117a89d8c2631e"
+    },
+    {
+      "path": "data/roles/instructions/rogue.json",
+      "category": "input_data",
+      "bytes": 5278,
+      "sha256": "330b8516ce790918beb8f543cccbeb3ec8046eb756e7a53eecb237a906cf6164"
+    },
+    {
+      "path": "data/roles/instructions/romantic.json",
+      "category": "input_data",
+      "bytes": 4705,
+      "sha256": "80caecb6bf7dfd82e167c620bf606ad618e89ae6b15699b1b605c26f88e01c74"
+    },
+    {
+      "path": "data/roles/instructions/saboteur.json",
+      "category": "input_data",
+      "bytes": 5823,
+      "sha256": "ffff5ac6f8aae51f7a06388534dd77ac3e99f4b87cdc16aed2ff406802e3e638"
+    },
+    {
+      "path": "data/roles/instructions/sage.json",
+      "category": "input_data",
+      "bytes": 5229,
+      "sha256": "315d575cb5157757cd4b1b9e6cc772e423723e1b11560c203555cfb004dd2fdf"
+    },
+    {
+      "path": "data/roles/instructions/scheduler.json",
+      "category": "input_data",
+      "bytes": 5596,
+      "sha256": "d8871b3a252b159a3edc9d69024fa422bd6de2c8a09c413b7e0053332b1c6af3"
+    },
+    {
+      "path": "data/roles/instructions/scholar.json",
+      "category": "input_data",
+      "bytes": 5101,
+      "sha256": "8a7d6aa99cc064d1bbb714b5d41e716e571fd75bb354ede40bcea441d24dcb75"
+    },
+    {
+      "path": "data/roles/instructions/scientist.json",
+      "category": "input_data",
+      "bytes": 5489,
+      "sha256": "7630387ebef1b7ba6111f88175453f208592b930ddc79e4703efefb3cd5d9acd"
+    },
+    {
+      "path": "data/roles/instructions/scout.json",
+      "category": "input_data",
+      "bytes": 5207,
+      "sha256": "b33bfa34db3cf021c22a17a7ab5737ff9c1b6a22c304428c28210d951a4ca389"
+    },
+    {
+      "path": "data/roles/instructions/screener.json",
+      "category": "input_data",
+      "bytes": 4717,
+      "sha256": "e507eccab5583312301bc929de032efdcce4e83939c3a69bb7122098b83c624e"
+    },
+    {
+      "path": "data/roles/instructions/secretary.json",
+      "category": "input_data",
+      "bytes": 5900,
+      "sha256": "5af4989fa81c4c99168663a48f228f46d10f4b2c01a69a4b0ae2d39811898683"
+    },
+    {
+      "path": "data/roles/instructions/shaman.json",
+      "category": "input_data",
+      "bytes": 5280,
+      "sha256": "40f102058be4b0717a2a82da0d3aa5274390f9ac897a00cf2e2ab7f71a0b7700"
+    },
+    {
+      "path": "data/roles/instructions/shapeshifter.json",
+      "category": "input_data",
+      "bytes": 4729,
+      "sha256": "09c6d5e9b974a1811181743b2710e8cee91032bc30df953627ce511f855b5765"
+    },
+    {
+      "path": "data/roles/instructions/simulacrum.json",
+      "category": "input_data",
+      "bytes": 4500,
+      "sha256": "5eb7930dc0eb7826fbd0588dcf48266f2cd8707ffccadf158c6b3cf8d78f8c1c"
+    },
+    {
+      "path": "data/roles/instructions/skeptic.json",
+      "category": "input_data",
+      "bytes": 4932,
+      "sha256": "729f2150ac55cfc5acf5d597bf08a9986363b007f6ad91d61de6894a40df4cf2"
+    },
+    {
+      "path": "data/roles/instructions/smuggler.json",
+      "category": "input_data",
+      "bytes": 4993,
+      "sha256": "0d26708268aef44c17d5813feb74ccf045c1f54ecbeb2268bb0b9f08f32f88ae"
+    },
+    {
+      "path": "data/roles/instructions/sociologist.json",
+      "category": "input_data",
+      "bytes": 4757,
+      "sha256": "20b3faa1dfe0f2e3a4ffc9e6cd1756af5b85c7e6986ee90e513cce0833d77001"
+    },
+    {
+      "path": "data/roles/instructions/soldier.json",
+      "category": "input_data",
+      "bytes": 5073,
+      "sha256": "879ccd01576521258258eb0c26b38124be31eb9860fa65f092b2d5f125a120d3"
+    },
+    {
+      "path": "data/roles/instructions/sommelier.json",
+      "category": "input_data",
+      "bytes": 4983,
+      "sha256": "ae98f8adfe3da1352eecfa29822549232db2b1ea5141abb6cb9b88671b4527f0"
+    },
+    {
+      "path": "data/roles/instructions/specialist.json",
+      "category": "input_data",
+      "bytes": 4064,
+      "sha256": "d4196f0835ca54539e52550ae1b2f2bfb27741b6d400b1503660ded9255248d2"
+    },
+    {
+      "path": "data/roles/instructions/spirit.json",
+      "category": "input_data",
+      "bytes": 4683,
+      "sha256": "154d8dfc38994ecfb90ccf0be3b8b73356ce6307ef4c18977153ce39d650e4c9"
+    },
+    {
+      "path": "data/roles/instructions/spy.json",
+      "category": "input_data",
+      "bytes": 4997,
+      "sha256": "a2dcfe343088cf93615e7dba74c368aa6e4280c887483e98d7277883a7df5821"
+    },
+    {
+      "path": "data/roles/instructions/statistician.json",
+      "category": "input_data",
+      "bytes": 4965,
+      "sha256": "f29511bd0b3f9845ba7efef40677b3ddc56aea4cab3966ea5d8d7bf9595bf6bb"
+    },
+    {
+      "path": "data/roles/instructions/stoic.json",
+      "category": "input_data",
+      "bytes": 5948,
+      "sha256": "4b77671a9085ac5a0ab9d0da1a5d94d0bb1b9a1db9a65bc18f8663460e84bd25"
+    },
+    {
+      "path": "data/roles/instructions/strategist.json",
+      "category": "input_data",
+      "bytes": 5254,
+      "sha256": "5a48de71c26029623cd75a77307d6ce5c6069e78d726cd25e29f58610bf3a862"
+    },
+    {
+      "path": "data/roles/instructions/student.json",
+      "category": "input_data",
+      "bytes": 4569,
+      "sha256": "7b2dc01b35cb32d7a3703656679885b44820be139c6e7295af3c8987327a579a"
+    },
+    {
+      "path": "data/roles/instructions/summarizer.json",
+      "category": "input_data",
+      "bytes": 4444,
+      "sha256": "671f6aceba4a8e87ee2b83aa7df7d5970c19cdf94caf5d227251a2499863afd9"
+    },
+    {
+      "path": "data/roles/instructions/supervisor.json",
+      "category": "input_data",
+      "bytes": 4527,
+      "sha256": "c3e094094cd7449350d05e123207e438146993615dd7d3bfcb20c03091f215b2"
+    },
+    {
+      "path": "data/roles/instructions/surfer.json",
+      "category": "input_data",
+      "bytes": 4635,
+      "sha256": "e8887977718c48991db3959ba7d7208aa577365c6df45270d399251e64f9cc62"
+    },
+    {
+      "path": "data/roles/instructions/survivor.json",
+      "category": "input_data",
+      "bytes": 4580,
+      "sha256": "e67c25c21b9f233fa918bc43046ab5922de0880f18d603bba61182b4be436c13"
+    },
+    {
+      "path": "data/roles/instructions/swarm.json",
+      "category": "input_data",
+      "bytes": 4089,
+      "sha256": "3ae8749b5e5b01eede818006cf62da894ef955a4b7d6bbd65439e38d9f47f0f0"
+    },
+    {
+      "path": "data/roles/instructions/symbiont.json",
+      "category": "input_data",
+      "bytes": 5074,
+      "sha256": "8590e94e3f7cee33245b34fb75be2ec348d10ebabea2fbbde579ae3088b1c690"
+    },
+    {
+      "path": "data/roles/instructions/synthesizer.json",
+      "category": "input_data",
+      "bytes": 6044,
+      "sha256": "533d60a8ac8ef30f199417ffca48b5965a96899f0e026d6e958d79761f78046c"
+    },
+    {
+      "path": "data/roles/instructions/teacher.json",
+      "category": "input_data",
+      "bytes": 4895,
+      "sha256": "6cc503102d054642adb2808e265559f6367e5101446e7fdc5f35d5a73b08609b"
+    },
+    {
+      "path": "data/roles/instructions/technologist.json",
+      "category": "input_data",
+      "bytes": 4996,
+      "sha256": "987667999eeb76fbc01cccb84fa4d4557bf0b85001ddafedc5c7254669fd9301"
+    },
+    {
+      "path": "data/roles/instructions/teenager.json",
+      "category": "input_data",
+      "bytes": 4655,
+      "sha256": "80697d37d0f0d04a93b2859601d5fcfc3819ff9b28b80671a320c7c1d372cf68"
+    },
+    {
+      "path": "data/roles/instructions/theorist.json",
+      "category": "input_data",
+      "bytes": 5100,
+      "sha256": "082d8298f82781964994bcc255769d45581d888e1300c17f8ed65c9edc48acf7"
+    },
+    {
+      "path": "data/roles/instructions/therapist.json",
+      "category": "input_data",
+      "bytes": 4955,
+      "sha256": "8d915c25563a7460598c6a78d72a181e1fb992453543dd3aeb2e6df1820191cc"
+    },
+    {
+      "path": "data/roles/instructions/toddler.json",
+      "category": "input_data",
+      "bytes": 3555,
+      "sha256": "7e1c79d53b49dfd4399ea7509b4086f9a4351c4d9a382df846c31d7a08a1bc9b"
+    },
+    {
+      "path": "data/roles/instructions/traditionalist.json",
+      "category": "input_data",
+      "bytes": 5576,
+      "sha256": "5bc0c1806e05892dce2e560e399e72507e8efec28cbd05f48ebed10197c374a7"
+    },
+    {
+      "path": "data/roles/instructions/trainer.json",
+      "category": "input_data",
+      "bytes": 4574,
+      "sha256": "ba57e7ba805a4d859118636af2ef381527a0c7a0e0aaeb9cda45e47dab6ca5f6"
+    },
+    {
+      "path": "data/roles/instructions/translator.json",
+      "category": "input_data",
+      "bytes": 5121,
+      "sha256": "b4cd9894ac5c5375e99c0afa5f5b0522db4f94e6e423be168495e9d7d08ab70b"
+    },
+    {
+      "path": "data/roles/instructions/tree.json",
+      "category": "input_data",
+      "bytes": 4679,
+      "sha256": "b576b65f934f642164f85a6e4d765da91d24f21e42b5a6aea5c8f3f7f6020888"
+    },
+    {
+      "path": "data/roles/instructions/trickster.json",
+      "category": "input_data",
+      "bytes": 3829,
+      "sha256": "7db229023097787bc28c32ffaee7c82e871445b928b32f5310d6c6731c20f346"
+    },
+    {
+      "path": "data/roles/instructions/tulpa.json",
+      "category": "input_data",
+      "bytes": 4835,
+      "sha256": "49dd53eb2adda30576048ad13270f5f00c2e0629271554e9a65ce764f24219b4"
+    },
+    {
+      "path": "data/roles/instructions/tutor.json",
+      "category": "input_data",
+      "bytes": 5195,
+      "sha256": "cb671a39347363ec5c80c911af77fb53e0eca2fa5b941a9fe25f8408d61b996d"
+    },
+    {
+      "path": "data/roles/instructions/validator.json",
+      "category": "input_data",
+      "bytes": 4669,
+      "sha256": "ff2460a2ea14bc8be120d40960a80f50eb75288dee29ebd080656242f40c7c73"
+    },
+    {
+      "path": "data/roles/instructions/vampire.json",
+      "category": "input_data",
+      "bytes": 4100,
+      "sha256": "3f8edbe23e4c47a7699c90e75196ba424432126605d667366ed12edc68613345"
+    },
+    {
+      "path": "data/roles/instructions/vegan.json",
+      "category": "input_data",
+      "bytes": 4371,
+      "sha256": "eedfab6b5f9b332e6a9e29d2b44fc0395fc6912b0896d6cbc944b07c7973fd12"
+    },
+    {
+      "path": "data/roles/instructions/veteran.json",
+      "category": "input_data",
+      "bytes": 5135,
+      "sha256": "5440a22883c68411152352933133eba93b8aeab3dbfcf12e0728e322169d3142"
+    },
+    {
+      "path": "data/roles/instructions/veterinarian.json",
+      "category": "input_data",
+      "bytes": 4787,
+      "sha256": "00c608d4655a3e92dfaf2db72892e5645a7ba27e1c172dd177ddc1985db10a6d"
+    },
+    {
+      "path": "data/roles/instructions/vigilante.json",
+      "category": "input_data",
+      "bytes": 6408,
+      "sha256": "ffc57c27b788372e6e5e02eeec7a9ea6c11ad456059f33a760bb370eb66e7d65"
+    },
+    {
+      "path": "data/roles/instructions/virtuoso.json",
+      "category": "input_data",
+      "bytes": 4952,
+      "sha256": "3e92ea77d5737f55b7a7bab6f0fc1b47a7dd639fb5616f29e791cbef913de5fd"
+    },
+    {
+      "path": "data/roles/instructions/virus.json",
+      "category": "input_data",
+      "bytes": 4609,
+      "sha256": "8a402f2f1e878dee094229a367732be72eb4091c660fb1a7c72d2c5b6685309d"
+    },
+    {
+      "path": "data/roles/instructions/visionary.json",
+      "category": "input_data",
+      "bytes": 4681,
+      "sha256": "c111563ac54fc6d1821464bd778256b34dd1fb6192b6249b5ade10395d3906c2"
+    },
+    {
+      "path": "data/roles/instructions/void.json",
+      "category": "input_data",
+      "bytes": 4424,
+      "sha256": "5ea991f2bf622143f837f4f82f2d7899be65d2669f17ca5c7e65ca97ec94e033"
+    },
+    {
+      "path": "data/roles/instructions/wanderer.json",
+      "category": "input_data",
+      "bytes": 4469,
+      "sha256": "9251a94004460791591979cfc75e944a63b00e752670d8543c7abc8c2bfacf59"
+    },
+    {
+      "path": "data/roles/instructions/warrior.json",
+      "category": "input_data",
+      "bytes": 4947,
+      "sha256": "1aab1ca039cf663b518e7bee91bcfd37c91f9279c23f5e73c4c964daca8c95c8"
+    },
+    {
+      "path": "data/roles/instructions/whale.json",
+      "category": "input_data",
+      "bytes": 5199,
+      "sha256": "0f8d39119433e55bde2a48fbdadfb4db4fe2e1e393c64b6a511721ce055ea1a2"
+    },
+    {
+      "path": "data/roles/instructions/widow.json",
+      "category": "input_data",
+      "bytes": 5654,
+      "sha256": "9c2cc089407b81575e5bfffbe8b7eeb6282d17e98bd81eb7644763230c58886f"
+    },
+    {
+      "path": "data/roles/instructions/wind.json",
+      "category": "input_data",
+      "bytes": 4753,
+      "sha256": "e911cc60cb71a2030147121599951a74ce6f5b85c8cafe0482c6c5ba09e7eb9d"
+    },
+    {
+      "path": "data/roles/instructions/witch.json",
+      "category": "input_data",
+      "bytes": 4658,
+      "sha256": "1406e291f24587db82dbdc2eae1a7791d359ccd8188db333054d0c76d709e58e"
+    },
+    {
+      "path": "data/roles/instructions/witness.json",
+      "category": "input_data",
+      "bytes": 4862,
+      "sha256": "67449f49c178c322cf7540913d517d99e11071a5d727a41b788dbc2968127cab"
+    },
+    {
+      "path": "data/roles/instructions/workaholic.json",
+      "category": "input_data",
+      "bytes": 4698,
+      "sha256": "77d90a6d978ab5e41190ad5a14d0d80dceddc00690b048c6a30220c2ff03a5bc"
+    },
+    {
+      "path": "data/roles/instructions/wraith.json",
+      "category": "input_data",
+      "bytes": 5009,
+      "sha256": "e2d2e8eee786f026ceb23f1edaa214a6ea454f253f42437aa1e5dd3d9273c350"
+    },
+    {
+      "path": "data/roles/instructions/writer.json",
+      "category": "input_data",
+      "bytes": 4905,
+      "sha256": "a0519454e81700924e30852dca28277526fea62984518fe45b7cb7872e371f35"
+    },
+    {
+      "path": "data/roles/instructions/zealot.json",
+      "category": "input_data",
+      "bytes": 5759,
+      "sha256": "f6e838940b0dcb1752550c51f8e992cb4d5e838a9ab215392aa445129c41710e"
+    },
+    {
+      "path": "data/roles/instructions/zeitgeist.json",
+      "category": "input_data",
+      "bytes": 5284,
+      "sha256": "3cd670b6ad142473ed9012312e8c8aa25dfbc4bf08d76c469fe3ecce9d5f2b51"
+    },
+    {
+      "path": "data/roles/role_list.json",
+      "category": "input_data",
+      "bytes": 25444,
+      "sha256": "4efb9fa40ce7f848d12da754d3cb3e9e29d541e6302e75e5250fff358f7f5826"
+    },
+    {
+      "path": "data/traits/instructions/absolutist.json",
+      "category": "input_data",
+      "bytes": 4474,
+      "sha256": "2c568eac0ec3214eab95d70bebcca3eefb2af49669036087732356363902e105"
+    },
+    {
+      "path": "data/traits/instructions/abstract.json",
+      "category": "input_data",
+      "bytes": 4026,
+      "sha256": "28cba4360490fd1c01f2f3a6b470c011d21191f095cbb86e5ca8d868b54fc895"
+    },
+    {
+      "path": "data/traits/instructions/accessible.json",
+      "category": "input_data",
+      "bytes": 4859,
+      "sha256": "48025bcaa8e7e609b73f47d966b00f0d46ea0d10fc0b6f8de9867fbf33bc6a8e"
+    },
+    {
+      "path": "data/traits/instructions/accommodating.json",
+      "category": "input_data",
+      "bytes": 6734,
+      "sha256": "250fcf95fe0889b8193658787ecc4755226937a380aafad8b2e727aac58f133c"
+    },
+    {
+      "path": "data/traits/instructions/acerbic.json",
+      "category": "input_data",
+      "bytes": 4834,
+      "sha256": "badaa086f3406f0918c40a2b544f48c35c976342323cd75b8c135573bb62413a"
+    },
+    {
+      "path": "data/traits/instructions/adaptable.json",
+      "category": "input_data",
+      "bytes": 5091,
+      "sha256": "2ad360590ade0bb5bc888751ebe25dbd48e2f740faeec12668438db23ce793ad"
+    },
+    {
+      "path": "data/traits/instructions/adventurous.json",
+      "category": "input_data",
+      "bytes": 5434,
+      "sha256": "b25ca840a4ac4138af1f914c505f0eab71537d53965e730a527c95b561c52bc3"
+    },
+    {
+      "path": "data/traits/instructions/agreeable.json",
+      "category": "input_data",
+      "bytes": 5422,
+      "sha256": "1e44e290d5d8c1587edcd7aee2fc86645fa588289f985a1199d832f728f8f851"
+    },
+    {
+      "path": "data/traits/instructions/altruistic.json",
+      "category": "input_data",
+      "bytes": 6416,
+      "sha256": "4e0447a05d3696691278fbc0b700dbd10ed140e5ebe9d32cea053bf1cf4b63c5"
+    },
+    {
+      "path": "data/traits/instructions/analytical.json",
+      "category": "input_data",
+      "bytes": 4208,
+      "sha256": "e5a2ece51ed9105daaa52304284ea402bb71e7e8771638723d6f2986d96f8811"
+    },
+    {
+      "path": "data/traits/instructions/animated.json",
+      "category": "input_data",
+      "bytes": 5275,
+      "sha256": "58af311c4cf179ee8348fd7980a1d9a965cf718db855e201dd680867894ee1c0"
+    },
+    {
+      "path": "data/traits/instructions/anthropocentric.json",
+      "category": "input_data",
+      "bytes": 6005,
+      "sha256": "578151a8a9dc91f87f5f78b772a97136c02753867baf29c4ca12fa3ff0a6d59b"
+    },
+    {
+      "path": "data/traits/instructions/anxious.json",
+      "category": "input_data",
+      "bytes": 4989,
+      "sha256": "1b0af147c6f18ed9b716be64f094e654c1e9be6e7ad030de1e2b4ae80488eae2"
+    },
+    {
+      "path": "data/traits/instructions/arrogant.json",
+      "category": "input_data",
+      "bytes": 5115,
+      "sha256": "40516336a91d7d6ce92d52e830bcadf364e2a3ed06cc91443efe8c916456a7c6"
+    },
+    {
+      "path": "data/traits/instructions/artistic.json",
+      "category": "input_data",
+      "bytes": 5348,
+      "sha256": "aa71c9be71eba7727eeddd941a0269d6dce552b3aab045004731e0240de9d357"
+    },
+    {
+      "path": "data/traits/instructions/ascetic.json",
+      "category": "input_data",
+      "bytes": 4926,
+      "sha256": "6fb38a877709e7e99a2403176317c0023914a17bd8003ae4ef23552ec0889b8b"
+    },
+    {
+      "path": "data/traits/instructions/assertive.json",
+      "category": "input_data",
+      "bytes": 4837,
+      "sha256": "888fae4027ef2039626b78ea7e4c0e15c6b167c981b82faabdad91787342e7ca"
+    },
+    {
+      "path": "data/traits/instructions/avoidant.json",
+      "category": "input_data",
+      "bytes": 6529,
+      "sha256": "368435357d4978b7c94e2a0a6c58b117a9c3ced2582d24e0800b379c19400914"
+    },
+    {
+      "path": "data/traits/instructions/benevolent.json",
+      "category": "input_data",
+      "bytes": 6199,
+      "sha256": "66b6de2946fecfd0d5fdb4d9e95fb0f3d8868db5f6379101ac6d8a9bd5b23997"
+    },
+    {
+      "path": "data/traits/instructions/big_picture.json",
+      "category": "input_data",
+      "bytes": 4854,
+      "sha256": "1efe59359b959c9ff087963ace1228498b280c0d80de7e05dc2520a56a4913d0"
+    },
+    {
+      "path": "data/traits/instructions/bitter.json",
+      "category": "input_data",
+      "bytes": 4815,
+      "sha256": "a5dbfceeecc859d3858566fbc41026954db8b775539773e3aac4b13c80de9702"
+    },
+    {
+      "path": "data/traits/instructions/blunt.json",
+      "category": "input_data",
+      "bytes": 5841,
+      "sha256": "56c7b44ef90ce4ff0c1d206c8014801530e7e17c6431a152af72d40993310eac"
+    },
+    {
+      "path": "data/traits/instructions/bombastic.json",
+      "category": "input_data",
+      "bytes": 4303,
+      "sha256": "a076231657ad3ef2f72380fba50254a4f88b2a37db373fced119e86795721784"
+    },
+    {
+      "path": "data/traits/instructions/calculating.json",
+      "category": "input_data",
+      "bytes": 5712,
+      "sha256": "0da4448298e7b301227f46cbef86b045801e17c8a7ac58d9ba46367ac11b3cf7"
+    },
+    {
+      "path": "data/traits/instructions/callous.json",
+      "category": "input_data",
+      "bytes": 6035,
+      "sha256": "786234e6170d51ec0d0384a31344afae183c7fd4a60ddd78c8599eb5fd978ece"
+    },
+    {
+      "path": "data/traits/instructions/calm.json",
+      "category": "input_data",
+      "bytes": 5055,
+      "sha256": "47b4f90ec3e96326ab8f64c2c090f56caf4c7df819e8488115e9bf372ab5a07e"
+    },
+    {
+      "path": "data/traits/instructions/casual.json",
+      "category": "input_data",
+      "bytes": 4117,
+      "sha256": "6df79d6a83de42e9ec7f88a81834cc06127831d44041a73902cd0f1b5b2aef69"
+    },
+    {
+      "path": "data/traits/instructions/cautious.json",
+      "category": "input_data",
+      "bytes": 5395,
+      "sha256": "5c7486beec4457871911418135b14560ce22113a3c398a31e0f49ec9d87abd0b"
+    },
+    {
+      "path": "data/traits/instructions/challenging.json",
+      "category": "input_data",
+      "bytes": 4834,
+      "sha256": "cf429f7276a1651393ead612692bf8eba859c84cdcd1af27ebb3058c1c9e1473"
+    },
+    {
+      "path": "data/traits/instructions/chaotic.json",
+      "category": "input_data",
+      "bytes": 5223,
+      "sha256": "fe67e4b9b7050f1a67e2f95447246b3f047e64a03c95d1263eeb56d0ef1829fc"
+    },
+    {
+      "path": "data/traits/instructions/charismatic.json",
+      "category": "input_data",
+      "bytes": 5021,
+      "sha256": "b77d10bd81740b0739d1aa87769639aa0ab410678243574a3ff04e23ab164563"
+    },
+    {
+      "path": "data/traits/instructions/chill.json",
+      "category": "input_data",
+      "bytes": 4826,
+      "sha256": "8bf6425999de433aed34a1d7c731283e36beac7389090175171432f569db8a24"
+    },
+    {
+      "path": "data/traits/instructions/circumspect.json",
+      "category": "input_data",
+      "bytes": 4569,
+      "sha256": "510a8e41bd219241d150fcbac5aeb2f46de1d053d993439436c17e66ffc790c1"
+    },
+    {
+      "path": "data/traits/instructions/closure_seeking.json",
+      "category": "input_data",
+      "bytes": 5101,
+      "sha256": "3db2f300f0af22dadc8ba09b51961d1536b6c272e180077dc14c7cb25b3731cc"
+    },
+    {
+      "path": "data/traits/instructions/collaborative.json",
+      "category": "input_data",
+      "bytes": 4802,
+      "sha256": "82ae92d589d467eb26ce1b1556b012db1dfa06e1327dffc5e9cff1495e660c76"
+    },
+    {
+      "path": "data/traits/instructions/collectivistic.json",
+      "category": "input_data",
+      "bytes": 7648,
+      "sha256": "cbbc962593dcab43edfaaefbee94c02deee186dc5d64958f3dae5e2e562dcc1e"
+    },
+    {
+      "path": "data/traits/instructions/competitive.json",
+      "category": "input_data",
+      "bytes": 4687,
+      "sha256": "f6e147ff3ce10da421f05df5761f05752eba9e01e33780339780b7c307e7265b"
+    },
+    {
+      "path": "data/traits/instructions/conceptual.json",
+      "category": "input_data",
+      "bytes": 4086,
+      "sha256": "7a107d6d792ceef61ce45b50c788fb3a1ca1f5c9147dcc0f4a27140c80140266"
+    },
+    {
+      "path": "data/traits/instructions/conciliatory.json",
+      "category": "input_data",
+      "bytes": 6099,
+      "sha256": "400a274d2942e1dd2d59f4c2e18a82e75d340646784e5e32fd72c74e5f6180e2"
+    },
+    {
+      "path": "data/traits/instructions/concise.json",
+      "category": "input_data",
+      "bytes": 3157,
+      "sha256": "c463223fb5d2b65c3f515231e7b2a60e10c5bf3e85716a8b74fbfb8a167768b3"
+    },
+    {
+      "path": "data/traits/instructions/condescending.json",
+      "category": "input_data",
+      "bytes": 4367,
+      "sha256": "6eefecedaa0b74467f5d3a658bdb0c095640b716c03c8bd043e58c23c8f5a7d4"
+    },
+    {
+      "path": "data/traits/instructions/confident.json",
+      "category": "input_data",
+      "bytes": 4804,
+      "sha256": "a87196514001c44772aaee4d04005e7b5821f48db01fc9977812a5c9465d5f8f"
+    },
+    {
+      "path": "data/traits/instructions/confrontational.json",
+      "category": "input_data",
+      "bytes": 5578,
+      "sha256": "636284724dbf24c2b41ad36f05557c6201137afbba4b1553dfa8f8bc33c2eaee"
+    },
+    {
+      "path": "data/traits/instructions/conscientious.json",
+      "category": "input_data",
+      "bytes": 4693,
+      "sha256": "8f34a452a729605eb5fc06ab3eec21bdf5fd385bd114beb4ae64fb2124703d77"
+    },
+    {
+      "path": "data/traits/instructions/constructivist.json",
+      "category": "input_data",
+      "bytes": 5062,
+      "sha256": "5a1592937569c0a8ac42e11c6f07dc240b5981e9b62d1a12c40e74e838112be4"
+    },
+    {
+      "path": "data/traits/instructions/contemporary.json",
+      "category": "input_data",
+      "bytes": 4474,
+      "sha256": "6aef46ea0bf81fcbe0543e4e8c520e069629fc7b752c8bfd1529a897462b00e6"
+    },
+    {
+      "path": "data/traits/instructions/contrarian.json",
+      "category": "input_data",
+      "bytes": 5724,
+      "sha256": "34f26ccff9caa08c1ffbba63f87c07ab19106457f1a830674a9244ae0d6ffc33"
+    },
+    {
+      "path": "data/traits/instructions/convergent.json",
+      "category": "input_data",
+      "bytes": 4423,
+      "sha256": "7120b43b0bcfc68a8bf7bf0a1165f8f0e1958c518faf0cf285f2570d515b9ef9"
+    },
+    {
+      "path": "data/traits/instructions/cosmopolitan.json",
+      "category": "input_data",
+      "bytes": 6144,
+      "sha256": "9243c836065473fa75ee1d15a3fad9bbf802b0e611a2767582e438c939b60b9f"
+    },
+    {
+      "path": "data/traits/instructions/creative.json",
+      "category": "input_data",
+      "bytes": 4994,
+      "sha256": "671ef2d27bd8bfe41bf140f161570c6fac95ae6f80541ec2b6ef77fa32470ee4"
+    },
+    {
+      "path": "data/traits/instructions/critical.json",
+      "category": "input_data",
+      "bytes": 5255,
+      "sha256": "c299cfc06ce747ec08070c827bf20d8285030c7a7a12f48f0c85b17ca25a2dca"
+    },
+    {
+      "path": "data/traits/instructions/cruel.json",
+      "category": "input_data",
+      "bytes": 6420,
+      "sha256": "48c4d3575a54015d7126611ae021eb28c78e7449d3b55a59307f3f770cf7d421"
+    },
+    {
+      "path": "data/traits/instructions/cryptic.json",
+      "category": "input_data",
+      "bytes": 4173,
+      "sha256": "dc274bc37fffb1d871521b8e99a4c7612a52915ed49e40793c7a957d68cd8104"
+    },
+    {
+      "path": "data/traits/instructions/curious.json",
+      "category": "input_data",
+      "bytes": 4666,
+      "sha256": "93555fe342b35304cb97add4883817c8593f38ce1d38e68f451513d40de4dfa8"
+    },
+    {
+      "path": "data/traits/instructions/cynical.json",
+      "category": "input_data",
+      "bytes": 5191,
+      "sha256": "0982e2d36133fe62683ddee5ea0587570cdf6ff270af8c5776cf424e629246f2"
+    },
+    {
+      "path": "data/traits/instructions/data_driven.json",
+      "category": "input_data",
+      "bytes": 5045,
+      "sha256": "4351742414884c25a01e85cae338e770f6a174a7f09054b3af8ba9b01922f0a0"
+    },
+    {
+      "path": "data/traits/instructions/decisive.json",
+      "category": "input_data",
+      "bytes": 5336,
+      "sha256": "c4c8375201d42611d4a404adc034df1dfb0fa60dd791dd233b4a3fbbd6b159fa"
+    },
+    {
+      "path": "data/traits/instructions/deconstructionist.json",
+      "category": "input_data",
+      "bytes": 4739,
+      "sha256": "5f760ea527395dde4e1416a85e8e00423c9a6c7a6ec4ea1ef5e31e4a3359194b"
+    },
+    {
+      "path": "data/traits/instructions/deferential.json",
+      "category": "input_data",
+      "bytes": 6758,
+      "sha256": "bbf8c15bf093afb911b8cc5042235ec6a06704950aae886074107d3072b8e16b"
+    },
+    {
+      "path": "data/traits/instructions/deontological.json",
+      "category": "input_data",
+      "bytes": 5583,
+      "sha256": "c165e5c8a9e66d6b26e33b9e6b723acfff5fd6fbac4c4fdf433aa9a9d4e9b569"
+    },
+    {
+      "path": "data/traits/instructions/descriptive.json",
+      "category": "input_data",
+      "bytes": 4682,
+      "sha256": "3b596451c4c004f21f766b1490f7a581a21a4bbfbae5c7acab43bd9f9d15ba11"
+    },
+    {
+      "path": "data/traits/instructions/detached.json",
+      "category": "input_data",
+      "bytes": 6248,
+      "sha256": "7d1b86963603feebe45f74b628d54c2e3360c019af346381268fc697af228b36"
+    },
+    {
+      "path": "data/traits/instructions/deterministic.json",
+      "category": "input_data",
+      "bytes": 5597,
+      "sha256": "a29603c812801981da960bda77cd62e85875e35d2784de11976bea825e4a8b04"
+    },
+    {
+      "path": "data/traits/instructions/diplomatic.json",
+      "category": "input_data",
+      "bytes": 5110,
+      "sha256": "989b13c7a9fe561216abb112c2378b3de878030ec5b4b00af404e7bc1742931d"
+    },
+    {
+      "path": "data/traits/instructions/disorganized.json",
+      "category": "input_data",
+      "bytes": 4892,
+      "sha256": "37cf045a86765e940ef1b7dca0c703630e04179d1f325255c6f21631a98bb60a"
+    },
+    {
+      "path": "data/traits/instructions/dispassionate.json",
+      "category": "input_data",
+      "bytes": 5990,
+      "sha256": "083b2a45902c7d15694822dde253a000b3b34c85b4fed2fad17adc621edbc7c2"
+    },
+    {
+      "path": "data/traits/instructions/divergent.json",
+      "category": "input_data",
+      "bytes": 5147,
+      "sha256": "992a14fb30aa173e4d59822d3fd3224638950bb54daa429095897a2b89aa4db4"
+    },
+    {
+      "path": "data/traits/instructions/dogmatic.json",
+      "category": "input_data",
+      "bytes": 5487,
+      "sha256": "70263e71e6394e2e60cf02d381863fc78aa2cdb723a269b10a2c48f361e49092"
+    },
+    {
+      "path": "data/traits/instructions/dominant.json",
+      "category": "input_data",
+      "bytes": 6227,
+      "sha256": "671993630a3cfaff09171ae7726fc933158c7150bab81a262d8efe570ddad279"
+    },
+    {
+      "path": "data/traits/instructions/dramatic.json",
+      "category": "input_data",
+      "bytes": 4415,
+      "sha256": "74a8e2db685c703cf4d18b54635c203f3acbf3c497a3919480557e3e414eba55"
+    },
+    {
+      "path": "data/traits/instructions/earnest.json",
+      "category": "input_data",
+      "bytes": 4539,
+      "sha256": "e944436d050fbf1e63866633ee02b8ebe8f15a68cae023c6f579c52a4f2ae754"
+    },
+    {
+      "path": "data/traits/instructions/eclectic.json",
+      "category": "input_data",
+      "bytes": 5168,
+      "sha256": "4bd2d993237c138ec64e21c0399e926954183cb12d192b37e1e075560dbda1a6"
+    },
+    {
+      "path": "data/traits/instructions/edgy.json",
+      "category": "input_data",
+      "bytes": 4483,
+      "sha256": "231e66efd624eab283e930179cd1d2339f566601bb34917613df40352203f9c5"
+    },
+    {
+      "path": "data/traits/instructions/educational.json",
+      "category": "input_data",
+      "bytes": 4216,
+      "sha256": "ff85d08f8c938da69144561b2751da2c6d3c62ca8ef14de7c658836b33cbc59b"
+    },
+    {
+      "path": "data/traits/instructions/efficient.json",
+      "category": "input_data",
+      "bytes": 4210,
+      "sha256": "dc00b2be10b2f3eb46c6963023323621c82632d9fc109c830b0c794fc7cb8866"
+    },
+    {
+      "path": "data/traits/instructions/effusive.json",
+      "category": "input_data",
+      "bytes": 5295,
+      "sha256": "0ba319ac05a4520bb84edbd96e4ac2d7e42ef3ac26ef3d5022be57fecd274131"
+    },
+    {
+      "path": "data/traits/instructions/egalitarian.json",
+      "category": "input_data",
+      "bytes": 5758,
+      "sha256": "fec23a602c1dc903877e818c9e6571789b99e59f1e568af438b437844dd6a8bb"
+    },
+    {
+      "path": "data/traits/instructions/elitist.json",
+      "category": "input_data",
+      "bytes": 5218,
+      "sha256": "c1a0fb7c313dbd1d0805281f8899e70375b029dcefa59ad0f716ed8ce80db39b"
+    },
+    {
+      "path": "data/traits/instructions/eloquent.json",
+      "category": "input_data",
+      "bytes": 4468,
+      "sha256": "52ea1ec1d843cb2c899fa5eb418e38943bb48c7bf3ea4bdded0a9e421f69eb6f"
+    },
+    {
+      "path": "data/traits/instructions/emotional.json",
+      "category": "input_data",
+      "bytes": 5580,
+      "sha256": "d0615a51a97f6e199a92861de5edf41ebfe6e4c00e44c2c2d927cb5194d18e5e"
+    },
+    {
+      "path": "data/traits/instructions/empathetic.json",
+      "category": "input_data",
+      "bytes": 5612,
+      "sha256": "241aae54ecb9c02bfee54ea6c1a52481b04e8fdcb021f66fba1f80b54722f867"
+    },
+    {
+      "path": "data/traits/instructions/enigmatic.json",
+      "category": "input_data",
+      "bytes": 4259,
+      "sha256": "f18c3920eb6a232c32698f514eb85f90b9d24338c12542f29cf44f764d0f7b98"
+    },
+    {
+      "path": "data/traits/instructions/entertaining.json",
+      "category": "input_data",
+      "bytes": 3929,
+      "sha256": "6889945fc046c4df1d2a47e61407754d263c132f847f4079c93e98e30d4bb5f4"
+    },
+    {
+      "path": "data/traits/instructions/environmental.json",
+      "category": "input_data",
+      "bytes": 4815,
+      "sha256": "2a18e95ba92a327b01ac341c04a4122812212efd564bc85c23343f166cca8b85"
+    },
+    {
+      "path": "data/traits/instructions/epicurean.json",
+      "category": "input_data",
+      "bytes": 4778,
+      "sha256": "28c561ae6bc912a9a12d4b4bb1568f47012187f0ec307cd2c17286daf51c2023"
+    },
+    {
+      "path": "data/traits/instructions/erudite.json",
+      "category": "input_data",
+      "bytes": 5535,
+      "sha256": "41d316c8846ce1a2ceae240638b7cb7be67d7b312e54b29b6e7c82f7cae7230f"
+    },
+    {
+      "path": "data/traits/instructions/esoteric.json",
+      "category": "input_data",
+      "bytes": 5058,
+      "sha256": "b2c31dded27b75647e04c32d6d8366fe99ec85581ee593ee8101977452043af3"
+    },
+    {
+      "path": "data/traits/instructions/essentialist.json",
+      "category": "input_data",
+      "bytes": 4837,
+      "sha256": "9ac62d36830893e3562e559af7d27f888bdb4e26a299e16b418eb8ae21e39cf4"
+    },
+    {
+      "path": "data/traits/instructions/ethereal.json",
+      "category": "input_data",
+      "bytes": 4681,
+      "sha256": "f1cb944fec5e616a9cfcbb7565fcacebf49f9599be3ba2ae79256aa31ad85aa1"
+    },
+    {
+      "path": "data/traits/instructions/evil.json",
+      "category": "input_data",
+      "bytes": 6100,
+      "sha256": "315eea943b27539295be2965dea79771fef3e9bab2b0fd8dbca32afcd8dfa790"
+    },
+    {
+      "path": "data/traits/instructions/existentialist.json",
+      "category": "input_data",
+      "bytes": 5642,
+      "sha256": "297131d5a7cb807d78c5c8dca33b9efa2b29376405d51f2a68216cd5b11e939d"
+    },
+    {
+      "path": "data/traits/instructions/experiential.json",
+      "category": "input_data",
+      "bytes": 5066,
+      "sha256": "ed12334941ac756adc6cad9fc2aa129a363626c418fd3583e686ece3791bf97b"
+    },
+    {
+      "path": "data/traits/instructions/exploratory.json",
+      "category": "input_data",
+      "bytes": 4884,
+      "sha256": "1740074303eb3e70ee0ae012f7bee57fe129e9d21c7387001c8f3010dccb9059"
+    },
+    {
+      "path": "data/traits/instructions/extroverted.json",
+      "category": "input_data",
+      "bytes": 4643,
+      "sha256": "4485d7f43da17abc9fabf76b7aaed5a0786f2e231978bd447282483837832488"
+    },
+    {
+      "path": "data/traits/instructions/factual.json",
+      "category": "input_data",
+      "bytes": 4255,
+      "sha256": "6f4e3e3639a5e84996dd52f48050dff036e23efd938f4b336f5bdcfc0060183e"
+    },
+    {
+      "path": "data/traits/instructions/fatalistic.json",
+      "category": "input_data",
+      "bytes": 5566,
+      "sha256": "0235d8925e4308c310cc466b0eaec63ffdb5b47e5b031f5dd4401072cfc2353a"
+    },
+    {
+      "path": "data/traits/instructions/flexible.json",
+      "category": "input_data",
+      "bytes": 6924,
+      "sha256": "8f5de3dab114aa27eb963962955844a9ce16bae3cf14e1095e3dd279a42d0590"
+    },
+    {
+      "path": "data/traits/instructions/flippant.json",
+      "category": "input_data",
+      "bytes": 5536,
+      "sha256": "d2e8d4b23df5e0a3f5d5c41265447e1168fccda5b9dcba60d78bdfda604a8098"
+    },
+    {
+      "path": "data/traits/instructions/flirty.json",
+      "category": "input_data",
+      "bytes": 4486,
+      "sha256": "5de6651696a70d603f8ceebee40854ab18d6f486fa4dad67bc9912b0cea31742"
+    },
+    {
+      "path": "data/traits/instructions/forgiving.json",
+      "category": "input_data",
+      "bytes": 6944,
+      "sha256": "3232b9889fa62ea64c677c55d093a8d46f50ce915c53d714b6f1813fa640753b"
+    },
+    {
+      "path": "data/traits/instructions/formal.json",
+      "category": "input_data",
+      "bytes": 4978,
+      "sha256": "2767a5835d334ef3ee626fa2c9f16d445b310102bc02889fb2668024a6d7259a"
+    },
+    {
+      "path": "data/traits/instructions/formalist.json",
+      "category": "input_data",
+      "bytes": 5202,
+      "sha256": "05ce7ed5bf01220bdb102b94195b56db7a413d1356b49f31480953d50a7a6030"
+    },
+    {
+      "path": "data/traits/instructions/fundamentalist.json",
+      "category": "input_data",
+      "bytes": 5533,
+      "sha256": "5b08fb79a5752d74bedbe8d0f3bcea9a82da3ad6795f16e7d5da63aa1bfe22d5"
+    },
+    {
+      "path": "data/traits/instructions/futuristic.json",
+      "category": "input_data",
+      "bytes": 4561,
+      "sha256": "315249c507d2594a17bfabe90beaf3f6e28b5c9d2cc5f2f508b80b25cb606a75"
+    },
+    {
+      "path": "data/traits/instructions/generalist.json",
+      "category": "input_data",
+      "bytes": 5099,
+      "sha256": "9885238f25832cbd2eb1cae07d6b2cd023046e3a639f3f84bd8c1398c803bcf3"
+    },
+    {
+      "path": "data/traits/instructions/generous.json",
+      "category": "input_data",
+      "bytes": 5379,
+      "sha256": "5d75b80a7889aa878e906bc0f94f60845b08086d0509478e17b6329689cad240"
+    },
+    {
+      "path": "data/traits/instructions/goofy.json",
+      "category": "input_data",
+      "bytes": 4598,
+      "sha256": "27ffd334b9947f387f9566ff83579d3ba4f4f19eee11ce35bcb33a3f0e2d364b"
+    },
+    {
+      "path": "data/traits/instructions/grandiose.json",
+      "category": "input_data",
+      "bytes": 4650,
+      "sha256": "798b25cc069847ea23e882620cefb9336fcaf9a8a49fc76f6d5e784dda6051b3"
+    },
+    {
+      "path": "data/traits/instructions/gregarious.json",
+      "category": "input_data",
+      "bytes": 4266,
+      "sha256": "67f1e6ed2a928c8a17c73598607b0e0bb68ce5038f2890446c27abcc06587678"
+    },
+    {
+      "path": "data/traits/instructions/grounded.json",
+      "category": "input_data",
+      "bytes": 5213,
+      "sha256": "1041ff346f456c25bc2651598d013afb4d86edca3e14d87a7e4416ecb2e6959d"
+    },
+    {
+      "path": "data/traits/instructions/hedonistic.json",
+      "category": "input_data",
+      "bytes": 4953,
+      "sha256": "e861e433b5647bb301143302ff54cffd8bb6ff570d2587dba7b2ea5b39dea327"
+    },
+    {
+      "path": "data/traits/instructions/historical.json",
+      "category": "input_data",
+      "bytes": 4403,
+      "sha256": "2d892e37e5c7f98fdbaa35203d564240c8bdec1cf18a1f57f2b42ef5399791f0"
+    },
+    {
+      "path": "data/traits/instructions/holistic.json",
+      "category": "input_data",
+      "bytes": 5337,
+      "sha256": "e341b4dd34032d855719394082b72ba07e122536dcdd077d6cd45c1a343b6986"
+    },
+    {
+      "path": "data/traits/instructions/hostile.json",
+      "category": "input_data",
+      "bytes": 4946,
+      "sha256": "3dd953499824514ee6b11d2f0a1bccf2a7626218575a5de321a1cf46718b31e1"
+    },
+    {
+      "path": "data/traits/instructions/humanistic.json",
+      "category": "input_data",
+      "bytes": 5346,
+      "sha256": "f3b6fca56e1410e241fadeb7ac8d8e73a8903f770e8581c689caacc5d954dfd1"
+    },
+    {
+      "path": "data/traits/instructions/humble.json",
+      "category": "input_data",
+      "bytes": 4283,
+      "sha256": "132c3e91ab6836956ae43876f3a8c2e398fca21ab81ccd09dc71b9a1433dc9c1"
+    },
+    {
+      "path": "data/traits/instructions/iconoclastic.json",
+      "category": "input_data",
+      "bytes": 5050,
+      "sha256": "13409b8d7263cfb4bd8e13f714e63787393067b1c31394116a90e2fb34fcb0e5"
+    },
+    {
+      "path": "data/traits/instructions/idealistic.json",
+      "category": "input_data",
+      "bytes": 4337,
+      "sha256": "e880f5d9e542870853aa75ce7c22f35afff91ce1b845614b05a419fd3b733422"
+    },
+    {
+      "path": "data/traits/instructions/impatient.json",
+      "category": "input_data",
+      "bytes": 4381,
+      "sha256": "8a63f5d62c590364ffec55659fa3b94328c8c8dceb74adc0e115f00866c055ec"
+    },
+    {
+      "path": "data/traits/instructions/improvisational.json",
+      "category": "input_data",
+      "bytes": 7120,
+      "sha256": "2f0522f6ea06bd8fcee3c333ae301896354f0e1ffe4ef980e384c8eef907a982"
+    },
+    {
+      "path": "data/traits/instructions/impulsive.json",
+      "category": "input_data",
+      "bytes": 6550,
+      "sha256": "230397f26a15198ddad3237cb3ad77725d5a113321cabb5727cbd8983d06a05e"
+    },
+    {
+      "path": "data/traits/instructions/inclusive.json",
+      "category": "input_data",
+      "bytes": 5220,
+      "sha256": "96140fce2d1f9501254127178e5c77009926a79e4cda27b86aaa9bff6ff2cfee"
+    },
+    {
+      "path": "data/traits/instructions/independent.json",
+      "category": "input_data",
+      "bytes": 6004,
+      "sha256": "2d271fe7afecc7d627dc8e908ed3b616f4b1a5025af530c0663c637e4c367985"
+    },
+    {
+      "path": "data/traits/instructions/individualistic.json",
+      "category": "input_data",
+      "bytes": 4656,
+      "sha256": "0a2b6a9682ce321163bde6cc7d88a9546bb20157ceaa3d7c84ff7eab83e60199"
+    },
+    {
+      "path": "data/traits/instructions/innovative.json",
+      "category": "input_data",
+      "bytes": 5050,
+      "sha256": "94a02ef93a0f72aae722805af71612e0617100a6947d596870050a68a50897ec"
+    },
+    {
+      "path": "data/traits/instructions/inquisitive.json",
+      "category": "input_data",
+      "bytes": 3997,
+      "sha256": "866a1fe3e3f916c40dc0e8c5f493c6eedb59e4bc6825d6d02c0fd803770528a0"
+    },
+    {
+      "path": "data/traits/instructions/inspirational.json",
+      "category": "input_data",
+      "bytes": 5497,
+      "sha256": "5bb48f01756901e3a9cfa1a91d0503c2d2565258608c705b47db824535b1a2ec"
+    },
+    {
+      "path": "data/traits/instructions/interdisciplinary.json",
+      "category": "input_data",
+      "bytes": 5000,
+      "sha256": "2a208b7a45d7e425b211c45211d040c9b2c7d88ad7295f1ac5ba7192a88f3c37"
+    },
+    {
+      "path": "data/traits/instructions/introspective.json",
+      "category": "input_data",
+      "bytes": 5201,
+      "sha256": "b028b28d962b1aad432eaad3d4a82c8087368bd51e7efdfac1471cb893453758"
+    },
+    {
+      "path": "data/traits/instructions/introverted.json",
+      "category": "input_data",
+      "bytes": 5028,
+      "sha256": "af6b0f79033bdb10415fa3a5da79192ab866b30ba1ecf8712936dd37b8827ae8"
+    },
+    {
+      "path": "data/traits/instructions/intuitive.json",
+      "category": "input_data",
+      "bytes": 5790,
+      "sha256": "6ce0a39dd129fa536446c9fc930d0afdd50345174508d540f86dba81417b9c9c"
+    },
+    {
+      "path": "data/traits/instructions/ironic.json",
+      "category": "input_data",
+      "bytes": 5528,
+      "sha256": "08bf65463e19e64e6f21b35c598191736db03892943952de15dad2a9a45fdfb4"
+    },
+    {
+      "path": "data/traits/instructions/irreverent.json",
+      "category": "input_data",
+      "bytes": 4947,
+      "sha256": "cba0f09dce5255bd85b776f021b619f23c71c09422f1446aad5a27b50b6fe35d"
+    },
+    {
+      "path": "data/traits/instructions/judgmental.json",
+      "category": "input_data",
+      "bytes": 5744,
+      "sha256": "adb2bc20ac7493dc55cfc0b71d116ceb49965ebcd0c27f685c98ae9e2fca5906"
+    },
+    {
+      "path": "data/traits/instructions/libertarian.json",
+      "category": "input_data",
+      "bytes": 5267,
+      "sha256": "5de0979354959ad1f5cefe73ee258acaec4eb70c8a1c29841e2de6cf4f61138b"
+    },
+    {
+      "path": "data/traits/instructions/literal.json",
+      "category": "input_data",
+      "bytes": 5530,
+      "sha256": "e81f2f2e46e903bc9f23619d98781c80f90c506413446633c3a64f2089faa58d"
+    },
+    {
+      "path": "data/traits/instructions/manic.json",
+      "category": "input_data",
+      "bytes": 4657,
+      "sha256": "b28ce25a1552e1c76356eac74b5e33b613e82c19c561fb03900131d325a405b2"
+    },
+    {
+      "path": "data/traits/instructions/manipulative.json",
+      "category": "input_data",
+      "bytes": 6089,
+      "sha256": "20e4fb926818361ecffcc12c94c6506f39529b0b10cd537bb65c02eb89810eaa"
+    },
+    {
+      "path": "data/traits/instructions/materialist.json",
+      "category": "input_data",
+      "bytes": 4532,
+      "sha256": "046df6fd2464741c65bb1254edc1efeebdb767485ce2d0fd568973da459286c9"
+    },
+    {
+      "path": "data/traits/instructions/meditative.json",
+      "category": "input_data",
+      "bytes": 4773,
+      "sha256": "97808c901ce770109b33a829a9c79df0ede0e38afaf5e79ffe313e56b7a14d87"
+    },
+    {
+      "path": "data/traits/instructions/melancholic.json",
+      "category": "input_data",
+      "bytes": 5068,
+      "sha256": "6c19d0d37aaedd4f1604950b379aa73ade5c69925bd1e3730514cde36143e29e"
+    },
+    {
+      "path": "data/traits/instructions/melodramatic.json",
+      "category": "input_data",
+      "bytes": 4600,
+      "sha256": "a4054eb71d83b57d6468fa51e87fb438886c719694011e5b31ad1209c358ff57"
+    },
+    {
+      "path": "data/traits/instructions/mercurial.json",
+      "category": "input_data",
+      "bytes": 5077,
+      "sha256": "60aaca99781a4d9b961ed79bc3989b5411ffee43f82eea9bfce7ca1f98029797"
+    },
+    {
+      "path": "data/traits/instructions/metaphorical.json",
+      "category": "input_data",
+      "bytes": 4433,
+      "sha256": "0f7d75cf4b7546b2ef3e9b2ddfaa9181509639b6239b82c90150ec5f034e6d1f"
+    },
+    {
+      "path": "data/traits/instructions/methodical.json",
+      "category": "input_data",
+      "bytes": 4799,
+      "sha256": "afea162669cebd8e43b86d77daa35eef980410b6a2b6ccd3e8e2d5ed28a66acc"
+    },
+    {
+      "path": "data/traits/instructions/meticulous.json",
+      "category": "input_data",
+      "bytes": 4385,
+      "sha256": "178b7448f27a728e1be9ca7f4f0225a1cfc5339dbc743b7cdc0eadd4786c3aef"
+    },
+    {
+      "path": "data/traits/instructions/militant.json",
+      "category": "input_data",
+      "bytes": 5230,
+      "sha256": "dd57f023ff4f2d856edc9f001090a79c30751cf0b1d5fd95354697b0c9b37ad0"
+    },
+    {
+      "path": "data/traits/instructions/misanthropic.json",
+      "category": "input_data",
+      "bytes": 4925,
+      "sha256": "d687796bc23c38fe2d16ab82ba4e631102aa8b6212de70a7cac5595a6a636f55"
+    },
+    {
+      "path": "data/traits/instructions/mischievous.json",
+      "category": "input_data",
+      "bytes": 4913,
+      "sha256": "cd657a14ef0889cc8aab6da4cf35dc065196c22d19a69aa85359b274273b8cc6"
+    },
+    {
+      "path": "data/traits/instructions/moderate.json",
+      "category": "input_data",
+      "bytes": 5360,
+      "sha256": "42006ebd1beeb8eb405b4c67d47709a05ae66b3cd7a8013e845ee4304a4994fe"
+    },
+    {
+      "path": "data/traits/instructions/mystical.json",
+      "category": "input_data",
+      "bytes": 5115,
+      "sha256": "9a76c320009894493920f701d28f70af9b23c4d573cac996c457cef7c098bd8e"
+    },
+    {
+      "path": "data/traits/instructions/naive.json",
+      "category": "input_data",
+      "bytes": 7301,
+      "sha256": "026b49fd288d64fa3692f79c589d4da63248035215f53bb9a46704b32c12038e"
+    },
+    {
+      "path": "data/traits/instructions/narrative.json",
+      "category": "input_data",
+      "bytes": 4425,
+      "sha256": "dc99e760db33902249d779c0ad69d11fc462b0a4a19703cd2e9fea3741b36562"
+    },
+    {
+      "path": "data/traits/instructions/neurotic.json",
+      "category": "input_data",
+      "bytes": 5400,
+      "sha256": "167fe59f62c5370782e43cd0e4787f2f2d9f4675558cd851d6a42fadcb54b270"
+    },
+    {
+      "path": "data/traits/instructions/nihilistic.json",
+      "category": "input_data",
+      "bytes": 5833,
+      "sha256": "643d246f58127c38e41eb9c9af84156637d4cf3491f8def6a709af313a7adfa8"
+    },
+    {
+      "path": "data/traits/instructions/nonchalant.json",
+      "category": "input_data",
+      "bytes": 5562,
+      "sha256": "18797cb800767779dd2dfe2e93b0cccdfb3029726f2f34320c4f40e73dd71c47"
+    },
+    {
+      "path": "data/traits/instructions/nostalgic.json",
+      "category": "input_data",
+      "bytes": 4573,
+      "sha256": "159fa07a0b16cf18cf782e62cbb8e19735f4a044071e6e96e6e628a54db4482b"
+    },
+    {
+      "path": "data/traits/instructions/nurturing.json",
+      "category": "input_data",
+      "bytes": 5456,
+      "sha256": "2f58aa1d6f2e896a9aaefc0b50f49eb32920c126404c7fe2f3b282e7b76604f9"
+    },
+    {
+      "path": "data/traits/instructions/obsessive.json",
+      "category": "input_data",
+      "bytes": 4421,
+      "sha256": "8b16472b182ffaa44f1a78aabac596898a550a4a9db2503a3f070948b8f2447a"
+    },
+    {
+      "path": "data/traits/instructions/open_ended.json",
+      "category": "input_data",
+      "bytes": 5294,
+      "sha256": "f4f5424d81f61b56379a23643e597ca61ca0e3b25dff2d54c22bf4489cce2396"
+    },
+    {
+      "path": "data/traits/instructions/optimistic.json",
+      "category": "input_data",
+      "bytes": 5094,
+      "sha256": "c8333f367fd4df483034b9198723425b883caf34289a0dea3ce76ab8c31e1012"
+    },
+    {
+      "path": "data/traits/instructions/pacifist.json",
+      "category": "input_data",
+      "bytes": 5696,
+      "sha256": "9d31fdb5bc3c6d63c3a27663b56dffe3bf65a6a402eacb000441b19c61e2ae5a"
+    },
+    {
+      "path": "data/traits/instructions/paradoxical.json",
+      "category": "input_data",
+      "bytes": 4706,
+      "sha256": "297da6edf7b2190d12c7771eb53067ac8aa50275cf9839388f7c9d6307ad7251"
+    },
+    {
+      "path": "data/traits/instructions/paranoid.json",
+      "category": "input_data",
+      "bytes": 5132,
+      "sha256": "3e5ee5ae6e6863b062938838dab4e9c51eb6db436d7d8193cac7f01fb45f8b67"
+    },
+    {
+      "path": "data/traits/instructions/passionate.json",
+      "category": "input_data",
+      "bytes": 4364,
+      "sha256": "da9aac18d0316f6074e391bc6ac224464cad7a497a025f7aa74df93f57d62229"
+    },
+    {
+      "path": "data/traits/instructions/passive_aggressive.json",
+      "category": "input_data",
+      "bytes": 5626,
+      "sha256": "e319709f15cb6d0fc12d523c4bb529b8202ac8a8b0d1c64d8b78a837f6a9fcb8"
+    },
+    {
+      "path": "data/traits/instructions/patient.json",
+      "category": "input_data",
+      "bytes": 5260,
+      "sha256": "5284e7a680ab0b29b3149a8017ff3ec4c2e56ceae271659cbacaa607eb9c042b"
+    },
+    {
+      "path": "data/traits/instructions/pedantic.json",
+      "category": "input_data",
+      "bytes": 4516,
+      "sha256": "b63e2b87a702050f39d56a7f8366babd4000e5e368da9ed534b7f22365ddd973"
+    },
+    {
+      "path": "data/traits/instructions/pensive.json",
+      "category": "input_data",
+      "bytes": 4962,
+      "sha256": "2b318345a54c05549293478e8e350f9a430982ada6fe5ff85ee79235acd8ebec"
+    },
+    {
+      "path": "data/traits/instructions/perfectionist.json",
+      "category": "input_data",
+      "bytes": 4661,
+      "sha256": "832a04eab3d4e9cad48ed91580dd27408d93fec5834f56dcbc91d597fe12133b"
+    },
+    {
+      "path": "data/traits/instructions/pessimistic.json",
+      "category": "input_data",
+      "bytes": 5616,
+      "sha256": "f99ec899e5989e7c0aef5b81c5998133f3ae3c418c9c6ce74744bab413f3ed74"
+    },
+    {
+      "path": "data/traits/instructions/petty.json",
+      "category": "input_data",
+      "bytes": 6478,
+      "sha256": "fe9600132529ddc68d1de9554728bbc0daa0517325a8e378a026e19619bd0145"
+    },
+    {
+      "path": "data/traits/instructions/philosophical.json",
+      "category": "input_data",
+      "bytes": 4227,
+      "sha256": "229e5ab441799df48111ff62b79a34ffb354f722b3f232d76f5f56e00a438157"
+    },
+    {
+      "path": "data/traits/instructions/playful.json",
+      "category": "input_data",
+      "bytes": 4314,
+      "sha256": "bc447d65c01c02b556f7904971df8ca0468e407518622c477cf6636dfd396a50"
+    },
+    {
+      "path": "data/traits/instructions/pluralist.json",
+      "category": "input_data",
+      "bytes": 4858,
+      "sha256": "5cbe8295b18155be19636a989ccd27c14f04b9bd57c3f166a2c8e85f18ac4660"
+    },
+    {
+      "path": "data/traits/instructions/poetic.json",
+      "category": "input_data",
+      "bytes": 4181,
+      "sha256": "54bece47e81c15141fad3f6d77e4cab422ec2b5047c538fbd35e2b79fce3301f"
+    },
+    {
+      "path": "data/traits/instructions/practical.json",
+      "category": "input_data",
+      "bytes": 4801,
+      "sha256": "9be98cf796720ae25ce06883d54bb4d9cc86369877fe0e316fab9b0e10733cc4"
+    },
+    {
+      "path": "data/traits/instructions/prescriptive.json",
+      "category": "input_data",
+      "bytes": 4767,
+      "sha256": "a9438f662549ad80c74b1b23ce974a3f7b17e3e8ed5f170e1360ae15b2d3c6ce"
+    },
+    {
+      "path": "data/traits/instructions/principled.json",
+      "category": "input_data",
+      "bytes": 7542,
+      "sha256": "c2cb3a0f4e5bb39245012a64229c4cfc178d6a1514b0c6e2b3661afb13b128f9"
+    },
+    {
+      "path": "data/traits/instructions/proactive.json",
+      "category": "input_data",
+      "bytes": 5316,
+      "sha256": "abbcafe172b9ced7f0cba0c346e377b2d51e555f14cb3e3b769eeca761b8a3e0"
+    },
+    {
+      "path": "data/traits/instructions/problem_solving.json",
+      "category": "input_data",
+      "bytes": 6013,
+      "sha256": "44bd289ef50cf30abf1cbed7d5445beeb1cbf643b96e7acd97c6b4fa68ab7b74"
+    },
+    {
+      "path": "data/traits/instructions/progressive.json",
+      "category": "input_data",
+      "bytes": 4500,
+      "sha256": "cadc5dbcfb8add1b5e388ad45ce0f12a5f48f49ff7de2d4a1fa76e55e909d0af"
+    },
+    {
+      "path": "data/traits/instructions/provocative.json",
+      "category": "input_data",
+      "bytes": 4874,
+      "sha256": "313d9d5236e085c993534b3bf1d539daa9c88ffb7341df26dd63da44bd1904a1"
+    },
+    {
+      "path": "data/traits/instructions/qualitative.json",
+      "category": "input_data",
+      "bytes": 5211,
+      "sha256": "277930bd3d4d226ece767f3c5ebe079ac5ac51698e39ab30b7fb69e2d0c4ac9c"
+    },
+    {
+      "path": "data/traits/instructions/quantitative.json",
+      "category": "input_data",
+      "bytes": 4708,
+      "sha256": "5a035cc5e4c7146246bc3d4ce4616517ed857c2d7d55f2355cfdb747b07c88d7"
+    },
+    {
+      "path": "data/traits/instructions/radical.json",
+      "category": "input_data",
+      "bytes": 4160,
+      "sha256": "6634696b485fee24f4099db6ec664fee6cf094eca7eb61c89dec712f094c6bd5"
+    },
+    {
+      "path": "data/traits/instructions/rationalist.json",
+      "category": "input_data",
+      "bytes": 4651,
+      "sha256": "5a9b9e0b86b76cc36376c04cab50df6816442d6d146f20d68ec3496f899b17ac"
+    },
+    {
+      "path": "data/traits/instructions/reactive.json",
+      "category": "input_data",
+      "bytes": 6431,
+      "sha256": "4b95ccd7c3a1a09cfeed9a9f3d54b0e33395e5a0ab9193d5531da809eda91c41"
+    },
+    {
+      "path": "data/traits/instructions/rebellious.json",
+      "category": "input_data",
+      "bytes": 4927,
+      "sha256": "a363d013cf2e637e6f1842705bca9ad80f3c0621ce12bb8a889320e30ddd1ee7"
+    },
+    {
+      "path": "data/traits/instructions/reductionist.json",
+      "category": "input_data",
+      "bytes": 4175,
+      "sha256": "9f194717c7204249c37efa22ea0c53954a883a367e03d258f8e97454520000a3"
+    },
+    {
+      "path": "data/traits/instructions/regulatory.json",
+      "category": "input_data",
+      "bytes": 5300,
+      "sha256": "6941a100a409a5dc1bf0b2147b13bbba0306e7f5d989c7a390819ec1d7e7df30"
+    },
+    {
+      "path": "data/traits/instructions/relativist.json",
+      "category": "input_data",
+      "bytes": 5113,
+      "sha256": "2426b65a4b3845dca4d25e6dfaa385db1fd7a2b38d0e5e11b042c9adedef0f96"
+    },
+    {
+      "path": "data/traits/instructions/reserved.json",
+      "category": "input_data",
+      "bytes": 4467,
+      "sha256": "9b88a35bff838f5b04d99243c9233f541c57318abb5fae98abf31f612b8b181b"
+    },
+    {
+      "path": "data/traits/instructions/resilient.json",
+      "category": "input_data",
+      "bytes": 6176,
+      "sha256": "fdab94e0dfb4c4f076142531d4a08477818a39a9994a78de33f7e4ac4f0c2a25"
+    },
+    {
+      "path": "data/traits/instructions/reverent.json",
+      "category": "input_data",
+      "bytes": 5580,
+      "sha256": "4d6743827807195537776ef82b024307bf10b9c1d218fcaa37a0a397600bd792"
+    },
+    {
+      "path": "data/traits/instructions/rhetorical.json",
+      "category": "input_data",
+      "bytes": 4943,
+      "sha256": "2e267badcf6db46e47f61abb0cabf5f0fda082162f8816441a9482e87fbd94d3"
+    },
+    {
+      "path": "data/traits/instructions/risk_taking.json",
+      "category": "input_data",
+      "bytes": 6958,
+      "sha256": "e455a3e5bac52a44daf3527b4ff3ddb15fe745ad7565e42f52108f1071b80749"
+    },
+    {
+      "path": "data/traits/instructions/ritualistic.json",
+      "category": "input_data",
+      "bytes": 5348,
+      "sha256": "a21cee1d4693d2ab29c158cc29bb6e9732bb82e7eef09c32a37f78ada507c2b9"
+    },
+    {
+      "path": "data/traits/instructions/romantic.json",
+      "category": "input_data",
+      "bytes": 4715,
+      "sha256": "1e7f987dcb6c228f72cd356709ed88076c4844ef932131bafc64c29c2abc7691"
+    },
+    {
+      "path": "data/traits/instructions/sarcastic.json",
+      "category": "input_data",
+      "bytes": 5379,
+      "sha256": "79a7ad6ff6a4a239bba15d533ccef77a1eee9da9e16a2b2fca928e2cc5475204"
+    },
+    {
+      "path": "data/traits/instructions/sardonic.json",
+      "category": "input_data",
+      "bytes": 6562,
+      "sha256": "38b4b1bb9efec100f0c9defd382b14f2fb9e7a372622af05162a79482e0cbce9"
+    },
+    {
+      "path": "data/traits/instructions/sassy.json",
+      "category": "input_data",
+      "bytes": 5958,
+      "sha256": "f3f3e435a948a1d0ca331dfc01350c7a0d9e0299fea80b94b520f652a0d340b6"
+    },
+    {
+      "path": "data/traits/instructions/savage.json",
+      "category": "input_data",
+      "bytes": 5937,
+      "sha256": "e70f05fb4c3bd779938c747a4d555d72558b7856e609bac7106d027c66cdf45b"
+    },
+    {
+      "path": "data/traits/instructions/secular.json",
+      "category": "input_data",
+      "bytes": 4768,
+      "sha256": "c13a082adf76198557a75745945aa27b8ee0b3e65f3a621beb3cf3e69a0695d0"
+    },
+    {
+      "path": "data/traits/instructions/serene.json",
+      "category": "input_data",
+      "bytes": 4963,
+      "sha256": "1ad0a3541fdde810e8b69b8cebd5d516cb1273728cbdc2e63c4fe1515f42b74f"
+    },
+    {
+      "path": "data/traits/instructions/serious.json",
+      "category": "input_data",
+      "bytes": 5283,
+      "sha256": "48e9bc2a82be175adab1fd8364e9707b3747b864cc1a6161eeb9bfcc77c0c13a"
+    },
+    {
+      "path": "data/traits/instructions/skeptical.json",
+      "category": "input_data",
+      "bytes": 5140,
+      "sha256": "dd48eb29cdd22bfc59e12bc5ec5f961a83c1127aa709c63cd4c5485e7a0e447b"
+    },
+    {
+      "path": "data/traits/instructions/socratic.json",
+      "category": "input_data",
+      "bytes": 5605,
+      "sha256": "5089636f7dc04986f1e81dcd332c8517b343fa9e0c490f3dbc23092d1d5e6c92"
+    },
+    {
+      "path": "data/traits/instructions/solemn.json",
+      "category": "input_data",
+      "bytes": 5216,
+      "sha256": "286e3f591c1b2aacdda0500b8fe06ef32b0a3119049fdb931f42ae4e0e64f639"
+    },
+    {
+      "path": "data/traits/instructions/specialized.json",
+      "category": "input_data",
+      "bytes": 5970,
+      "sha256": "f482a3dbdfe963081700b6c2bd852d71f7a0cb60f002037857b10bf1dca00b59"
+    },
+    {
+      "path": "data/traits/instructions/speculative.json",
+      "category": "input_data",
+      "bytes": 5327,
+      "sha256": "a186080ce61aef8d69c199b909fbdb2b5206b2eef8b5958ccf8d5942c669a975"
+    },
+    {
+      "path": "data/traits/instructions/spiritual.json",
+      "category": "input_data",
+      "bytes": 4524,
+      "sha256": "934dffdbaffdaa8a3cfde22ef7f61b5d945d4fe0e8da1c808e8b06a62ed21e76"
+    },
+    {
+      "path": "data/traits/instructions/spontaneous.json",
+      "category": "input_data",
+      "bytes": 4362,
+      "sha256": "d7464fffea924bad70e06eef2798f6d2cfa2dc6821c1deb1fd8b520f71540aee"
+    },
+    {
+      "path": "data/traits/instructions/stoic.json",
+      "category": "input_data",
+      "bytes": 5491,
+      "sha256": "941ad40b08b553f869776c82ade3ba5576eb16f6da0194f4aedca6e72bac3918"
+    },
+    {
+      "path": "data/traits/instructions/strategic.json",
+      "category": "input_data",
+      "bytes": 5667,
+      "sha256": "3662a10769bf4a2682ae9e9b7803b50481334a9822b66ecef86634b3a62e1cd1"
+    },
+    {
+      "path": "data/traits/instructions/stream_of_consciousness.json",
+      "category": "input_data",
+      "bytes": 4660,
+      "sha256": "d8d340b63f1463b90374107dea2b828df689082b66a71bf568e5669d072be6e4"
+    },
+    {
+      "path": "data/traits/instructions/structuralist.json",
+      "category": "input_data",
+      "bytes": 5271,
+      "sha256": "3c452bd87adc0aec63225e844523ac6c29c216963d0fa884642ecca75805851c"
+    },
+    {
+      "path": "data/traits/instructions/submissive.json",
+      "category": "input_data",
+      "bytes": 5378,
+      "sha256": "6fd68f99029d4b1b7b122fb4281495c902509bc038bb53fd810ccbfb5f68a3f2"
+    },
+    {
+      "path": "data/traits/instructions/subversive.json",
+      "category": "input_data",
+      "bytes": 4794,
+      "sha256": "999986b506f2f593ce302f4290b8fc32b965b993d658d3b9a11e688d62f7e775"
+    },
+    {
+      "path": "data/traits/instructions/supportive.json",
+      "category": "input_data",
+      "bytes": 6282,
+      "sha256": "1c5407911a13a599d514b2dce00f5e287420bff3a6fd4bd050ec05663f76b227"
+    },
+    {
+      "path": "data/traits/instructions/sycophantic.json",
+      "category": "input_data",
+      "bytes": 5711,
+      "sha256": "6b2de0e6ec20c6b7fe97aebee7ee5ed185e25466680303bcd7522b25741d4c2d"
+    },
+    {
+      "path": "data/traits/instructions/systems_thinker.json",
+      "category": "input_data",
+      "bytes": 5351,
+      "sha256": "78377015b0182309bd95f740bb6ca6c0929a12362150423e9588881f9324a116"
+    },
+    {
+      "path": "data/traits/instructions/tactful.json",
+      "category": "input_data",
+      "bytes": 6607,
+      "sha256": "1fd80f33957d4ab493566087bbdd882e2ce90dcd611652679501eff0e542c9b4"
+    },
+    {
+      "path": "data/traits/instructions/technical.json",
+      "category": "input_data",
+      "bytes": 4207,
+      "sha256": "40813e823ba0b7216f2e44c10b663ac40d543540163a1c5dc1524815d33509b3"
+    },
+    {
+      "path": "data/traits/instructions/temperamental.json",
+      "category": "input_data",
+      "bytes": 5799,
+      "sha256": "9767fed1e0945ecbcef84c1e59c07ca04a27fe6bfb409f1780d1d0574cf56cf3"
+    },
+    {
+      "path": "data/traits/instructions/theatrical.json",
+      "category": "input_data",
+      "bytes": 4301,
+      "sha256": "b1eb17feb777f51e8ca4dafd7a460cd33570b5a6c476f501a1b3dc0447762bc9"
+    },
+    {
+      "path": "data/traits/instructions/theoretical.json",
+      "category": "input_data",
+      "bytes": 4649,
+      "sha256": "b800b77855fe52c21d5f08eba990da127f61be430e509aa23ae3c8128b4a5647"
+    },
+    {
+      "path": "data/traits/instructions/traditional.json",
+      "category": "input_data",
+      "bytes": 4906,
+      "sha256": "46716c9d7844e66002fe15630bacd452f9251f1e6ff2ee8d4b2874354dbb38c9"
+    },
+    {
+      "path": "data/traits/instructions/transparent.json",
+      "category": "input_data",
+      "bytes": 5634,
+      "sha256": "a37980f44f8e27fdba220ee83e86d008bc38d25e89aa356bd5fb2215f83e15d5"
+    },
+    {
+      "path": "data/traits/instructions/understated.json",
+      "category": "input_data",
+      "bytes": 5245,
+      "sha256": "08d1eff43754d804e75ef5bae127547772523ec029644fe1d8c149bb8865ccab"
+    },
+    {
+      "path": "data/traits/instructions/universalist.json",
+      "category": "input_data",
+      "bytes": 6803,
+      "sha256": "ac97ce4d0d70fcf786a58b3cfea17f9d93e834e21463da8f72e1f73b038d2ff8"
+    },
+    {
+      "path": "data/traits/instructions/urgent.json",
+      "category": "input_data",
+      "bytes": 5764,
+      "sha256": "e4b5dd16788e20dccb31d2d5a204325d8cecab3305677d0f8023c1d07fa3d91c"
+    },
+    {
+      "path": "data/traits/instructions/utilitarian.json",
+      "category": "input_data",
+      "bytes": 6651,
+      "sha256": "ea050c01e28ac569cc96b75590dcb4e5c0ef69217beb276f31f7c5b863b79a7f"
+    },
+    {
+      "path": "data/traits/instructions/verbose.json",
+      "category": "input_data",
+      "bytes": 3746,
+      "sha256": "116c57d2ab12cde5d966fedf7ccd371cafed4510cc64541cd358c47bc67db935"
+    },
+    {
+      "path": "data/traits/instructions/vindictive.json",
+      "category": "input_data",
+      "bytes": 6650,
+      "sha256": "48bbed31a6cc8a7ba342c67d9a5495361df1edec61012168837c3dffd226fa9f"
+    },
+    {
+      "path": "data/traits/instructions/visceral.json",
+      "category": "input_data",
+      "bytes": 5405,
+      "sha256": "375e41024062bf751a526c3af8863db5cde07af987dbca0e79a5448c635c8104"
+    },
+    {
+      "path": "data/traits/instructions/whimsical.json",
+      "category": "input_data",
+      "bytes": 4032,
+      "sha256": "c6106f70d35a080fc0fb5a64d068717efd474a60c5d1323f6a98fa75050dcfed"
+    },
+    {
+      "path": "data/traits/instructions/witty.json",
+      "category": "input_data",
+      "bytes": 4929,
+      "sha256": "3ea25872c32e1c59e46ba569ec874143b82e5c2654b951725e79f9f1e9678337"
+    },
+    {
+      "path": "data/traits/instructions/wry.json",
+      "category": "input_data",
+      "bytes": 5413,
+      "sha256": "185461aeb1d005006bb8840d4571f9cda80418963c6c5e98465b928616ed786a"
+    },
+    {
+      "path": "data/traits/instructions/zealous.json",
+      "category": "input_data",
+      "bytes": 5165,
+      "sha256": "1c9f47c12c3573696f2049d536c6c3df1a47b33b2a50ae749f4c462295a6e02f"
+    },
+    {
+      "path": "data/traits/trait_list.json",
+      "category": "input_data",
+      "bytes": 24297,
+      "sha256": "8668c407c2e4e893e2af8066caf235dbbf557280defbb1f8427db3f6b322042d"
+    },
+    {
+      "path": "pipeline/1_generate.py",
+      "category": "reference_code",
+      "bytes": 11548,
+      "sha256": "0893538565b2d81786187dadd4f90673221aeff1e01bf609de0a9b8061298388"
+    },
+    {
+      "path": "pipeline/2_activations.py",
+      "category": "reference_code",
+      "bytes": 15649,
+      "sha256": "4ad68908809a4855397d31705afc8a0207fe33d501f73dff97ca35506414085e"
+    },
+    {
+      "path": "pipeline/3_judge.py",
+      "category": "reference_code",
+      "bytes": 11833,
+      "sha256": "509b4dc355c1ffdb97124b80360d2621231a1fbc9abb9c42146c17ddc1102afc"
+    },
+    {
+      "path": "pipeline/4_vectors.py",
+      "category": "reference_code",
+      "bytes": 5210,
+      "sha256": "63ee371249820cbd492cc4a7e38ddd2fdb7a60987057923e639cf1902e1625f7"
+    },
+    {
+      "path": "pipeline/5_axis.py",
+      "category": "reference_code",
+      "bytes": 3111,
+      "sha256": "954b9e2ce4779d03be0ad8ea904edac7d6eed3b9991f12413adb9c2eb9c09497"
+    },
+    {
+      "path": "assistant_axis/__init__.py",
+      "category": "reference_code",
+      "bytes": 2215,
+      "sha256": "938e4b6c9605d1cc7c51fb17c99b317879fb8c175c60e9e082c9b0b568e0a22e"
+    },
+    {
+      "path": "assistant_axis/axis.py",
+      "category": "reference_code",
+      "bytes": 6157,
+      "sha256": "5141e979786d8c295d92bcc8973671682dad4dd66d9a0343622eefe5540d170b"
+    },
+    {
+      "path": "assistant_axis/generation.py",
+      "category": "reference_code",
+      "bytes": 16699,
+      "sha256": "2a9ef324397047cd38a3612fd84ee7a1c835512d73425ddfcc0ab6f32d0cb1b4"
+    },
+    {
+      "path": "assistant_axis/internals/__init__.py",
+      "category": "reference_code",
+      "bytes": 623,
+      "sha256": "fc2430e24e23f25f527e39173dcad8273ba3056b3b1845934584bd65bd4492e3"
+    },
+    {
+      "path": "assistant_axis/internals/activations.py",
+      "category": "reference_code",
+      "bytes": 15788,
+      "sha256": "005171dba4350e94a2df93e3733f93df022a736c9d18bd729e88c61a424e7f2f"
+    },
+    {
+      "path": "assistant_axis/internals/conversation.py",
+      "category": "reference_code",
+      "bytes": 36805,
+      "sha256": "52fa2b4a0b5f635c95653fc63d0585ce4407dcd2d6a24eaed78bbc73f34708ab"
+    },
+    {
+      "path": "assistant_axis/internals/exceptions.py",
+      "category": "reference_code",
+      "bytes": 158,
+      "sha256": "c48bed2fd09829a02ca5636a0142e156161af829ebadee94a441d0b95c9a5589"
+    },
+    {
+      "path": "assistant_axis/internals/model.py",
+      "category": "reference_code",
+      "bytes": 14930,
+      "sha256": "3a3ecd73d8243e7494e4bd91f1762d8ffdb34837ce4c32bc53e8b4766c4290d1"
+    },
+    {
+      "path": "assistant_axis/internals/spans.py",
+      "category": "reference_code",
+      "bytes": 13219,
+      "sha256": "f6b62facbd7f8c0fdbb764b7fa6f732ad0fa522d66bf540582e3cfc2e8a4732c"
+    },
+    {
+      "path": "assistant_axis/judge.py",
+      "category": "reference_code",
+      "bytes": 6914,
+      "sha256": "0c7c6e7d61aa50b2d0cbf7f9795e75e4bcef3baea37c8d49efe4d43de64519ab"
+    },
+    {
+      "path": "assistant_axis/models.py",
+      "category": "reference_code",
+      "bytes": 2902,
+      "sha256": "134bef491b50491a921eda956364d546eb0747ea7cbf272e78a6cbcc8f6f8e50"
+    },
+    {
+      "path": "assistant_axis/pca.py",
+      "category": "reference_code",
+      "bytes": 10929,
+      "sha256": "eb0d6835b6f0b83bb3bd8e9b2af2173a530fcbd88a96fd64bff2641c1f942eb2"
+    },
+    {
+      "path": "assistant_axis/steering.py",
+      "category": "reference_code",
+      "bytes": 21964,
+      "sha256": "06b4465f825837da212c631ec2350e6185cb33fe58411ac5c70292019afb75d7"
+    },
+    {
+      "path": "assistant_axis/tests/__init__.py",
+      "category": "reference_code",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assistant_axis/tests/test_axis.py",
+      "category": "reference_code",
+      "bytes": 6144,
+      "sha256": "22d280ccfd25e6a2df6b6731fb540b77dbd139a2f9b3beabbce76d79fe842fcf"
+    },
+    {
+      "path": "assistant_axis/tests/test_generation.py",
+      "category": "reference_code",
+      "bytes": 5304,
+      "sha256": "9a96c5e17df2b89b609022aab32b37b0aa8ccd0298804fef4c081fa127e3f282"
+    },
+    {
+      "path": "README.md",
+      "category": "reference_doc",
+      "bytes": 9150,
+      "sha256": "bb79af66741f0c0d8e4b22c000f5beedcfa9de13329714a9640940d242d347f8"
+    },
+    {
+      "path": "pyproject.toml",
+      "category": "reference_doc",
+      "bytes": 683,
+      "sha256": "5162ec759e88bbbfe5604487c92967e0e1ae6cf44e7934b314d39bd83b9d5a0a"
+    },
+    {
+      "path": "pipeline/README.md",
+      "category": "reference_doc",
+      "bytes": 4772,
+      "sha256": "503dffdead82c10fe5c0eb93982191cf53d33e58d119228139ba1a43bfb1caa2"
+    },
+    {
+      "path": "notebooks/pca.ipynb",
+      "category": "reference_doc",
+      "bytes": 163203,
+      "sha256": "ee904457aa7d64fd795799c9c3bbf09e4621897619554d221f96d2c077e331b3"
+    },
+    {
+      "path": "notebooks/project_transcipt.ipynb",
+      "category": "reference_doc",
+      "bytes": 52812,
+      "sha256": "eb59e641191978a778a45562cd439c6c6634b908348158b443e71817892ee1b3"
+    },
+    {
+      "path": "notebooks/steer.ipynb",
+      "category": "reference_doc",
+      "bytes": 16973,
+      "sha256": "880e9301b8a81460c57fe3837b100eedb3748b210c896f2b9b19dc17cc089f0e"
+    },
+    {
+      "path": "notebooks/visualize_axis.ipynb",
+      "category": "reference_doc",
+      "bytes": 67681,
+      "sha256": "e6702b649b2e38baf78acec6faff94bd138f23fabcf37d1a758cc440e3b920b2"
+    }
+  ],
+  "source_artifact_bytes": 3210485,
+  "outputs": [
+    {
+      "path": "data/lu_et_al/roles.json",
+      "bytes": 1360676,
+      "sha256": "372fbadb9cafa3434873a900b1ae35d6d2f333d49a85b75d7641f76329f71720",
+      "scientific_content_sha256": "69e84a46926be55020b55063b5c3bb077d068f4dc5ccd3459b622ccd759f6e74"
+    },
+    {
+      "path": "data/lu_et_al/role_prompts.json",
+      "bytes": 431019,
+      "sha256": "be8cbd9a6aaf0a45b3fe7f143e3ae923bd97a507f559196da738a1c73ac17491",
+      "scientific_content_sha256": "7ccc9bcfbf7f5fc0e1bd923cc91e8937a340fb33ec799f84c6e17bcf37d07a89"
+    },
+    {
+      "path": "data/lu_et_al/questions.json",
+      "bytes": 50177,
+      "sha256": "142d1b08843a4193c87c1cb0cad482c3b9272562274af76414deea65d1f48d9a",
+      "scientific_content_sha256": "97da6c9383d51f0ed57ed46ec9bfa7cf83231c49f7f2cc0cba91e731e2651580"
+    },
+    {
+      "path": "data/lu_et_al/causal_evaluation.json",
+      "bytes": 11358,
+      "sha256": "8d2f3d387f5b577d8f8053f29614757e9f08d7d66752a0c128c80f93ffb51cd3",
+      "scientific_content_sha256": "c39238226a7bd15994be7714f88568a29fdaacb49f18b732c67585c4b2523025"
+    },
+    {
+      "path": "data/lu_et_al/VERIFICATION.md",
+      "bytes": 13704,
+      "sha256": "681d1acca66a9a89d6aa853023301e9fd753dbeebd1d0e531702c08adb3be856"
+    },
+    {
+      "path": "data/lu_et_al/KNOWN_SOURCE_DEFECTS.md",
+      "bytes": 4840,
+      "sha256": "ff44a7ac5f6dace09cd2301963d66e690f444c41723f94f292e204d3588dd75b"
+    }
+  ],
+  "output_hash_note": "All artifacts are written as UTF-8 with LF endings via write_bytes. With the repository .gitattributes (*.json/*.md text eol=lf) the working-tree bytes equal the bytes git stores, so these SHA-256 values match `git show HEAD:<path> | sha256sum`. artifact_manifest.json itself is excluded because a file cannot contain its own hash.",
+  "check_totals": {
+    "total": 73,
+    "pass": 70,
+    "warn": 3,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "requirement": "T01-1",
+      "check": "repository present and is a git checkout",
+      "status": "PASS",
+      "detail": "verified clean local checkout"
+    },
+    {
+      "requirement": "T01-2",
+      "check": "HEAD matches pinned commit",
+      "status": "PASS",
+      "detail": "a98961956072224eaf244eb289d6c01700b63795"
+    },
+    {
+      "requirement": "T01-2",
+      "check": "origin remote matches official repository",
+      "status": "PASS",
+      "detail": "https://github.com/safety-research/assistant-axis"
+    },
+    {
+      "requirement": "T01-3",
+      "check": "working tree clean",
+      "status": "PASS",
+      "detail": "clean"
+    },
+    {
+      "requirement": "T01-3",
+      "check": "no local modifications to tracked files",
+      "status": "PASS",
+      "detail": "none"
+    },
+    {
+      "requirement": "T01-3",
+      "check": "every tracked file matches its committed blob hash",
+      "status": "PASS",
+      "detail": "569 tracked files verified"
+    },
+    {
+      "requirement": "T01-PAPER",
+      "check": "vendored paper PDF present",
+      "status": "PASS",
+      "detail": "data/lu_et_al/paper/lu_et_al_2601.10387v1.pdf"
+    },
+    {
+      "requirement": "T01-PAPER",
+      "check": "vendored paper PDF hash matches the copy actually read",
+      "status": "PASS",
+      "detail": "e9e638ad3057f4cdb7e43b5a3fcf0011786c7d1d5bd6e54fe7feb189a799ad09"
+    },
+    {
+      "requirement": "T01-PAPER",
+      "check": "every paper citation carries page, section, quote and note",
+      "status": "PASS",
+      "detail": "8 citations"
+    },
+    {
+      "requirement": "T01-4",
+      "check": "every catalogued artifact has a SHA-256",
+      "status": "PASS",
+      "detail": "547 files, 3135 KiB"
+    },
+    {
+      "requirement": "T01-4",
+      "check": "required primary inputs present",
+      "status": "PASS",
+      "detail": "['data/roles/role_list.json', 'data/extraction_questions.jsonl']"
+    },
+    {
+      "requirement": "T01-4",
+      "check": "every catalogued artifact is a tracked file of the pinned commit",
+      "status": "PASS",
+      "detail": "547 catalogued"
+    },
+    {
+      "requirement": "T01-4",
+      "check": "catalogued + excluded partitions the tracked set exactly",
+      "status": "PASS",
+      "detail": "569 tracked = 547 catalogued + 22 excluded"
+    },
+    {
+      "requirement": "T01-5a",
+      "check": "role_list.json maps role_id -> description",
+      "status": "PASS",
+      "detail": "dict"
+    },
+    {
+      "requirement": "T01-5a",
+      "check": "exactly 275 roles declared",
+      "status": "PASS",
+      "detail": "275"
+    },
+    {
+      "requirement": "T01-5a",
+      "check": "every declared role has an instruction file",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "requirement": "T01-5a",
+      "check": "only extra instruction file is the default condition",
+      "status": "PASS",
+      "detail": "['default']"
+    },
+    {
+      "requirement": "T01-5b",
+      "check": "exactly 5 prompts for every role",
+      "status": "PASS",
+      "detail": "1375 prompts across 275 roles"
+    },
+    {
+      "requirement": "T01-5d",
+      "check": "every role has a non-empty description",
+      "status": "PASS",
+      "detail": "275/275"
+    },
+    {
+      "requirement": "T01-5d",
+      "check": "every role has a non-empty evaluation prompt",
+      "status": "PASS",
+      "detail": "275/275"
+    },
+    {
+      "requirement": "T01-5d",
+      "check": "every role has 40 bespoke questions",
+      "status": "PASS",
+      "detail": "recorded, not used"
+    },
+    {
+      "requirement": "T01-5b",
+      "check": "no empty prompt variants",
+      "status": "PASS",
+      "detail": "none"
+    },
+    {
+      "requirement": "T01-5c",
+      "check": "exactly 240 question records",
+      "status": "PASS",
+      "detail": "240"
+    },
+    {
+      "requirement": "T01-5c",
+      "check": "question schema is exactly {id, question}",
+      "status": "PASS",
+      "detail": "['id', 'question']"
+    },
+    {
+      "requirement": "T01-5c",
+      "check": "no category field in source",
+      "status": "WARN",
+      "detail": "downstream category-balanced sampling cannot be attributed to Lu et al."
+    },
+    {
+      "requirement": "T01-5c",
+      "check": "question ids unique",
+      "status": "PASS",
+      "detail": "240 unique"
+    },
+    {
+      "requirement": "T01-5c",
+      "check": "question id space contiguous",
+      "status": "PASS",
+      "detail": "[0..239]"
+    },
+    {
+      "requirement": "T01-5c",
+      "check": "duplicate question TEXT in source",
+      "status": "WARN",
+      "detail": "239 unique texts for 240 ids: ids [7, 227]"
+    },
+    {
+      "requirement": "T01-5e",
+      "check": "5 default conditions present",
+      "status": "PASS",
+      "detail": "5"
+    },
+    {
+      "requirement": "T01-5e",
+      "check": "default condition carries no evaluation rubric",
+      "status": "PASS",
+      "detail": "correct: Lu build the default vector unfiltered, so it is never judged"
+    },
+    {
+      "requirement": "T01-5e",
+      "check": "exactly one bare (empty-string) control condition",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "requirement": "T01-7",
+      "check": "template variables recorded but NOT substituted",
+      "status": "PASS",
+      "detail": "['model_name'] left verbatim for the serialization task"
+    },
+    {
+      "requirement": "T01-5f",
+      "check": "every intended tracked text file was actually searched",
+      "status": "PASS",
+      "detail": "567/567 searched"
+    },
+    {
+      "requirement": "T01-5f",
+      "check": "no candidate 50-role causal subset found by structural inspection",
+      "status": "PASS",
+      "detail": "1 role-lists found, 1 are the full 275 roster, 0 proper-subset candidates"
+    },
+    {
+      "requirement": "T01-5f",
+      "check": "the five published introspective questions are absent from the repository",
+      "status": "PASS",
+      "detail": "no file contains all 5; partial matches in 1 file(s)"
+    },
+    {
+      "requirement": "T01-9",
+      "check": "causal record separates repository, paper and unavailable evidence",
+      "status": "PASS",
+      "detail": "5 published, 4 unavailable"
+    },
+    {
+      "requirement": "T01-5f",
+      "check": "all 11 plan-required notes adjudicated",
+      "status": "PASS",
+      "detail": "11 plan-required notes plus 4 additional verification notes"
+    },
+    {
+      "requirement": "T01-9",
+      "check": "every note carries one of the three evidence classes",
+      "status": "PASS",
+      "detail": "{'VERIFIED_FROM_REPOSITORY': 11, 'UNAVAILABLE': 1, 'VERIFIED_FROM_PAPER': 3}"
+    },
+    {
+      "requirement": "T01-9",
+      "check": "paper-verified claims are never labelled repository-verified",
+      "status": "PASS",
+      "detail": "retention_threshold, causal_roles_proximal, introspective_questions"
+    },
+    {
+      "requirement": "T01-6",
+      "check": "no duplicate role ids",
+      "status": "PASS",
+      "detail": "275 unique"
+    },
+    {
+      "requirement": "T01-6",
+      "check": "no duplicate prompt uids",
+      "status": "PASS",
+      "detail": "1375 unique"
+    },
+    {
+      "requirement": "T01-6",
+      "check": "every role has prompt indices 0..4 exactly once",
+      "status": "PASS",
+      "detail": "275/275"
+    },
+    {
+      "requirement": "T01-6",
+      "check": "no duplicate question ids",
+      "status": "PASS",
+      "detail": "240 unique"
+    },
+    {
+      "requirement": "T01-6",
+      "check": "no missing role/rubric linkage",
+      "status": "PASS",
+      "detail": "275/275"
+    },
+    {
+      "requirement": "T01-6",
+      "check": "all 5 prompt variants distinct within every role",
+      "status": "PASS",
+      "detail": "275/275"
+    },
+    {
+      "requirement": "T01-6",
+      "check": "duplicate question text carried forward as a known source defect",
+      "status": "WARN",
+      "detail": "ids [7, 227] share identical text"
+    },
+    {
+      "requirement": "T01-7",
+      "check": "no target-model adaptation present in outputs",
+      "status": "PASS",
+      "detail": "clean"
+    },
+    {
+      "requirement": "T01-7",
+      "check": "{model_name} preserved unsubstituted",
+      "status": "PASS",
+      "detail": "verbatim"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "roles.json reopens and parses",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "roles.json on-disk hash matches recorded hash",
+      "status": "PASS",
+      "detail": "372fbadb9cafa343"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "roles.json scientific-content hash is stable",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "roles.json declared count equals actual records",
+      "status": "PASS",
+      "detail": "275 declared / 275 actual / 275 expected"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "role_prompts.json reopens and parses",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "role_prompts.json on-disk hash matches recorded hash",
+      "status": "PASS",
+      "detail": "be8cbd9a6aaf0a45"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "role_prompts.json scientific-content hash is stable",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "role_prompts.json declared count equals actual records",
+      "status": "PASS",
+      "detail": "1375 declared / 1375 actual / 1375 expected"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "questions.json reopens and parses",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "questions.json on-disk hash matches recorded hash",
+      "status": "PASS",
+      "detail": "142d1b08843a4193"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "questions.json scientific-content hash is stable",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "questions.json declared count equals actual records",
+      "status": "PASS",
+      "detail": "240 declared / 240 actual / 240 expected"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "causal_evaluation.json reopens and parses",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "causal_evaluation.json on-disk hash matches recorded hash",
+      "status": "PASS",
+      "detail": "8d2f3d387f5b577d"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "causal_evaluation.json scientific-content hash is stable",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "VERIFICATION.md on-disk hash matches recorded hash",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "KNOWN_SOURCE_DEFECTS.md on-disk hash matches recorded hash",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "role uids unique after reload",
+      "status": "PASS",
+      "detail": "275"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "prompt uids unique after reload",
+      "status": "PASS",
+      "detail": "1375"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "question uids unique after reload",
+      "status": "PASS",
+      "detail": "240"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "record-level content hashes recompute correctly",
+      "status": "PASS",
+      "detail": "questions + prompts re-hashed from stored text"
+    },
+    {
+      "requirement": "T01-VALIDATE",
+      "check": "LF line endings (no CR) in every emitted artifact",
+      "status": "PASS",
+      "detail": "6 files"
+    },
+    {
+      "requirement": "T01-10",
+      "check": "all T01 deliverables written",
+      "status": "PASS",
+      "detail": "2 required docs + 4 derived JSON"
+    },
+    {
+      "requirement": "T01-PROV",
+      "check": "generator notebook present at the declared repository path",
+      "status": "PASS",
+      "detail": "replications/assistant-axis-8b/T01_retrieve_lu_materials.ipynb"
+    },
+    {
+      "requirement": "T01-PROV",
+      "check": "generator sha256 recorded and non-null",
+      "status": "PASS",
+      "detail": "de67cd36166f63e9"
+    }
+  ]
+}

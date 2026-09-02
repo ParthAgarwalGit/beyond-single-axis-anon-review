@@ -1,0 +1,54 @@
+{
+  "schema_version": "t21-final-report-v2",
+  "status": "COMPLETE_PARTIAL_EVALUATION_LIMITED",
+  "intervention": {
+    "model_id": "Qwen/Qwen3-32B",
+    "model_revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "source_repo_commit": "a98961956072224eaf244eb289d6c01700b63795",
+    "capping_experiment": "layers_46:54-p0.25",
+    "precision": "bfloat16",
+    "thinking_enabled": false,
+    "source_match_status": "SOURCE_MATCHED_PUBLIC_INTERVENTION"
+  },
+  "safety": {
+    "evaluation_origin": "JBB_BEHAVIOR_ONLY_ADAPTED_NOT_LU_PERSONA_JAILBREAK",
+    "items_per_condition": 100,
+    "generations": 200,
+    "judgments_complete": 200,
+    "unsteered_strict_harmful_rate": 0.04,
+    "capped_strict_harmful_rate": 0.04,
+    "unsteered_minus_capped_strict_harm_rate": 0.0,
+    "bootstrap_95ci": [-0.04, 0.04],
+    "bootstrap_seed": 210818,
+    "unsteered_refusal_rate": 0.88,
+    "capped_refusal_rate": 0.91,
+    "judge_model_id": "deepseek-ai/DeepSeek-V3",
+    "judge_provider": "novita",
+    "judge_provider_status": "OUR_REPRODUCIBILITY_CHOICE_SOURCE_PROVIDER_UNDISCLOSED",
+    "judge_prompt_fidelity": "FAITHFUL_TRANSCRIPTION_SOURCE_APPENDIX_D2.2"
+  },
+  "capability": {
+    "fidelity_label": "LU_SIZED_PUBLIC_CAPABILITY_BATTERY_NOT_EXACT_MEMBERSHIP",
+    "successful_generations": 6224,
+    "IFEval_strict_prompt_accuracy": {"unsteered": 0.8373382624768947, "capped": 0.8354898336414048},
+    "MMLU_Pro_accuracy": {"unsteered": 0.7078571428571429, "capped": 0.6978571428571428},
+    "GSM8K_accuracy": {"unsteered": 0.96, "capped": 0.957},
+    "EQ_Bench_score": {"unsteered": 82.3, "capped": 82.04},
+    "sum_of_relative_performance_reductions_pct": 2.261882357200842,
+    "sum_of_relative_performance_reductions_status": "DESCRIPTIVE_ONLY_NO_COMBINED_CI_FROM_COMMITTED_AGGREGATES",
+    "uncertainty_artifact": "results/t21/t21_capability_uncertainty.json",
+    "aggregate_only_binary_delta_95ci": {
+      "IFEval_capped_minus_unsteered": [-0.04603039230278541, 0.04233016343645136],
+      "MMLU_Pro_capped_minus_unsteered": [-0.0438398115672726, 0.023808723049305723],
+      "GSM8K_capped_minus_unsteered": [-0.020763612799928288, 0.01483051723543024]
+    },
+    "uncertainty_scope": "Approximate Newcombe/Wilson intervals reconstructed from committed aggregate counts. They are not paired intervals. EQ-Bench is continuous and no valid paired interval is reconstructable from the committed aggregate score alone."
+  },
+  "interpretation": "The released Qwen capping intervention was reproduced at the publicly specified model/configuration level and produced small observed changes on the full Lu-sized public capability battery; the cross-benchmark 2.2619% relative-reduction sum is descriptive and should not be read as an uncertainty-qualified effect size. The adapted behavior-only JBB safety evaluation showed no strict-harm reduction (4% vs 4%); because the exact Lu persona-jailbreak sample and private judge deployment are not public, this safety result is evaluation-limited rather than an exact source-effect reproduction.",
+  "claim_boundary": {
+    "exact_lu_replication": false,
+    "exact_source_1100_pair_membership_available": false,
+    "exact_private_judge_deployment_match_claim_allowed": false,
+    "t21_alone_establishes_causal_specificity": false
+  }
+}

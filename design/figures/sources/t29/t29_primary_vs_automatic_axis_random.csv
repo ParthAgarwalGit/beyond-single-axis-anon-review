@@ -1,0 +1,3 @@
+evidence,outcome,rate_assistant,rate_random,risk_difference,ci95_low,ci95_high,primary
+human_design_weighted,strict,0.04,0.07692307692307693,-0.036923076923076927,-0.11076923076923076,0.0,True
+automatic_full_corpus,strict,0.03,0.02,0.01,0.0,0.03,False

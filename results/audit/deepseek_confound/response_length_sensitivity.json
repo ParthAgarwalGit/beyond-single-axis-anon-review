@@ -1,0 +1,50 @@
+{
+  "question": "is role position along the cross-built Assistant direction associated with mean generated-response length, and does the recovery survive removing that association?",
+  "per_block": [
+    {
+      "block": "C80-A",
+      "n_roles": 275,
+      "pearson_length_vs_score": 0.5948485506628746,
+      "spearman_length_vs_score": 0.6104065968100518,
+      "ols_slope_score_per_token": 0.0024722163564988783,
+      "ols_r2": 0.35384479822572235,
+      "mean_length_min": 973.0125,
+      "mean_length_max": 1328.5375,
+      "pearson_reasoning_tokens_vs_score": 0.5075440354538232,
+      "spearman_reasoning_tokens_vs_score": 0.5313968239222471,
+      "pearson_final_answer_tokens_vs_score": 0.5611508700192339,
+      "spearman_final_answer_tokens_vs_score": 0.580484741054735
+    },
+    {
+      "block": "C80-B",
+      "n_roles": 275,
+      "pearson_length_vs_score": 0.6117613770191508,
+      "spearman_length_vs_score": 0.6181801763048124,
+      "ols_slope_score_per_token": 0.0022281231204889372,
+      "ols_r2": 0.3742519824123677,
+      "mean_length_min": 951.6125,
+      "mean_length_max": 1333.8875,
+      "pearson_reasoning_tokens_vs_score": 0.5669050230581375,
+      "spearman_reasoning_tokens_vs_score": 0.5930746053524424,
+      "pearson_final_answer_tokens_vs_score": 0.5336524819178741,
+      "spearman_final_answer_tokens_vs_score": 0.5446732368821706
+    }
+  ],
+  "residualized_recovery": {
+    "pearson_r": 0.8783282127716037,
+    "spearman_r": 0.8548847407749344,
+    "frozen_headline_r": 0.976528,
+    "delta_vs_headline": -0.09819978722839628
+  },
+  "meta_rows_used": {
+    "C80-A": {
+      "n_files": 86,
+      "n_valid_rows": 21998
+    },
+    "C80-B": {
+      "n_files": 86,
+      "n_valid_rows": 22000
+    }
+  },
+  "length_measure": "token_region_counts.all_response per row (generated content tokens, identical token set to the pooled representation), averaged per role over valid rows with the all-response pool"
+}

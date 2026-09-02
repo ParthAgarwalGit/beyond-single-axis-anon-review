@@ -1,0 +1,92 @@
+{
+  "task": "T15_T16_confirmatory_axis_reliability",
+  "membership": "label_independent_technical_validity",
+  "frozen_params": {
+    "block_index": 16,
+    "arm": "USER_TRANSLATED_LU",
+    "pool": "ALL_RESPONSE_TOKENS",
+    "threshold": 10
+  },
+  "n_retained_roles": 275,
+  "cross_axis_pearson_r": 0.976528,
+  "secondary": {
+    "spearman": 0.975928,
+    "cosine_vA_vB": 0.912713,
+    "same_axis_projection_pearson": 0.975918
+  },
+  "nulls": {
+    "role_correspondence_permutation": {
+      "mean": -0.0004708183258534662,
+      "p95": 0.09951091482928515,
+      "p_ge_observed": 0.0,
+      "n_draws": 5000,
+      "reporting_note": "0 of 5000 null draws reached or exceeded the observed statistic"
+    },
+    "common_orientation_sign_flip": {
+      "mean": 0.9648402254587342,
+      "p95": 0.9841952544218213,
+      "p_ge_observed": 0.3784,
+      "n_draws": 5000
+    },
+    "isotropic_random_direction": {
+      "mean": 0.0033130526657730967,
+      "p95": 0.35625101918002605,
+      "p_ge_observed": 0.0,
+      "n_draws": 5000,
+      "reporting_note": "0 of 5000 null draws reached or exceeded the observed statistic"
+    }
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "ci95": [
+      0.97101,
+      0.981079
+    ]
+  },
+  "leave_one_role_out": {
+    "min": 0.975671,
+    "max": 0.977177
+  },
+  "input_provenance": {
+    "bundle_sha256": "d1b2fdeb37dc3e3d5cfbed95dc73ab577c1b90ad1c013d9f45d1601f2b517469",
+    "counts_sha256": "6fc68c91539c5f3c2625d089f2301fd1ada43847c5253de629e479f4158dd694",
+    "t12_manifest_sha256": {
+      "C80-A": "021524bf56416d7217baaae07b024d398e3fc5b869561015dff24b44abacb7e8",
+      "C80-B": "987571b3518b014296326fef853709df991a4e68c7ede3ac45a9832a9e09b58e"
+    },
+    "arm": "USER_TRANSLATED_LU",
+    "block_index": 16,
+    "pool": "ALL_RESPONSE_TOKENS",
+    "membership": "label_independent_technical_validity",
+    "reduce_side_hf_revision": null,
+    "reduce_side_hf_revision_note": "immutable dataset revision the REDUCTION consumed, as recorded by the reduce cell. Null for bundles produced before the cell pinned a revision: those reductions read a mutable branch tip, so the exact input bytes are attested only by the T12 manifest SHAs above.",
+    "bundle_fetched_at_hf_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1",
+    "bundle_fetched_at_hf_revision_note": "immutable revision THIS analysis downloaded the bundle from; together with the bundle/counts SHA-256 it pins the analysed bytes exactly",
+    "membership_authority": "docs/DEVIATION_2026-08-17_CONFIRMATORY_MEMBERSHIP.md",
+    "eligible_outputs": {
+      "C80-A": 21998,
+      "C80-B": 22000
+    },
+    "default_valid_fractions": {
+      "C80-A": {
+        "0": 0.9875,
+        "1": 0.9875,
+        "2": 0.9875,
+        "3": 1.0,
+        "4": 1.0
+      },
+      "C80-B": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0
+      }
+    },
+    "source_repo": "[Author-A-HF]/persona-artifacts"
+  },
+  "seed": 0,
+  "source_git_sha": "32a787d604e530ca3d1d8f32b8e8a859aedd83db",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

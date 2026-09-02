@@ -1,0 +1,1837 @@
+{
+  "task": "T15_T16_REPEATED_FROZEN_QUESTION_RESPLIT_SENSITIVITY",
+  "authority": "docs/DEVIATION_2026-08-25_T15_T16_RESPLIT_SPEC.md",
+  "manifest_sha256": "f24520be2e72bf03a37bd368990b5fa1392a2835f44cb0594ddf3410a92b038f",
+  "hf_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1",
+  "n_draws": 300,
+  "observed_split": {
+    "cross_axis_pearson_r": 0.976528,
+    "axis_cosine": 0.912713,
+    "n_common_roles": 275
+  },
+  "draws": [
+    {
+      "draw_index": 0,
+      "cross_axis_pearson_r": 0.966984,
+      "axis_cosine": 0.859739,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 1,
+      "cross_axis_pearson_r": 0.975423,
+      "axis_cosine": 0.910748,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 2,
+      "cross_axis_pearson_r": 0.972676,
+      "axis_cosine": 0.868974,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 3,
+      "cross_axis_pearson_r": 0.977608,
+      "axis_cosine": 0.93534,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 4,
+      "cross_axis_pearson_r": 0.971595,
+      "axis_cosine": 0.922549,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 5,
+      "cross_axis_pearson_r": 0.975228,
+      "axis_cosine": 0.922348,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 6,
+      "cross_axis_pearson_r": 0.974616,
+      "axis_cosine": 0.923125,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 7,
+      "cross_axis_pearson_r": 0.975439,
+      "axis_cosine": 0.915916,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 8,
+      "cross_axis_pearson_r": 0.977307,
+      "axis_cosine": 0.930337,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 9,
+      "cross_axis_pearson_r": 0.973836,
+      "axis_cosine": 0.911043,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 10,
+      "cross_axis_pearson_r": 0.973446,
+      "axis_cosine": 0.919442,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 11,
+      "cross_axis_pearson_r": 0.961587,
+      "axis_cosine": 0.903454,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 12,
+      "cross_axis_pearson_r": 0.972627,
+      "axis_cosine": 0.90771,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 13,
+      "cross_axis_pearson_r": 0.971356,
+      "axis_cosine": 0.932784,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 14,
+      "cross_axis_pearson_r": 0.957199,
+      "axis_cosine": 0.908619,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 15,
+      "cross_axis_pearson_r": 0.965136,
+      "axis_cosine": 0.922932,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 16,
+      "cross_axis_pearson_r": 0.971712,
+      "axis_cosine": 0.908105,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 17,
+      "cross_axis_pearson_r": 0.978492,
+      "axis_cosine": 0.895501,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 18,
+      "cross_axis_pearson_r": 0.974621,
+      "axis_cosine": 0.92358,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 19,
+      "cross_axis_pearson_r": 0.972151,
+      "axis_cosine": 0.93288,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 20,
+      "cross_axis_pearson_r": 0.972441,
+      "axis_cosine": 0.906466,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 21,
+      "cross_axis_pearson_r": 0.976216,
+      "axis_cosine": 0.928626,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 22,
+      "cross_axis_pearson_r": 0.97144,
+      "axis_cosine": 0.853988,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 23,
+      "cross_axis_pearson_r": 0.978249,
+      "axis_cosine": 0.916942,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 24,
+      "cross_axis_pearson_r": 0.96467,
+      "axis_cosine": 0.903635,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 25,
+      "cross_axis_pearson_r": 0.977068,
+      "axis_cosine": 0.923947,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 26,
+      "cross_axis_pearson_r": 0.965149,
+      "axis_cosine": 0.929162,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 27,
+      "cross_axis_pearson_r": 0.968469,
+      "axis_cosine": 0.887856,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 28,
+      "cross_axis_pearson_r": 0.975602,
+      "axis_cosine": 0.928824,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 29,
+      "cross_axis_pearson_r": 0.967163,
+      "axis_cosine": 0.92276,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 30,
+      "cross_axis_pearson_r": 0.969351,
+      "axis_cosine": 0.938438,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 31,
+      "cross_axis_pearson_r": 0.970337,
+      "axis_cosine": 0.918074,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 32,
+      "cross_axis_pearson_r": 0.975895,
+      "axis_cosine": 0.922614,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 33,
+      "cross_axis_pearson_r": 0.978192,
+      "axis_cosine": 0.922049,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 34,
+      "cross_axis_pearson_r": 0.97094,
+      "axis_cosine": 0.881958,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 35,
+      "cross_axis_pearson_r": 0.965107,
+      "axis_cosine": 0.870318,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 36,
+      "cross_axis_pearson_r": 0.976649,
+      "axis_cosine": 0.938321,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 37,
+      "cross_axis_pearson_r": 0.973572,
+      "axis_cosine": 0.91901,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 38,
+      "cross_axis_pearson_r": 0.983534,
+      "axis_cosine": 0.941047,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 39,
+      "cross_axis_pearson_r": 0.974447,
+      "axis_cosine": 0.903482,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 40,
+      "cross_axis_pearson_r": 0.972158,
+      "axis_cosine": 0.872136,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 41,
+      "cross_axis_pearson_r": 0.959394,
+      "axis_cosine": 0.886442,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 42,
+      "cross_axis_pearson_r": 0.975527,
+      "axis_cosine": 0.93402,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 43,
+      "cross_axis_pearson_r": 0.972353,
+      "axis_cosine": 0.941348,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 44,
+      "cross_axis_pearson_r": 0.972666,
+      "axis_cosine": 0.911312,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 45,
+      "cross_axis_pearson_r": 0.97826,
+      "axis_cosine": 0.915123,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 46,
+      "cross_axis_pearson_r": 0.979254,
+      "axis_cosine": 0.926804,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 47,
+      "cross_axis_pearson_r": 0.975118,
+      "axis_cosine": 0.938734,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 48,
+      "cross_axis_pearson_r": 0.974904,
+      "axis_cosine": 0.934065,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 49,
+      "cross_axis_pearson_r": 0.972206,
+      "axis_cosine": 0.920971,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 50,
+      "cross_axis_pearson_r": 0.970191,
+      "axis_cosine": 0.920832,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 51,
+      "cross_axis_pearson_r": 0.963094,
+      "axis_cosine": 0.90448,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 52,
+      "cross_axis_pearson_r": 0.970275,
+      "axis_cosine": 0.888271,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 53,
+      "cross_axis_pearson_r": 0.972367,
+      "axis_cosine": 0.925725,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 54,
+      "cross_axis_pearson_r": 0.978501,
+      "axis_cosine": 0.927964,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 55,
+      "cross_axis_pearson_r": 0.964912,
+      "axis_cosine": 0.927806,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 56,
+      "cross_axis_pearson_r": 0.976778,
+      "axis_cosine": 0.940098,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 57,
+      "cross_axis_pearson_r": 0.97688,
+      "axis_cosine": 0.94806,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 58,
+      "cross_axis_pearson_r": 0.970837,
+      "axis_cosine": 0.912217,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 59,
+      "cross_axis_pearson_r": 0.969552,
+      "axis_cosine": 0.928082,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 60,
+      "cross_axis_pearson_r": 0.974153,
+      "axis_cosine": 0.929859,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 61,
+      "cross_axis_pearson_r": 0.975008,
+      "axis_cosine": 0.932376,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 62,
+      "cross_axis_pearson_r": 0.968632,
+      "axis_cosine": 0.913702,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 63,
+      "cross_axis_pearson_r": 0.973918,
+      "axis_cosine": 0.921065,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 64,
+      "cross_axis_pearson_r": 0.971856,
+      "axis_cosine": 0.89503,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 65,
+      "cross_axis_pearson_r": 0.961546,
+      "axis_cosine": 0.882696,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 66,
+      "cross_axis_pearson_r": 0.977051,
+      "axis_cosine": 0.911256,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 67,
+      "cross_axis_pearson_r": 0.962179,
+      "axis_cosine": 0.864731,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 68,
+      "cross_axis_pearson_r": 0.973847,
+      "axis_cosine": 0.921466,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 69,
+      "cross_axis_pearson_r": 0.976876,
+      "axis_cosine": 0.927464,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 70,
+      "cross_axis_pearson_r": 0.975091,
+      "axis_cosine": 0.923411,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 71,
+      "cross_axis_pearson_r": 0.976315,
+      "axis_cosine": 0.911717,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 72,
+      "cross_axis_pearson_r": 0.968929,
+      "axis_cosine": 0.865863,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 73,
+      "cross_axis_pearson_r": 0.972066,
+      "axis_cosine": 0.923525,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 74,
+      "cross_axis_pearson_r": 0.966015,
+      "axis_cosine": 0.856056,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 75,
+      "cross_axis_pearson_r": 0.976512,
+      "axis_cosine": 0.927771,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 76,
+      "cross_axis_pearson_r": 0.974359,
+      "axis_cosine": 0.909303,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 77,
+      "cross_axis_pearson_r": 0.966761,
+      "axis_cosine": 0.885601,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 78,
+      "cross_axis_pearson_r": 0.975368,
+      "axis_cosine": 0.915651,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 79,
+      "cross_axis_pearson_r": 0.963582,
+      "axis_cosine": 0.900418,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 80,
+      "cross_axis_pearson_r": 0.971965,
+      "axis_cosine": 0.860969,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 81,
+      "cross_axis_pearson_r": 0.976218,
+      "axis_cosine": 0.919547,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 82,
+      "cross_axis_pearson_r": 0.973724,
+      "axis_cosine": 0.902221,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 83,
+      "cross_axis_pearson_r": 0.967443,
+      "axis_cosine": 0.871853,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 84,
+      "cross_axis_pearson_r": 0.973214,
+      "axis_cosine": 0.9345,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 85,
+      "cross_axis_pearson_r": 0.975181,
+      "axis_cosine": 0.930916,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 86,
+      "cross_axis_pearson_r": 0.979805,
+      "axis_cosine": 0.927306,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 87,
+      "cross_axis_pearson_r": 0.957113,
+      "axis_cosine": 0.885289,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 88,
+      "cross_axis_pearson_r": 0.959908,
+      "axis_cosine": 0.897907,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 89,
+      "cross_axis_pearson_r": 0.969271,
+      "axis_cosine": 0.921518,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 90,
+      "cross_axis_pearson_r": 0.965159,
+      "axis_cosine": 0.892794,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 91,
+      "cross_axis_pearson_r": 0.971087,
+      "axis_cosine": 0.918814,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 92,
+      "cross_axis_pearson_r": 0.974692,
+      "axis_cosine": 0.933883,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 93,
+      "cross_axis_pearson_r": 0.975732,
+      "axis_cosine": 0.902355,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 94,
+      "cross_axis_pearson_r": 0.973709,
+      "axis_cosine": 0.925656,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 95,
+      "cross_axis_pearson_r": 0.969816,
+      "axis_cosine": 0.911417,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 96,
+      "cross_axis_pearson_r": 0.981069,
+      "axis_cosine": 0.931666,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 97,
+      "cross_axis_pearson_r": 0.974566,
+      "axis_cosine": 0.929487,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 98,
+      "cross_axis_pearson_r": 0.976547,
+      "axis_cosine": 0.923902,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 99,
+      "cross_axis_pearson_r": 0.981157,
+      "axis_cosine": 0.927562,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 100,
+      "cross_axis_pearson_r": 0.973981,
+      "axis_cosine": 0.926525,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 101,
+      "cross_axis_pearson_r": 0.971291,
+      "axis_cosine": 0.929676,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 102,
+      "cross_axis_pearson_r": 0.978308,
+      "axis_cosine": 0.935865,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 103,
+      "cross_axis_pearson_r": 0.975953,
+      "axis_cosine": 0.906709,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 104,
+      "cross_axis_pearson_r": 0.977185,
+      "axis_cosine": 0.934151,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 105,
+      "cross_axis_pearson_r": 0.979426,
+      "axis_cosine": 0.941582,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 106,
+      "cross_axis_pearson_r": 0.973399,
+      "axis_cosine": 0.883038,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 107,
+      "cross_axis_pearson_r": 0.975243,
+      "axis_cosine": 0.938414,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 108,
+      "cross_axis_pearson_r": 0.959815,
+      "axis_cosine": 0.910343,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 109,
+      "cross_axis_pearson_r": 0.972593,
+      "axis_cosine": 0.865517,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 110,
+      "cross_axis_pearson_r": 0.969596,
+      "axis_cosine": 0.933999,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 111,
+      "cross_axis_pearson_r": 0.968844,
+      "axis_cosine": 0.913211,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 112,
+      "cross_axis_pearson_r": 0.97603,
+      "axis_cosine": 0.911948,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 113,
+      "cross_axis_pearson_r": 0.974309,
+      "axis_cosine": 0.915735,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 114,
+      "cross_axis_pearson_r": 0.976404,
+      "axis_cosine": 0.926131,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 115,
+      "cross_axis_pearson_r": 0.975119,
+      "axis_cosine": 0.937434,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 116,
+      "cross_axis_pearson_r": 0.970043,
+      "axis_cosine": 0.909667,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 117,
+      "cross_axis_pearson_r": 0.977866,
+      "axis_cosine": 0.92546,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 118,
+      "cross_axis_pearson_r": 0.970069,
+      "axis_cosine": 0.92937,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 119,
+      "cross_axis_pearson_r": 0.965481,
+      "axis_cosine": 0.90907,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 120,
+      "cross_axis_pearson_r": 0.976443,
+      "axis_cosine": 0.923883,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 121,
+      "cross_axis_pearson_r": 0.968773,
+      "axis_cosine": 0.932905,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 122,
+      "cross_axis_pearson_r": 0.970293,
+      "axis_cosine": 0.919071,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 123,
+      "cross_axis_pearson_r": 0.973368,
+      "axis_cosine": 0.888561,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 124,
+      "cross_axis_pearson_r": 0.974169,
+      "axis_cosine": 0.909696,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 125,
+      "cross_axis_pearson_r": 0.957478,
+      "axis_cosine": 0.878472,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 126,
+      "cross_axis_pearson_r": 0.960754,
+      "axis_cosine": 0.877477,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 127,
+      "cross_axis_pearson_r": 0.975537,
+      "axis_cosine": 0.918479,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 128,
+      "cross_axis_pearson_r": 0.974525,
+      "axis_cosine": 0.93221,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 129,
+      "cross_axis_pearson_r": 0.974412,
+      "axis_cosine": 0.921492,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 130,
+      "cross_axis_pearson_r": 0.976179,
+      "axis_cosine": 0.910893,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 131,
+      "cross_axis_pearson_r": 0.969538,
+      "axis_cosine": 0.913397,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 132,
+      "cross_axis_pearson_r": 0.979473,
+      "axis_cosine": 0.920563,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 133,
+      "cross_axis_pearson_r": 0.97285,
+      "axis_cosine": 0.907472,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 134,
+      "cross_axis_pearson_r": 0.973625,
+      "axis_cosine": 0.92284,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 135,
+      "cross_axis_pearson_r": 0.968321,
+      "axis_cosine": 0.883532,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 136,
+      "cross_axis_pearson_r": 0.97462,
+      "axis_cosine": 0.93666,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 137,
+      "cross_axis_pearson_r": 0.975166,
+      "axis_cosine": 0.920082,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 138,
+      "cross_axis_pearson_r": 0.977544,
+      "axis_cosine": 0.929525,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 139,
+      "cross_axis_pearson_r": 0.969385,
+      "axis_cosine": 0.910449,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 140,
+      "cross_axis_pearson_r": 0.974981,
+      "axis_cosine": 0.91407,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 141,
+      "cross_axis_pearson_r": 0.968056,
+      "axis_cosine": 0.920546,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 142,
+      "cross_axis_pearson_r": 0.97051,
+      "axis_cosine": 0.908654,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 143,
+      "cross_axis_pearson_r": 0.975388,
+      "axis_cosine": 0.942883,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 144,
+      "cross_axis_pearson_r": 0.976007,
+      "axis_cosine": 0.899092,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 145,
+      "cross_axis_pearson_r": 0.975776,
+      "axis_cosine": 0.922555,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 146,
+      "cross_axis_pearson_r": 0.965453,
+      "axis_cosine": 0.887517,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 147,
+      "cross_axis_pearson_r": 0.977375,
+      "axis_cosine": 0.926476,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 148,
+      "cross_axis_pearson_r": 0.975288,
+      "axis_cosine": 0.935565,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 149,
+      "cross_axis_pearson_r": 0.969002,
+      "axis_cosine": 0.905302,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 150,
+      "cross_axis_pearson_r": 0.97278,
+      "axis_cosine": 0.936587,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 151,
+      "cross_axis_pearson_r": 0.974547,
+      "axis_cosine": 0.928093,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 152,
+      "cross_axis_pearson_r": 0.972829,
+      "axis_cosine": 0.921118,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 153,
+      "cross_axis_pearson_r": 0.978025,
+      "axis_cosine": 0.922086,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 154,
+      "cross_axis_pearson_r": 0.973349,
+      "axis_cosine": 0.915213,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 155,
+      "cross_axis_pearson_r": 0.972519,
+      "axis_cosine": 0.92465,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 156,
+      "cross_axis_pearson_r": 0.976449,
+      "axis_cosine": 0.925836,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 157,
+      "cross_axis_pearson_r": 0.963243,
+      "axis_cosine": 0.912797,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 158,
+      "cross_axis_pearson_r": 0.965073,
+      "axis_cosine": 0.856447,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 159,
+      "cross_axis_pearson_r": 0.975768,
+      "axis_cosine": 0.914391,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 160,
+      "cross_axis_pearson_r": 0.973811,
+      "axis_cosine": 0.925973,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 161,
+      "cross_axis_pearson_r": 0.980584,
+      "axis_cosine": 0.932235,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 162,
+      "cross_axis_pearson_r": 0.970907,
+      "axis_cosine": 0.932075,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 163,
+      "cross_axis_pearson_r": 0.972713,
+      "axis_cosine": 0.914007,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 164,
+      "cross_axis_pearson_r": 0.964529,
+      "axis_cosine": 0.888442,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 165,
+      "cross_axis_pearson_r": 0.957191,
+      "axis_cosine": 0.871492,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 166,
+      "cross_axis_pearson_r": 0.97615,
+      "axis_cosine": 0.923212,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 167,
+      "cross_axis_pearson_r": 0.972886,
+      "axis_cosine": 0.928023,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 168,
+      "cross_axis_pearson_r": 0.974216,
+      "axis_cosine": 0.89363,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 169,
+      "cross_axis_pearson_r": 0.970297,
+      "axis_cosine": 0.92067,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 170,
+      "cross_axis_pearson_r": 0.969472,
+      "axis_cosine": 0.88974,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 171,
+      "cross_axis_pearson_r": 0.963538,
+      "axis_cosine": 0.912556,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 172,
+      "cross_axis_pearson_r": 0.959297,
+      "axis_cosine": 0.89146,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 173,
+      "cross_axis_pearson_r": 0.969553,
+      "axis_cosine": 0.915473,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 174,
+      "cross_axis_pearson_r": 0.975441,
+      "axis_cosine": 0.935837,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 175,
+      "cross_axis_pearson_r": 0.963057,
+      "axis_cosine": 0.885152,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 176,
+      "cross_axis_pearson_r": 0.974034,
+      "axis_cosine": 0.933432,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 177,
+      "cross_axis_pearson_r": 0.97379,
+      "axis_cosine": 0.925583,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 178,
+      "cross_axis_pearson_r": 0.971225,
+      "axis_cosine": 0.931379,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 179,
+      "cross_axis_pearson_r": 0.971091,
+      "axis_cosine": 0.905285,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 180,
+      "cross_axis_pearson_r": 0.978522,
+      "axis_cosine": 0.91918,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 181,
+      "cross_axis_pearson_r": 0.965897,
+      "axis_cosine": 0.89215,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 182,
+      "cross_axis_pearson_r": 0.975494,
+      "axis_cosine": 0.939474,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 183,
+      "cross_axis_pearson_r": 0.974958,
+      "axis_cosine": 0.928935,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 184,
+      "cross_axis_pearson_r": 0.974525,
+      "axis_cosine": 0.91822,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 185,
+      "cross_axis_pearson_r": 0.97106,
+      "axis_cosine": 0.907521,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 186,
+      "cross_axis_pearson_r": 0.96889,
+      "axis_cosine": 0.909428,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 187,
+      "cross_axis_pearson_r": 0.964646,
+      "axis_cosine": 0.891098,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 188,
+      "cross_axis_pearson_r": 0.973621,
+      "axis_cosine": 0.905026,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 189,
+      "cross_axis_pearson_r": 0.976807,
+      "axis_cosine": 0.938835,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 190,
+      "cross_axis_pearson_r": 0.976699,
+      "axis_cosine": 0.910253,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 191,
+      "cross_axis_pearson_r": 0.962804,
+      "axis_cosine": 0.904304,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 192,
+      "cross_axis_pearson_r": 0.96994,
+      "axis_cosine": 0.880256,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 193,
+      "cross_axis_pearson_r": 0.976434,
+      "axis_cosine": 0.917294,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 194,
+      "cross_axis_pearson_r": 0.966634,
+      "axis_cosine": 0.929867,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 195,
+      "cross_axis_pearson_r": 0.974284,
+      "axis_cosine": 0.929786,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 196,
+      "cross_axis_pearson_r": 0.966752,
+      "axis_cosine": 0.885259,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 197,
+      "cross_axis_pearson_r": 0.964632,
+      "axis_cosine": 0.884568,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 198,
+      "cross_axis_pearson_r": 0.97296,
+      "axis_cosine": 0.922721,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 199,
+      "cross_axis_pearson_r": 0.961553,
+      "axis_cosine": 0.897559,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 200,
+      "cross_axis_pearson_r": 0.979211,
+      "axis_cosine": 0.91162,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 201,
+      "cross_axis_pearson_r": 0.971466,
+      "axis_cosine": 0.932673,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 202,
+      "cross_axis_pearson_r": 0.974845,
+      "axis_cosine": 0.908434,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 203,
+      "cross_axis_pearson_r": 0.966081,
+      "axis_cosine": 0.929607,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 204,
+      "cross_axis_pearson_r": 0.96443,
+      "axis_cosine": 0.916761,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 205,
+      "cross_axis_pearson_r": 0.970059,
+      "axis_cosine": 0.92194,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 206,
+      "cross_axis_pearson_r": 0.97422,
+      "axis_cosine": 0.930312,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 207,
+      "cross_axis_pearson_r": 0.978998,
+      "axis_cosine": 0.927484,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 208,
+      "cross_axis_pearson_r": 0.977261,
+      "axis_cosine": 0.906522,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 209,
+      "cross_axis_pearson_r": 0.964209,
+      "axis_cosine": 0.862929,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 210,
+      "cross_axis_pearson_r": 0.970274,
+      "axis_cosine": 0.926673,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 211,
+      "cross_axis_pearson_r": 0.963828,
+      "axis_cosine": 0.921456,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 212,
+      "cross_axis_pearson_r": 0.976705,
+      "axis_cosine": 0.896556,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 213,
+      "cross_axis_pearson_r": 0.968123,
+      "axis_cosine": 0.889503,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 214,
+      "cross_axis_pearson_r": 0.962333,
+      "axis_cosine": 0.896288,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 215,
+      "cross_axis_pearson_r": 0.970645,
+      "axis_cosine": 0.892466,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 216,
+      "cross_axis_pearson_r": 0.973641,
+      "axis_cosine": 0.895641,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 217,
+      "cross_axis_pearson_r": 0.974226,
+      "axis_cosine": 0.931708,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 218,
+      "cross_axis_pearson_r": 0.967134,
+      "axis_cosine": 0.923928,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 219,
+      "cross_axis_pearson_r": 0.972942,
+      "axis_cosine": 0.916953,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 220,
+      "cross_axis_pearson_r": 0.971379,
+      "axis_cosine": 0.897322,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 221,
+      "cross_axis_pearson_r": 0.976734,
+      "axis_cosine": 0.922144,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 222,
+      "cross_axis_pearson_r": 0.963516,
+      "axis_cosine": 0.865419,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 223,
+      "cross_axis_pearson_r": 0.973627,
+      "axis_cosine": 0.921724,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 224,
+      "cross_axis_pearson_r": 0.972744,
+      "axis_cosine": 0.899176,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 225,
+      "cross_axis_pearson_r": 0.967795,
+      "axis_cosine": 0.923027,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 226,
+      "cross_axis_pearson_r": 0.970857,
+      "axis_cosine": 0.934073,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 227,
+      "cross_axis_pearson_r": 0.971592,
+      "axis_cosine": 0.924983,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 228,
+      "cross_axis_pearson_r": 0.976378,
+      "axis_cosine": 0.924424,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 229,
+      "cross_axis_pearson_r": 0.977735,
+      "axis_cosine": 0.923841,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 230,
+      "cross_axis_pearson_r": 0.970767,
+      "axis_cosine": 0.899599,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 231,
+      "cross_axis_pearson_r": 0.977806,
+      "axis_cosine": 0.915217,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 232,
+      "cross_axis_pearson_r": 0.967669,
+      "axis_cosine": 0.921075,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 233,
+      "cross_axis_pearson_r": 0.978184,
+      "axis_cosine": 0.938679,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 234,
+      "cross_axis_pearson_r": 0.970221,
+      "axis_cosine": 0.896733,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 235,
+      "cross_axis_pearson_r": 0.973269,
+      "axis_cosine": 0.914065,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 236,
+      "cross_axis_pearson_r": 0.968484,
+      "axis_cosine": 0.891181,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 237,
+      "cross_axis_pearson_r": 0.974318,
+      "axis_cosine": 0.90598,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 238,
+      "cross_axis_pearson_r": 0.973151,
+      "axis_cosine": 0.925773,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 239,
+      "cross_axis_pearson_r": 0.972307,
+      "axis_cosine": 0.901595,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 240,
+      "cross_axis_pearson_r": 0.971923,
+      "axis_cosine": 0.918169,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 241,
+      "cross_axis_pearson_r": 0.97359,
+      "axis_cosine": 0.905123,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 242,
+      "cross_axis_pearson_r": 0.979601,
+      "axis_cosine": 0.936588,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 243,
+      "cross_axis_pearson_r": 0.971356,
+      "axis_cosine": 0.899987,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 244,
+      "cross_axis_pearson_r": 0.970774,
+      "axis_cosine": 0.930882,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 245,
+      "cross_axis_pearson_r": 0.978619,
+      "axis_cosine": 0.923527,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 246,
+      "cross_axis_pearson_r": 0.973697,
+      "axis_cosine": 0.937486,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 247,
+      "cross_axis_pearson_r": 0.968681,
+      "axis_cosine": 0.931913,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 248,
+      "cross_axis_pearson_r": 0.974559,
+      "axis_cosine": 0.90995,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 249,
+      "cross_axis_pearson_r": 0.980024,
+      "axis_cosine": 0.905585,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 250,
+      "cross_axis_pearson_r": 0.977801,
+      "axis_cosine": 0.929939,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 251,
+      "cross_axis_pearson_r": 0.963075,
+      "axis_cosine": 0.88082,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 252,
+      "cross_axis_pearson_r": 0.971747,
+      "axis_cosine": 0.917342,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 253,
+      "cross_axis_pearson_r": 0.97923,
+      "axis_cosine": 0.920748,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 254,
+      "cross_axis_pearson_r": 0.973631,
+      "axis_cosine": 0.918318,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 255,
+      "cross_axis_pearson_r": 0.972599,
+      "axis_cosine": 0.924598,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 256,
+      "cross_axis_pearson_r": 0.97242,
+      "axis_cosine": 0.904927,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 257,
+      "cross_axis_pearson_r": 0.97262,
+      "axis_cosine": 0.894032,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 258,
+      "cross_axis_pearson_r": 0.971535,
+      "axis_cosine": 0.918195,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 259,
+      "cross_axis_pearson_r": 0.975333,
+      "axis_cosine": 0.918432,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 260,
+      "cross_axis_pearson_r": 0.971219,
+      "axis_cosine": 0.919656,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 261,
+      "cross_axis_pearson_r": 0.9608,
+      "axis_cosine": 0.873608,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 262,
+      "cross_axis_pearson_r": 0.975986,
+      "axis_cosine": 0.926105,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 263,
+      "cross_axis_pearson_r": 0.97268,
+      "axis_cosine": 0.922659,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 264,
+      "cross_axis_pearson_r": 0.978042,
+      "axis_cosine": 0.905174,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 265,
+      "cross_axis_pearson_r": 0.975084,
+      "axis_cosine": 0.915403,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 266,
+      "cross_axis_pearson_r": 0.974675,
+      "axis_cosine": 0.925654,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 267,
+      "cross_axis_pearson_r": 0.96682,
+      "axis_cosine": 0.910546,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 268,
+      "cross_axis_pearson_r": 0.97126,
+      "axis_cosine": 0.89166,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 269,
+      "cross_axis_pearson_r": 0.975241,
+      "axis_cosine": 0.910898,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 270,
+      "cross_axis_pearson_r": 0.956277,
+      "axis_cosine": 0.888517,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 271,
+      "cross_axis_pearson_r": 0.972638,
+      "axis_cosine": 0.929928,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 272,
+      "cross_axis_pearson_r": 0.971587,
+      "axis_cosine": 0.920768,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 273,
+      "cross_axis_pearson_r": 0.974983,
+      "axis_cosine": 0.931968,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 274,
+      "cross_axis_pearson_r": 0.965624,
+      "axis_cosine": 0.881359,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 275,
+      "cross_axis_pearson_r": 0.977687,
+      "axis_cosine": 0.924115,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 276,
+      "cross_axis_pearson_r": 0.974065,
+      "axis_cosine": 0.928214,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 277,
+      "cross_axis_pearson_r": 0.974235,
+      "axis_cosine": 0.922663,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 278,
+      "cross_axis_pearson_r": 0.977257,
+      "axis_cosine": 0.930815,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 279,
+      "cross_axis_pearson_r": 0.968335,
+      "axis_cosine": 0.91192,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 280,
+      "cross_axis_pearson_r": 0.970348,
+      "axis_cosine": 0.93407,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 281,
+      "cross_axis_pearson_r": 0.969288,
+      "axis_cosine": 0.933235,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 282,
+      "cross_axis_pearson_r": 0.97471,
+      "axis_cosine": 0.888654,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 283,
+      "cross_axis_pearson_r": 0.977052,
+      "axis_cosine": 0.937273,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 284,
+      "cross_axis_pearson_r": 0.969241,
+      "axis_cosine": 0.911396,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 285,
+      "cross_axis_pearson_r": 0.973813,
+      "axis_cosine": 0.931383,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 286,
+      "cross_axis_pearson_r": 0.974407,
+      "axis_cosine": 0.90987,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 287,
+      "cross_axis_pearson_r": 0.965887,
+      "axis_cosine": 0.903401,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 288,
+      "cross_axis_pearson_r": 0.975092,
+      "axis_cosine": 0.942193,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 289,
+      "cross_axis_pearson_r": 0.976553,
+      "axis_cosine": 0.937095,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 290,
+      "cross_axis_pearson_r": 0.969196,
+      "axis_cosine": 0.915932,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 291,
+      "cross_axis_pearson_r": 0.956678,
+      "axis_cosine": 0.857652,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 292,
+      "cross_axis_pearson_r": 0.974774,
+      "axis_cosine": 0.923511,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 293,
+      "cross_axis_pearson_r": 0.97019,
+      "axis_cosine": 0.913907,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 294,
+      "cross_axis_pearson_r": 0.958071,
+      "axis_cosine": 0.874119,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 295,
+      "cross_axis_pearson_r": 0.967292,
+      "axis_cosine": 0.928938,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 296,
+      "cross_axis_pearson_r": 0.970813,
+      "axis_cosine": 0.898256,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 297,
+      "cross_axis_pearson_r": 0.976467,
+      "axis_cosine": 0.930544,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 298,
+      "cross_axis_pearson_r": 0.974142,
+      "axis_cosine": 0.933146,
+      "n_common_roles": 275
+    },
+    {
+      "draw_index": 299,
+      "cross_axis_pearson_r": 0.970774,
+      "axis_cosine": 0.937293,
+      "n_common_roles": 275
+    }
+  ],
+  "summary": {
+    "cross_axis_pearson_r": {
+      "min": 0.956277,
+      "median": 0.972914,
+      "max": 0.983534,
+      "mean": 0.971947,
+      "std": 0.005135
+    },
+    "axis_cosine": {
+      "min": 0.853988,
+      "median": 0.91904,
+      "max": 0.94806,
+      "mean": 0.9138,
+      "std": 0.019434
+    },
+    "observed_split_percentile_within_draws": {
+      "cross_axis_pearson_r": 83.67,
+      "axis_cosine": 39.33
+    }
+  },
+  "source_git_sha": "7591e44113d7786bd3eddfb7e9bdc5f20a630de6",
+  "source_git_dirty": false,
+  "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59"
+}

@@ -1,0 +1,17 @@
+{
+  "all_response_tensors": 22000,
+  "answer_tensors": 22000,
+  "metadata_rows": 22000,
+  "production_signature": "5055bf516ad9a24fcc97d348f13d1e671a8032e7edf454498e7ad002536741c3",
+  "reasoning_middle_tensors": 21961,
+  "segmentation_provenance_counts": {
+    "frozen_segment_response": 39,
+    "prompt_seeded_reconstructed_from_stored_text_boundary": 21961
+  },
+  "status": "PASS",
+  "unique_uids": 22000,
+  "validity_counts": {
+    "truncated": 54,
+    "valid": 21946
+  }
+}

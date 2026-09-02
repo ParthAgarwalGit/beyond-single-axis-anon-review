@@ -1,0 +1,59 @@
+{
+  "format_version": "t17-regional-independent-recovery-v1",
+  "task": "T17_REGIONAL_INDEPENDENT_RECOVERY",
+  "status": "POST_PRIMARY_SENSITIVITY_COMPLETE",
+  "analysis_plan": {
+    "task": "T17_REGIONAL_INDEPENDENT_RECOVERY",
+    "analysis_status": "POST_PRIMARY_SENSITIVITY",
+    "motivation": "Test whether the reasoning-only and final-answer-only assistant directions are each reproducible across the disjoint C80-A/C80-B question sets, rather than the pooled response-region difference being attributable to unstable estimation.",
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "block_index": 16,
+    "prompt_arm": "USER_TRANSLATED_LU",
+    "membership": "label_independent_technical_validity",
+    "role_cohort": "matched_triple within each C80 block",
+    "regions": ["reasoning", "answer"],
+    "n_roles_expected": 275,
+    "axis_formula": "default_mean - equal_weighted_mean(role_means), unit-normalized",
+    "default_rule": "five region-specific condition means, equal 0.2 weighting, block-specific",
+    "cross_projection": "A role means on B axis; B role means on A axis",
+    "primary_descriptive_statistics": ["cross_axis_role_projection_pearson_r", "axis_cosine_C80A_C80B"],
+    "secondary_statistics": ["project_consistent_spearman", "same_axis_projection_pearson", "within_block_reasoning_answer_axis_cosine", "within_block_reasoning_answer_same_role_own_axis_pearson"],
+    "bootstrap": {"replicates": 2000, "seed": 0, "unit": "role", "rule": "resample fixed aligned cross-projection pairs; axes are not rebuilt", "ci": "percentile_95"},
+    "claim_boundary": ["Does not alter the frozen all-response T15/T16 primary result.", "Reasoning/answer analyses remain response-region sensitivities and are not Lu-comparable.", "Does not establish causal propagation from reasoning to final answer.", "Does not establish a uniquely privileged assistant direction."]
+  },
+  "fidelity_gate": {"status": "PASS", "expected_c160_reasoning_answer_axis_cosine": 0.5877841077999876, "reconstructed_c160_reasoning_answer_axis_cosine": 0.5877841077999876, "expected_c160_reasoning_answer_role_r": 0.9546374089228963, "reconstructed_c160_reasoning_answer_role_r": 0.9546374089228963, "absolute_tolerance": 1e-09},
+  "regional_independent_recovery": {
+    "reasoning": {"region": "reasoning", "n_roles": 275, "cross_axis_pearson_r": 0.9737941803520305, "cross_axis_pearson_ci95": [0.9674739825165557, 0.9789373791870419], "project_consistent_spearman": 0.9721075560428148, "axis_cosine_C80A_C80B": 0.9246771534321052, "same_axis_projection_pearson": 0.9738284065190626, "bootstrap_replicates": 2000, "bootstrap_valid_replicates": 2000, "bootstrap_invalid_replicates": 0},
+    "answer": {"region": "answer", "n_roles": 275, "cross_axis_pearson_r": 0.9600601570530783, "cross_axis_pearson_ci95": [0.9512717641280366, 0.9678385903672123], "project_consistent_spearman": 0.960806093303713, "axis_cosine_C80A_C80B": 0.8348719274959626, "same_axis_projection_pearson": 0.9613828293132511, "bootstrap_replicates": 2000, "bootstrap_valid_replicates": 2000, "bootstrap_invalid_replicates": 0}
+  },
+  "within_block_reasoning_vs_answer": {
+    "C80-A": {"block": "C80-A", "n_roles": 275, "reasoning_answer_axis_cosine": 0.5841187007983598, "reasoning_answer_same_role_own_axis_pearson": 0.9567436005010954, "reasoning_answer_project_consistent_spearman": 0.9469663310348808},
+    "C80-B": {"block": "C80-B", "n_roles": 275, "reasoning_answer_axis_cosine": 0.5868930507571809, "reasoning_answer_same_role_own_axis_pearson": 0.947056402551915, "reasoning_answer_project_consistent_spearman": 0.9397524595366551}
+  },
+  "provenance": {
+    "source_git_sha": "0ce58dff49d13da539ca6bfa14deca1547b37006",
+    "source_git_dirty_before_outputs": false,
+    "numpy_version": "2.1.3",
+    "retained_role_manifest_sha256": "3c7d373cb67f96ac21d9b6cbd9097ce184d145b9d381af1ad12b3e0675524315",
+    "membership_authority_sha256": "21afdeb5aa4f45eae6d8600a60a311af2b4ce7689013e48e7b385847ea6aee1a",
+    "hf_dataset_repo": "[Author-A-HF]/persona-artifacts",
+    "hf_dataset_revision": "e1885e0865d1e6d7a39a9c2585b224b30e28b3f1",
+    "config_sha256": "f7e7dd9df8c7c72d5da08bf8201295dfc91f3208837d8cd0867054c393984e59",
+    "input_sha256": {
+      "results/t17/C80-A/reduced_manifest.json": "74ba728d52e50311675b7e8b2eacc1f09d17a937e22d045b846ca7961ee45d1b",
+      "results/t17/C80-B/reduced_manifest.json": "06a30075b0559363d5724c6cf00b945cf4d44fcfe167110f5873daa62169b47c",
+      "results/t17/C80-A/C80-A/matched_triple.npz": "46564b8ce14533339410df5898d5e5f4c05c01639ebfc62a0b549107dfa241c8",
+      "results/t17/C80-B/C80-B/matched_triple.npz": "694080aae4cf82730578c085dc4752f28d1b49147eac864c55726ae14e795ca2",
+      "results/t17/C80-A/C80-A/counts.json": "2e9ec84fe0214066546c606280f1409ad2339f0e2565dc9fcb45ad5205c1cc19",
+      "results/t17/C80-B/C80-B/counts.json": "cce5697e7d761676e07f935964eb82b38c157cdf04d27a0154390534f9b26e29",
+      "results/t17/C80-A/DEFAULT-C80-A/answer.npz": "ce97e11cb27b398047816d899420ab0f819ad4a85dfaa3acfc166ecd2611aef7",
+      "results/t17/C80-A/DEFAULT-C80-A/reasoning.npz": "09855bd15180ce371d33a77c6fe061582c7fb73b6e0e75d67817d6ddae0c75fa",
+      "results/t17/C80-A/DEFAULT-C80-A/condition_counts_by_pool.json": "2a69ef4412f18e8c897557a39386281cabab1012bebf570631b6c32974edcf2f",
+      "results/t17/C80-B/DEFAULT-C80-B/answer.npz": "de0ead6bc3d0c5b1c5c4b28f9d5e5fb99d2849ea5a4bc3d58d06297067286896",
+      "results/t17/C80-B/DEFAULT-C80-B/reasoning.npz": "0d0709645c4a1a67854a445af15b9871e1ece4d22cfddfb632e0e4f115f245ae",
+      "results/t17/C80-B/DEFAULT-C80-B/condition_counts_by_pool.json": "5c0511b6635318bb032c833e1f5bed792a62e824df1f618ba08a9ba9891e27cd",
+      "results/t17/c160/t17_c160_role_space_report.json": "6a40e00ecfa6333f70fadb1fd52248d91aafe20b098a236bb3c81db6e1d45bf0"
+    }
+  },
+  "claim_boundary": ["Does not alter the frozen all-response T15/T16 primary result.", "Reasoning/answer analyses remain response-region sensitivities and are not Lu-comparable.", "Does not establish causal propagation from reasoning to final answer.", "Does not establish a uniquely privileged assistant direction."]
+}

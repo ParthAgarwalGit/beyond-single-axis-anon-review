@@ -1,0 +1,62 @@
+# T21 source-model activation-capping reproduction freeze
+schema_version: t21-source-capping-v1
+status: COMPLETE_PARTIAL_EVALUATION_LIMITED
+
+source:
+  repository: https://github.com/safety-research/assistant-axis.git
+  commit: a98961956072224eaf244eb289d6c01700b63795
+  source_claim: source-matched Qwen capping intervention
+
+model:
+  id: Qwen/Qwen3-32B
+  revision: 9216db5781bf21249d130ec9da846c4624c16137
+  precision: bfloat16
+  quantized: false
+  thinking_enabled: false
+
+capping:
+  artifact_repo: lu-christina/assistant-axis-vectors
+  artifact_revision: 3b3b788432ad33e3a28d9ff08e88a530c0740814
+  artifact_file: qwen-3-32b/capping_config.pt
+  artifact_sha256: 6aec1220487473aaeab80b05d5d960ac54b5dd9080b51ac4bb0bbd1f4330db24
+  assistant_axis_sha256: a207fe7a36563280b7b29010880aa0082bd8e3113c141cb4a2eed6b46c140211
+  experiment: layers_46:54-p0.25
+  layers: [46, 47, 48, 49, 50, 51, 52, 53]
+  static_orientation_verdict: CONSISTENT_VIA_NEGATED_CONFIG_VECTOR
+  dynamic_orientation_verdict: MOVES_TOWARD_RELEASED_ASSISTANT_AXIS
+
+safety_evaluation:
+  origin: JBB_BEHAVIOR_ONLY_ADAPTED_NOT_LU_PERSONA_JAILBREAK
+  frozen_items: 100
+  frozen_manifest_sha256: d611e904f3b5d47c71e5ab1f3fa1a84ead6cfd5d94dba337f5c3b71aafef7793
+  conditions: [UNSTEERED, ASSISTANT_AXIS_CAP_SOURCE_SETTING]
+  generations: 200
+  judge:
+    paper_name: deepseek-v3
+    model_id: deepseek-ai/DeepSeek-V3
+    hf_repo_revision: e815299b0bcbac849fa540c768ef21845365c9eb
+    provider: novita
+    provider_status: OUR_REPRODUCIBILITY_CHOICE_SOURCE_PROVIDER_UNDISCLOSED
+    prompt_fidelity: FAITHFUL_TRANSCRIPTION_SOURCE_APPENDIX_D2.2
+    response_truncation: first_512_tokens_using_frozen_source_model_tokenizer
+    sampling_arguments: OMITTED_BECAUSE_SOURCE_UNSPECIFIED
+  paired_bootstrap_seed: 210818
+
+capability_evaluation:
+  fidelity_label: LU_SIZED_PUBLIC_CAPABILITY_BATTERY_NOT_EXACT_MEMBERSHIP
+  frozen_manifest_sha256: 7217d6021d77d9dc2091601dbe85a2974ccaa610b97fc77e90007732f9931f55
+  freeze_seed: 210817
+  benchmark_counts:
+    IFEval: 541
+    MMLU-Pro: 1400
+    GSM8K: 1000
+    EQ-Bench: 171
+  total_items_per_condition: 3112
+  total_generations: 6224
+  exact_lu_membership_claim_allowed: false
+
+claim_boundary:
+  exact_lu_replication: false
+  exact_private_judge_deployment_match: false
+  exact_source_persona_jailbreak_dataset_match: false
+  causal_specificity_established_by_t21_alone: false
